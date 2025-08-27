@@ -2,7 +2,7 @@ name: Auto Sync Fork with Releases
 
 on:
   schedule:
-    - cron: '0 17 * * *'  # 每天 UTC 17 点自动运行
+    - cron: '0 18 * * *'  # 每天 UTC 17 点自动运行
   workflow_dispatch:      # 允许手动触发
 
 permissions:
@@ -71,7 +71,7 @@ jobs:
       - name: Add upstream and fetch
         run: |
           git remote remove upstream 2>/dev/null || true
-          git remote add upstream https://github.com/5VNetwork/vproxy.git
+          git remote add upstream https://github.com/KaringX/karing.git
           git fetch upstream --tags --force --prune
           git fetch upstream --force --prune '+refs/heads/*:refs/remotes/upstream/*'
 
@@ -156,7 +156,7 @@ jobs:
           # 获取上游所有发布（按创建时间排序）
           echo "Getting upstream releases..."
           upstream_releases_json=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
-            "https://api.github.com/repos/5VNetwork/vproxy/releases?per_page=100")
+            "https://api.github.com/repos/KaringX/karing/releases?per_page=100")
           
           # 获取本地所有发布（按创建时间排序）
           echo "Getting local releases..."
@@ -248,7 +248,7 @@ jobs:
             
             # 获取发布详情
             release_info_json=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-              "https://api.github.com/repos/5VNetwork/vproxy/releases/tags/$tag_name")
+              "https://api.github.com/repos/KaringX/karing/releases/tags/$tag_name")
             
             # 检查是否有错误
             if echo "$release_info_json" | jq -e '.message' > /dev/null 2>&1; then
