@@ -56,23 +56,25 @@
 ## 系统要求
 - Windows >= 10 （仅支持64位）
 - Android >= 8  (arm64-v8a, armeabi-v7a)
+- Linux （仅支持64位）
 - IOS >= 15
-- MacOS >= 12
+- MacOS >= 12 (Intel, Apple Silicon)
 - TvOS >= 17
 
 ## 安装
-- **IOS/MacOS/TvOS AppStore**: （搜索关键词：karing vpn）
+- **IOS/TvOS AppStore**: （搜索关键词：karing vpn）
   - https://apps.apple.com/us/app/karing/id6472431552
-- **IOS/MacOS/TvOS TestFlight**:
+- **IOS/TvOS TestFlight**:
   - https://testflight.apple.com/join/RLU59OsJ
 - **Android**:
+  - [https://karing.app/download](https://karing.app/download)
   - https://github.com/KaringX/karing/releases/latest
   - APKPure https://apkpure.com/p/com.nebula.karing
   - Amazon AppStore https://www.amazon.com/gp/product/B0DJSQDDM8
-  - [gh-proxy of android backup](https://dot.karing.app/client.html?p=android)
-- **Windows**:
+- **Windows/Macos/Linux**:
+  - [https://karing.app/download](https://karing.app/download)
   - https://github.com/KaringX/karing/releases/latest
-  - [gh-proxy of win64 backup](https://dot.karing.app/client.html?p=windows)
+
 
 ### 常见问题
 
