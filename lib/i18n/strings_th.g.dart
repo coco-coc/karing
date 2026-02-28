@@ -124,6 +124,7 @@ class TranslationsTh with BaseTranslations<AppLocale, Translations> implements T
 		'vi': 'Tiếng Việt',
 		'tr': 'Türkçe',
 		'th': 'ไทย',
+		'pa': 'ਪੰਜਾਬੀ',
 	};
 }
 
@@ -411,6 +412,8 @@ class _TranslationsSettingsScreenTh implements TranslationsSettingsScreenEn {
 	@override String get dnsTypeResolverTips => 'การแก้ไขชื่อโดเมนสำหรับ [${_root.SettingsScreen.dnsTypeResolver}]';
 	@override String get dnsAutoSetServer => 'ตั้งค่าเซิร์ฟเวอร์อัตโนมัติ';
 	@override String get dnsResetServer => 'รีเซ็ตเซิร์ฟเวอร์';
+	@override String get dnsEnableStaticIPForResolver => 'ส่วนแบบสถิตสำหรับ IP';
+	@override String get dnsEnableStaticIPForResolverTips => 'ป้องกันเซิร์ฟเวอร์ DNS เองจากการปนเปื้อนในระหว่างการแก้ไข';
 	@override String get inboundDomainResolve => 'แก้ไขชื่อโดเมนขาเข้า';
 	@override String get privateDirect => 'การเชื่อมต่อเครือข่ายส่วนตัวโดยตรง';
 	@override String inboundDomainResolveTips({required Object p}) => 'ชื่อโดเมนบางชื่อที่ไม่มีกฎการเปลี่ยนเส้นทางที่กำหนดค่าไว้จำเป็นต้องแก้ไขก่อนจึงจะสามารถโจมตีกฎการเปลี่ยนเส้นทางที่ใช้ IP ได้ คุณสมบัตินี้ส่งผลกระทบต่อคำขอขาเข้าไปยังพอร์ตพร็อกซี [${p}]';
@@ -654,6 +657,7 @@ class _TranslationsMetaTh implements TranslationsMetaEn {
 	@override String get user => 'ผู้ใช้';
 	@override String get account => 'บัญชี';
 	@override String get password => 'รหัสผ่าน';
+	@override String get decryptPassword => 'รหัสผ่านถอดรหัส';
 	@override String get required => 'จำเป็น';
 	@override String get type => 'ประเภท';
 	@override String get path => 'เส้นทาง';
@@ -1071,6 +1075,8 @@ extension on TranslationsTh {
 			'SettingsScreen.dnsTypeResolverTips' => 'การแก้ไขชื่อโดเมนสำหรับ [${_root.SettingsScreen.dnsTypeResolver}]',
 			'SettingsScreen.dnsAutoSetServer' => 'ตั้งค่าเซิร์ฟเวอร์อัตโนมัติ',
 			'SettingsScreen.dnsResetServer' => 'รีเซ็ตเซิร์ฟเวอร์',
+			'SettingsScreen.dnsEnableStaticIPForResolver' => 'ส่วนแบบสถิตสำหรับ IP',
+			'SettingsScreen.dnsEnableStaticIPForResolverTips' => 'ป้องกันเซิร์ฟเวอร์ DNS เองจากการปนเปื้อนในระหว่างการแก้ไข',
 			'SettingsScreen.inboundDomainResolve' => 'แก้ไขชื่อโดเมนขาเข้า',
 			'SettingsScreen.privateDirect' => 'การเชื่อมต่อเครือข่ายส่วนตัวโดยตรง',
 			'SettingsScreen.inboundDomainResolveTips' => ({required Object p}) => 'ชื่อโดเมนบางชื่อที่ไม่มีกฎการเปลี่ยนเส้นทางที่กำหนดค่าไว้จำเป็นต้องแก้ไขก่อนจึงจะสามารถโจมตีกฎการเปลี่ยนเส้นทางที่ใช้ IP ได้ คุณสมบัตินี้ส่งผลกระทบต่อคำขอขาเข้าไปยังพอร์ตพร็อกซี [${p}]',
@@ -1270,6 +1276,7 @@ extension on TranslationsTh {
 			'meta.user' => 'ผู้ใช้',
 			'meta.account' => 'บัญชี',
 			'meta.password' => 'รหัสผ่าน',
+			'meta.decryptPassword' => 'รหัสผ่านถอดรหัส',
 			'meta.required' => 'จำเป็น',
 			'meta.type' => 'ประเภท',
 			'meta.path' => 'เส้นทาง',
@@ -1447,11 +1454,11 @@ extension on TranslationsTh {
 			'tls.insecure' => 'ข้ามการตรวจสอบใบรับรอง',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => 'เปิดใช้งาน TLS Fragment',
+			_ => null,
+		} ?? switch (path) {
 			'tls.fragmentSize' => 'ขนาด TLS Fragment',
 			'tls.fragmentSleep' => 'TLS Fragment Sleep',
 			'tls.mixedCaseSNIEnable' => 'เปิดใช้งาน TLS Mixed SNI',
-			_ => null,
-		} ?? switch (path) {
 			'tls.paddingEnable' => 'เปิดใช้งาน TLS Padding',
 			'tls.paddingSize' => 'ขนาด TLS Padding',
 			'outboundRuleMode.currentSelected' => 'เลือกปัจจุบัน',
@@ -1519,6 +1526,7 @@ extension on TranslationsTh {
 			'locales.vi' => 'Tiếng Việt',
 			'locales.tr' => 'Türkçe',
 			'locales.th' => 'ไทย',
+			'locales.pa' => 'ਪੰਜਾਬੀ',
 			_ => null,
 		};
 	}

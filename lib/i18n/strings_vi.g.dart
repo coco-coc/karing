@@ -124,6 +124,7 @@ class TranslationsVi with BaseTranslations<AppLocale, Translations> implements T
 		'vi': 'Tiếng Việt',
 		'tr': 'Türkçe',
 		'th': 'ไทย',
+		'pa': 'ਪੰਜਾਬੀ',
 	};
 }
 
@@ -411,6 +412,8 @@ class _TranslationsSettingsScreenVi implements TranslationsSettingsScreenEn {
 	@override String get dnsTypeResolverTips => 'Giải quyết tên miền cho [${_root.SettingsScreen.dnsTypeResolver}]';
 	@override String get dnsAutoSetServer => 'Tự động thiết lập máy chủ';
 	@override String get dnsResetServer => 'Đặt lại máy chủ';
+	@override String get dnsEnableStaticIPForResolver => 'Ưu tiên phân giải IP tĩnh';
+	@override String get dnsEnableStaticIPForResolverTips => 'Ngăn chặn hiệu quả máy chủ DNS bị ô nhiễm trong quá trình phân giải';
 	@override String get inboundDomainResolve => 'Giải quyết tên miền đến';
 	@override String get privateDirect => 'Kết nối trực tiếp mạng nội bộ';
 	@override String inboundDomainResolveTips({required Object p}) => 'Một số tên miền không được cấu hình quy tắc phân luồng cần được giải quyết trước khi có thể khớp với các quy tắc dựa trên IP; tính năng này ảnh hưởng đến các yêu cầu đến cổng proxy [${p}]';
@@ -654,6 +657,7 @@ class _TranslationsMetaVi implements TranslationsMetaEn {
 	@override String get user => 'Người dùng';
 	@override String get account => 'Tài khoản';
 	@override String get password => 'Mật khẩu';
+	@override String get decryptPassword => 'Mật khẩu giải mã';
 	@override String get required => 'Bắt buộc';
 	@override String get type => 'Loại';
 	@override String get path => 'Đường dẫn';
@@ -1071,6 +1075,8 @@ extension on TranslationsVi {
 			'SettingsScreen.dnsTypeResolverTips' => 'Giải quyết tên miền cho [${_root.SettingsScreen.dnsTypeResolver}]',
 			'SettingsScreen.dnsAutoSetServer' => 'Tự động thiết lập máy chủ',
 			'SettingsScreen.dnsResetServer' => 'Đặt lại máy chủ',
+			'SettingsScreen.dnsEnableStaticIPForResolver' => 'Ưu tiên phân giải IP tĩnh',
+			'SettingsScreen.dnsEnableStaticIPForResolverTips' => 'Ngăn chặn hiệu quả máy chủ DNS bị ô nhiễm trong quá trình phân giải',
 			'SettingsScreen.inboundDomainResolve' => 'Giải quyết tên miền đến',
 			'SettingsScreen.privateDirect' => 'Kết nối trực tiếp mạng nội bộ',
 			'SettingsScreen.inboundDomainResolveTips' => ({required Object p}) => 'Một số tên miền không được cấu hình quy tắc phân luồng cần được giải quyết trước khi có thể khớp với các quy tắc dựa trên IP; tính năng này ảnh hưởng đến các yêu cầu đến cổng proxy [${p}]',
@@ -1270,6 +1276,7 @@ extension on TranslationsVi {
 			'meta.user' => 'Người dùng',
 			'meta.account' => 'Tài khoản',
 			'meta.password' => 'Mật khẩu',
+			'meta.decryptPassword' => 'Mật khẩu giải mã',
 			'meta.required' => 'Bắt buộc',
 			'meta.type' => 'Loại',
 			'meta.path' => 'Đường dẫn',
@@ -1447,11 +1454,11 @@ extension on TranslationsVi {
 			'tls.insecure' => 'Bỏ qua xác minh chứng chỉ',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => 'Bật phân đoạn TLS',
+			_ => null,
+		} ?? switch (path) {
 			'tls.fragmentSize' => 'Kích thước phân đoạn TLS',
 			'tls.fragmentSleep' => 'Thời gian chờ phân đoạn TLS',
 			'tls.mixedCaseSNIEnable' => 'Bật SNI hỗn hợp TLS',
-			_ => null,
-		} ?? switch (path) {
 			'tls.paddingEnable' => 'Bật TLS Padding',
 			'tls.paddingSize' => 'Kích thước TLS Padding',
 			'outboundRuleMode.currentSelected' => 'Đã chọn hiện tại',
@@ -1519,6 +1526,7 @@ extension on TranslationsVi {
 			'locales.vi' => 'Tiếng Việt',
 			'locales.tr' => 'Türkçe',
 			'locales.th' => 'ไทย',
+			'locales.pa' => 'ਪੰਜਾਬੀ',
 			_ => null,
 		};
 	}

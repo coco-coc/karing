@@ -165,6 +165,8 @@
         "dnsTypeResolverTips": "Domenenavnoppløsning for [@:{SettingsScreen.dnsTypeResolver}]",
         "dnsAutoSetServer": "Sett opp server automatisk",
         "dnsResetServer": "Tilbakestill server",
+        "dnsEnableStaticIPForResolver": "Foretrekk statisk IP-oppløsning",
+        "dnsEnableStaticIPForResolverTips": "Effektivt forhindra at DNS-server selv blir forurenet under oppløsning",
         "inboundDomainResolve": "Løs inngående domenenavn",
         "privateDirect": "Direkte tilkobling til privat nettverk",
         "inboundDomainResolveTips": "Noen domenenavn som ikke er konfigurert med omledningsregler, må løses før de kan treffe de IP-baserte omledningsreglene; denne funksjonen påvirker inngående forespørsler til proxyporten [$p]",
@@ -376,6 +378,7 @@
         "user": "Bruker",
         "account": "Konto",
         "password": "Passord",
+        "decryptPassword": "Dekryptering passord",
         "required": "Påkrevd",
         "type": "Type",
         "path": "Bane",
@@ -640,6 +643,7 @@
         "el": "Ελληνικά",
         "vi": "Tiếng Việt",
         "tr": "Türkçe",
-        "th": "ไทย"
+        "th": "ไทย",
+        "pa": "ਪੰਜਾਬੀ"
     }
 }

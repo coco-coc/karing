@@ -124,6 +124,7 @@ class TranslationsNl with BaseTranslations<AppLocale, Translations> implements T
 		'vi': 'Tiếng Việt',
 		'tr': 'Türkçe',
 		'th': 'ไทย',
+		'pa': 'ਪੰਜਾਬੀ',
 	};
 }
 
@@ -411,6 +412,8 @@ class _TranslationsSettingsScreenNl implements TranslationsSettingsScreenEn {
 	@override String get dnsTypeResolverTips => 'Domeinnaamoplossing voor [${_root.SettingsScreen.dnsTypeResolver}]';
 	@override String get dnsAutoSetServer => 'Server automatisch instellen';
 	@override String get dnsResetServer => 'Server resetten';
+	@override String get dnsEnableStaticIPForResolver => 'Statische IP-resolutie voorkeur';
+	@override String get dnsEnableStaticIPForResolverTips => 'Voorkomen dat de DNS-server zelf tijdens het omzetten wordt vervuild';
 	@override String get inboundDomainResolve => 'Inkomende domeinnamen oplossen';
 	@override String get privateDirect => 'Directe verbinding met privénetwerk';
 	@override String inboundDomainResolveTips({required Object p}) => 'Sommige domeinnamen die niet zijn geconfigureerd met omleidingsregels, moeten worden opgelost voordat ze de op IP gebaseerde omleidingsregels kunnen raken; deze functie is van invloed op inkomende verzoeken naar de proxypoort [${p}]';
@@ -654,6 +657,7 @@ class _TranslationsMetaNl implements TranslationsMetaEn {
 	@override String get user => 'Gebruiker';
 	@override String get account => 'Account';
 	@override String get password => 'Wachtwoord';
+	@override String get decryptPassword => 'Ontcijferingswachtwoord';
 	@override String get required => 'Vereist';
 	@override String get type => 'Type';
 	@override String get path => 'Pad';
@@ -1071,6 +1075,8 @@ extension on TranslationsNl {
 			'SettingsScreen.dnsTypeResolverTips' => 'Domeinnaamoplossing voor [${_root.SettingsScreen.dnsTypeResolver}]',
 			'SettingsScreen.dnsAutoSetServer' => 'Server automatisch instellen',
 			'SettingsScreen.dnsResetServer' => 'Server resetten',
+			'SettingsScreen.dnsEnableStaticIPForResolver' => 'Statische IP-resolutie voorkeur',
+			'SettingsScreen.dnsEnableStaticIPForResolverTips' => 'Voorkomen dat de DNS-server zelf tijdens het omzetten wordt vervuild',
 			'SettingsScreen.inboundDomainResolve' => 'Inkomende domeinnamen oplossen',
 			'SettingsScreen.privateDirect' => 'Directe verbinding met privénetwerk',
 			'SettingsScreen.inboundDomainResolveTips' => ({required Object p}) => 'Sommige domeinnamen die niet zijn geconfigureerd met omleidingsregels, moeten worden opgelost voordat ze de op IP gebaseerde omleidingsregels kunnen raken; deze functie is van invloed op inkomende verzoeken naar de proxypoort [${p}]',
@@ -1270,6 +1276,7 @@ extension on TranslationsNl {
 			'meta.user' => 'Gebruiker',
 			'meta.account' => 'Account',
 			'meta.password' => 'Wachtwoord',
+			'meta.decryptPassword' => 'Ontcijferingswachtwoord',
 			'meta.required' => 'Vereist',
 			'meta.type' => 'Type',
 			'meta.path' => 'Pad',
@@ -1447,11 +1454,11 @@ extension on TranslationsNl {
 			'tls.insecure' => 'Certificaatverificatie overslaan',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => 'TLS Fragment inschakelen',
+			_ => null,
+		} ?? switch (path) {
 			'tls.fragmentSize' => 'TLS Fragment grootte',
 			'tls.fragmentSleep' => 'TLS Fragment slaap',
 			'tls.mixedCaseSNIEnable' => 'TLS Mixed SNI inschakelen',
-			_ => null,
-		} ?? switch (path) {
 			'tls.paddingEnable' => 'TLS Padding inschakelen',
 			'tls.paddingSize' => 'TLS Padding grootte',
 			'outboundRuleMode.currentSelected' => 'Huidige geselecteerde',
@@ -1519,6 +1526,7 @@ extension on TranslationsNl {
 			'locales.vi' => 'Tiếng Việt',
 			'locales.tr' => 'Türkçe',
 			'locales.th' => 'ไทย',
+			'locales.pa' => 'ਪੰਜਾਬੀ',
 			_ => null,
 		};
 	}

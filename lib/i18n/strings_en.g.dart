@@ -189,6 +189,7 @@ class Translations with BaseTranslations<AppLocale, Translations> {
 		'vi': 'Tiếng Việt',
 		'tr': 'Türkçe',
 		'th': 'ไทย',
+		'pa': 'ਪੰਜਾਬੀ',
 	};
 }
 
@@ -742,6 +743,12 @@ class TranslationsSettingsScreenEn {
 
 	/// en: 'Reset Server'
 	String get dnsResetServer => 'Reset Server';
+
+	/// en: 'Prefer Static IP Resolution'
+	String get dnsEnableStaticIPForResolver => 'Prefer Static IP Resolution';
+
+	/// en: 'Effectively prevent DNS server itself from being polluted during resolution'
+	String get dnsEnableStaticIPForResolverTips => 'Effectively prevent DNS server itself from being polluted during resolution';
 
 	/// en: 'Resolve Inbound Domain names'
 	String get inboundDomainResolve => 'Resolve Inbound Domain names';
@@ -1379,6 +1386,9 @@ class TranslationsMetaEn {
 
 	/// en: 'Password'
 	String get password => 'Password';
+
+	/// en: 'Decrypt Password'
+	String get decryptPassword => 'Decrypt Password';
 
 	/// en: 'Required'
 	String get required => 'Required';
@@ -2182,6 +2192,8 @@ extension on Translations {
 			'SettingsScreen.dnsTypeResolverTips' => 'Domain name resolution for [${_root.SettingsScreen.dnsTypeResolver}]',
 			'SettingsScreen.dnsAutoSetServer' => 'Auto Setup Server',
 			'SettingsScreen.dnsResetServer' => 'Reset Server',
+			'SettingsScreen.dnsEnableStaticIPForResolver' => 'Prefer Static IP Resolution',
+			'SettingsScreen.dnsEnableStaticIPForResolverTips' => 'Effectively prevent DNS server itself from being polluted during resolution',
 			'SettingsScreen.inboundDomainResolve' => 'Resolve Inbound Domain names',
 			'SettingsScreen.privateDirect' => 'Private Network Direct connection',
 			'SettingsScreen.inboundDomainResolveTips' => ({required Object p}) => 'Some domain names that are not configured with diversion rules need to be resolved before they can hit the IP-based diversion rules; this feature affects inbound requests to the proxy port [${p}]',
@@ -2381,6 +2393,7 @@ extension on Translations {
 			'meta.user' => 'User',
 			'meta.account' => 'Account',
 			'meta.password' => 'Password',
+			'meta.decryptPassword' => 'Decrypt Password',
 			'meta.required' => 'Required',
 			'meta.type' => 'Type',
 			'meta.path' => 'Path',
@@ -2558,11 +2571,11 @@ extension on Translations {
 			'tls.insecure' => 'Skip Certificate Verification',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => 'Enable TLS Fragment',
+			_ => null,
+		} ?? switch (path) {
 			'tls.fragmentSize' => 'TLS Fragment Size',
 			'tls.fragmentSleep' => 'TLS Fragment Sleep',
 			'tls.mixedCaseSNIEnable' => 'Enable TLS Mixed SNI',
-			_ => null,
-		} ?? switch (path) {
 			'tls.paddingEnable' => 'Enable TLS Padding',
 			'tls.paddingSize' => 'TLS Padding Size',
 			'outboundRuleMode.currentSelected' => 'Current Selected',
@@ -2630,6 +2643,7 @@ extension on Translations {
 			'locales.vi' => 'Tiếng Việt',
 			'locales.tr' => 'Türkçe',
 			'locales.th' => 'ไทย',
+			'locales.pa' => 'ਪੰਜਾਬੀ',
 			_ => null,
 		};
 	}

@@ -124,6 +124,7 @@ class TranslationsUk with BaseTranslations<AppLocale, Translations> implements T
 		'vi': 'Tiếng Việt',
 		'tr': 'Türkçe',
 		'th': 'ไทย',
+		'pa': 'ਪੰਜਾਬੀ',
 	};
 }
 
@@ -411,6 +412,8 @@ class _TranslationsSettingsScreenUk implements TranslationsSettingsScreenEn {
 	@override String get dnsTypeResolverTips => 'Вирішення доменного імені для [${_root.SettingsScreen.dnsTypeResolver}]';
 	@override String get dnsAutoSetServer => 'Автоматичне налаштування сервера';
 	@override String get dnsResetServer => 'Скинути сервер';
+	@override String get dnsEnableStaticIPForResolver => 'Надання переваги статичному розпізнаванню IP';
+	@override String get dnsEnableStaticIPForResolverTips => 'Ефективно запобігти забрудненню самого DNS-сервера під час розпізнавання';
 	@override String get inboundDomainResolve => 'Вирішувати вхідні доменні імена';
 	@override String get privateDirect => 'Пряме підключення до приватної мережі';
 	@override String inboundDomainResolveTips({required Object p}) => 'Деякі доменні імена, для яких не налаштовані правила відхилення, потрібно вирішити, перш ніж вони зможуть потрапити під правила відхилення на основі IP; ця функція впливає на вхідні запити до проксі-порту [${p}]';
@@ -654,6 +657,7 @@ class _TranslationsMetaUk implements TranslationsMetaEn {
 	@override String get user => 'Користувач';
 	@override String get account => 'Обліковий запис';
 	@override String get password => 'Пароль';
+	@override String get decryptPassword => 'Пароль розшифровки';
 	@override String get required => 'Обов\'язково';
 	@override String get type => 'Тип';
 	@override String get path => 'Шлях';
@@ -1071,6 +1075,8 @@ extension on TranslationsUk {
 			'SettingsScreen.dnsTypeResolverTips' => 'Вирішення доменного імені для [${_root.SettingsScreen.dnsTypeResolver}]',
 			'SettingsScreen.dnsAutoSetServer' => 'Автоматичне налаштування сервера',
 			'SettingsScreen.dnsResetServer' => 'Скинути сервер',
+			'SettingsScreen.dnsEnableStaticIPForResolver' => 'Надання переваги статичному розпізнаванню IP',
+			'SettingsScreen.dnsEnableStaticIPForResolverTips' => 'Ефективно запобігти забрудненню самого DNS-сервера під час розпізнавання',
 			'SettingsScreen.inboundDomainResolve' => 'Вирішувати вхідні доменні імена',
 			'SettingsScreen.privateDirect' => 'Пряме підключення до приватної мережі',
 			'SettingsScreen.inboundDomainResolveTips' => ({required Object p}) => 'Деякі доменні імена, для яких не налаштовані правила відхилення, потрібно вирішити, перш ніж вони зможуть потрапити під правила відхилення на основі IP; ця функція впливає на вхідні запити до проксі-порту [${p}]',
@@ -1270,6 +1276,7 @@ extension on TranslationsUk {
 			'meta.user' => 'Користувач',
 			'meta.account' => 'Обліковий запис',
 			'meta.password' => 'Пароль',
+			'meta.decryptPassword' => 'Пароль розшифровки',
 			'meta.required' => 'Обов\'язково',
 			'meta.type' => 'Тип',
 			'meta.path' => 'Шлях',
@@ -1447,11 +1454,11 @@ extension on TranslationsUk {
 			'tls.insecure' => 'Пропустити перевірку сертифіката',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => 'Увімкнути фрагментацію TLS',
+			_ => null,
+		} ?? switch (path) {
 			'tls.fragmentSize' => 'Розмір фрагмента TLS',
 			'tls.fragmentSleep' => 'Пауза фрагментації TLS',
 			'tls.mixedCaseSNIEnable' => 'Увімкнути змішаний регістр SNI TLS',
-			_ => null,
-		} ?? switch (path) {
 			'tls.paddingEnable' => 'Увімкнути заповнення (Padding) TLS',
 			'tls.paddingSize' => 'Розмір заповнення (Padding) TLS',
 			'outboundRuleMode.currentSelected' => 'Поточний вибраний',
@@ -1519,6 +1526,7 @@ extension on TranslationsUk {
 			'locales.vi' => 'Tiếng Việt',
 			'locales.tr' => 'Türkçe',
 			'locales.th' => 'ไทย',
+			'locales.pa' => 'ਪੰਜਾਬੀ',
 			_ => null,
 		};
 	}

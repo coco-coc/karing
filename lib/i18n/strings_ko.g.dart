@@ -124,6 +124,7 @@ class TranslationsKo with BaseTranslations<AppLocale, Translations> implements T
 		'vi': 'Tiếng Việt',
 		'tr': 'Türkçe',
 		'th': 'ไทย',
+		'pa': 'ਪੰਜਾਬੀ',
 	};
 }
 
@@ -411,6 +412,8 @@ class _TranslationsSettingsScreenKo implements TranslationsSettingsScreenEn {
 	@override String get dnsTypeResolverTips => '[${_root.SettingsScreen.dnsTypeResolver}]에 대한 도메인 이름 확인';
 	@override String get dnsAutoSetServer => '자동 서버 설정';
 	@override String get dnsResetServer => '서버 리셋';
+	@override String get dnsEnableStaticIPForResolver => '정적 IP 확인 우선';
+	@override String get dnsEnableStaticIPForResolverTips => '확인 중에 DNS 서버 자체가 오염되는 것을 효과적으로 방지';
 	@override String get inboundDomainResolve => '수신 도메인 이름 확인';
 	@override String get privateDirect => '개인 네트워크 직접 연결';
 	@override String inboundDomainResolveTips({required Object p}) => '분류 규칙이 구성되지 않은 일부 도메인 이름은 IP 기반 분류 규칙과 일치시키기 전에 확인해야 합니다. 이 기능은 프록시 포트 [${p}]로의 수신 요청에 영향을 미칩니다';
@@ -654,6 +657,7 @@ class _TranslationsMetaKo implements TranslationsMetaEn {
 	@override String get user => '사용자';
 	@override String get account => '계정';
 	@override String get password => '비밀번호';
+	@override String get decryptPassword => '복호화 비밀번호';
 	@override String get required => '필수';
 	@override String get type => '유형';
 	@override String get path => '경로';
@@ -1071,6 +1075,8 @@ extension on TranslationsKo {
 			'SettingsScreen.dnsTypeResolverTips' => '[${_root.SettingsScreen.dnsTypeResolver}]에 대한 도메인 이름 확인',
 			'SettingsScreen.dnsAutoSetServer' => '자동 서버 설정',
 			'SettingsScreen.dnsResetServer' => '서버 리셋',
+			'SettingsScreen.dnsEnableStaticIPForResolver' => '정적 IP 확인 우선',
+			'SettingsScreen.dnsEnableStaticIPForResolverTips' => '확인 중에 DNS 서버 자체가 오염되는 것을 효과적으로 방지',
 			'SettingsScreen.inboundDomainResolve' => '수신 도메인 이름 확인',
 			'SettingsScreen.privateDirect' => '개인 네트워크 직접 연결',
 			'SettingsScreen.inboundDomainResolveTips' => ({required Object p}) => '분류 규칙이 구성되지 않은 일부 도메인 이름은 IP 기반 분류 규칙과 일치시키기 전에 확인해야 합니다. 이 기능은 프록시 포트 [${p}]로의 수신 요청에 영향을 미칩니다',
@@ -1270,6 +1276,7 @@ extension on TranslationsKo {
 			'meta.user' => '사용자',
 			'meta.account' => '계정',
 			'meta.password' => '비밀번호',
+			'meta.decryptPassword' => '복호화 비밀번호',
 			'meta.required' => '필수',
 			'meta.type' => '유형',
 			'meta.path' => '경로',
@@ -1447,11 +1454,11 @@ extension on TranslationsKo {
 			'tls.insecure' => '인증서 확인 건너뛰기',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => 'TLS 조각화 활성화',
+			_ => null,
+		} ?? switch (path) {
 			'tls.fragmentSize' => 'TLS 조각 크기',
 			'tls.fragmentSleep' => 'TLS 조각 대기 시간',
 			'tls.mixedCaseSNIEnable' => 'TLS 혼합 케이스 SNI 활성화',
-			_ => null,
-		} ?? switch (path) {
 			'tls.paddingEnable' => 'TLS 패딩 활성화',
 			'tls.paddingSize' => 'TLS 패딩 크기',
 			'outboundRuleMode.currentSelected' => '현재 선택됨',
@@ -1519,6 +1526,7 @@ extension on TranslationsKo {
 			'locales.vi' => 'Tiếng Việt',
 			'locales.tr' => 'Türkçe',
 			'locales.th' => 'ไทย',
+			'locales.pa' => 'ਪੰਜਾਬੀ',
 			_ => null,
 		};
 	}

@@ -124,6 +124,7 @@ class TranslationsIt with BaseTranslations<AppLocale, Translations> implements T
 		'vi': 'Tiếng Việt',
 		'tr': 'Türkçe',
 		'th': 'ไทย',
+		'pa': 'ਪੰਜਾਬੀ',
 	};
 }
 
@@ -411,6 +412,8 @@ class _TranslationsSettingsScreenIt implements TranslationsSettingsScreenEn {
 	@override String get dnsTypeResolverTips => 'Risoluzione del nome di dominio per [${_root.SettingsScreen.dnsTypeResolver}]';
 	@override String get dnsAutoSetServer => 'Configurazione Automatica Server';
 	@override String get dnsResetServer => 'Ripristina Server';
+	@override String get dnsEnableStaticIPForResolver => 'Preferisci Risoluzione IP Statica';
+	@override String get dnsEnableStaticIPForResolverTips => 'Previeni efficacemente che il server DNS stesso si inquini durante la risoluzione';
 	@override String get inboundDomainResolve => 'Risolvi nomi di Dominio in entrata';
 	@override String get privateDirect => 'Connessione Diretta Rete Privata';
 	@override String inboundDomainResolveTips({required Object p}) => 'Alcuni nomi di dominio che non sono configurati con regole di diversione devono essere risolti prima di poter colpire le regole di diversione basate su IP; questa funzione influisce sulle richieste in entrata alla porta proxy [${p}]';
@@ -654,6 +657,7 @@ class _TranslationsMetaIt implements TranslationsMetaEn {
 	@override String get user => 'Utente';
 	@override String get account => 'Account';
 	@override String get password => 'Password';
+	@override String get decryptPassword => 'Password di decrittazione';
 	@override String get required => 'Richiesto';
 	@override String get type => 'Tipo';
 	@override String get path => 'Percorso';
@@ -1071,6 +1075,8 @@ extension on TranslationsIt {
 			'SettingsScreen.dnsTypeResolverTips' => 'Risoluzione del nome di dominio per [${_root.SettingsScreen.dnsTypeResolver}]',
 			'SettingsScreen.dnsAutoSetServer' => 'Configurazione Automatica Server',
 			'SettingsScreen.dnsResetServer' => 'Ripristina Server',
+			'SettingsScreen.dnsEnableStaticIPForResolver' => 'Preferisci Risoluzione IP Statica',
+			'SettingsScreen.dnsEnableStaticIPForResolverTips' => 'Previeni efficacemente che il server DNS stesso si inquini durante la risoluzione',
 			'SettingsScreen.inboundDomainResolve' => 'Risolvi nomi di Dominio in entrata',
 			'SettingsScreen.privateDirect' => 'Connessione Diretta Rete Privata',
 			'SettingsScreen.inboundDomainResolveTips' => ({required Object p}) => 'Alcuni nomi di dominio che non sono configurati con regole di diversione devono essere risolti prima di poter colpire le regole di diversione basate su IP; questa funzione influisce sulle richieste in entrata alla porta proxy [${p}]',
@@ -1270,6 +1276,7 @@ extension on TranslationsIt {
 			'meta.user' => 'Utente',
 			'meta.account' => 'Account',
 			'meta.password' => 'Password',
+			'meta.decryptPassword' => 'Password di decrittazione',
 			'meta.required' => 'Richiesto',
 			'meta.type' => 'Tipo',
 			'meta.path' => 'Percorso',
@@ -1447,11 +1454,11 @@ extension on TranslationsIt {
 			'tls.insecure' => 'Salta Verifica Certificato',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => 'Abilita Frammento TLS',
+			_ => null,
+		} ?? switch (path) {
 			'tls.fragmentSize' => 'Dimensione Frammento TLS',
 			'tls.fragmentSleep' => 'Pausa Frammento TLS',
 			'tls.mixedCaseSNIEnable' => 'Abilita SNI TLS Case Misto',
-			_ => null,
-		} ?? switch (path) {
 			'tls.paddingEnable' => 'Abilita Padding TLS',
 			'tls.paddingSize' => 'Dimensione Padding TLS',
 			'outboundRuleMode.currentSelected' => 'Attuale Selezionato',
@@ -1519,6 +1526,7 @@ extension on TranslationsIt {
 			'locales.vi' => 'Tiếng Việt',
 			'locales.tr' => 'Türkçe',
 			'locales.th' => 'ไทย',
+			'locales.pa' => 'ਪੰਜਾਬੀ',
 			_ => null,
 		};
 	}

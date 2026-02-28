@@ -124,6 +124,7 @@ class TranslationsRu with BaseTranslations<AppLocale, Translations> implements T
 		'vi': 'Tiếng Việt',
 		'tr': 'Türkçe',
 		'th': 'ไทย',
+		'pa': 'ਪੰਜਾਬੀ',
 	};
 }
 
@@ -411,6 +412,8 @@ class _TranslationsSettingsScreenRu implements TranslationsSettingsScreenEn {
 	@override String get dnsTypeResolverTips => 'Разрешение доменных имен для DNS-серверов';
 	@override String get dnsAutoSetServer => 'Автоматически настроить сервер';
 	@override String get dnsResetServer => 'Сбросить сервер';
+	@override String get dnsEnableStaticIPForResolver => 'Предпочитать разрешение статического IP';
+	@override String get dnsEnableStaticIPForResolverTips => 'Эффективно предотвратить загрязнение самого DNS-сервера во время разрешения';
 	@override String get inboundDomainResolve => 'Разрешение входящих доменных имен';
 	@override String get privateDirect => 'Прямое подключение к частной сети';
 	@override String inboundDomainResolveTips({required Object p}) => 'Некоторые доменные имена без настроенных правил переадресации необходимо разрешить, прежде чем они смогут соответствовать правилам переадресации на основе IP; эта функция влияет на входящие запросы к порту прокси [${p}]';
@@ -654,6 +657,7 @@ class _TranslationsMetaRu implements TranslationsMetaEn {
 	@override String get user => 'Пользователь';
 	@override String get account => 'Аккаунт';
 	@override String get password => 'Пароль';
+	@override String get decryptPassword => 'Пароль расшифровки';
 	@override String get required => 'Необходимо';
 	@override String get type => 'тип';
 	@override String get path => 'путь';
@@ -1071,6 +1075,8 @@ extension on TranslationsRu {
 			'SettingsScreen.dnsTypeResolverTips' => 'Разрешение доменных имен для DNS-серверов',
 			'SettingsScreen.dnsAutoSetServer' => 'Автоматически настроить сервер',
 			'SettingsScreen.dnsResetServer' => 'Сбросить сервер',
+			'SettingsScreen.dnsEnableStaticIPForResolver' => 'Предпочитать разрешение статического IP',
+			'SettingsScreen.dnsEnableStaticIPForResolverTips' => 'Эффективно предотвратить загрязнение самого DNS-сервера во время разрешения',
 			'SettingsScreen.inboundDomainResolve' => 'Разрешение входящих доменных имен',
 			'SettingsScreen.privateDirect' => 'Прямое подключение к частной сети',
 			'SettingsScreen.inboundDomainResolveTips' => ({required Object p}) => 'Некоторые доменные имена без настроенных правил переадресации необходимо разрешить, прежде чем они смогут соответствовать правилам переадресации на основе IP; эта функция влияет на входящие запросы к порту прокси [${p}]',
@@ -1270,6 +1276,7 @@ extension on TranslationsRu {
 			'meta.user' => 'Пользователь',
 			'meta.account' => 'Аккаунт',
 			'meta.password' => 'Пароль',
+			'meta.decryptPassword' => 'Пароль расшифровки',
 			'meta.required' => 'Необходимо',
 			'meta.type' => 'тип',
 			'meta.path' => 'путь',
@@ -1447,11 +1454,11 @@ extension on TranslationsRu {
 			'tls.insecure' => 'Пропустить проверку сертификата',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => 'Включить фрагментацию TLS',
+			_ => null,
+		} ?? switch (path) {
 			'tls.fragmentSize' => 'Размер фрагмента TLS',
 			'tls.fragmentSleep' => 'Длина фрагмента паузы TLS',
 			'tls.mixedCaseSNIEnable' => 'Включить гибридный SNI TLS',
-			_ => null,
-		} ?? switch (path) {
 			'tls.paddingEnable' => 'Включить заполнение TLS',
 			'tls.paddingSize' => 'Размер заполнения TLS',
 			'outboundRuleMode.currentSelected' => 'Текущий сервер',
@@ -1519,6 +1526,7 @@ extension on TranslationsRu {
 			'locales.vi' => 'Tiếng Việt',
 			'locales.tr' => 'Türkçe',
 			'locales.th' => 'ไทย',
+			'locales.pa' => 'ਪੰਜਾਬੀ',
 			_ => null,
 		};
 	}

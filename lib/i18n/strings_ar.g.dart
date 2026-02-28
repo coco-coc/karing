@@ -124,6 +124,7 @@ class TranslationsAr with BaseTranslations<AppLocale, Translations> implements T
 		'vi': 'Tiếng Việt',
 		'tr': 'Türkçe',
 		'th': 'ไทย',
+		'pa': 'ਪੰਜਾਬੀ',
 	};
 }
 
@@ -411,6 +412,8 @@ class _TranslationsSettingsScreenAr implements TranslationsSettingsScreenEn {
 	@override String get dnsTypeResolverTips => 'دقة اسم المجال لخادم DNS الآخر';
 	@override String get dnsAutoSetServer => 'إعداد الخادم تلقائيا';
 	@override String get dnsResetServer => 'إعادة تعيين الخادم';
+	@override String get dnsEnableStaticIPForResolver => 'تفضيل حل IP الثابت';
+	@override String get dnsEnableStaticIPForResolverTips => 'منع خادم DNS نفسه من التلوث بشكل فعال أثناء الدقة';
 	@override String get inboundDomainResolve => 'حل أسماء النطاقات الواردة';
 	@override String get privateDirect => 'اتصال مباشر بالشبكة الخاصة';
 	@override String inboundDomainResolveTips({required Object p}) => 'تحتاج بعض أسماء النطاقات التي لا تحتوي على قواعد تحويل تم تكوينها إلى حلها قبل أن تتمكن من الوصول إلى قواعد التحويل المستندة إلى IP؛ وتؤثر هذه الميزة على الطلبات الواردة إلى منفذ الوكيل [${p}]';
@@ -654,6 +657,7 @@ class _TranslationsMetaAr implements TranslationsMetaEn {
 	@override String get user => 'مستخدم';
 	@override String get account => 'حساب';
 	@override String get password => 'كلمة المرور';
+	@override String get decryptPassword => 'فك تشفير كلمة المرور';
 	@override String get required => 'مطلوب';
 	@override String get type => 'يكتب';
 	@override String get path => 'طريق';
@@ -1071,6 +1075,8 @@ extension on TranslationsAr {
 			'SettingsScreen.dnsTypeResolverTips' => 'دقة اسم المجال لخادم DNS الآخر',
 			'SettingsScreen.dnsAutoSetServer' => 'إعداد الخادم تلقائيا',
 			'SettingsScreen.dnsResetServer' => 'إعادة تعيين الخادم',
+			'SettingsScreen.dnsEnableStaticIPForResolver' => 'تفضيل حل IP الثابت',
+			'SettingsScreen.dnsEnableStaticIPForResolverTips' => 'منع خادم DNS نفسه من التلوث بشكل فعال أثناء الدقة',
 			'SettingsScreen.inboundDomainResolve' => 'حل أسماء النطاقات الواردة',
 			'SettingsScreen.privateDirect' => 'اتصال مباشر بالشبكة الخاصة',
 			'SettingsScreen.inboundDomainResolveTips' => ({required Object p}) => 'تحتاج بعض أسماء النطاقات التي لا تحتوي على قواعد تحويل تم تكوينها إلى حلها قبل أن تتمكن من الوصول إلى قواعد التحويل المستندة إلى IP؛ وتؤثر هذه الميزة على الطلبات الواردة إلى منفذ الوكيل [${p}]',
@@ -1270,6 +1276,7 @@ extension on TranslationsAr {
 			'meta.user' => 'مستخدم',
 			'meta.account' => 'حساب',
 			'meta.password' => 'كلمة المرور',
+			'meta.decryptPassword' => 'فك تشفير كلمة المرور',
 			'meta.required' => 'مطلوب',
 			'meta.type' => 'يكتب',
 			'meta.path' => 'طريق',
@@ -1447,11 +1454,11 @@ extension on TranslationsAr {
 			'tls.insecure' => 'تخطي التحقق من الشهادة',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => 'تمكين تجزئة TLS',
+			_ => null,
+		} ?? switch (path) {
 			'tls.fragmentSize' => 'حجم شريحة TLS',
 			'tls.fragmentSleep' => 'TLS النوم المجزأ',
 			'tls.mixedCaseSNIEnable' => 'تمكين TLS الهجين SNI',
-			_ => null,
-		} ?? switch (path) {
 			'tls.paddingEnable' => 'تمكين الحشو TLS',
 			'tls.paddingSize' => 'حجم الحشو TLS',
 			'outboundRuleMode.currentSelected' => 'المحدد الحالي',
@@ -1519,6 +1526,7 @@ extension on TranslationsAr {
 			'locales.vi' => 'Tiếng Việt',
 			'locales.tr' => 'Türkçe',
 			'locales.th' => 'ไทย',
+			'locales.pa' => 'ਪੰਜਾਬੀ',
 			_ => null,
 		};
 	}
