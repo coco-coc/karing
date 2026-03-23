@@ -3,15 +3,17 @@
 import 'dart:async';
 import 'dart:io';
 import 'dart:ui';
-import 'package:flutter/rendering.dart';
+
 import 'package:karing/app/local_services/vpn_service.dart';
 import 'package:karing/app/utils/device_utils.dart';
 import 'package:karing/app/utils/http_overrides_utils.dart';
+import 'package:karing/app/utils/move_to_background_utils.dart';
 import 'package:karing/app/utils/vpn_action_handler.dart';
 import 'package:karing/screens/home_screen.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:fast_cached_network_image/fast_cached_network_image.dart';
 import 'package:flutter_inapp_notifications/flutter_inapp_notifications.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:karing/app/utils/app_lifecycle_state_notify.dart';
@@ -38,7 +40,6 @@ import 'package:karing/screens/launch_failed_screen.dart';
 import 'package:karing/screens/theme_data_dark.dart';
 import 'package:karing/screens/themes.dart';
 import 'package:karing/screens/widgets/routes.dart';
-import 'package:move_to_background/move_to_background.dart';
 import 'package:path/path.dart' as path;
 import 'package:provider/provider.dart';
 import 'package:tray_manager/tray_manager.dart';
@@ -151,6 +152,7 @@ Future<void> run(List<String> args) async {
         }
       }
     } while (false);
+
     if (PlatformUtils.isPC()) {
       await windowManager.ensureInitialized();
       const inProduction = bool.fromEnvironment("dart.vm.product");
@@ -208,6 +210,11 @@ Future<void> run(List<String> args) async {
       err,
       stacktrace,
     );
+  }
+  try {
+    await FastCachedImageConfig.init();
+  } catch (err, stacktrace) {
+    Log.w("FastCachedImageConfig.init() exception: ${err.toString()}");
   }
   if (Platform.isAndroid) {
     SystemUiOverlayStyle systemUiOverlayStyle = const SystemUiOverlayStyle(
@@ -351,7 +358,7 @@ class MyAppState extends State<MyApp>
                 canPop: false,
                 onPopInvokedWithResult: (didPop, result) {
                   if (Platform.isAndroid || Platform.isIOS) {
-                    MoveToBackground.moveTaskToBack();
+                    MoveToBackgroundUtils.moveToBackground();
                   }
                 },
                 child: startFailedReason != null
