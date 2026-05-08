@@ -587,6 +587,7 @@ class _TranslationsMetaDa implements TranslationsMetaEn {
 	@override String addFailed({required Object p}) => 'Kunne ikke tilføje:${p}';
 	@override String get remove => 'Fjern';
 	@override String get removeConfirm => 'Er du sikker på, at du vil slette?';
+	@override String get removed => 'Slettet';
 	@override String get edit => 'Rediger';
 	@override String get view => 'Vis';
 	@override String get more => 'Mere';
@@ -1208,6 +1209,7 @@ extension on TranslationsDa {
 			'meta.addFailed' => ({required Object p}) => 'Kunne ikke tilføje:${p}',
 			'meta.remove' => 'Fjern',
 			'meta.removeConfirm' => 'Er du sikker på, at du vil slette?',
+			'meta.removed' => 'Slettet',
 			'meta.edit' => 'Rediger',
 			'meta.view' => 'Vis',
 			'meta.more' => 'Mere',
@@ -1456,9 +1458,9 @@ extension on TranslationsDa {
 			'permission.appQuery' => 'Hent app-liste',
 			'permission.request' => ({required Object p}) => 'Slå tilladelse [${p}] til',
 			'permission.requestNeed' => ({required Object p}) => 'Slå venligst tilladelse [${p}] til',
-			'tls.insecure' => 'Spring certifikatverificering over',
 			_ => null,
 		} ?? switch (path) {
+			'tls.insecure' => 'Spring certifikatverificering over',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => 'Aktiver TLS-fragment',
 			'tls.fragmentSize' => 'TLS-fragmentstørrelse',

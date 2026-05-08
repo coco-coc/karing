@@ -307,6 +307,7 @@
         "addFailed": "Mislyktes i å legge til:$p",
         "remove": "Fjern",
         "removeConfirm": "Er du sikker på at du vil slette?",
+        "removed": "Slettet",
         "edit": "Rediger",
         "view": "Vis",
         "more": "Mer",

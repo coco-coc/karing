@@ -307,6 +307,7 @@
         "addFailed": "Error al agregar: $p",
         "remove": "Eliminar",
         "removeConfirm": "¿Está seguro de que desea eliminar?",
+        "removed": "Eliminado",
         "edit": "Editar",
         "view": "Ver",
         "more": "Más",

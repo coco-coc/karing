@@ -587,6 +587,7 @@ class _TranslationsMetaVi implements TranslationsMetaEn {
 	@override String addFailed({required Object p}) => 'Thêm thất bại: ${p}';
 	@override String get remove => 'Xóa';
 	@override String get removeConfirm => 'Bạn có chắc chắn muốn xóa không?';
+	@override String get removed => 'Đã xóa';
 	@override String get edit => 'Sửa';
 	@override String get view => 'Xem';
 	@override String get more => 'Thêm';
@@ -1208,6 +1209,7 @@ extension on TranslationsVi {
 			'meta.addFailed' => ({required Object p}) => 'Thêm thất bại: ${p}',
 			'meta.remove' => 'Xóa',
 			'meta.removeConfirm' => 'Bạn có chắc chắn muốn xóa không?',
+			'meta.removed' => 'Đã xóa',
 			'meta.edit' => 'Sửa',
 			'meta.view' => 'Xem',
 			'meta.more' => 'Thêm',
@@ -1456,9 +1458,9 @@ extension on TranslationsVi {
 			'permission.appQuery' => 'Lấy danh sách ứng dụng',
 			'permission.request' => ({required Object p}) => 'Bật quyền [${p}]',
 			'permission.requestNeed' => ({required Object p}) => 'Vui lòng bật quyền [${p}]',
-			'tls.insecure' => 'Bỏ qua xác minh chứng chỉ',
 			_ => null,
 		} ?? switch (path) {
+			'tls.insecure' => 'Bỏ qua xác minh chứng chỉ',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => 'Bật phân đoạn TLS',
 			'tls.fragmentSize' => 'Kích thước phân đoạn TLS',

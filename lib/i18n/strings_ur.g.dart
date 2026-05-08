@@ -587,6 +587,7 @@ class _TranslationsMetaUr implements TranslationsMetaEn {
 	@override String addFailed({required Object p}) => 'شامل کرنے میں ناکامی:${p}';
 	@override String get remove => 'ہٹائیں';
 	@override String get removeConfirm => 'کیا آپ واقعی حذف کرنا چاہتے ہیں؟';
+	@override String get removed => 'حذف کر دیا گیا';
 	@override String get edit => 'ترمیم کریں';
 	@override String get view => 'دیکھیں';
 	@override String get more => 'مزید';
@@ -1208,6 +1209,7 @@ extension on TranslationsUr {
 			'meta.addFailed' => ({required Object p}) => 'شامل کرنے میں ناکامی:${p}',
 			'meta.remove' => 'ہٹائیں',
 			'meta.removeConfirm' => 'کیا آپ واقعی حذف کرنا چاہتے ہیں؟',
+			'meta.removed' => 'حذف کر دیا گیا',
 			'meta.edit' => 'ترمیم کریں',
 			'meta.view' => 'دیکھیں',
 			'meta.more' => 'مزید',
@@ -1456,9 +1458,9 @@ extension on TranslationsUr {
 			'permission.appQuery' => 'ایپ لسٹ حاصل کریں',
 			'permission.request' => ({required Object p}) => '[${p}] اجازت آن کریں',
 			'permission.requestNeed' => ({required Object p}) => 'براہ کرم [${p}] اجازت آن کریں',
-			'tls.insecure' => 'سرٹیفکیٹ کی تصدیق نظر انداز کریں',
 			_ => null,
 		} ?? switch (path) {
+			'tls.insecure' => 'سرٹیفکیٹ کی تصدیق نظر انداز کریں',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => 'TLS فریگمنٹ فعال کریں',
 			'tls.fragmentSize' => 'TLS فریگمنٹ سائز',

@@ -307,6 +307,7 @@
         "addFailed": "Hinzufügen fehlgeschlagen:$p",
         "remove": "Entfernen",
         "removeConfirm": "Sind Sie sicher, dass Sie löschen möchten?",
+        "removed": "Gelöscht",
         "edit": "Bearbeiten",
         "view": "Ansehen",
         "more": "Mehr",

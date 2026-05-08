@@ -587,6 +587,7 @@ class _TranslationsMetaFr implements TranslationsMetaEn {
 	@override String addFailed({required Object p}) => 'Échec de l\'ajout : ${p}';
 	@override String get remove => 'Supprimer';
 	@override String get removeConfirm => 'Êtes-vous sûr de vouloir supprimer ?';
+	@override String get removed => 'Supprimé';
 	@override String get edit => 'Modifier';
 	@override String get view => 'Voir';
 	@override String get more => 'Plus';
@@ -1208,6 +1209,7 @@ extension on TranslationsFr {
 			'meta.addFailed' => ({required Object p}) => 'Échec de l\'ajout : ${p}',
 			'meta.remove' => 'Supprimer',
 			'meta.removeConfirm' => 'Êtes-vous sûr de vouloir supprimer ?',
+			'meta.removed' => 'Supprimé',
 			'meta.edit' => 'Modifier',
 			'meta.view' => 'Voir',
 			'meta.more' => 'Plus',
@@ -1456,9 +1458,9 @@ extension on TranslationsFr {
 			'permission.appQuery' => 'Obtenir la liste des applications',
 			'permission.request' => ({required Object p}) => 'Activer l\'autorisation [${p}]',
 			'permission.requestNeed' => ({required Object p}) => 'Veuillez activer l\'autorisation [${p}]',
-			'tls.insecure' => 'Passer la vérification du certificat',
 			_ => null,
 		} ?? switch (path) {
+			'tls.insecure' => 'Passer la vérification du certificat',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => 'Activer le fragment TLS',
 			'tls.fragmentSize' => 'Taille du fragment TLS',

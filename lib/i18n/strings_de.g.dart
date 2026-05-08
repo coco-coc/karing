@@ -587,6 +587,7 @@ class _TranslationsMetaDe implements TranslationsMetaEn {
 	@override String addFailed({required Object p}) => 'Hinzufügen fehlgeschlagen:${p}';
 	@override String get remove => 'Entfernen';
 	@override String get removeConfirm => 'Sind Sie sicher, dass Sie löschen möchten?';
+	@override String get removed => 'Gelöscht';
 	@override String get edit => 'Bearbeiten';
 	@override String get view => 'Ansehen';
 	@override String get more => 'Mehr';
@@ -1208,6 +1209,7 @@ extension on TranslationsDe {
 			'meta.addFailed' => ({required Object p}) => 'Hinzufügen fehlgeschlagen:${p}',
 			'meta.remove' => 'Entfernen',
 			'meta.removeConfirm' => 'Sind Sie sicher, dass Sie löschen möchten?',
+			'meta.removed' => 'Gelöscht',
 			'meta.edit' => 'Bearbeiten',
 			'meta.view' => 'Ansehen',
 			'meta.more' => 'Mehr',
@@ -1456,9 +1458,9 @@ extension on TranslationsDe {
 			'permission.appQuery' => 'Anwendungsliste abrufen',
 			'permission.request' => ({required Object p}) => 'Berechtigung [${p}] einschalten',
 			'permission.requestNeed' => ({required Object p}) => 'Bitte schalten Sie die Berechtigung [${p}] ein',
-			'tls.insecure' => 'Zertifikatsprüfung überspringen',
 			_ => null,
 		} ?? switch (path) {
+			'tls.insecure' => 'Zertifikatsprüfung überspringen',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => 'TLS-Fragment aktivieren',
 			'tls.fragmentSize' => 'TLS-Fragmentgröße',

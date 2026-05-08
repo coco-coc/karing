@@ -40,7 +40,6 @@ class VpnServiceConfig: Codable {
     var name: String = ""
     var secret: String = ""
     var install_refer: String = ""
-    var expired_time: Int64 = 0
     var disconnect_after_sleep_seconds: Int32 = 0
     var auto_route_use_sub_ranges_by_default: Bool = false
     var sentry_minversion: String = ""
@@ -58,7 +57,6 @@ class VpnServiceConfig: Codable {
         case name
         case secret
         case install_refer
-        case expired_time
         case disconnect_after_sleep_seconds
         case auto_route_use_sub_ranges_by_default
         case sentry_minversion
@@ -80,7 +78,6 @@ class VpnServiceConfig: Codable {
         name = try container.decodeIfPresent(String.self, forKey: .name) ?? ""
         secret = try container.decodeIfPresent(String.self, forKey: .secret) ?? ""
         install_refer = try container.decodeIfPresent(String.self, forKey: .install_refer) ?? ""
-        expired_time = try container.decodeIfPresent(Int64.self, forKey: .expired_time) ?? 0
         disconnect_after_sleep_seconds = try container.decodeIfPresent(Int32.self, forKey: .disconnect_after_sleep_seconds) ?? 0
         auto_route_use_sub_ranges_by_default = try container.decodeIfPresent(Bool.self, forKey: .auto_route_use_sub_ranges_by_default) ?? false
         sentry_minversion = try container.decodeIfPresent(String.self, forKey: .sentry_minversion) ?? ""
@@ -553,7 +550,6 @@ public struct DashboardView: View {
         DashboardView.config.err_path = DashboardView.coreErrorLogFile.path()
         DashboardView.config.version = DashboardView.version
         DashboardView.config.name = "Karing"
-        DashboardView.config.expired_time = 0
         DashboardView.config.disconnect_after_sleep_seconds = 0
         DashboardView.config.auto_route_use_sub_ranges_by_default = false
         DashboardView.config.sentry_minversion = ""

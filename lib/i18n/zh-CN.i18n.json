@@ -307,6 +307,7 @@
         "addFailed": "添加失败:$p",
         "remove": "删除",
         "removeConfirm": "确认删除?",
+        "removed": "已删除",
         "edit": "编辑",
         "view": "查看",
         "more": "更多",

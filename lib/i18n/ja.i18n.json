@@ -307,6 +307,7 @@
         "addFailed": "追加に失敗しました: $p",
         "remove": "削除",
         "removeConfirm": "本当に削除しますか？",
+        "removed": "削除しました",
         "edit": "編集",
         "view": "表示",
         "more": "もっと見る",

@@ -587,6 +587,7 @@ class _TranslationsMetaTr implements TranslationsMetaEn {
 	@override String addFailed({required Object p}) => 'Ekleme başarısız: ${p}';
 	@override String get remove => 'Kaldır';
 	@override String get removeConfirm => 'Silmek istediğinizden emin misiniz?';
+	@override String get removed => 'Silindi';
 	@override String get edit => 'Düzenle';
 	@override String get view => 'Görüntüle';
 	@override String get more => 'Daha Fazla';
@@ -1208,6 +1209,7 @@ extension on TranslationsTr {
 			'meta.addFailed' => ({required Object p}) => 'Ekleme başarısız: ${p}',
 			'meta.remove' => 'Kaldır',
 			'meta.removeConfirm' => 'Silmek istediğinizden emin misiniz?',
+			'meta.removed' => 'Silindi',
 			'meta.edit' => 'Düzenle',
 			'meta.view' => 'Görüntüle',
 			'meta.more' => 'Daha Fazla',
@@ -1456,9 +1458,9 @@ extension on TranslationsTr {
 			'permission.appQuery' => 'Uygulama Listesini Al',
 			'permission.request' => ({required Object p}) => '[${p}] iznini aç',
 			'permission.requestNeed' => ({required Object p}) => 'Lütfen [${p}] iznini açın',
-			'tls.insecure' => 'Sertifika Doğrulamasını Atla',
 			_ => null,
 		} ?? switch (path) {
+			'tls.insecure' => 'Sertifika Doğrulamasını Atla',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => 'TLS Parçalamayı Etkinleştir',
 			'tls.fragmentSize' => 'TLS Parça Boyutu',

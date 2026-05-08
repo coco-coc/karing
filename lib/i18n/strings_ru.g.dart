@@ -587,6 +587,7 @@ class _TranslationsMetaRu implements TranslationsMetaEn {
 	@override String addFailed({required Object p}) => 'Ошибка при добавлении:${p}';
 	@override String get remove => 'Удалить';
 	@override String get removeConfirm => 'Подтверждаете удаление?';
+	@override String get removed => 'Удалено';
 	@override String get edit => 'Редактировать';
 	@override String get view => 'Просмотр';
 	@override String get more => 'Больше';
@@ -1208,6 +1209,7 @@ extension on TranslationsRu {
 			'meta.addFailed' => ({required Object p}) => 'Ошибка при добавлении:${p}',
 			'meta.remove' => 'Удалить',
 			'meta.removeConfirm' => 'Подтверждаете удаление?',
+			'meta.removed' => 'Удалено',
 			'meta.edit' => 'Редактировать',
 			'meta.view' => 'Просмотр',
 			'meta.more' => 'Больше',
@@ -1456,9 +1458,9 @@ extension on TranslationsRu {
 			'permission.appQuery' => 'Получить список приложений',
 			'permission.request' => ({required Object p}) => 'Включить разрешения [${p}]',
 			'permission.requestNeed' => ({required Object p}) => 'Пожалуйста, включите разрешение [${p}]',
-			'tls.insecure' => 'Пропустить проверку сертификата',
 			_ => null,
 		} ?? switch (path) {
+			'tls.insecure' => 'Пропустить проверку сертификата',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => 'Включить фрагментацию TLS',
 			'tls.fragmentSize' => 'Размер фрагмента TLS',

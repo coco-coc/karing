@@ -587,6 +587,7 @@ class _TranslationsMetaUk implements TranslationsMetaEn {
 	@override String addFailed({required Object p}) => 'Не вдалося додати:${p}';
 	@override String get remove => 'Видалити';
 	@override String get removeConfirm => 'Ви впевнені, що хочете видалити?';
+	@override String get removed => 'Видалено';
 	@override String get edit => 'Редагувати';
 	@override String get view => 'Перегляд';
 	@override String get more => 'Більше';
@@ -1208,6 +1209,7 @@ extension on TranslationsUk {
 			'meta.addFailed' => ({required Object p}) => 'Не вдалося додати:${p}',
 			'meta.remove' => 'Видалити',
 			'meta.removeConfirm' => 'Ви впевнені, що хочете видалити?',
+			'meta.removed' => 'Видалено',
 			'meta.edit' => 'Редагувати',
 			'meta.view' => 'Перегляд',
 			'meta.more' => 'Більше',
@@ -1456,9 +1458,9 @@ extension on TranslationsUk {
 			'permission.appQuery' => 'Отримати список програм',
 			'permission.request' => ({required Object p}) => 'Увімкнути дозвіл [${p}]',
 			'permission.requestNeed' => ({required Object p}) => 'Будь ласка, увімкніть дозвіл [${p}]',
-			'tls.insecure' => 'Пропустити перевірку сертифіката',
 			_ => null,
 		} ?? switch (path) {
+			'tls.insecure' => 'Пропустити перевірку сертифіката',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => 'Увімкнути фрагментацію TLS',
 			'tls.fragmentSize' => 'Розмір фрагмента TLS',

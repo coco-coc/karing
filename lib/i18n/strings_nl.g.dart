@@ -587,6 +587,7 @@ class _TranslationsMetaNl implements TranslationsMetaEn {
 	@override String addFailed({required Object p}) => 'Toevoegen mislukt:${p}';
 	@override String get remove => 'Verwijderen';
 	@override String get removeConfirm => 'Weet u zeker dat u wilt verwijderen?';
+	@override String get removed => 'Verwijderd';
 	@override String get edit => 'Bewerken';
 	@override String get view => 'Bekijken';
 	@override String get more => 'Meer';
@@ -1208,6 +1209,7 @@ extension on TranslationsNl {
 			'meta.addFailed' => ({required Object p}) => 'Toevoegen mislukt:${p}',
 			'meta.remove' => 'Verwijderen',
 			'meta.removeConfirm' => 'Weet u zeker dat u wilt verwijderen?',
+			'meta.removed' => 'Verwijderd',
 			'meta.edit' => 'Bewerken',
 			'meta.view' => 'Bekijken',
 			'meta.more' => 'Meer',
@@ -1456,9 +1458,9 @@ extension on TranslationsNl {
 			'permission.appQuery' => 'App-lijst ophalen',
 			'permission.request' => ({required Object p}) => 'Schakel machtiging [${p}] in',
 			'permission.requestNeed' => ({required Object p}) => 'Schakel machtiging [${p}] in a.u.b.',
-			'tls.insecure' => 'Certificaatverificatie overslaan',
 			_ => null,
 		} ?? switch (path) {
+			'tls.insecure' => 'Certificaatverificatie overslaan',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => 'TLS Fragment inschakelen',
 			'tls.fragmentSize' => 'TLS Fragment grootte',

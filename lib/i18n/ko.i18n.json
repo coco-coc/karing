@@ -307,6 +307,7 @@
         "addFailed": "추가 실패: $p",
         "remove": "삭제",
         "removeConfirm": "정말로 삭제하시겠습니까?",
+        "removed": "삭제됨",
         "edit": "편집",
         "view": "보기",
         "more": "더 보기",

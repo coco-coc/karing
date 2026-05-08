@@ -587,6 +587,7 @@ class _TranslationsMetaKo implements TranslationsMetaEn {
 	@override String addFailed({required Object p}) => '추가 실패: ${p}';
 	@override String get remove => '삭제';
 	@override String get removeConfirm => '정말로 삭제하시겠습니까?';
+	@override String get removed => '삭제됨';
 	@override String get edit => '편집';
 	@override String get view => '보기';
 	@override String get more => '더 보기';
@@ -1208,6 +1209,7 @@ extension on TranslationsKo {
 			'meta.addFailed' => ({required Object p}) => '추가 실패: ${p}',
 			'meta.remove' => '삭제',
 			'meta.removeConfirm' => '정말로 삭제하시겠습니까?',
+			'meta.removed' => '삭제됨',
 			'meta.edit' => '편집',
 			'meta.view' => '보기',
 			'meta.more' => '더 보기',
@@ -1456,9 +1458,9 @@ extension on TranslationsKo {
 			'permission.appQuery' => '앱 목록 가져오기',
 			'permission.request' => ({required Object p}) => '[${p}] 권한 켜기',
 			'permission.requestNeed' => ({required Object p}) => '[${p}] 권한을 켜주십시오',
-			'tls.insecure' => '인증서 확인 건너뛰기',
 			_ => null,
 		} ?? switch (path) {
+			'tls.insecure' => '인증서 확인 건너뛰기',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => 'TLS 조각화 활성화',
 			'tls.fragmentSize' => 'TLS 조각 크기',

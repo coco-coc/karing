@@ -307,6 +307,7 @@
         "addFailed": "Toevoegen mislukt:$p",
         "remove": "Verwijderen",
         "removeConfirm": "Weet u zeker dat u wilt verwijderen?",
+        "removed": "Verwijderd",
         "edit": "Bewerken",
         "view": "Bekijken",
         "more": "Meer",

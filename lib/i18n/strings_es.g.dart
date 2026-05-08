@@ -587,6 +587,7 @@ class _TranslationsMetaEs implements TranslationsMetaEn {
 	@override String addFailed({required Object p}) => 'Error al agregar: ${p}';
 	@override String get remove => 'Eliminar';
 	@override String get removeConfirm => '¿Está seguro de que desea eliminar?';
+	@override String get removed => 'Eliminado';
 	@override String get edit => 'Editar';
 	@override String get view => 'Ver';
 	@override String get more => 'Más';
@@ -1208,6 +1209,7 @@ extension on TranslationsEs {
 			'meta.addFailed' => ({required Object p}) => 'Error al agregar: ${p}',
 			'meta.remove' => 'Eliminar',
 			'meta.removeConfirm' => '¿Está seguro de que desea eliminar?',
+			'meta.removed' => 'Eliminado',
 			'meta.edit' => 'Editar',
 			'meta.view' => 'Ver',
 			'meta.more' => 'Más',
@@ -1456,9 +1458,9 @@ extension on TranslationsEs {
 			'permission.appQuery' => 'Obtener lista de aplicaciones',
 			'permission.request' => ({required Object p}) => 'Activar permiso [${p}]',
 			'permission.requestNeed' => ({required Object p}) => 'Active el permiso [${p}]',
-			'tls.insecure' => 'Omitir verificación de certificado',
 			_ => null,
 		} ?? switch (path) {
+			'tls.insecure' => 'Omitir verificación de certificado',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => 'Habilitar fragmento TLS',
 			'tls.fragmentSize' => 'Tamaño de fragmento TLS',

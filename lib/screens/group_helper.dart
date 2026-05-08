@@ -500,6 +500,84 @@ class GroupHelper {
                     },
             ),
           ),
+          GroupItemOptions(
+            switchOptions: GroupItemSwitchOptions(
+              name: "includeAllNetworks",
+              tips: "iOS 14.0+;macOS 10.15+",
+              switchValue: settingConfig.tun.includeAllNetworks,
+              onSwitch: !tunMode
+                  ? null
+                  : (bool value) async {
+                      settingConfig.tun.includeAllNetworks = value;
+                      SettingManager.setDirty(true);
+                    },
+            ),
+          ),
+          GroupItemOptions(
+            switchOptions: GroupItemSwitchOptions(
+              name: "excludeLocalNetworks",
+              tips: "iOS 14.2+;macOS 10.15+",
+              switchValue: settingConfig.tun.excludeLocalNetworks,
+              onSwitch: !tunMode
+                  ? null
+                  : (bool value) async {
+                      settingConfig.tun.excludeLocalNetworks = value;
+                      SettingManager.setDirty(true);
+                    },
+            ),
+          ),
+          GroupItemOptions(
+            switchOptions: GroupItemSwitchOptions(
+              name: "excludeCellularServices",
+              tips: "iOS 16.4+;macOS 13.3+",
+              switchValue: settingConfig.tun.excludeCellularServices,
+              onSwitch: !tunMode
+                  ? null
+                  : (bool value) async {
+                      settingConfig.tun.excludeCellularServices = value;
+                      SettingManager.setDirty(true);
+                    },
+            ),
+          ),
+          GroupItemOptions(
+            switchOptions: GroupItemSwitchOptions(
+              name: "excludeAPNs",
+              tips: "iOS 16.4+;macOS 13.3+",
+              switchValue: settingConfig.tun.excludeApns,
+              onSwitch: !tunMode
+                  ? null
+                  : (bool value) async {
+                      settingConfig.tun.excludeApns = value;
+                      SettingManager.setDirty(true);
+                    },
+            ),
+          ),
+          GroupItemOptions(
+            switchOptions: GroupItemSwitchOptions(
+              name: "excludeDeviceCommunication",
+              tips: "iOS 17.4+;macOS 14.4+",
+              switchValue: settingConfig.tun.excludeDeviceCommunication,
+              onSwitch: !tunMode
+                  ? null
+                  : (bool value) async {
+                      settingConfig.tun.excludeDeviceCommunication = value;
+                      SettingManager.setDirty(true);
+                    },
+            ),
+          ),
+          GroupItemOptions(
+            switchOptions: GroupItemSwitchOptions(
+              name: "enforceRoutes",
+              tips: "iOS 14.2+;macOS 11.0+",
+              switchValue: settingConfig.tun.enforceRoutes,
+              onSwitch: !tunMode
+                  ? null
+                  : (bool value) async {
+                      settingConfig.tun.enforceRoutes = value;
+                      SettingManager.setDirty(true);
+                    },
+            ),
+          ),
         ],
         if (!settingConfig.novice && Platform.isAndroid) ...[
           GroupItemOptions(

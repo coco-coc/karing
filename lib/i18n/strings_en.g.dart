@@ -1177,6 +1177,9 @@ class TranslationsMetaEn {
 	/// en: 'Are you sure to delete?'
 	String get removeConfirm => 'Are you sure to delete?';
 
+	/// en: 'Deleted'
+	String get removed => 'Deleted';
+
 	/// en: 'Edit'
 	String get edit => 'Edit';
 
@@ -2331,6 +2334,7 @@ extension on Translations {
 			'meta.addFailed' => ({required Object p}) => 'Add failed:${p}',
 			'meta.remove' => 'Remove',
 			'meta.removeConfirm' => 'Are you sure to delete?',
+			'meta.removed' => 'Deleted',
 			'meta.edit' => 'Edit',
 			'meta.view' => 'View',
 			'meta.more' => 'More',
@@ -2579,9 +2583,9 @@ extension on Translations {
 			'permission.appQuery' => 'Get Application List',
 			'permission.request' => ({required Object p}) => 'Turn on [${p}] permission',
 			'permission.requestNeed' => ({required Object p}) => 'Please Turn on [${p}] permission',
-			'tls.insecure' => 'Skip Certificate Verification',
 			_ => null,
 		} ?? switch (path) {
+			'tls.insecure' => 'Skip Certificate Verification',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => 'Enable TLS Fragment',
 			'tls.fragmentSize' => 'TLS Fragment Size',

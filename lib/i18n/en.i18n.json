@@ -307,6 +307,7 @@
         "addFailed": "Add failed:$p",
         "remove": "Remove",
         "removeConfirm": "Are you sure to delete?",
+        "removed": "Deleted",
         "edit": "Edit",
         "view": "View",
         "more": "More",

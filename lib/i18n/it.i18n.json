@@ -307,6 +307,7 @@
         "addFailed": "Aggiunta fallita:$p",
         "remove": "Rimuovi",
         "removeConfirm": "Sei sicuro di voler eliminare?",
+        "removed": "Eliminato",
         "edit": "Modifica",
         "view": "Visualizza",
         "more": "Altro",

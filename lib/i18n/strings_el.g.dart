@@ -587,6 +587,7 @@ class _TranslationsMetaEl implements TranslationsMetaEn {
 	@override String addFailed({required Object p}) => 'Η προσθήκη απέτυχε:${p}';
 	@override String get remove => 'Κατάργηση';
 	@override String get removeConfirm => 'Είστε βέβαιοι ότι θέλετε να διαγράψετε;';
+	@override String get removed => 'Διαγράφηκε';
 	@override String get edit => 'Επεξεργασία';
 	@override String get view => 'Προβολή';
 	@override String get more => 'Περισσότερα';
@@ -1208,6 +1209,7 @@ extension on TranslationsEl {
 			'meta.addFailed' => ({required Object p}) => 'Η προσθήκη απέτυχε:${p}',
 			'meta.remove' => 'Κατάργηση',
 			'meta.removeConfirm' => 'Είστε βέβαιοι ότι θέλετε να διαγράψετε;',
+			'meta.removed' => 'Διαγράφηκε',
 			'meta.edit' => 'Επεξεργασία',
 			'meta.view' => 'Προβολή',
 			'meta.more' => 'Περισσότερα',
@@ -1456,9 +1458,9 @@ extension on TranslationsEl {
 			'permission.appQuery' => 'Λήψη λίστας εφαρμογών',
 			'permission.request' => ({required Object p}) => 'Ενεργοποίηση άδειας [${p}]',
 			'permission.requestNeed' => ({required Object p}) => 'Παρακαλούμε ενεργοποιήστε την άδεια [${p}]',
-			'tls.insecure' => 'Παράλειψη επαλήθευσης πιστοποιητικού',
 			_ => null,
 		} ?? switch (path) {
+			'tls.insecure' => 'Παράλειψη επαλήθευσης πιστοποιητικού',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => 'Ενεργοποίηση TLS Fragment',
 			'tls.fragmentSize' => 'Μέγεθος TLS Fragment',

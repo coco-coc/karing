@@ -587,6 +587,7 @@ class _TranslationsMetaJa implements TranslationsMetaEn {
 	@override String addFailed({required Object p}) => '追加に失敗しました: ${p}';
 	@override String get remove => '削除';
 	@override String get removeConfirm => '本当に削除しますか？';
+	@override String get removed => '削除しました';
 	@override String get edit => '編集';
 	@override String get view => '表示';
 	@override String get more => 'もっと見る';
@@ -1208,6 +1209,7 @@ extension on TranslationsJa {
 			'meta.addFailed' => ({required Object p}) => '追加に失敗しました: ${p}',
 			'meta.remove' => '削除',
 			'meta.removeConfirm' => '本当に削除しますか？',
+			'meta.removed' => '削除しました',
 			'meta.edit' => '編集',
 			'meta.view' => '表示',
 			'meta.more' => 'もっと見る',
@@ -1456,9 +1458,9 @@ extension on TranslationsJa {
 			'permission.appQuery' => 'アプリリストを取得',
 			'permission.request' => ({required Object p}) => '[${p}] 権限をオンにする',
 			'permission.requestNeed' => ({required Object p}) => '[${p}] 権限をオンにしてください',
-			'tls.insecure' => '証明書の検証をスキップする',
 			_ => null,
 		} ?? switch (path) {
+			'tls.insecure' => '証明書の検証をスキップする',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => 'TLS フラグメントを有効にする',
 			'tls.fragmentSize' => 'TLS フラグメントサイズ',

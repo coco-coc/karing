@@ -587,6 +587,7 @@ class _TranslationsMetaNo implements TranslationsMetaEn {
 	@override String addFailed({required Object p}) => 'Mislyktes i å legge til:${p}';
 	@override String get remove => 'Fjern';
 	@override String get removeConfirm => 'Er du sikker på at du vil slette?';
+	@override String get removed => 'Slettet';
 	@override String get edit => 'Rediger';
 	@override String get view => 'Vis';
 	@override String get more => 'Mer';
@@ -1208,6 +1209,7 @@ extension on TranslationsNo {
 			'meta.addFailed' => ({required Object p}) => 'Mislyktes i å legge til:${p}',
 			'meta.remove' => 'Fjern',
 			'meta.removeConfirm' => 'Er du sikker på at du vil slette?',
+			'meta.removed' => 'Slettet',
 			'meta.edit' => 'Rediger',
 			'meta.view' => 'Vis',
 			'meta.more' => 'Mer',
@@ -1456,9 +1458,9 @@ extension on TranslationsNo {
 			'permission.appQuery' => 'Hent appliste',
 			'permission.request' => ({required Object p}) => 'Slå på tillatelse [${p}]',
 			'permission.requestNeed' => ({required Object p}) => 'Vennligst slå på tillatelse [${p}]',
-			'tls.insecure' => 'Hopp over sertifikatverifisering',
 			_ => null,
 		} ?? switch (path) {
+			'tls.insecure' => 'Hopp over sertifikatverifisering',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => 'Aktiver TLS-fragment',
 			'tls.fragmentSize' => 'TLS-fragmentstørrelse',

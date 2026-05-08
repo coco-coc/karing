@@ -587,6 +587,7 @@ class _TranslationsMetaIt implements TranslationsMetaEn {
 	@override String addFailed({required Object p}) => 'Aggiunta fallita:${p}';
 	@override String get remove => 'Rimuovi';
 	@override String get removeConfirm => 'Sei sicuro di voler eliminare?';
+	@override String get removed => 'Eliminato';
 	@override String get edit => 'Modifica';
 	@override String get view => 'Visualizza';
 	@override String get more => 'Altro';
@@ -1208,6 +1209,7 @@ extension on TranslationsIt {
 			'meta.addFailed' => ({required Object p}) => 'Aggiunta fallita:${p}',
 			'meta.remove' => 'Rimuovi',
 			'meta.removeConfirm' => 'Sei sicuro di voler eliminare?',
+			'meta.removed' => 'Eliminato',
 			'meta.edit' => 'Modifica',
 			'meta.view' => 'Visualizza',
 			'meta.more' => 'Altro',
@@ -1456,9 +1458,9 @@ extension on TranslationsIt {
 			'permission.appQuery' => 'Ottieni Elenco Applicazioni',
 			'permission.request' => ({required Object p}) => 'Attiva permesso [${p}]',
 			'permission.requestNeed' => ({required Object p}) => 'Attiva il permesso [${p}]',
-			'tls.insecure' => 'Salta Verifica Certificato',
 			_ => null,
 		} ?? switch (path) {
+			'tls.insecure' => 'Salta Verifica Certificato',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => 'Abilita Frammento TLS',
 			'tls.fragmentSize' => 'Dimensione Frammento TLS',

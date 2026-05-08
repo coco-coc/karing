@@ -307,6 +307,7 @@
         "addFailed": "Dodawanie nie powiodło się:$p",
         "remove": "Usuń",
         "removeConfirm": "Czy na pewno chcesz usunąć?",
+        "removed": "Usunięto",
         "edit": "Edytuj",
         "view": "Widok",
         "more": "Więcej",

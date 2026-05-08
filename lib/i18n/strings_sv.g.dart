@@ -587,6 +587,7 @@ class _TranslationsMetaSv implements TranslationsMetaEn {
 	@override String addFailed({required Object p}) => 'Misslyckades med att lägga till:${p}';
 	@override String get remove => 'Ta bort';
 	@override String get removeConfirm => 'Är du säker på att du vill ta bort?';
+	@override String get removed => 'Borttagen';
 	@override String get edit => 'Redigera';
 	@override String get view => 'Visa';
 	@override String get more => 'Mer';
@@ -1208,6 +1209,7 @@ extension on TranslationsSv {
 			'meta.addFailed' => ({required Object p}) => 'Misslyckades med att lägga till:${p}',
 			'meta.remove' => 'Ta bort',
 			'meta.removeConfirm' => 'Är du säker på att du vill ta bort?',
+			'meta.removed' => 'Borttagen',
 			'meta.edit' => 'Redigera',
 			'meta.view' => 'Visa',
 			'meta.more' => 'Mer',
@@ -1456,9 +1458,9 @@ extension on TranslationsSv {
 			'permission.appQuery' => 'Hämta applista',
 			'permission.request' => ({required Object p}) => 'Slå på behörighet [${p}]',
 			'permission.requestNeed' => ({required Object p}) => 'Slå på behörighet [${p}] tack',
-			'tls.insecure' => 'Hoppa över certifikatverifiering',
 			_ => null,
 		} ?? switch (path) {
+			'tls.insecure' => 'Hoppa över certifikatverifiering',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => 'Aktivera TLS-fragment',
 			'tls.fragmentSize' => 'TLS-fragmentstorlek',

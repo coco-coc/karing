@@ -587,6 +587,7 @@ class _TranslationsMetaAr implements TranslationsMetaEn {
 	@override String addFailed({required Object p}) => 'إضافة فشل:${p}';
 	@override String get remove => 'يمسح';
 	@override String get removeConfirm => 'هل انت متأكد من الحذف؟';
+	@override String get removed => 'تم الحذف';
 	@override String get edit => 'يحرر';
 	@override String get view => 'يفحص';
 	@override String get more => 'أكثر';
@@ -1208,6 +1209,7 @@ extension on TranslationsAr {
 			'meta.addFailed' => ({required Object p}) => 'إضافة فشل:${p}',
 			'meta.remove' => 'يمسح',
 			'meta.removeConfirm' => 'هل انت متأكد من الحذف؟',
+			'meta.removed' => 'تم الحذف',
 			'meta.edit' => 'يحرر',
 			'meta.view' => 'يفحص',
 			'meta.more' => 'أكثر',
@@ -1456,9 +1458,9 @@ extension on TranslationsAr {
 			'permission.appQuery' => 'الحصول على قائمة التطبيقات',
 			'permission.request' => ({required Object p}) => 'تمكين أذونات [${p}]',
 			'permission.requestNeed' => ({required Object p}) => 'الرجاء تفعيل إذن [${p}]',
-			'tls.insecure' => 'تخطي التحقق من الشهادة',
 			_ => null,
 		} ?? switch (path) {
+			'tls.insecure' => 'تخطي التحقق من الشهادة',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => 'تمكين تجزئة TLS',
 			'tls.fragmentSize' => 'حجم شريحة TLS',

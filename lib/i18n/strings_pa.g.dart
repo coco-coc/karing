@@ -587,6 +587,7 @@ class _TranslationsMetaPa implements TranslationsMetaEn {
 	@override String addFailed({required Object p}) => 'जोड़ने में विफल:${p}';
 	@override String get remove => 'हटाएं';
 	@override String get removeConfirm => 'क्या आप वाकई हटाना चाहते हैं?';
+	@override String get removed => 'ਮਿਟਾਇਆ ਗਿਆ';
 	@override String get edit => 'संपादित करें';
 	@override String get view => 'देखें';
 	@override String get more => 'अधिक';
@@ -1208,6 +1209,7 @@ extension on TranslationsPa {
 			'meta.addFailed' => ({required Object p}) => 'जोड़ने में विफल:${p}',
 			'meta.remove' => 'हटाएं',
 			'meta.removeConfirm' => 'क्या आप वाकई हटाना चाहते हैं?',
+			'meta.removed' => 'ਮਿਟਾਇਆ ਗਿਆ',
 			'meta.edit' => 'संपादित करें',
 			'meta.view' => 'देखें',
 			'meta.more' => 'अधिक',
@@ -1456,9 +1458,9 @@ extension on TranslationsPa {
 			'permission.appQuery' => 'ऐप सूची प्राप्त करें',
 			'permission.request' => ({required Object p}) => '[${p}] अनुमति चालू करें',
 			'permission.requestNeed' => ({required Object p}) => 'कृपया [${p}] अनुमति चालू करें',
-			'tls.insecure' => 'प्रमाणपत्र सत्यापन छोड़ें',
 			_ => null,
 		} ?? switch (path) {
+			'tls.insecure' => 'प्रमाणपत्र सत्यापन छोड़ें',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => 'TLS फ्रैगमेंट सक्षम करें',
 			'tls.fragmentSize' => 'TLS फ्रैगमेंट आकार',

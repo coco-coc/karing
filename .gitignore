@@ -60,6 +60,7 @@ app.*.map.json
 /bind/android/core
 /bind/windows/core
 /bind/linux/core
+ios/karingWidget/VpnServiceHandler.swift
 /.idea/workspace.xml
 /lib/app/private
 /android/app/build

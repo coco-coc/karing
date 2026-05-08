@@ -307,6 +307,7 @@
         "addFailed": "إضافة فشل:$p",
         "remove": "يمسح",
         "removeConfirm": "هل انت متأكد من الحذف؟",
+        "removed": "تم الحذف",
         "edit": "يحرر",
         "view": "يفحص",
         "more": "أكثر",

@@ -587,6 +587,7 @@ class _TranslationsMetaBn implements TranslationsMetaEn {
 	@override String addFailed({required Object p}) => 'যুক্ত করতে ব্যর্থ:${p}';
 	@override String get remove => 'সরিয়ে দিন';
 	@override String get removeConfirm => 'আপনি কি নিশ্চিত যে আপনি মুছতে চান?';
+	@override String get removed => 'মুছে ফেলা হয়েছে';
 	@override String get edit => 'সম্পাদনা করুন';
 	@override String get view => 'দেখুন';
 	@override String get more => 'আরও';
@@ -1208,6 +1209,7 @@ extension on TranslationsBn {
 			'meta.addFailed' => ({required Object p}) => 'যুক্ত করতে ব্যর্থ:${p}',
 			'meta.remove' => 'সরিয়ে দিন',
 			'meta.removeConfirm' => 'আপনি কি নিশ্চিত যে আপনি মুছতে চান?',
+			'meta.removed' => 'মুছে ফেলা হয়েছে',
 			'meta.edit' => 'সম্পাদনা করুন',
 			'meta.view' => 'দেখুন',
 			'meta.more' => 'আরও',
@@ -1456,9 +1458,9 @@ extension on TranslationsBn {
 			'permission.appQuery' => 'অ্যাপ তালিকা পান',
 			'permission.request' => ({required Object p}) => '[${p}] অনুমতি চালু করুন',
 			'permission.requestNeed' => ({required Object p}) => 'অনুগ্রহ করে [${p}] অনুমতি চালু করুন',
-			'tls.insecure' => 'সার্টিফিকেট যাচাইকরণ এড়িয়ে যান',
 			_ => null,
 		} ?? switch (path) {
+			'tls.insecure' => 'সার্টিফিকেট যাচাইকরণ এড়িয়ে যান',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => 'TLS ফ্র্যাগমেন্ট সক্ষম করুন',
 			'tls.fragmentSize' => 'TLS ফ্র্যাগমেন্ট সাইজ',

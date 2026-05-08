@@ -587,6 +587,7 @@ class _TranslationsMetaZhCn implements TranslationsMetaEn {
 	@override String addFailed({required Object p}) => '添加失败:${p}';
 	@override String get remove => '删除';
 	@override String get removeConfirm => '确认删除?';
+	@override String get removed => '已删除';
 	@override String get edit => '编辑';
 	@override String get view => '查看';
 	@override String get more => '更多';
@@ -1208,6 +1209,7 @@ extension on TranslationsZhCn {
 			'meta.addFailed' => ({required Object p}) => '添加失败:${p}',
 			'meta.remove' => '删除',
 			'meta.removeConfirm' => '确认删除?',
+			'meta.removed' => '已删除',
 			'meta.edit' => '编辑',
 			'meta.view' => '查看',
 			'meta.more' => '更多',
@@ -1456,9 +1458,9 @@ extension on TranslationsZhCn {
 			'permission.appQuery' => '获取应用列表',
 			'permission.request' => ({required Object p}) => '开启[${p}]权限',
 			'permission.requestNeed' => ({required Object p}) => '请开启[${p}]权限',
-			'tls.insecure' => '跳过证书验证',
 			_ => null,
 		} ?? switch (path) {
+			'tls.insecure' => '跳过证书验证',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => '启用TLS分段',
 			'tls.fragmentSize' => 'TLS分段大小',

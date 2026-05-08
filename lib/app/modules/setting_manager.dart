@@ -442,6 +442,12 @@ class SettingConfigItemTUN {
   bool autoRoute = true;
   bool autoRedirect = false;
   bool strictRoute = false;
+  bool includeAllNetworks = false;
+  bool excludeLocalNetworks = false;
+  bool excludeCellularServices = false;
+  bool excludeApns = false;
+  bool excludeDeviceCommunication = false;
+  bool enforceRoutes = false;
   bool autoRouteUseSubRangesByDefault = false; // ios/macos
   bool overrideAndroidVPN = false; //android
   bool allowBypass = false; //android
@@ -461,6 +467,12 @@ class SettingConfigItemTUN {
       'auto_route': autoRoute,
       'auto_redirect': autoRedirect,
       'strict_route': strictRoute,
+      'include_all_networks': includeAllNetworks,
+      'exclude_local_networks': excludeLocalNetworks,
+      'exclude_cellular_services': excludeCellularServices,
+      'exclude_apns': excludeApns,
+      'exclude_device_communication': excludeDeviceCommunication,
+      'enforce_routes': enforceRoutes,
       'auto_route_use_sub_ranges_by_default': autoRouteUseSubRangesByDefault,
       'override_android_vpn': overrideAndroidVPN,
       'allow_bypass': allowBypass,
@@ -502,6 +514,12 @@ class SettingConfigItemTUN {
     autoRoute = map["auto_route"] ?? true;
     autoRedirect = map["auto_redirect"] ?? false;
     strictRoute = map["strict_route"] ?? false;
+    includeAllNetworks = map["include_all_networks"] ?? false;
+    excludeLocalNetworks = map["exclude_local_networks"] ?? false;
+    excludeCellularServices = map["exclude_cellular_services"] ?? false;
+    excludeApns = map["exclude_apns"] ?? false;
+    excludeDeviceCommunication = map["exclude_device_communication"] ?? false;
+    enforceRoutes = map["enforce_routes"] ?? false;
     autoRouteUseSubRangesByDefault =
         map["auto_route_use_sub_ranges_by_default"] ?? false;
     allowBypass = map["allow_bypass"] ?? false;

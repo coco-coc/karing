@@ -587,6 +587,7 @@ class _TranslationsMetaZhTw implements TranslationsMetaEn {
 	@override String addFailed({required Object p}) => '新增失敗: ${p}';
 	@override String get remove => '刪除';
 	@override String get removeConfirm => '確認刪除?';
+	@override String get removed => '已刪除';
 	@override String get edit => '編輯';
 	@override String get view => '查看';
 	@override String get more => '更多';
@@ -1208,6 +1209,7 @@ extension on TranslationsZhTw {
 			'meta.addFailed' => ({required Object p}) => '新增失敗: ${p}',
 			'meta.remove' => '刪除',
 			'meta.removeConfirm' => '確認刪除?',
+			'meta.removed' => '已刪除',
 			'meta.edit' => '編輯',
 			'meta.view' => '查看',
 			'meta.more' => '更多',
@@ -1456,9 +1458,9 @@ extension on TranslationsZhTw {
 			'permission.appQuery' => '獲取應用程式列表',
 			'permission.request' => ({required Object p}) => '開啟 [${p}] 權限',
 			'permission.requestNeed' => ({required Object p}) => '請開啟 [${p}] 權限',
-			'tls.insecure' => '跳過證書驗證',
 			_ => null,
 		} ?? switch (path) {
+			'tls.insecure' => '跳過證書驗證',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => '啟用 TLS 分段',
 			'tls.fragmentSize' => 'TLS 分段大小',

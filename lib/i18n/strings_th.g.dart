@@ -587,6 +587,7 @@ class _TranslationsMetaTh implements TranslationsMetaEn {
 	@override String addFailed({required Object p}) => 'เพิ่มล้มเหลว:${p}';
 	@override String get remove => 'ลบ';
 	@override String get removeConfirm => 'คุณแน่ใจไหมว่าต้องการลบ?';
+	@override String get removed => 'ลบแล้ว';
 	@override String get edit => 'แก้ไข';
 	@override String get view => 'มุมมอง';
 	@override String get more => 'เพิ่มเติม';
@@ -1208,6 +1209,7 @@ extension on TranslationsTh {
 			'meta.addFailed' => ({required Object p}) => 'เพิ่มล้มเหลว:${p}',
 			'meta.remove' => 'ลบ',
 			'meta.removeConfirm' => 'คุณแน่ใจไหมว่าต้องการลบ?',
+			'meta.removed' => 'ลบแล้ว',
 			'meta.edit' => 'แก้ไข',
 			'meta.view' => 'มุมมอง',
 			'meta.more' => 'เพิ่มเติม',
@@ -1456,9 +1458,9 @@ extension on TranslationsTh {
 			'permission.appQuery' => 'รับรายการแอปพลิเคชัน',
 			'permission.request' => ({required Object p}) => 'เปิดใช้งาน [${p}] สิทธิ์',
 			'permission.requestNeed' => ({required Object p}) => 'โปรดเปิดใช้งาน [${p}] สิทธิ์',
-			'tls.insecure' => 'ข้ามการตรวจสอบใบรับรอง',
 			_ => null,
 		} ?? switch (path) {
+			'tls.insecure' => 'ข้ามการตรวจสอบใบรับรอง',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => 'เปิดใช้งาน TLS Fragment',
 			'tls.fragmentSize' => 'ขนาด TLS Fragment',

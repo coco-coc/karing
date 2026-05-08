@@ -307,6 +307,7 @@
         "addFailed": "Échec de l'ajout : $p",
         "remove": "Supprimer",
         "removeConfirm": "Êtes-vous sûr de vouloir supprimer ?",
+        "removed": "Supprimé",
         "edit": "Modifier",
         "view": "Voir",
         "more": "Plus",

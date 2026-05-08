@@ -587,6 +587,7 @@ class _TranslationsMetaFa implements TranslationsMetaEn {
 	@override String addFailed({required Object p}) => 'افزودن ناموفق بود:${p}';
 	@override String get remove => 'حذف';
 	@override String get removeConfirm => 'آیا از حذف اطمینان دارین؟';
+	@override String get removed => 'حذف شد';
 	@override String get edit => 'ویرایش کنید';
 	@override String get view => 'بررسی';
 	@override String get more => 'بیشتر';
@@ -1208,6 +1209,7 @@ extension on TranslationsFa {
 			'meta.addFailed' => ({required Object p}) => 'افزودن ناموفق بود:${p}',
 			'meta.remove' => 'حذف',
 			'meta.removeConfirm' => 'آیا از حذف اطمینان دارین؟',
+			'meta.removed' => 'حذف شد',
 			'meta.edit' => 'ویرایش کنید',
 			'meta.view' => 'بررسی',
 			'meta.more' => 'بیشتر',
@@ -1456,9 +1458,9 @@ extension on TranslationsFa {
 			'permission.appQuery' => 'Get Application List',
 			'permission.request' => ({required Object p}) => 'مجوزهای [${p}] را فعال کنید',
 			'permission.requestNeed' => ({required Object p}) => 'لطفاً مجوز [${p}] را فعال کنید',
-			'tls.insecure' => 'رد شدن از تأیید گواهی',
 			_ => null,
 		} ?? switch (path) {
+			'tls.insecure' => 'رد شدن از تأیید گواهی',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => 'بخش بندی TLS را فعال کنید',
 			'tls.fragmentSize' => 'اندازه بخش TLS',

@@ -307,6 +307,7 @@
         "addFailed": "Misslyckades med att lägga till:$p",
         "remove": "Ta bort",
         "removeConfirm": "Är du säker på att du vill ta bort?",
+        "removed": "Borttagen",
         "edit": "Redigera",
         "view": "Visa",
         "more": "Mer",

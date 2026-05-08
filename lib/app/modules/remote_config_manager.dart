@@ -15,12 +15,13 @@ import 'package:karing/app/utils/did.dart';
 import 'package:karing/app/utils/file_utils.dart';
 import 'package:karing/app/utils/log.dart';
 import 'package:karing/app/utils/path_utils.dart';
+import 'package:karing/app/utils/platform_utils.dart';
 import 'package:karing/app/utils/version_compare_utils.dart';
 import 'package:vpn_service/state.dart';
 
 class RemoteConfigManager {
   static final List<void Function()> onEventCheck = [];
-
+  static Timer? _timerChecker;
   static bool _checking = false;
   static Duration _duration = const Duration(hours: 1);
   static RemoteConfig _config = RemoteConfig();
@@ -49,9 +50,17 @@ class RemoteConfigManager {
     Future.delayed(duration, () async {
       _check();
     });
+    if (PlatformUtils.isPC()) {
+      _timerChecker = Timer.periodic(const Duration(minutes: 30), (timer) {
+        _check();
+      });
+    }
   }
 
-  static Future<void> uninit() async {}
+  static Future<void> uninit() async {
+    _timerChecker?.cancel();
+    _timerChecker = null;
+  }
 
   static RemoteConfig getConfig() {
     return _config;

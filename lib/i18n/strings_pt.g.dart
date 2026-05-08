@@ -587,6 +587,7 @@ class _TranslationsMetaPt implements TranslationsMetaEn {
 	@override String addFailed({required Object p}) => 'Falha ao adicionar:${p}';
 	@override String get remove => 'Remover';
 	@override String get removeConfirm => 'Tem a certeza de que deseja eliminar?';
+	@override String get removed => 'Removido';
 	@override String get edit => 'Editar';
 	@override String get view => 'Ver';
 	@override String get more => 'Mais';
@@ -1208,6 +1209,7 @@ extension on TranslationsPt {
 			'meta.addFailed' => ({required Object p}) => 'Falha ao adicionar:${p}',
 			'meta.remove' => 'Remover',
 			'meta.removeConfirm' => 'Tem a certeza de que deseja eliminar?',
+			'meta.removed' => 'Removido',
 			'meta.edit' => 'Editar',
 			'meta.view' => 'Ver',
 			'meta.more' => 'Mais',
@@ -1456,9 +1458,9 @@ extension on TranslationsPt {
 			'permission.appQuery' => 'Obter Lista de Aplicações',
 			'permission.request' => ({required Object p}) => 'Ativar permissão [${p}]',
 			'permission.requestNeed' => ({required Object p}) => 'Por favor Ative a permissão [${p}]',
-			'tls.insecure' => 'Saltar Verificação de Certificado',
 			_ => null,
 		} ?? switch (path) {
+			'tls.insecure' => 'Saltar Verificação de Certificado',
 			'tls.affectProtocolTips' => 'vless, vmess, trojan',
 			'tls.fragmentEnable' => 'Ativar Fragmento TLS',
 			'tls.fragmentSize' => 'Tamanho do Fragmento TLS',

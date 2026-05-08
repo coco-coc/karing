@@ -20,6 +20,7 @@ import 'package:karing/app/utils/file_utils.dart';
 import 'package:karing/app/utils/http_utils.dart';
 import 'package:karing/app/utils/log.dart';
 import 'package:karing/app/utils/path_utils.dart';
+import 'package:karing/app/utils/platform_utils.dart';
 import 'package:karing/app/utils/proxy_conf_utils.dart';
 import 'package:karing/app/utils/ruleset_codes_utils.dart';
 import 'package:karing/app/utils/sentry_utils.dart';
@@ -436,6 +437,7 @@ class ServerManager {
   static bool _updateLatencyByHistory = false;
   static bool _dirty = false;
   static bool _updatedDirty = false;
+  static Timer? _timerChecker;
 
   static Future<void> init() async {
     await loadServerConfig();
@@ -460,9 +462,17 @@ class ServerManager {
     Future.delayed(const Duration(seconds: 30), () async {
       updateSubscription();
     });
+    if (PlatformUtils.isPC()) {
+      _timerChecker = Timer.periodic(const Duration(minutes: 30), (timer) {
+        updateSubscription();
+      });
+    }
   }
 
-  static Future<void> uninit() async {}
+  static Future<void> uninit() async {
+    _timerChecker?.cancel();
+    _timerChecker = null;
+  }
 
   static void onEventAddConfig(
     int hashcode,
