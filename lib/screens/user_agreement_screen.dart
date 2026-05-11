@@ -6,7 +6,7 @@ import 'package:karing/app/modules/remote_config_manager.dart';
 import 'package:karing/app/utils/app_utils.dart';
 import 'package:karing/app/utils/assets_utils.dart';
 import 'package:karing/i18n/strings.g.dart';
-import 'package:karing/screens/group_helper.dart';
+
 import 'package:karing/screens/theme_config.dart';
 import 'package:karing/screens/webview_helper.dart';
 import 'package:karing/screens/widgets/framework.dart';
@@ -119,20 +119,13 @@ class _UserAgreementScreenState
                             onTap: () async {
                               var remoteConfig =
                                   RemoteConfigManager.getConfig();
-                              bool ok = await WebviewHelper.loadUrl(
+                              await WebviewHelper.loadUrl(
                                 context,
                                 remoteConfig.privacyPolicy,
                                 "privacyPolicy",
                                 title: tcontext.meta.privacyPolicy,
                                 useInappWebViewForPC: true,
                               );
-
-                              if (!ok) {
-                                if (!context.mounted) {
-                                  return;
-                                }
-                                GroupHelper.showPrivacyPolicy(context);
-                              }
                             },
                           ),
                         ],

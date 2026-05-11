@@ -264,20 +264,13 @@ class AboutScreenState extends LasyRenderingState<AboutScreen> {
             name: tcontext.meta.privacyPolicy,
             onPush: () async {
               var remoteConfig = RemoteConfigManager.getConfig();
-              bool ok = await WebviewHelper.loadUrl(
+              await WebviewHelper.loadUrl(
                 context,
                 remoteConfig.privacyPolicy,
                 "privacyPolicy",
                 title: tcontext.meta.privacyPolicy,
                 useInappWebViewForPC: true,
               );
-
-              if (!ok) {
-                if (!mounted) {
-                  return;
-                }
-                GroupHelper.showPrivacyPolicy(context);
-              }
             },
           ),
         ),

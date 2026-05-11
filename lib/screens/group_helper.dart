@@ -234,21 +234,6 @@ class GroupHelper {
     return options;
   }
 
-  static void showPrivacyPolicy(BuildContext context) {
-    final tcontext = Translations.of(context);
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        settings: RichtextViewScreen.routSettings(),
-        builder: (context) => RichtextViewScreen(
-          title: tcontext.meta.privacyPolicy,
-          file: AssetsUtils.privacyPolicyPath(),
-          content: "",
-        ),
-      ),
-    );
-  }
-
   static Future<Tuple2<List<String>, bool>> showUserAgent(
     BuildContext context,
     List<String> userAgent,
