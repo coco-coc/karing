@@ -335,6 +335,8 @@ category-finance
 category-finance@ads
 category-finance@cn
 category-food-cn
+category-food-cn@ads
+category-food-cn@cn
 category-forums-ir
 category-forums
 category-forums@ads
@@ -366,12 +368,15 @@ category-logistics-cn@ads
 category-media-cn
 category-media-cn@ads
 category-media-ir
+category-media-ru-blocked
 category-media-ru
 category-media
 category-media@cn
 category-medicine-ru
 category-mobile-repair
 category-mooc-cn
+category-netdisk-!cn
+category-netdisk-!cn@ads
 category-netdisk-cn
 category-network-security-cn
 category-news-ir
@@ -502,6 +507,7 @@ colorfulclouds
 comfy-ui-launcher
 comfy
 comodo
+comssone
 connectivity-check
 contentful
 coolapk
@@ -637,6 +643,7 @@ entermediadb
 entrust
 entrust@cn
 envato
+envybox
 epicbrowser
 epicgames
 epicgames@cn
@@ -719,6 +726,7 @@ garena
 gateio
 geetest
 gemfury
+genotek-ru
 geolocation-!cn
 geolocation-!cn@ads
 geolocation-cn
@@ -733,9 +741,12 @@ giffgaff
 gigabyte
 gigabyte@cn
 gimy
+gismeteo-ru
+gismeteo
 gitbook
 gitee
 github-copilot
+github-copilot@ads
 github
 github1s
 github@ads
@@ -777,6 +788,7 @@ gravatar
 greatfire
 gree
 groq
+group-ib
 growingio-ads
 growingio
 gucci
@@ -862,6 +874,7 @@ icloud
 icloud@cn
 icloudprivaterelay
 id
+ideco-ru
 identrust
 idg
 ieee
@@ -1071,6 +1084,7 @@ mediachinesegroup
 medium
 meduza
 mega
+megafon
 meipian
 meitu
 meituan
@@ -1133,6 +1147,8 @@ msi
 msn
 msn@ads
 msn@cn
+mts-ru
+mts-ru@ads
 mubi
 mucinex
 mudvod
@@ -1322,6 +1338,7 @@ python
 qcc
 qcloud
 qcloud@!cn
+qianxin
 qihoo360
 qihoo360@ads
 qimao
@@ -1369,6 +1386,8 @@ riot@cn
 roblox
 rockstar
 roku
+rostelecom
+rostelecom@ads
 rsshub-3rd
 rsshub
 rthk
@@ -1523,6 +1542,7 @@ symantec-pki
 symantec
 synology
 synology@cn
+t2-ru
 taboola
 tagtic-ads
 taikang
@@ -1622,6 +1642,7 @@ tvb@cn
 tvdb
 tver
 twca
+twilio
 twitch
 twitter
 twitter@ads

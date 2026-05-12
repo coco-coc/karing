@@ -298,7 +298,8 @@ class MyProfilesScreenState extends LasyRenderingState<MyProfilesScreen> {
                   : tcontext.meta.disable,
               child: Switch.adaptive(
                 value: item.enable,
-                activeColor: ThemeDefine.kColorGreenBright,
+                activeThumbColor: Colors.white,
+                activeTrackColor: ThemeDefine.kColorGreenBright,
                 onChanged: (bool newValue) async {
                   final statusText = newValue
                       ? Translations.of(context).meta.enable

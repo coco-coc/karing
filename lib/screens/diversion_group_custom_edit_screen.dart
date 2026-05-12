@@ -988,20 +988,27 @@ class _DiversionGroupCustomEditScreenState
                 if (widget.options.showLogicOperations) ...[
                   Padding(
                     padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                    child: Row(
-                      children: [
-                        Text(tcontext.meta.logicOperation),
-                        const SizedBox(width: 10),
-                        _buildLogicOperationOption(
-                          label: 'OR',
-                          value: LogicOperations.or,
-                        ),
-                        const SizedBox(width: 20),
-                        _buildLogicOperationOption(
-                          label: 'AND',
-                          value: LogicOperations.and,
-                        ),
-                      ],
+                    child: RadioGroup<LogicOperations>(
+                      groupValue: _logicOperation,
+                      onChanged: (LogicOperations? selected) {
+                        _logicOperation = selected;
+                        setState(() {});
+                      },
+                      child: Row(
+                        children: [
+                          Text(tcontext.meta.logicOperation),
+                          const SizedBox(width: 10),
+                          _buildLogicOperationOption(
+                            label: 'OR',
+                            value: LogicOperations.or,
+                          ),
+                          const SizedBox(width: 20),
+                          _buildLogicOperationOption(
+                            label: 'AND',
+                            value: LogicOperations.and,
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
@@ -1053,13 +1060,8 @@ class _DiversionGroupCustomEditScreenState
         children: [
           Radio<LogicOperations>(
             value: value,
-            groupValue: _logicOperation,
             materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
             visualDensity: VisualDensity.compact,
-            onChanged: (LogicOperations? selected) {
-              _logicOperation = selected;
-              setState(() {});
-            },
           ),
           Text(label),
         ],

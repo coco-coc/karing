@@ -96,7 +96,8 @@ abstract class SwitchCardState<T extends SwitchCard> extends State<T> {
               ),
               Switch.adaptive(
                 value: enable,
-                activeColor: ThemeDefine.kColorGreenBright,
+                activeThumbColor: Colors.white,
+                activeTrackColor: ThemeDefine.kColorGreenBright,
                 onChanged: (value) {
                   final statusText = value
                       ? Translations.of(context).meta.enable
@@ -191,7 +192,8 @@ abstract class FutureSwitchCardState<T extends FutureSwitchCard>
                   enabled = snapshot.hasData && snapshot.data!;
                   return Switch.adaptive(
                     value: enabled,
-                    activeColor: ThemeDefine.kColorGreenBright,
+                    activeThumbColor: Colors.white,
+                    activeTrackColor: ThemeDefine.kColorGreenBright,
                     onChanged: (value) {
                       final statusText = value
                           ? Translations.of(context).meta.enable

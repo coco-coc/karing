@@ -25,8 +25,8 @@ import 'package:karing/app/modules/auto_update_manager.dart';
 import 'package:karing/app/private/sentry_utils_private.dart';
 import 'package:karing/app/utils/app_args.dart';
 import 'package:karing/app/utils/app_utils.dart';
-import 'package:karing/app/utils/geoip_subnet_utils.dart';
-import 'package:karing/app/utils/file_utils.dart';
+//import 'package:karing/app/utils/geoip_subnet_utils.dart';
+//import 'package:karing/app/utils/file_utils.dart';
 
 import 'package:karing/app/utils/log.dart';
 import 'package:karing/app/utils/path_utils.dart';
@@ -35,7 +35,6 @@ import 'package:karing/app/utils/sentry_utils.dart';
 import 'package:karing/app/utils/system_scheme_utils.dart';
 import 'package:karing/app/utils/windows_version_helper.dart';
 import 'package:karing/i18n/strings.g.dart';
-//import 'package:karing/screens/splash_screen.dart';
 import 'package:karing/screens/launch_failed_screen.dart';
 import 'package:karing/screens/theme_data_dark.dart';
 import 'package:karing/screens/themes.dart';
