@@ -3,10 +3,10 @@
 /// Source: lib/i18n
 /// To regenerate, run: `dart run slang`
 ///
-/// Locales: 27
-/// Strings: 16011 (593 per locale)
+/// Locales: 28
+/// Strings: 16632 (594 per locale)
 ///
-/// Built on 2026-07-02 at 02:22 UTC
+/// Built on 2026-07-05 at 04:42 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint, unused_import
@@ -27,6 +27,7 @@ import 'strings_es.g.dart' deferred as l_es;
 import 'strings_fa.g.dart' deferred as l_fa;
 import 'strings_fr.g.dart' deferred as l_fr;
 import 'strings_hi.g.dart' deferred as l_hi;
+import 'strings_id.g.dart' deferred as l_id;
 import 'strings_it.g.dart' deferred as l_it;
 import 'strings_ja.g.dart' deferred as l_ja;
 import 'strings_ko.g.dart' deferred as l_ko;
@@ -63,6 +64,7 @@ enum AppLocale with BaseAppLocale<AppLocale, Translations> {
 	fa(languageCode: 'fa'),
 	fr(languageCode: 'fr'),
 	hi(languageCode: 'hi'),
+	id(languageCode: 'id'),
 	it(languageCode: 'it'),
 	ja(languageCode: 'ja'),
 	ko(languageCode: 'ko'),
@@ -163,6 +165,13 @@ enum AppLocale with BaseAppLocale<AppLocale, Translations> {
 			case AppLocale.hi:
 				await l_hi.loadLibrary();
 				return l_hi.TranslationsHi(
+					overrides: overrides,
+					cardinalResolver: cardinalResolver,
+					ordinalResolver: ordinalResolver,
+				);
+			case AppLocale.id:
+				await l_id.loadLibrary();
+				return l_id.TranslationsId(
 					overrides: overrides,
 					cardinalResolver: cardinalResolver,
 					ordinalResolver: ordinalResolver,
@@ -352,6 +361,12 @@ enum AppLocale with BaseAppLocale<AppLocale, Translations> {
 				);
 			case AppLocale.hi:
 				return l_hi.TranslationsHi(
+					overrides: overrides,
+					cardinalResolver: cardinalResolver,
+					ordinalResolver: ordinalResolver,
+				);
+			case AppLocale.id:
+				return l_id.TranslationsId(
 					overrides: overrides,
 					cardinalResolver: cardinalResolver,
 					ordinalResolver: ordinalResolver,
