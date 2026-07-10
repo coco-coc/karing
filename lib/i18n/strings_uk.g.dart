@@ -327,6 +327,7 @@ class _Translations$NetConnectionsScreen$uk implements Translations$NetConnectio
 	// Translations
 	@override String get copyAsCSV => 'Скопійовано у формат CSV';
 	@override String get selectType => 'Виберіть тип відхилення';
+	@override String get loopbackWarning => 'Можливо, виникло мережеве зациклення. Перевірте налаштування мережевого адаптера';
 }
 
 // Path: PerAppAndroidScreen
@@ -669,6 +670,7 @@ class _Translations$meta$uk implements Translations$meta$en {
 	@override String get account => 'Обліковий запис';
 	@override String get password => 'Пароль';
 	@override String get decryptPassword => 'Пароль розшифровки';
+	@override String get overwriteOutboundDns => 'DNS: Перезаписати [${_root.SettingsScreen.dnsTypeOutbound}]';
 	@override String get required => 'Обов\'язково';
 	@override String get type => 'Тип';
 	@override String get path => 'Шлях';
@@ -1035,6 +1037,7 @@ extension on TranslationsUk {
 			'NetConnectionsFilterScreen.chain' => 'Вихідний',
 			'NetConnectionsScreen.copyAsCSV' => 'Скопійовано у формат CSV',
 			'NetConnectionsScreen.selectType' => 'Виберіть тип відхилення',
+			'NetConnectionsScreen.loopbackWarning' => 'Можливо, виникло мережеве зациклення. Перевірте налаштування мережевого адаптера',
 			'PerAppAndroidScreen.title' => 'Проксі для окремих програм',
 			'PerAppAndroidScreen.whiteListMode' => 'Режим білого списку',
 			'PerAppAndroidScreen.whiteListModeTip' => 'Коли увімкнено: проксі-серверами є лише позначені програми; коли вимкнено: проксі-серверами є лише непозначені програми',
@@ -1297,6 +1300,7 @@ extension on TranslationsUk {
 			'meta.account' => 'Обліковий запис',
 			'meta.password' => 'Пароль',
 			'meta.decryptPassword' => 'Пароль розшифровки',
+			'meta.overwriteOutboundDns' => 'DNS: Перезаписати [${_root.SettingsScreen.dnsTypeOutbound}]',
 			'meta.required' => 'Обов\'язково',
 			'meta.type' => 'Тип',
 			'meta.path' => 'Шлях',
@@ -1463,10 +1467,10 @@ extension on TranslationsUk {
 			'isp.bind' => 'Прив\'язати до [${_root.meta.isp}] ',
 			'isp.unbind' => ({required Object p}) => 'Відв\'язати[${p}]',
 			'isp.faq' => ({required Object p}) => 'FAQ[${p}]',
-			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
-			'isp.follow' => ({required Object p}) => 'Слідкувати[${p}]',
 			_ => null,
 		} ?? switch (path) {
+			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
+			'isp.follow' => ({required Object p}) => 'Слідкувати[${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}] Некоректний або термін дії закінчився',
 			'permission.camera' => 'Камера',
 			'permission.screen' => 'Запис екрана',

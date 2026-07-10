@@ -105,7 +105,8 @@
     },
     "NetConnectionsScreen": {
         "copyAsCSV": "Kopiert til CSV-format",
-        "selectType": "Velg omledningstype"
+        "selectType": "Velg omledningstype",
+        "loopbackWarning": "En nettverksløkke kan ha oppstått. Kontroller innstillingene for nettverksadapteret"
     },
     "PerAppAndroidScreen": {
         "title": "Proxy per app",
@@ -388,6 +389,7 @@
         "account": "Konto",
         "password": "Passord",
         "decryptPassword": "Dekryptering passord",
+        "overwriteOutboundDns": "DNS: Overstyr [@:{SettingsScreen.dnsTypeOutbound}]",
         "required": "Påkrevd",
         "type": "Type",
         "path": "Bane",

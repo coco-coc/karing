@@ -105,7 +105,8 @@
     },
     "NetConnectionsScreen": {
         "copyAsCSV": "In das CSV-Format kopiert",
-        "selectType": "Umleitungstyp auswählen"
+        "selectType": "Umleitungstyp auswählen",
+        "loopbackWarning": "Möglicherweise ist eine Netzwerkschleife aufgetreten. Bitte überprüfen Sie die Einstellungen Ihres Netzwerkadapters"
     },
     "PerAppAndroidScreen": {
         "title": "Pro-App-Proxy",
@@ -388,6 +389,7 @@
         "account": "Konto",
         "password": "Passwort",
         "decryptPassword": "Entschlüsselungspasswort",
+        "overwriteOutboundDns": "DNS: Überschreiben [@:{SettingsScreen.dnsTypeOutbound}]",
         "required": "Erforderlich",
         "type": "Typ",
         "path": "Pfad",

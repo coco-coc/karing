@@ -105,7 +105,8 @@
     },
     "NetConnectionsScreen": {
         "copyAsCSV": "CSV فارمیٹ میں کاپی کر لیا گیا",
-        "selectType": "ڈائیورژن کی قسم منتخب کریں"
+        "selectType": "ڈائیورژن کی قسم منتخب کریں",
+        "loopbackWarning": "نیٹ ورک میں لوپ بیک ہو سکتا ہے، براہ کرم نیٹ ورک اڈاپٹر کی ترتیبات چیک کریں"
     },
     "PerAppAndroidScreen": {
         "title": "فی ایپ پراکسی",
@@ -388,6 +389,7 @@
         "account": "اکاؤنٹ",
         "password": "پاس ورڈ",
         "decryptPassword": "ڈی کرپٹ پاس ورڈ",
+        "overwriteOutboundDns": "DNS: اووررائڈ کریں [@:{SettingsScreen.dnsTypeOutbound}]",
         "required": "ضروری",
         "type": "قسم",
         "path": "راستہ",

@@ -105,7 +105,8 @@
     },
     "NetConnectionsScreen": {
         "copyAsCSV": "Copiado en formato CSV",
-        "selectType": "Seleccionar tipo de desvío"
+        "selectType": "Seleccionar tipo de desvío",
+        "loopbackWarning": "Es posible que se haya producido un bucle de red. Verifique la configuración de su adaptador de red"
     },
     "PerAppAndroidScreen": {
         "title": "Proxy por aplicación",
@@ -388,6 +389,7 @@
         "account": "Cuenta",
         "password": "Contraseña",
         "decryptPassword": "Contraseña de descifrado",
+        "overwriteOutboundDns": "DNS: Sobrescribir [@:{SettingsScreen.dnsTypeOutbound}]",
         "required": "Requerido",
         "type": "Tipo",
         "path": "Ruta",

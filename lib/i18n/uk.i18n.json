@@ -105,7 +105,8 @@
     },
     "NetConnectionsScreen": {
         "copyAsCSV": "Скопійовано у формат CSV",
-        "selectType": "Виберіть тип відхилення"
+        "selectType": "Виберіть тип відхилення",
+        "loopbackWarning": "Можливо, виникло мережеве зациклення. Перевірте налаштування мережевого адаптера"
     },
     "PerAppAndroidScreen": {
         "title": "Проксі для окремих програм",
@@ -388,6 +389,7 @@
         "account": "Обліковий запис",
         "password": "Пароль",
         "decryptPassword": "Пароль розшифровки",
+        "overwriteOutboundDns": "DNS: Перезаписати [@:{SettingsScreen.dnsTypeOutbound}]",
         "required": "Обов'язково",
         "type": "Тип",
         "path": "Шлях",

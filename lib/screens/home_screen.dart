@@ -236,6 +236,13 @@ class _HomeScreenState extends LasyRenderingState<HomeScreen>
     WidgetsBinding.instance.addObserver(this);
 
     protocolHandler.addListener(this);
+    Biz.onEventSingletonInstance = (String url) {
+      Log.w("onEventSingletonInstance: $url");
+      if (!mounted) {
+        return;
+      }
+      SchemeHandler.handle(context, url);
+    };
     _initUrl = widget.launchUrl;
 
     _widgetOptions = HomeWidgetOptions(
@@ -1023,12 +1030,12 @@ class _HomeScreenState extends LasyRenderingState<HomeScreen>
     AppLifecycleStateNofity.onStateResumed(hashCode, _onStateResumed);
     AppLifecycleStateNofity.onStatePaused(hashCode, _onStatePaused);
 
-    if (Platform.isWindows) {
-      bool reg = SystemSchemeUtils.isRegistered(
+    if (Platform.isWindows || Platform.isLinux) {
+      final registerErr = await SystemSchemeUtils.register(
         SystemSchemeUtils.getKaringScheme(),
       );
-      if (!reg) {
-        SystemSchemeUtils.register(SystemSchemeUtils.getKaringScheme());
+      if (registerErr != null) {
+        Log.w("register karing scheme failed: $registerErr");
       }
     }
 

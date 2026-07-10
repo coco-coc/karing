@@ -1,5 +1,8 @@
 // ignore_for_file: constant_identifier_names
 
+import 'dart:io';
+
+import 'package:board_datetime_picker/board_datetime_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:karing/app/utils/accessibility_utils.dart';
 import 'package:karing/i18n/strings.g.dart';
@@ -8,7 +11,6 @@ import 'package:karing/screens/group_item_options.dart';
 import 'package:karing/screens/theme_define.dart';
 import 'package:karing/screens/widgets/sheet.dart';
 import 'package:karing/screens/widgets/text_field.dart';
-import 'package:board_datetime_picker/board_datetime_picker.dart';
 
 class GroupItemText extends StatelessWidget {
   const GroupItemText({super.key, required this.options});
@@ -129,6 +131,7 @@ class GroupItemTextField extends StatelessWidget {
               enabled: options.enabled,
               onSubmitted: options.onSubmitted,
               title: options.name,
+              autocompleteCandidates: options.autocompleteCandidates,
             ),
           ),
         ),
@@ -593,6 +596,7 @@ class GroupItemStringPicker extends StatelessWidget {
                 color: options.selected == key.item1
                     ? ThemeDefine.kColorBlue
                     : null,
+                fontFamily: Platform.isWindows ? 'Emoji' : null,
               ),
             ),
             onTap: () async {
@@ -611,6 +615,7 @@ class GroupItemStringPicker extends StatelessWidget {
               key ?? "",
               style: TextStyle(
                 color: options.selected == key ? ThemeDefine.kColorBlue : null,
+                fontFamily: Platform.isWindows ? 'Emoji' : null,
               ),
             ),
             onTap: () async {
@@ -672,6 +677,9 @@ class GroupItemStringPicker extends StatelessWidget {
                 selectedText,
                 maxLines: 3,
                 overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                  fontFamily: Platform.isWindows ? 'Emoji' : null,
+                ),
               ),
             ),
           ),

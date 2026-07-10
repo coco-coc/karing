@@ -2325,24 +2325,71 @@ class _SettingScreenState extends LasyRenderingState<SettingsScreen> {
           ),
         ),
         GroupItemOptions(
-          pushOptions: GroupItemPushOptions(
+          textFormFieldOptions: GroupItemTextFieldOptions(
+            name: "MaxConnections",
+            keyboardType: TextInputType.number,
+            inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+            text: settingConfig.mux.maxConnections?.toString(),
+            textWidthPercent: 0.6,
+            enabled: settingConfig.mux.enable,
+            onChanged: (String value) {
+              settingConfig.mux.maxConnections = int.tryParse(value);
+              SettingManager.setDirty(true);
+            },
+          ),
+        ),
+        GroupItemOptions(
+          textFormFieldOptions: GroupItemTextFieldOptions(
+            name: "MinStream",
+            hint: "1-256",
+            keyboardType: TextInputType.number,
+            inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+            text: settingConfig.mux.minStream?.toString(),
+            textWidthPercent: 0.6,
+            enabled: settingConfig.mux.enable,
+            onChanged: (String value) {
+              settingConfig.mux.minStream = int.tryParse(value);
+              SettingManager.setDirty(true);
+            },
+          ),
+        ),
+        GroupItemOptions(
+          textFormFieldOptions: GroupItemTextFieldOptions(
             name: "MaxStream",
-            text: settingConfig.mux.maxStream.toString(),
+            hint: "1-256",
+            keyboardType: TextInputType.number,
+            inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+            text: settingConfig.mux.maxStream?.toString(),
+            textWidthPercent: 0.6,
+            enabled: settingConfig.mux.enable,
+            onChanged: (String value) {
+              settingConfig.mux.maxStream = int.tryParse(value);
+              SettingManager.setDirty(true);
+            },
+          ),
+        ),
+
+        GroupItemOptions(
+          pushOptions: GroupItemPushOptions(
+            name: "Brutal",
             onPush: !settingConfig.mux.enable
                 ? null
                 : () async {
-                    int? p = await DialogUtils.showIntInputDialog(
+                    settingConfig.mux.brutal ??=
+                        SingboxOutboundMultiplexBrutalOptions();
+                    await Navigator.push(
                       context,
-                      tcontext.SettingsScreen.modifyPort,
-                      settingConfig.mux.maxStream,
-                      1,
-                      256,
+                      MaterialPageRoute(
+                        settings: GroupScreen.routSettings("brutal"),
+                        builder: (context) => GroupScreen(
+                          title: "brutal",
+                          getOptions:
+                              settingConfig.mux.brutal!.getWidgetOptions,
+                        ),
+                      ),
                     );
-                    if (p != null) {
-                      settingConfig.mux.maxStream = p;
-                      SettingManager.setDirty(true);
-                      setState(() {});
-                    }
+                    SettingManager.setDirty(true);
+                    setState(() {});
                   },
           ),
         ),
@@ -2375,6 +2422,8 @@ class _SettingScreenState extends LasyRenderingState<SettingsScreen> {
         GroupItemOptions(
           switchOptions: GroupItemSwitchOptions(
             name: SingboxOutboundType.vless.name,
+            tips:
+                "If the node's `flow` is not empty, this does not apply to the node.",
             switchValue: settingConfig.mux.outboundTypes.contains(
               SingboxOutboundType.vless.name,
             ),

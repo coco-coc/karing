@@ -5,10 +5,13 @@ import 'dart:async';
 import 'package:after_layout/after_layout.dart';
 import 'package:flutter/material.dart';
 import 'package:karing/app/modules/server_manager.dart';
+import 'package:karing/app/modules/setting_manager.dart';
 import 'package:karing/app/runtime/return_result.dart';
 import 'package:karing/app/utils/auto_conf_utils.dart';
 import 'package:karing/app/utils/http_utils.dart';
 import 'package:karing/app/utils/proxy_conf_utils.dart';
+import 'package:karing/app/utils/system_scheme_utils.dart';
+import 'package:karing/app/utils/uri_utils.dart';
 import 'package:karing/i18n/strings.g.dart';
 import 'package:karing/screens/dialog_utils.dart';
 import 'package:karing/screens/file_view_screen.dart';
@@ -32,6 +35,7 @@ class AddProfileByLinkOrContentScreen extends LasyRenderingStatefulWidget {
   final String? ispUser;
   final bool? autoAdd;
   final bool? xhwid;
+  final List<String> outboundDns;
 
   const AddProfileByLinkOrContentScreen({
     super.key,
@@ -41,6 +45,7 @@ class AddProfileByLinkOrContentScreen extends LasyRenderingStatefulWidget {
     this.ispUser,
     this.autoAdd,
     this.xhwid,
+    this.outboundDns = const [],
   });
 
   @override
@@ -58,6 +63,8 @@ class _AddProfileByLinkOrContentScreenState
   bool _append = true;
   List<String> _compatible = [];
   bool _xhwid = false;
+  bool _overrideProxyDns = false;
+  List<String> outboundDns = [];
   String _website = "";
   String _decryptPassword = "";
   final RemoteContent _remoteContent = RemoteContent();
@@ -78,8 +85,24 @@ class _AddProfileByLinkOrContentScreenState
     if (name.isNotEmpty) {
       _textControllerRemark.text = name;
     } else if (urlOrContent.isNotEmpty) {
-      updateRemarkByText(true);
+      updateDnsByText();
+      updateRemarkByText();
     }
+
+    for (var dns in widget.outboundDns) {
+      Uri? dnsUri = UriUtils.parseUrlFixIPV6(dns);
+      if (dnsUri == null) {
+        continue;
+      }
+      if (!SettingConfigItemDNS.isDNSValidScheme(dnsUri.scheme)) {
+        continue;
+      }
+      if (dnsUri.host.isEmpty) {
+        continue;
+      }
+      outboundDns.add(dns);
+    }
+    _overrideProxyDns = outboundDns.isNotEmpty;
 
     super.initState();
   }
@@ -99,7 +122,30 @@ class _AddProfileByLinkOrContentScreenState
     super.dispose();
   }
 
-  void updateRemarkByText(bool getTitle) async {
+  void updateDnsByText() async {
+    if (!mounted) {
+      return;
+    }
+    final text = _textControllerLink.text.trim();
+    if (text.isEmpty) {
+      return;
+    }
+    Uri? uri = Uri.tryParse(text);
+    if (uri != null &&
+        (uri.isScheme(SystemSchemeUtils.getKaringScheme()) ||
+            uri.isScheme(SystemSchemeUtils.getClashScheme()) ||
+            uri.isScheme(SystemSchemeUtils.getSingboxScheme()))) {
+      if (outboundDns.isEmpty) {
+        final dns = uri.queryParameters["outbound-dns"];
+        if (dns != null && dns.isNotEmpty) {
+          outboundDns = dns.split(",");
+          _overrideProxyDns = outboundDns.isNotEmpty;
+        }
+      }
+    }
+  }
+
+  void updateRemarkByText() async {
     if (!mounted) {
       return;
     }
@@ -133,15 +179,13 @@ class _AddProfileByLinkOrContentScreenState
       }
     } while (false);
 
-    if (getTitle) {
-      if (remarks == null || remarks.isEmpty) {
-        final titleResult = await HttpUtils.httpGetTitle(
-          result.data!,
-          _compatible.join(";"),
-        );
-        if (titleResult.data != null && titleResult.data!.length < 32) {
-          remarks = titleResult.data!;
-        }
+    if (remarks == null || remarks.isEmpty) {
+      final titleResult = await HttpUtils.httpGetTitle(
+        result.data!,
+        _compatible.join(";"),
+      );
+      if (titleResult.data != null && titleResult.data!.length < 32) {
+        remarks = titleResult.data!;
       }
     }
 
@@ -231,6 +275,30 @@ class _AddProfileByLinkOrContentScreenState
       decryptPassword: _decryptPassword,
     );
     if (error == null) {
+      if (_overrideProxyDns && outboundDns.isNotEmpty) {
+        final uri = Uri.tryParse(url);
+        for (var dns in outboundDns) {
+          if (!SettingConfigItemDNS.containsDNSURL(dns)) {
+            final exists = SettingManager.getConfig().dns.list.any((element) {
+              if (element is Map<String, dynamic>) {
+                final dnsUrl = element[SettingConfigItemDNS.kDNSUrl];
+                if (dnsUrl == dns) {
+                  return true;
+                }
+              }
+              return false;
+            });
+            if (!exists) {
+              SettingManager.getConfig().dns.list.add({
+                SettingConfigItemDNS.kDNSIsp: uri?.host ?? "",
+                SettingConfigItemDNS.kDNSUrl: dns,
+              });
+            }
+          }
+        }
+        SettingManager.getConfig().dns.setOutboundDns(outboundDns);
+        SettingManager.setDirty(true);
+      }
       ServerManager.setDirty(true);
     }
     if (!mounted) {
@@ -380,7 +448,9 @@ class _AddProfileByLinkOrContentScreenState
                             hintText: tcontext.meta.profileUrlOrContentHit,
                           ),
                           onChanged: (text) {
-                            updateRemarkByText(true);
+                            updateDnsByText();
+                            updateRemarkByText();
+                            setState(() {});
                           },
                           onSubmitted: (String? text) {
                             FocusScope.of(context).nextFocus();
@@ -484,6 +554,20 @@ class _AddProfileByLinkOrContentScreenState
           },
         ),
       ),
+      if (outboundDns.isNotEmpty) ...[
+        GroupItemOptions(
+          switchOptions: GroupItemSwitchOptions(
+            name: tcontext.meta.overwriteOutboundDns,
+            tips: outboundDns.join("\n"),
+            switchValue: _overrideProxyDns,
+            onSwitch: (bool value) async {
+              _overrideProxyDns = value;
+              setState(() {});
+            },
+          ),
+        ),
+      ],
+
       GroupItemOptions(
         textFormFieldOptions: GroupItemTextFieldOptions(
           name: tcontext.meta.decryptPassword,

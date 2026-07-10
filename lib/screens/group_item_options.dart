@@ -54,6 +54,7 @@ class GroupItemTextFieldOptions {
     this.controller,
     this.onChanged,
     this.onSubmitted,
+    this.autocompleteCandidates,
   });
 
   final String name;
@@ -74,6 +75,7 @@ class GroupItemTextFieldOptions {
   final TextEditingController? controller;
   final void Function(String)? onChanged;
   final void Function(String)? onSubmitted;
+  final List<String>? autocompleteCandidates;
 }
 
 class GroupItemSwitchOptions {

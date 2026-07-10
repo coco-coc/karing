@@ -105,7 +105,8 @@
     },
     "NetConnectionsScreen": {
         "copyAsCSV": "CSV ফরম্যাটে কপি করা হয়েছে",
-        "selectType": "ডাইভারশন টাইপ নির্বাচন করুন"
+        "selectType": "ডাইভারশন টাইপ নির্বাচন করুন",
+        "loopbackWarning": "নেটওয়ার্কে লুপব্যাক হতে পারে, অনুগ্রহ করে নেটওয়ার্ক অ্যাডাপ্টারের সেটিংস পরীক্ষা করুন"
     },
     "PerAppAndroidScreen": {
         "title": "প্রতি-অ্যাপ প্রক্সি",
@@ -388,6 +389,7 @@
         "account": "অ্যাকাউন্ট",
         "password": "পাসওয়ার্ড",
         "decryptPassword": "ডিক্রিপ্ট পাসওয়ার্ড",
+        "overwriteOutboundDns": "DNS: ওভাররাইড [@:{SettingsScreen.dnsTypeOutbound}]",
         "required": "প্রয়োজন",
         "type": "ধরন",
         "path": "পাথ",

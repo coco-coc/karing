@@ -105,7 +105,8 @@
     },
     "NetConnectionsScreen": {
         "copyAsCSV": "CSV प्रारूप में कॉपी किया गया",
-        "selectType": "विचलन प्रकार चुनें"
+        "selectType": "विचलन प्रकार चुनें",
+        "loopbackWarning": "ਨੈੱਟਵਰਕ ਵਿੱਚ ਲੂਪਬੈਕ ਹੋ ਸਕਦਾ ਹੈ, ਕਿਰਪਾ ਕਰਕੇ ਨੈੱਟਵਰਕ ਐਡਾਪਟਰ ਸੈਟਿੰਗਾਂ ਦੀ ਜਾਂਚ ਕਰੋ"
     },
     "PerAppAndroidScreen": {
         "title": "प्रति-ऐप प्रॉक्सी",
@@ -388,6 +389,7 @@
         "account": "खाता",
         "password": "पासवर्ड",
         "decryptPassword": "डिक्रोरप्ट पासवर्ड",
+        "overwriteOutboundDns": "DNS: ਓਵਰਰਾਈਡ ਕਰੋ [@:{SettingsScreen.dnsTypeOutbound}]",
         "required": "आवश्यक",
         "type": "प्रकार",
         "path": "पथ",

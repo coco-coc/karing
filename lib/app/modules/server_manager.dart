@@ -2834,13 +2834,12 @@ class ServerManager {
   }
 
   static Future<ReturnResultError?> reloadFromZip(
-    String url,
     String zipPath, {
     Set<String> whiteList = const {},
     bool? tun,
     bool mergePerapp = false,
   }) async {
-    var result = await BackupAndSyncUtils.validZip(url, zipPath);
+    var result = await BackupAndSyncUtils.validZip(zipPath);
     if (result != null) {
       return result;
     }

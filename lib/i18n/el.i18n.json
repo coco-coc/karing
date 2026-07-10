@@ -105,7 +105,8 @@
     },
     "NetConnectionsScreen": {
         "copyAsCSV": "Αντιγράφηκε σε μορφή CSV",
-        "selectType": "Επιλογή τύπου εκτροπής"
+        "selectType": "Επιλογή τύπου εκτροπής",
+        "loopbackWarning": "Μπορεί να έχει προκύψει βρόχος δικτύου. Ελέγξτε τις ρυθμίσεις του προσαρμογέα δικτύου"
     },
     "PerAppAndroidScreen": {
         "title": "Proxy ανά εφαρμογή",
@@ -388,6 +389,7 @@
         "account": "Λογαριασμός",
         "password": "Κωδικός πρόσβασης",
         "decryptPassword": "Κωδικός Αποκρυπτογράφησης",
+        "overwriteOutboundDns": "DNS: Επικάλυψη [@:{SettingsScreen.dnsTypeOutbound}]",
         "required": "Απαιτείται",
         "type": "Τύπος",
         "path": "Διαδρομή",

@@ -105,7 +105,8 @@
     },
     "NetConnectionsScreen": {
         "copyAsCSV": "已複製為 CSV 格式",
-        "selectType": "選擇分流類型"
+        "selectType": "選擇分流類型",
+        "loopbackWarning": "網路可能出現回環，請檢查網卡設定"
     },
     "PerAppAndroidScreen": {
         "title": "分應用代理",
@@ -388,6 +389,7 @@
         "account": "帳號",
         "password": "密碼",
         "decryptPassword": "解密密碼",
+        "overwriteOutboundDns": "DNS:覆蓋[@:{SettingsScreen.dnsTypeOutbound}]",
         "required": "必填",
         "type": "類型",
         "path": "路徑",

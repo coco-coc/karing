@@ -558,6 +558,9 @@ class Translations$NetConnectionsScreen$en {
 
 	/// en: 'Select Diversion Type'
 	String get selectType => 'Select Diversion Type';
+
+	/// en: 'A network loop may have occurred. Please check your network adapter settings.'
+	String get loopbackWarning => 'A network loop may have occurred. Please check your network adapter settings.';
 }
 
 // Path: PerAppAndroidScreen
@@ -1421,6 +1424,9 @@ class Translations$meta$en {
 	/// en: 'Decrypt Password'
 	String get decryptPassword => 'Decrypt Password';
 
+	/// en: 'DNS: Override [Proxy Server]'
+	String get overwriteOutboundDns => 'DNS: Override [${_root.SettingsScreen.dnsTypeOutbound}]';
+
 	/// en: 'Required'
 	String get required => 'Required';
 
@@ -2172,6 +2178,7 @@ extension on Translations {
 			'NetConnectionsFilterScreen.chain' => 'Outbound',
 			'NetConnectionsScreen.copyAsCSV' => 'Copied to CSV format',
 			'NetConnectionsScreen.selectType' => 'Select Diversion Type',
+			'NetConnectionsScreen.loopbackWarning' => 'A network loop may have occurred. Please check your network adapter settings.',
 			'PerAppAndroidScreen.title' => 'Per-App Proxy',
 			'PerAppAndroidScreen.whiteListMode' => 'Whitelist Mode',
 			'PerAppAndroidScreen.whiteListModeTip' => 'When enabled: only the apps that have been checked are proxies; when not enabled: only the apps that are not checked are proxies',
@@ -2434,6 +2441,7 @@ extension on Translations {
 			'meta.account' => 'Account',
 			'meta.password' => 'Password',
 			'meta.decryptPassword' => 'Decrypt Password',
+			'meta.overwriteOutboundDns' => 'DNS: Override [${_root.SettingsScreen.dnsTypeOutbound}]',
 			'meta.required' => 'Required',
 			'meta.type' => 'Type',
 			'meta.path' => 'Path',
@@ -2600,10 +2608,10 @@ extension on Translations {
 			'isp.bind' => 'Bind To [${_root.meta.isp}] ',
 			'isp.unbind' => ({required Object p}) => 'Unbind[${p}]',
 			'isp.faq' => ({required Object p}) => 'FAQ[${p}]',
-			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
-			'isp.follow' => ({required Object p}) => 'Follow[${p}]',
 			_ => null,
 		} ?? switch (path) {
+			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
+			'isp.follow' => ({required Object p}) => 'Follow[${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}] Invalid or expired',
 			'permission.camera' => 'Camera',
 			'permission.screen' => 'Screen Recording',

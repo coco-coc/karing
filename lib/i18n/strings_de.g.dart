@@ -327,6 +327,7 @@ class _Translations$NetConnectionsScreen$de implements Translations$NetConnectio
 	// Translations
 	@override String get copyAsCSV => 'In das CSV-Format kopiert';
 	@override String get selectType => 'Umleitungstyp auswählen';
+	@override String get loopbackWarning => 'Möglicherweise ist eine Netzwerkschleife aufgetreten. Bitte überprüfen Sie die Einstellungen Ihres Netzwerkadapters';
 }
 
 // Path: PerAppAndroidScreen
@@ -669,6 +670,7 @@ class _Translations$meta$de implements Translations$meta$en {
 	@override String get account => 'Konto';
 	@override String get password => 'Passwort';
 	@override String get decryptPassword => 'Entschlüsselungspasswort';
+	@override String get overwriteOutboundDns => 'DNS: Überschreiben [${_root.SettingsScreen.dnsTypeOutbound}]';
 	@override String get required => 'Erforderlich';
 	@override String get type => 'Typ';
 	@override String get path => 'Pfad';
@@ -1035,6 +1037,7 @@ extension on TranslationsDe {
 			'NetConnectionsFilterScreen.chain' => 'Ausgehend',
 			'NetConnectionsScreen.copyAsCSV' => 'In das CSV-Format kopiert',
 			'NetConnectionsScreen.selectType' => 'Umleitungstyp auswählen',
+			'NetConnectionsScreen.loopbackWarning' => 'Möglicherweise ist eine Netzwerkschleife aufgetreten. Bitte überprüfen Sie die Einstellungen Ihres Netzwerkadapters',
 			'PerAppAndroidScreen.title' => 'Pro-App-Proxy',
 			'PerAppAndroidScreen.whiteListMode' => 'Whitelist-Modus',
 			'PerAppAndroidScreen.whiteListModeTip' => 'Wenn aktiviert: Nur die markierten Apps sind Proxies; wenn nicht aktiviert: Nur die nicht markierten Apps sind Proxies',
@@ -1297,6 +1300,7 @@ extension on TranslationsDe {
 			'meta.account' => 'Konto',
 			'meta.password' => 'Passwort',
 			'meta.decryptPassword' => 'Entschlüsselungspasswort',
+			'meta.overwriteOutboundDns' => 'DNS: Überschreiben [${_root.SettingsScreen.dnsTypeOutbound}]',
 			'meta.required' => 'Erforderlich',
 			'meta.type' => 'Typ',
 			'meta.path' => 'Pfad',
@@ -1463,10 +1467,10 @@ extension on TranslationsDe {
 			'isp.bind' => 'An [${_root.meta.isp}] binden',
 			'isp.unbind' => ({required Object p}) => 'Entbinden[${p}]',
 			'isp.faq' => ({required Object p}) => 'FAQ[${p}]',
-			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
-			'isp.follow' => ({required Object p}) => 'Folgen[${p}]',
 			_ => null,
 		} ?? switch (path) {
+			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
+			'isp.follow' => ({required Object p}) => 'Folgen[${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}] Ungültig oder abgelaufen',
 			'permission.camera' => 'Kamera',
 			'permission.screen' => 'Bildschirmaufnahme',

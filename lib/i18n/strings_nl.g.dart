@@ -327,6 +327,7 @@ class _Translations$NetConnectionsScreen$nl implements Translations$NetConnectio
 	// Translations
 	@override String get copyAsCSV => 'Gekopieerd naar CSV-formaat';
 	@override String get selectType => 'Selecteer omleidingstype';
+	@override String get loopbackWarning => 'Er is mogelijk een netwerklus opgetreden. Controleer de instellingen van je netwerkadapter';
 }
 
 // Path: PerAppAndroidScreen
@@ -669,6 +670,7 @@ class _Translations$meta$nl implements Translations$meta$en {
 	@override String get account => 'Account';
 	@override String get password => 'Wachtwoord';
 	@override String get decryptPassword => 'Ontcijferingswachtwoord';
+	@override String get overwriteOutboundDns => 'DNS: Overschrijven [${_root.SettingsScreen.dnsTypeOutbound}]';
 	@override String get required => 'Vereist';
 	@override String get type => 'Type';
 	@override String get path => 'Pad';
@@ -1035,6 +1037,7 @@ extension on TranslationsNl {
 			'NetConnectionsFilterScreen.chain' => 'Uitgaand',
 			'NetConnectionsScreen.copyAsCSV' => 'Gekopieerd naar CSV-formaat',
 			'NetConnectionsScreen.selectType' => 'Selecteer omleidingstype',
+			'NetConnectionsScreen.loopbackWarning' => 'Er is mogelijk een netwerklus opgetreden. Controleer de instellingen van je netwerkadapter',
 			'PerAppAndroidScreen.title' => 'Proxy per app',
 			'PerAppAndroidScreen.whiteListMode' => 'Whitelist-modus',
 			'PerAppAndroidScreen.whiteListModeTip' => 'Indien ingeschakeld: alleen de geselecteerde apps gebruiken de proxy; indien niet ingeschakeld: alleen de niet-geselecteerde apps gebruiken de proxy',
@@ -1297,6 +1300,7 @@ extension on TranslationsNl {
 			'meta.account' => 'Account',
 			'meta.password' => 'Wachtwoord',
 			'meta.decryptPassword' => 'Ontcijferingswachtwoord',
+			'meta.overwriteOutboundDns' => 'DNS: Overschrijven [${_root.SettingsScreen.dnsTypeOutbound}]',
 			'meta.required' => 'Vereist',
 			'meta.type' => 'Type',
 			'meta.path' => 'Pad',
@@ -1463,10 +1467,10 @@ extension on TranslationsNl {
 			'isp.bind' => 'Koppelen aan [${_root.meta.isp}] ',
 			'isp.unbind' => ({required Object p}) => 'Ontkoppelen[${p}]',
 			'isp.faq' => ({required Object p}) => 'FAQ[${p}]',
-			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
-			'isp.follow' => ({required Object p}) => 'Volgen[${p}]',
 			_ => null,
 		} ?? switch (path) {
+			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
+			'isp.follow' => ({required Object p}) => 'Volgen[${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}] Ongeldig of verlopen',
 			'permission.camera' => 'Camera',
 			'permission.screen' => 'Schermopname',

@@ -327,6 +327,7 @@ class _Translations$NetConnectionsScreen$ru implements Translations$NetConnectio
 	// Translations
 	@override String get copyAsCSV => 'Скопировано в CSV формате';
 	@override String get selectType => 'Выберите тип перенаправления';
+	@override String get loopbackWarning => 'Возможно, возникло сетевое зацикливание. Проверьте настройки сетевого адаптера';
 }
 
 // Path: PerAppAndroidScreen
@@ -669,6 +670,7 @@ class _Translations$meta$ru implements Translations$meta$en {
 	@override String get account => 'Аккаунт';
 	@override String get password => 'Пароль';
 	@override String get decryptPassword => 'Пароль расшифровки';
+	@override String get overwriteOutboundDns => 'DNS: Переопределить [${_root.SettingsScreen.dnsTypeOutbound}]';
 	@override String get required => 'Необходимо';
 	@override String get type => 'тип';
 	@override String get path => 'путь';
@@ -1035,6 +1037,7 @@ extension on TranslationsRu {
 			'NetConnectionsFilterScreen.chain' => 'Исходящий',
 			'NetConnectionsScreen.copyAsCSV' => 'Скопировано в CSV формате',
 			'NetConnectionsScreen.selectType' => 'Выберите тип перенаправления',
+			'NetConnectionsScreen.loopbackWarning' => 'Возможно, возникло сетевое зацикливание. Проверьте настройки сетевого адаптера',
 			'PerAppAndroidScreen.title' => 'Проксируемые приложения',
 			'PerAppAndroidScreen.whiteListMode' => 'Режим белого списка',
 			'PerAppAndroidScreen.whiteListModeTip' => 'Если включено: перенаправляются через прокси-сервер только те приложения, которые были отмечены. Если выключено: перенаправляются через прокси-сервер только те приложения, которые не были отмечены.',
@@ -1297,6 +1300,7 @@ extension on TranslationsRu {
 			'meta.account' => 'Аккаунт',
 			'meta.password' => 'Пароль',
 			'meta.decryptPassword' => 'Пароль расшифровки',
+			'meta.overwriteOutboundDns' => 'DNS: Переопределить [${_root.SettingsScreen.dnsTypeOutbound}]',
 			'meta.required' => 'Необходимо',
 			'meta.type' => 'тип',
 			'meta.path' => 'путь',
@@ -1463,10 +1467,10 @@ extension on TranslationsRu {
 			'isp.bind' => 'Привязать к [${_root.meta.isp}]',
 			'isp.unbind' => ({required Object p}) => 'Отвязать[${p}]',
 			'isp.faq' => ({required Object p}) => 'Часто задаваемые вопросы[${p}]',
-			'isp.customerService' => ({required Object p}) => 'Служба поддержки клиентов[${p}]',
-			'isp.follow' => ({required Object p}) => 'Следуйте[${p}]',
 			_ => null,
 		} ?? switch (path) {
+			'isp.customerService' => ({required Object p}) => 'Служба поддержки клиентов[${p}]',
+			'isp.follow' => ({required Object p}) => 'Следуйте[${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}]Недействительно, или срок действия истек',
 			'permission.camera' => 'Камера',
 			'permission.screen' => 'Запись экрана',

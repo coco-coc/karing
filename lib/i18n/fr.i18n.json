@@ -105,7 +105,8 @@
     },
     "NetConnectionsScreen": {
         "copyAsCSV": "Copié au format CSV",
-        "selectType": "Sélectionner le type de diversion"
+        "selectType": "Sélectionner le type de diversion",
+        "loopbackWarning": "Une boucle réseau a peut-être été détectée. Veuillez vérifier les paramètres de votre carte réseau"
     },
     "PerAppAndroidScreen": {
         "title": "Proxy par application",
@@ -388,6 +389,7 @@
         "account": "Compte",
         "password": "Mot de passe",
         "decryptPassword": "Mot de passe de déchiffrement",
+        "overwriteOutboundDns": "DNS : Remplacer [@:{SettingsScreen.dnsTypeOutbound}]",
         "required": "Requis",
         "type": "Type",
         "path": "Chemin",

@@ -105,7 +105,8 @@
     },
     "NetConnectionsScreen": {
         "copyAsCSV": "Скопировано в CSV формате",
-        "selectType": "Выберите тип перенаправления"
+        "selectType": "Выберите тип перенаправления",
+        "loopbackWarning": "Возможно, возникло сетевое зацикливание. Проверьте настройки сетевого адаптера"
     },
     "PerAppAndroidScreen": {
         "title": "Проксируемые приложения",
@@ -388,6 +389,7 @@
         "account": "Аккаунт",
         "password": "Пароль",
         "decryptPassword": "Пароль расшифровки",
+        "overwriteOutboundDns": "DNS: Переопределить [@:{SettingsScreen.dnsTypeOutbound}]",
         "required": "Необходимо",
         "type": "тип",
         "path": "путь",

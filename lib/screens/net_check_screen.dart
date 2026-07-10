@@ -985,9 +985,7 @@ class _NetCheckScreenState extends LasyRenderingState<NetCheckScreen> {
                   textAlign: TextAlign.left,
                   style: TextStyle(
                     fontSize: ThemeConfig.kFontSizeGroupItem,
-                    color: _domain != _domainAndPort.item1
-                        ? Colors.yellow
-                        : null,
+                    color: _domain != _domainAndPort.item1 ? Colors.blue : null,
                   ),
                 ),
               ),

@@ -327,6 +327,7 @@ class _Translations$NetConnectionsScreen$ja implements Translations$NetConnectio
 	// Translations
 	@override String get copyAsCSV => 'CSV 形式でコピーしました';
 	@override String get selectType => '分流タイプを選択';
+	@override String get loopbackWarning => 'ネットワークでループバックが発生している可能性があります。ネットワークアダプターの設定を確認してください';
 }
 
 // Path: PerAppAndroidScreen
@@ -669,6 +670,7 @@ class _Translations$meta$ja implements Translations$meta$en {
 	@override String get account => 'アカウント';
 	@override String get password => 'パスワード';
 	@override String get decryptPassword => '複号化パスワード';
+	@override String get overwriteOutboundDns => 'DNS:上書き[${_root.SettingsScreen.dnsTypeOutbound}]';
 	@override String get required => '必須';
 	@override String get type => 'タイプ';
 	@override String get path => 'パス';
@@ -1035,6 +1037,7 @@ extension on TranslationsJa {
 			'NetConnectionsFilterScreen.chain' => '送信',
 			'NetConnectionsScreen.copyAsCSV' => 'CSV 形式でコピーしました',
 			'NetConnectionsScreen.selectType' => '分流タイプを選択',
+			'NetConnectionsScreen.loopbackWarning' => 'ネットワークでループバックが発生している可能性があります。ネットワークアダプターの設定を確認してください',
 			'PerAppAndroidScreen.title' => 'アプリごとのプロキシ',
 			'PerAppAndroidScreen.whiteListMode' => 'ホワイトリストモード',
 			'PerAppAndroidScreen.whiteListModeTip' => 'オンの場合: チェックされたアプリのみがプロキシを経由します。オフの場合: チェックされていないアプリのみがプロキシを経由します',
@@ -1297,6 +1300,7 @@ extension on TranslationsJa {
 			'meta.account' => 'アカウント',
 			'meta.password' => 'パスワード',
 			'meta.decryptPassword' => '複号化パスワード',
+			'meta.overwriteOutboundDns' => 'DNS:上書き[${_root.SettingsScreen.dnsTypeOutbound}]',
 			'meta.required' => '必須',
 			'meta.type' => 'タイプ',
 			'meta.path' => 'パス',
@@ -1463,10 +1467,10 @@ extension on TranslationsJa {
 			'isp.bind' => '[${_root.meta.isp}] にバインドする',
 			'isp.unbind' => ({required Object p}) => 'バインド解除 [${p}]',
 			'isp.faq' => ({required Object p}) => 'よくある質問 [${p}]',
-			'isp.customerService' => ({required Object p}) => 'Telegram [${p}]',
-			'isp.follow' => ({required Object p}) => 'フォロー [${p}]',
 			_ => null,
 		} ?? switch (path) {
+			'isp.customerService' => ({required Object p}) => 'Telegram [${p}]',
+			'isp.follow' => ({required Object p}) => 'フォロー [${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}] が無効または期限切れです',
 			'permission.camera' => 'カメラ',
 			'permission.screen' => '画面収録',

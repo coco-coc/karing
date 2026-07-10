@@ -327,6 +327,7 @@ class _Translations$NetConnectionsScreen$el implements Translations$NetConnectio
 	// Translations
 	@override String get copyAsCSV => 'Αντιγράφηκε σε μορφή CSV';
 	@override String get selectType => 'Επιλογή τύπου εκτροπής';
+	@override String get loopbackWarning => 'Μπορεί να έχει προκύψει βρόχος δικτύου. Ελέγξτε τις ρυθμίσεις του προσαρμογέα δικτύου';
 }
 
 // Path: PerAppAndroidScreen
@@ -669,6 +670,7 @@ class _Translations$meta$el implements Translations$meta$en {
 	@override String get account => 'Λογαριασμός';
 	@override String get password => 'Κωδικός πρόσβασης';
 	@override String get decryptPassword => 'Κωδικός Αποκρυπτογράφησης';
+	@override String get overwriteOutboundDns => 'DNS: Επικάλυψη [${_root.SettingsScreen.dnsTypeOutbound}]';
 	@override String get required => 'Απαιτείται';
 	@override String get type => 'Τύπος';
 	@override String get path => 'Διαδρομή';
@@ -1035,6 +1037,7 @@ extension on TranslationsEl {
 			'NetConnectionsFilterScreen.chain' => 'Εξερχόμενα',
 			'NetConnectionsScreen.copyAsCSV' => 'Αντιγράφηκε σε μορφή CSV',
 			'NetConnectionsScreen.selectType' => 'Επιλογή τύπου εκτροπής',
+			'NetConnectionsScreen.loopbackWarning' => 'Μπορεί να έχει προκύψει βρόχος δικτύου. Ελέγξτε τις ρυθμίσεις του προσαρμογέα δικτύου',
 			'PerAppAndroidScreen.title' => 'Proxy ανά εφαρμογή',
 			'PerAppAndroidScreen.whiteListMode' => 'Λειτουργία Λευκής Λίστας',
 			'PerAppAndroidScreen.whiteListModeTip' => 'Όταν είναι ενεργοποιημένο: μόνο οι επισημασμένες εφαρμογές είναι proxies. Όταν δεν είναι ενεργοποιημένο: μόνο οι μη επισημασμένες εφαρμογές είναι proxies',
@@ -1297,6 +1300,7 @@ extension on TranslationsEl {
 			'meta.account' => 'Λογαριασμός',
 			'meta.password' => 'Κωδικός πρόσβασης',
 			'meta.decryptPassword' => 'Κωδικός Αποκρυπτογράφησης',
+			'meta.overwriteOutboundDns' => 'DNS: Επικάλυψη [${_root.SettingsScreen.dnsTypeOutbound}]',
 			'meta.required' => 'Απαιτείται',
 			'meta.type' => 'Τύπος',
 			'meta.path' => 'Διαδρομή',
@@ -1463,10 +1467,10 @@ extension on TranslationsEl {
 			'isp.bind' => 'Σύνδεση με [${_root.meta.isp}] ',
 			'isp.unbind' => ({required Object p}) => 'Αποσύνδεση[${p}]',
 			'isp.faq' => ({required Object p}) => 'Συχνές ερωτήσεις[${p}]',
-			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
-			'isp.follow' => ({required Object p}) => 'Ακολουθήστε[${p}]',
 			_ => null,
 		} ?? switch (path) {
+			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
+			'isp.follow' => ({required Object p}) => 'Ακολουθήστε[${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}] Μη έγκυρο ή ληγμένο',
 			'permission.camera' => 'Κάμερα',
 			'permission.screen' => 'Εγγραφή οθόνης',

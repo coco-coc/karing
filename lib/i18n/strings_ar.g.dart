@@ -327,6 +327,7 @@ class _Translations$NetConnectionsScreen$ar implements Translations$NetConnectio
 	// Translations
 	@override String get copyAsCSV => 'نسخ إلى تنسيق CSV';
 	@override String get selectType => 'حدد نوع التحويل';
+	@override String get loopbackWarning => 'قد تكون هناك حلقة في الشبكة. يرجى التحقق من إعدادات محول الشبكة';
 }
 
 // Path: PerAppAndroidScreen
@@ -669,6 +670,7 @@ class _Translations$meta$ar implements Translations$meta$en {
 	@override String get account => 'حساب';
 	@override String get password => 'كلمة المرور';
 	@override String get decryptPassword => 'فك تشفير كلمة المرور';
+	@override String get overwriteOutboundDns => 'DNS: استبدال [${_root.SettingsScreen.dnsTypeOutbound}]';
 	@override String get required => 'مطلوب';
 	@override String get type => 'يكتب';
 	@override String get path => 'طريق';
@@ -1035,6 +1037,7 @@ extension on TranslationsAr {
 			'NetConnectionsFilterScreen.chain' => 'خارج',
 			'NetConnectionsScreen.copyAsCSV' => 'نسخ إلى تنسيق CSV',
 			'NetConnectionsScreen.selectType' => 'حدد نوع التحويل',
+			'NetConnectionsScreen.loopbackWarning' => 'قد تكون هناك حلقة في الشبكة. يرجى التحقق من إعدادات محول الشبكة',
 			'PerAppAndroidScreen.title' => 'لكل وكيل تطبيق',
 			'PerAppAndroidScreen.whiteListMode' => 'وضع القائمة البيضاء',
 			'PerAppAndroidScreen.whiteListModeTip' => 'عند التمكين: فقط التطبيقات التي تم فحصها هي وكلاء ؛عندما لا يتم تمكينها: فقط التطبيقات التي لم يتم فحصها هي وكلاء',
@@ -1297,6 +1300,7 @@ extension on TranslationsAr {
 			'meta.account' => 'حساب',
 			'meta.password' => 'كلمة المرور',
 			'meta.decryptPassword' => 'فك تشفير كلمة المرور',
+			'meta.overwriteOutboundDns' => 'DNS: استبدال [${_root.SettingsScreen.dnsTypeOutbound}]',
 			'meta.required' => 'مطلوب',
 			'meta.type' => 'يكتب',
 			'meta.path' => 'طريق',
@@ -1463,10 +1467,10 @@ extension on TranslationsAr {
 			'isp.bind' => 'الارتباط بـ [${_root.meta.isp}]',
 			'isp.unbind' => ({required Object p}) => 'فك الارتباط[${p}]',
 			'isp.faq' => ({required Object p}) => 'الأسئلة الشائعة[${p}]',
-			'isp.customerService' => ({required Object p}) => 'خدمة العملاء[${p}]',
-			'isp.follow' => ({required Object p}) => 'متابعة[${p}]',
 			_ => null,
 		} ?? switch (path) {
+			'isp.customerService' => ({required Object p}) => 'خدمة العملاء[${p}]',
+			'isp.follow' => ({required Object p}) => 'متابعة[${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}]غير صالح أو منتهية الصلاحية',
 			'permission.camera' => 'الكاميرا',
 			'permission.screen' => 'تسجيل الشاشة',

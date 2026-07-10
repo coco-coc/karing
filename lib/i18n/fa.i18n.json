@@ -105,7 +105,8 @@
     },
     "NetConnectionsScreen": {
         "copyAsCSV": "در فرمت CAV کپی شد",
-        "selectType": "انتخاب نوع انحراف"
+        "selectType": "انتخاب نوع انحراف",
+        "loopbackWarning": "ممکن است حلقه شبکه رخ داده باشد. لطفاً تنظیمات آداپتور شبکه را بررسی کنید"
     },
     "PerAppAndroidScreen": {
         "title": "پروکسی به‌تفکیک برنامه",
@@ -388,6 +389,7 @@
         "account": "نام‌کاربری",
         "password": "رمز‌عبور",
         "decryptPassword": "دکريپت رمز‌عبور",
+        "overwriteOutboundDns": "DNS: بازنویسی [@:{SettingsScreen.dnsTypeOutbound}]",
         "required": "الزامی",
         "type": "نوع",
         "path": "مسیر",

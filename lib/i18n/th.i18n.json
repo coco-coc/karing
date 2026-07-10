@@ -105,7 +105,8 @@
     },
     "NetConnectionsScreen": {
         "copyAsCSV": "คัดลอกไปยังรูปแบบ CSV",
-        "selectType": "เลือกประเภทการเปลี่ยนเส้นทาง"
+        "selectType": "เลือกประเภทการเปลี่ยนเส้นทาง",
+        "loopbackWarning": "อาจเกิดลูปเครือข่าย โปรดตรวจสอบการตั้งค่าอะแดปเตอร์เครือข่าย"
     },
     "PerAppAndroidScreen": {
         "title": "พร็อกซีต่อแอป",
@@ -388,6 +389,7 @@
         "account": "บัญชี",
         "password": "รหัสผ่าน",
         "decryptPassword": "รหัสผ่านถอดรหัส",
+        "overwriteOutboundDns": "DNS: เขียนทับ [@:{SettingsScreen.dnsTypeOutbound}]",
         "required": "จำเป็น",
         "type": "ประเภท",
         "path": "เส้นทาง",

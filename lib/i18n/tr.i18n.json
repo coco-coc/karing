@@ -105,7 +105,8 @@
     },
     "NetConnectionsScreen": {
         "copyAsCSV": "CSV formatına kopyalandı",
-        "selectType": "Yönlendirme Türünü Seçin"
+        "selectType": "Yönlendirme Türünü Seçin",
+        "loopbackWarning": "Ağ döngüsü oluşmuş olabilir. Lütfen ağ bağdaştırıcısı ayarlarını kontrol edin"
     },
     "PerAppAndroidScreen": {
         "title": "Uygulama Başına Proxy",
@@ -388,6 +389,7 @@
         "account": "Hesap",
         "password": "Şifre",
         "decryptPassword": "Şifre Çözme Şifresi",
+        "overwriteOutboundDns": "DNS: Geçersiz kıl [@:{SettingsScreen.dnsTypeOutbound}]",
         "required": "Gerekli",
         "type": "Tür",
         "path": "Yol",

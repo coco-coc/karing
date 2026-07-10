@@ -327,6 +327,7 @@ class _Translations$NetConnectionsScreen$ko implements Translations$NetConnectio
 	// Translations
 	@override String get copyAsCSV => 'CSV 형식으로 복사됨';
 	@override String get selectType => '분류 유형 선택';
+	@override String get loopbackWarning => '네트워크 루프백이 발생했을 수 있습니다. 네트워크 어댑터 설정을 확인하세요';
 }
 
 // Path: PerAppAndroidScreen
@@ -669,6 +670,7 @@ class _Translations$meta$ko implements Translations$meta$en {
 	@override String get account => '계정';
 	@override String get password => '비밀번호';
 	@override String get decryptPassword => '복호화 비밀번호';
+	@override String get overwriteOutboundDns => 'DNS: 덮어쓰기[${_root.SettingsScreen.dnsTypeOutbound}]';
 	@override String get required => '필수';
 	@override String get type => '유형';
 	@override String get path => '경로';
@@ -1035,6 +1037,7 @@ extension on TranslationsKo {
 			'NetConnectionsFilterScreen.chain' => '아웃바운드',
 			'NetConnectionsScreen.copyAsCSV' => 'CSV 형식으로 복사됨',
 			'NetConnectionsScreen.selectType' => '분류 유형 선택',
+			'NetConnectionsScreen.loopbackWarning' => '네트워크 루프백이 발생했을 수 있습니다. 네트워크 어댑터 설정을 확인하세요',
 			'PerAppAndroidScreen.title' => '앱별 프록시',
 			'PerAppAndroidScreen.whiteListMode' => '화이트리스트 모드',
 			'PerAppAndroidScreen.whiteListModeTip' => '켜져 있는 경우: 선택한 앱만 프록시를 통과합니다. 꺼져 있는 경우: 선택하지 않은 앱만 프록시를 통과합니다',
@@ -1297,6 +1300,7 @@ extension on TranslationsKo {
 			'meta.account' => '계정',
 			'meta.password' => '비밀번호',
 			'meta.decryptPassword' => '복호화 비밀번호',
+			'meta.overwriteOutboundDns' => 'DNS: 덮어쓰기[${_root.SettingsScreen.dnsTypeOutbound}]',
 			'meta.required' => '필수',
 			'meta.type' => '유형',
 			'meta.path' => '경로',
@@ -1463,10 +1467,10 @@ extension on TranslationsKo {
 			'isp.bind' => '[${_root.meta.isp}]에 바인딩 ',
 			'isp.unbind' => ({required Object p}) => '바인딩 해제 [${p}]',
 			'isp.faq' => ({required Object p}) => '자주 묻는 질문 [${p}]',
-			'isp.customerService' => ({required Object p}) => 'Telegram [${p}]',
-			'isp.follow' => ({required Object p}) => '팔로우 [${p}]',
 			_ => null,
 		} ?? switch (path) {
+			'isp.customerService' => ({required Object p}) => 'Telegram [${p}]',
+			'isp.follow' => ({required Object p}) => '팔로우 [${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}]가 유효하지 않거나 만료되었습니다',
 			'permission.camera' => '카메라',
 			'permission.screen' => '화면 녹화',

@@ -327,6 +327,7 @@ class Translations$NetConnectionsScreen$zh_CN implements Translations$NetConnect
 	// Translations
 	@override String get copyAsCSV => '已复制为CSV格式';
 	@override String get selectType => '选择分流类型';
+	@override String get loopbackWarning => '网络可能出现了回环,请检查网卡设置';
 }
 
 // Path: PerAppAndroidScreen
@@ -669,6 +670,7 @@ class Translations$meta$zh_CN implements Translations$meta$en {
 	@override String get account => '账号';
 	@override String get password => '密码';
 	@override String get decryptPassword => '解密密码';
+	@override String get overwriteOutboundDns => 'DNS:覆盖[${_root.SettingsScreen.dnsTypeOutbound}]';
 	@override String get required => '必填';
 	@override String get type => '类型';
 	@override String get path => '路径';
@@ -1035,6 +1037,7 @@ extension on TranslationsZhCn {
 			'NetConnectionsFilterScreen.chain' => '出站',
 			'NetConnectionsScreen.copyAsCSV' => '已复制为CSV格式',
 			'NetConnectionsScreen.selectType' => '选择分流类型',
+			'NetConnectionsScreen.loopbackWarning' => '网络可能出现了回环,请检查网卡设置',
 			'PerAppAndroidScreen.title' => '分应用代理',
 			'PerAppAndroidScreen.whiteListMode' => '白名单模式',
 			'PerAppAndroidScreen.whiteListModeTip' => '启用后:仅代理已勾选的App;未启用:仅代理未勾选的App',
@@ -1297,6 +1300,7 @@ extension on TranslationsZhCn {
 			'meta.account' => '账号',
 			'meta.password' => '密码',
 			'meta.decryptPassword' => '解密密码',
+			'meta.overwriteOutboundDns' => 'DNS:覆盖[${_root.SettingsScreen.dnsTypeOutbound}]',
 			'meta.required' => '必填',
 			'meta.type' => '类型',
 			'meta.path' => '路径',
@@ -1463,10 +1467,10 @@ extension on TranslationsZhCn {
 			'isp.bind' => '绑定到[${_root.meta.isp}]',
 			'isp.unbind' => ({required Object p}) => '解除绑定[${p}]',
 			'isp.faq' => ({required Object p}) => '常见问题[${p}]',
-			'isp.customerService' => ({required Object p}) => '客服[${p}]',
-			'isp.follow' => ({required Object p}) => '关注[${p}]',
 			_ => null,
 		} ?? switch (path) {
+			'isp.customerService' => ({required Object p}) => '客服[${p}]',
+			'isp.follow' => ({required Object p}) => '关注[${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}]无效或已过期',
 			'permission.camera' => '摄像头',
 			'permission.screen' => '屏幕录制',

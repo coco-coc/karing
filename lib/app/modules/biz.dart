@@ -17,6 +17,7 @@ class Biz {
   static final List<void Function()> onEventInitFinish = [];
   static final List<void Function()> onEventInitHomeFinish = [];
   static final List<void Function()> onEventInitAllFinish = [];
+  static void Function(String)? onEventSingletonInstance;
   static bool _initFinish = false;
   static bool _initHomeFinish = false;
   static Future<ReturnResultError?> Function(String from)?

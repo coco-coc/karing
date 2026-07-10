@@ -327,6 +327,7 @@ class _Translations$NetConnectionsScreen$bn implements Translations$NetConnectio
 	// Translations
 	@override String get copyAsCSV => 'CSV ফরম্যাটে কপি করা হয়েছে';
 	@override String get selectType => 'ডাইভারশন টাইপ নির্বাচন করুন';
+	@override String get loopbackWarning => 'নেটওয়ার্কে লুপব্যাক হতে পারে, অনুগ্রহ করে নেটওয়ার্ক অ্যাডাপ্টারের সেটিংস পরীক্ষা করুন';
 }
 
 // Path: PerAppAndroidScreen
@@ -669,6 +670,7 @@ class _Translations$meta$bn implements Translations$meta$en {
 	@override String get account => 'অ্যাকাউন্ট';
 	@override String get password => 'পাসওয়ার্ড';
 	@override String get decryptPassword => 'ডিক্রিপ্ট পাসওয়ার্ড';
+	@override String get overwriteOutboundDns => 'DNS: ওভাররাইড [${_root.SettingsScreen.dnsTypeOutbound}]';
 	@override String get required => 'প্রয়োজন';
 	@override String get type => 'ধরন';
 	@override String get path => 'পাথ';
@@ -1035,6 +1037,7 @@ extension on TranslationsBn {
 			'NetConnectionsFilterScreen.chain' => 'আউটবাউন্ড',
 			'NetConnectionsScreen.copyAsCSV' => 'CSV ফরম্যাটে কপি করা হয়েছে',
 			'NetConnectionsScreen.selectType' => 'ডাইভারশন টাইপ নির্বাচন করুন',
+			'NetConnectionsScreen.loopbackWarning' => 'নেটওয়ার্কে লুপব্যাক হতে পারে, অনুগ্রহ করে নেটওয়ার্ক অ্যাডাপ্টারের সেটিংস পরীক্ষা করুন',
 			'PerAppAndroidScreen.title' => 'প্রতি-অ্যাপ প্রক্সি',
 			'PerAppAndroidScreen.whiteListMode' => 'হোয়াইটলিস্ট মোড',
 			'PerAppAndroidScreen.whiteListModeTip' => 'সক্ষম করা হলে: শুধুমাত্র চিহ্নিত অ্যাপগুলি প্রক্সি হয়; সক্ষম না করা হলে: শুধুমাত্র অচিহ্নিত অ্যাপগুলি প্রক্সি হয়',
@@ -1297,6 +1300,7 @@ extension on TranslationsBn {
 			'meta.account' => 'অ্যাকাউন্ট',
 			'meta.password' => 'পাসওয়ার্ড',
 			'meta.decryptPassword' => 'ডিক্রিপ্ট পাসওয়ার্ড',
+			'meta.overwriteOutboundDns' => 'DNS: ওভাররাইড [${_root.SettingsScreen.dnsTypeOutbound}]',
 			'meta.required' => 'প্রয়োজন',
 			'meta.type' => 'ধরন',
 			'meta.path' => 'পাথ',
@@ -1463,10 +1467,10 @@ extension on TranslationsBn {
 			'isp.bind' => '[${_root.meta.isp}] এর সাথে লিঙ্ক করুন ',
 			'isp.unbind' => ({required Object p}) => 'আনলিঙ্ক করুন[${p}]',
 			'isp.faq' => ({required Object p}) => 'FAQ[${p}]',
-			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
-			'isp.follow' => ({required Object p}) => 'অনুসরণ করুন[${p}]',
 			_ => null,
 		} ?? switch (path) {
+			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
+			'isp.follow' => ({required Object p}) => 'অনুসরণ করুন[${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}] অকার্যকর বা মেয়াদ শেষ',
 			'permission.camera' => 'ক্যামেরা',
 			'permission.screen' => 'স্ক্রিন রেকর্ডিং',

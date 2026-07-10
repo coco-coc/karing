@@ -201,7 +201,7 @@ class _DiversionRuleDetectScreenState
                           ),
                           ValueListenableBuilder<String>(
                             builder: _encoded.value != _domain
-                                ? _buildWithValueYellow
+                                ? _buildWithValueBlue
                                 : _buildWithValue,
                             valueListenable: _encoded,
                           ),
@@ -459,7 +459,7 @@ class _DiversionRuleDetectScreenState
     );
   }
 
-  Widget _buildWithValueYellow(
+  Widget _buildWithValueBlue(
     BuildContext context,
     String value,
     Widget? child,
@@ -470,7 +470,7 @@ class _DiversionRuleDetectScreenState
         value,
         style: TextStyle(
           fontSize: ThemeConfig.kFontSizeListSubItem,
-          color: Colors.yellow,
+          color: Colors.blue,
         ),
       ),
     );

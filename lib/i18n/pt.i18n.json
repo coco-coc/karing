@@ -105,7 +105,8 @@
     },
     "NetConnectionsScreen": {
         "copyAsCSV": "Copiado para formato CSV",
-        "selectType": "Selecionar Tipo de Desvio"
+        "selectType": "Selecionar Tipo de Desvio",
+        "loopbackWarning": "Pode ter ocorrido um loop de rede. Verifique as configurações do adaptador de rede"
     },
     "PerAppAndroidScreen": {
         "title": "Proxy por Aplicação",
@@ -388,6 +389,7 @@
         "account": "Conta",
         "password": "Palavra-passe",
         "decryptPassword": "Palavra-passe de descriptografia",
+        "overwriteOutboundDns": "DNS: Sobrescrever [@:{SettingsScreen.dnsTypeOutbound}]",
         "required": "Obrigatório",
         "type": "Tipo",
         "path": "Caminho",

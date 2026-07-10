@@ -327,6 +327,7 @@ class _Translations$NetConnectionsScreen$th implements Translations$NetConnectio
 	// Translations
 	@override String get copyAsCSV => 'คัดลอกไปยังรูปแบบ CSV';
 	@override String get selectType => 'เลือกประเภทการเปลี่ยนเส้นทาง';
+	@override String get loopbackWarning => 'อาจเกิดลูปเครือข่าย โปรดตรวจสอบการตั้งค่าอะแดปเตอร์เครือข่าย';
 }
 
 // Path: PerAppAndroidScreen
@@ -669,6 +670,7 @@ class _Translations$meta$th implements Translations$meta$en {
 	@override String get account => 'บัญชี';
 	@override String get password => 'รหัสผ่าน';
 	@override String get decryptPassword => 'รหัสผ่านถอดรหัส';
+	@override String get overwriteOutboundDns => 'DNS: เขียนทับ [${_root.SettingsScreen.dnsTypeOutbound}]';
 	@override String get required => 'จำเป็น';
 	@override String get type => 'ประเภท';
 	@override String get path => 'เส้นทาง';
@@ -1035,6 +1037,7 @@ extension on TranslationsTh {
 			'NetConnectionsFilterScreen.chain' => 'Outbound',
 			'NetConnectionsScreen.copyAsCSV' => 'คัดลอกไปยังรูปแบบ CSV',
 			'NetConnectionsScreen.selectType' => 'เลือกประเภทการเปลี่ยนเส้นทาง',
+			'NetConnectionsScreen.loopbackWarning' => 'อาจเกิดลูปเครือข่าย โปรดตรวจสอบการตั้งค่าอะแดปเตอร์เครือข่าย',
 			'PerAppAndroidScreen.title' => 'พร็อกซีต่อแอป',
 			'PerAppAndroidScreen.whiteListMode' => 'โหมดรายการอนุญาต',
 			'PerAppAndroidScreen.whiteListModeTip' => 'เมื่อเปิดใช้งาน: เฉพาะแอปที่ได้ตรวจสอบเท่านั้นจะใช้พร็อกซี เมื่อไม่เปิดใช้งาน: เฉพาะแอปที่ไม่ได้ตรวจสอบเท่านั้นจะใช้พร็อกซี',
@@ -1297,6 +1300,7 @@ extension on TranslationsTh {
 			'meta.account' => 'บัญชี',
 			'meta.password' => 'รหัสผ่าน',
 			'meta.decryptPassword' => 'รหัสผ่านถอดรหัส',
+			'meta.overwriteOutboundDns' => 'DNS: เขียนทับ [${_root.SettingsScreen.dnsTypeOutbound}]',
 			'meta.required' => 'จำเป็น',
 			'meta.type' => 'ประเภท',
 			'meta.path' => 'เส้นทาง',
@@ -1463,10 +1467,10 @@ extension on TranslationsTh {
 			'isp.bind' => 'ผูกไว้กับ [${_root.meta.isp}] ',
 			'isp.unbind' => ({required Object p}) => 'ยกเลิกการผูก[${p}]',
 			'isp.faq' => ({required Object p}) => 'คำถามที่พบบ่อย[${p}]',
-			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
-			'isp.follow' => ({required Object p}) => 'ติดตาม[${p}]',
 			_ => null,
 		} ?? switch (path) {
+			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
+			'isp.follow' => ({required Object p}) => 'ติดตาม[${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}] ไม่ถูกต้องหรือหมดอายุ',
 			'permission.camera' => 'กล้อง',
 			'permission.screen' => 'การบันทึกหน้าจอ',

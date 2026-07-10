@@ -7,12 +7,15 @@ import 'dart:io';
 import 'package:csv/csv.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_inapp_notifications/flutter_inapp_notifications.dart';
 import 'package:karing/app/local_services/vpn_service.dart';
 import 'package:karing/app/modules/remote_config_manager.dart';
 import 'package:karing/app/modules/server_manager.dart';
+import 'package:karing/app/utils/app_lifecycle_state_notify.dart';
 import 'package:karing/app/utils/app_utils.dart';
 import 'package:karing/app/utils/http_utils.dart';
 import 'package:karing/app/utils/package_manager_android.dart';
+import 'package:karing/app/utils/path_utils.dart';
 import 'package:karing/app/utils/platform_utils.dart';
 import 'package:karing/app/utils/proxy_conf_utils.dart';
 import 'package:karing/app/utils/singbox_config_builder.dart';
@@ -333,6 +336,7 @@ class _NetConnectionsScreenState
   ConnectionsSortType _sortType = ConnectionsSortType.none;
   bool _showConnectionIn = true;
   NetConnectionFilter _filter = NetConnectionFilter();
+  bool _loopback = false;
 
   @override
   void initState() {
@@ -741,6 +745,23 @@ class _NetConnectionsScreenState
         bool refreshOut = convertConnectionsOut(con.connectionsOut);
         if (refreshIn || refreshOut) {
           setState(() {});
+        }
+        if (Platform.isWindows) {
+          if (!_loopback) {
+            final serviceExePath = PathUtils.serviceExePath().toLowerCase();
+            for (var connection in _connectionInList) {
+              final processPath = connection.process.toLowerCase();
+              if (processPath == serviceExePath) {
+                _loopback = true;
+                final tcontext = Translations.of(context);
+                _showNotifyWarningContent(
+                  tcontext.NetConnectionsScreen.loopbackWarning,
+                  ignorePaused: true,
+                );
+                break;
+              }
+            }
+          }
         }
       },
       onDone: () {
@@ -1604,5 +1625,22 @@ class _NetConnectionsScreenState
 
   int sortCompareDownload(NetConnectionStateIn a, NetConnectionStateIn b) {
     return (b.getDownload() - a.getDownload()).toInt();
+  }
+
+  void _showNotifyWarningContent(String content, {bool ignorePaused = false}) {
+    if (AppLifecycleStateNofity.isPaused() && !ignorePaused) {
+      return;
+    }
+
+    final tcontext = Translations.of(context);
+    InAppNotifications.show(
+      title: tcontext.meta.tips,
+      duration: const Duration(seconds: 10),
+      leading: const Icon(Icons.warning, color: Colors.red, size: 50),
+      description: content,
+      onTap: () {
+        InAppNotifications.dismiss();
+      },
+    );
   }
 }

@@ -105,7 +105,8 @@
     },
     "NetConnectionsScreen": {
         "copyAsCSV": "Gekopieerd naar CSV-formaat",
-        "selectType": "Selecteer omleidingstype"
+        "selectType": "Selecteer omleidingstype",
+        "loopbackWarning": "Er is mogelijk een netwerklus opgetreden. Controleer de instellingen van je netwerkadapter"
     },
     "PerAppAndroidScreen": {
         "title": "Proxy per app",
@@ -388,6 +389,7 @@
         "account": "Account",
         "password": "Wachtwoord",
         "decryptPassword": "Ontcijferingswachtwoord",
+        "overwriteOutboundDns": "DNS: Overschrijven [@:{SettingsScreen.dnsTypeOutbound}]",
         "required": "Vereist",
         "type": "Type",
         "path": "Pad",

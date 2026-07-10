@@ -327,6 +327,7 @@ class _Translations$NetConnectionsScreen$vi implements Translations$NetConnectio
 	// Translations
 	@override String get copyAsCSV => 'Đã sao chép định dạng CSV';
 	@override String get selectType => 'Chọn loại phân luồng';
+	@override String get loopbackWarning => 'Có thể đã xảy ra vòng lặp mạng. Vui lòng kiểm tra cài đặt card mạng';
 }
 
 // Path: PerAppAndroidScreen
@@ -669,6 +670,7 @@ class _Translations$meta$vi implements Translations$meta$en {
 	@override String get account => 'Tài khoản';
 	@override String get password => 'Mật khẩu';
 	@override String get decryptPassword => 'Mật khẩu giải mã';
+	@override String get overwriteOutboundDns => 'DNS: Ghi đè [${_root.SettingsScreen.dnsTypeOutbound}]';
 	@override String get required => 'Bắt buộc';
 	@override String get type => 'Loại';
 	@override String get path => 'Đường dẫn';
@@ -1035,6 +1037,7 @@ extension on TranslationsVi {
 			'NetConnectionsFilterScreen.chain' => 'Gửi đi',
 			'NetConnectionsScreen.copyAsCSV' => 'Đã sao chép định dạng CSV',
 			'NetConnectionsScreen.selectType' => 'Chọn loại phân luồng',
+			'NetConnectionsScreen.loopbackWarning' => 'Có thể đã xảy ra vòng lặp mạng. Vui lòng kiểm tra cài đặt card mạng',
 			'PerAppAndroidScreen.title' => 'Proxy cho từng ứng dụng',
 			'PerAppAndroidScreen.whiteListMode' => 'Chế độ danh sách trắng',
 			'PerAppAndroidScreen.whiteListModeTip' => 'Khi bật: chỉ các ứng dụng đã chọn mới đi qua proxy; khi tắt: chỉ các ứng dụng không được chọn mới đi qua proxy',
@@ -1297,6 +1300,7 @@ extension on TranslationsVi {
 			'meta.account' => 'Tài khoản',
 			'meta.password' => 'Mật khẩu',
 			'meta.decryptPassword' => 'Mật khẩu giải mã',
+			'meta.overwriteOutboundDns' => 'DNS: Ghi đè [${_root.SettingsScreen.dnsTypeOutbound}]',
 			'meta.required' => 'Bắt buộc',
 			'meta.type' => 'Loại',
 			'meta.path' => 'Đường dẫn',
@@ -1463,10 +1467,10 @@ extension on TranslationsVi {
 			'isp.bind' => 'Liên kết với [${_root.meta.isp}] ',
 			'isp.unbind' => ({required Object p}) => 'Hủy liên kết [${p}]',
 			'isp.faq' => ({required Object p}) => 'Câu hỏi thường gặp [${p}]',
-			'isp.customerService' => ({required Object p}) => 'Telegram [${p}]',
-			'isp.follow' => ({required Object p}) => 'Theo dõi [${p}]',
 			_ => null,
 		} ?? switch (path) {
+			'isp.customerService' => ({required Object p}) => 'Telegram [${p}]',
+			'isp.follow' => ({required Object p}) => 'Theo dõi [${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}] không hợp lệ hoặc hết hạn',
 			'permission.camera' => 'Máy ảnh',
 			'permission.screen' => 'Ghi màn hình',

@@ -105,7 +105,8 @@
     },
     "NetConnectionsScreen": {
         "copyAsCSV": "نسخ إلى تنسيق CSV",
-        "selectType": "حدد نوع التحويل"
+        "selectType": "حدد نوع التحويل",
+        "loopbackWarning": "قد تكون هناك حلقة في الشبكة. يرجى التحقق من إعدادات محول الشبكة"
     },
     "PerAppAndroidScreen": {
         "title": "لكل وكيل تطبيق",
@@ -388,6 +389,7 @@
         "account": "حساب",
         "password": "كلمة المرور",
         "decryptPassword": "فك تشفير كلمة المرور",
+        "overwriteOutboundDns": "DNS: استبدال [@:{SettingsScreen.dnsTypeOutbound}]",
         "required": "مطلوب",
         "type": "يكتب",
         "path": "طريق",

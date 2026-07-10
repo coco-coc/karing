@@ -327,6 +327,7 @@ class _Translations$NetConnectionsScreen$sv implements Translations$NetConnectio
 	// Translations
 	@override String get copyAsCSV => 'Kopierat till CSV-format';
 	@override String get selectType => 'Välj omledningstyp';
+	@override String get loopbackWarning => 'Ett nätverksloop kan ha uppstått. Kontrollera inställningarna för nätverksadaptern';
 }
 
 // Path: PerAppAndroidScreen
@@ -669,6 +670,7 @@ class _Translations$meta$sv implements Translations$meta$en {
 	@override String get account => 'Konto';
 	@override String get password => 'Lösenord';
 	@override String get decryptPassword => 'Dekrypterringslösenord';
+	@override String get overwriteOutboundDns => 'DNS: Åsidosätt [${_root.SettingsScreen.dnsTypeOutbound}]';
 	@override String get required => 'Krävs';
 	@override String get type => 'Typ';
 	@override String get path => 'Sökväg';
@@ -1035,6 +1037,7 @@ extension on TranslationsSv {
 			'NetConnectionsFilterScreen.chain' => 'Utgående',
 			'NetConnectionsScreen.copyAsCSV' => 'Kopierat till CSV-format',
 			'NetConnectionsScreen.selectType' => 'Välj omledningstyp',
+			'NetConnectionsScreen.loopbackWarning' => 'Ett nätverksloop kan ha uppstått. Kontrollera inställningarna för nätverksadaptern',
 			'PerAppAndroidScreen.title' => 'Proxy per app',
 			'PerAppAndroidScreen.whiteListMode' => 'Whitelist-läge',
 			'PerAppAndroidScreen.whiteListModeTip' => 'När aktiverat: endast de markerade apparna använder proxy; när inte aktiverat: endast de omarkerade apparna använder proxy',
@@ -1297,6 +1300,7 @@ extension on TranslationsSv {
 			'meta.account' => 'Konto',
 			'meta.password' => 'Lösenord',
 			'meta.decryptPassword' => 'Dekrypterringslösenord',
+			'meta.overwriteOutboundDns' => 'DNS: Åsidosätt [${_root.SettingsScreen.dnsTypeOutbound}]',
 			'meta.required' => 'Krävs',
 			'meta.type' => 'Typ',
 			'meta.path' => 'Sökväg',
@@ -1463,10 +1467,10 @@ extension on TranslationsSv {
 			'isp.bind' => 'Bind till [${_root.meta.isp}] ',
 			'isp.unbind' => ({required Object p}) => 'Ta bort bindning[${p}]',
 			'isp.faq' => ({required Object p}) => 'FAQ[${p}]',
-			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
-			'isp.follow' => ({required Object p}) => 'Följ[${p}]',
 			_ => null,
 		} ?? switch (path) {
+			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
+			'isp.follow' => ({required Object p}) => 'Följ[${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}] Ogiltig eller utgången',
 			'permission.camera' => 'Kamera',
 			'permission.screen' => 'Skärminspelning',

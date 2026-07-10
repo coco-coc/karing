@@ -2,6 +2,7 @@ import 'package:karing/i18n/strings.g.dart';
 import 'package:karing/screens/theme_config.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_typeahead/flutter_typeahead.dart';
 import 'dart:ui' as ui show BoxHeightStyle, BoxWidthStyle;
 
 import 'package:flutter/services.dart';
@@ -79,14 +80,156 @@ class TextFieldEx extends TextField {
     super.spellCheckConfiguration,
     super.magnifierConfiguration,
     this.title,
+    this.autocompleteCandidates,
   });
   @override
   State<TextFieldEx> createState() => _TextFieldExState();
   final String? title;
+  final List<String>? autocompleteCandidates;
 }
 
 class _TextFieldExState<T> extends State<TextFieldEx> {
   final _focusNode = FocusNode();
+  TextEditingController? _typeAheadController;
+
+  List<String> _getAutocompleteSuggestions(String pattern) {
+    final List<String> candidates =
+        widget.autocompleteCandidates ?? const <String>[];
+    final String keyword = pattern.trim().toLowerCase();
+    if (candidates.isEmpty || keyword.isEmpty) {
+      return const <String>[];
+    }
+    return candidates
+        .where((String item) => item.toLowerCase().contains(keyword))
+        .take(20)
+        .toList(growable: false);
+  }
+
+  Widget _buildInputField({
+    required TextEditingController? controller,
+    required FocusNode? focusNode,
+    required UndoHistoryController? undoController,
+    required bool readOnly,
+    required bool autofocus,
+    required ValueChanged<String>? onChanged,
+    required VoidCallback? onEditingComplete,
+    required ValueChanged<String>? onSubmitted,
+    required bool enabled,
+    required GestureTapCallback? onTap,
+    required bool onTapAlwaysCalled,
+    required bool canRequestFocus,
+    required bool useAutocomplete,
+  }) {
+    Widget buildTextField(
+      TextEditingController? resolvedController,
+      FocusNode? resolvedFocusNode,
+    ) {
+      return TextField(
+        controller: resolvedController,
+        focusNode: resolvedFocusNode,
+        undoController: undoController,
+        decoration: widget.decoration,
+        keyboardType: widget.keyboardType,
+        textInputAction: widget.textInputAction,
+        textCapitalization: widget.textCapitalization,
+        style: widget.style,
+        strutStyle: widget.strutStyle,
+        textAlign: widget.textAlign,
+        textAlignVertical: widget.textAlignVertical,
+        textDirection: widget.textDirection,
+        readOnly: readOnly,
+        //toolbarOptions: widget.toolbarOptions,
+        showCursor: widget.showCursor,
+        autofocus: autofocus,
+        statesController: widget.statesController,
+        obscuringCharacter: widget.obscuringCharacter,
+        obscureText: widget.obscureText,
+        autocorrect: widget.autocorrect,
+        smartDashesType: widget.smartDashesType,
+        smartQuotesType: widget.smartQuotesType,
+        enableSuggestions: widget.enableSuggestions,
+        maxLines: widget.maxLines,
+        minLines: widget.minLines,
+        expands: widget.expands,
+        maxLength: widget.maxLength,
+        maxLengthEnforcement: widget.maxLengthEnforcement,
+        onChanged: onChanged,
+        onEditingComplete: onEditingComplete,
+        onSubmitted: onSubmitted,
+        onAppPrivateCommand: widget.onAppPrivateCommand,
+        inputFormatters: widget.inputFormatters,
+        enabled: enabled,
+        ignorePointers: widget.ignorePointers,
+        cursorWidth: widget.cursorWidth,
+        cursorHeight: widget.cursorHeight,
+        cursorRadius: widget.cursorRadius,
+        cursorOpacityAnimates: widget.cursorOpacityAnimates,
+        cursorColor: widget.cursorColor,
+        cursorErrorColor: widget.cursorErrorColor,
+        selectionHeightStyle: widget.selectionHeightStyle,
+        selectionWidthStyle: widget.selectionWidthStyle,
+        keyboardAppearance: widget.keyboardAppearance,
+        scrollPadding: widget.scrollPadding,
+        dragStartBehavior: widget.dragStartBehavior,
+        enableInteractiveSelection: widget.enableInteractiveSelection,
+        selectionControls: widget.selectionControls,
+        onTap: onTap,
+        onTapAlwaysCalled: onTapAlwaysCalled,
+        onTapOutside: widget.onTapOutside,
+        mouseCursor: widget.mouseCursor,
+        buildCounter: widget.buildCounter,
+        scrollController: widget.scrollController,
+        scrollPhysics: widget.scrollPhysics,
+        autofillHints: widget.autofillHints,
+        contentInsertionConfiguration: widget.contentInsertionConfiguration,
+        clipBehavior: widget.clipBehavior,
+        restorationId: widget.restorationId,
+        stylusHandwritingEnabled: widget.stylusHandwritingEnabled,
+        enableIMEPersonalizedLearning: widget.enableIMEPersonalizedLearning,
+        canRequestFocus: canRequestFocus,
+        spellCheckConfiguration: widget.spellCheckConfiguration,
+        magnifierConfiguration: widget.magnifierConfiguration,
+      );
+    }
+
+    if (!useAutocomplete) {
+      return buildTextField(controller, focusNode);
+    }
+
+    return TypeAheadField<String>(
+      hideOnEmpty: true,
+      hideOnUnfocus: true,
+      controller: controller,
+      focusNode: focusNode,
+      suggestionsCallback: _getAutocompleteSuggestions,
+      itemBuilder: (BuildContext context, String suggestion) {
+        return ListTile(title: Text(suggestion));
+      },
+      onSelected: (String suggestion) {
+        final TextEditingController? effectiveController =
+            controller ?? _typeAheadController;
+        if (effectiveController != null) {
+          effectiveController.value = TextEditingValue(
+            text: suggestion,
+            selection: TextSelection.collapsed(offset: suggestion.length),
+          );
+        }
+        onChanged?.call(suggestion);
+      },
+      builder:
+          (
+            BuildContext context,
+            TextEditingController typeAheadController,
+            FocusNode typeAheadFocusNode,
+          ) {
+            _typeAheadController = typeAheadController;
+            return buildTextField(
+              controller ?? typeAheadController,
+              focusNode ?? typeAheadFocusNode,
+            );
+          },
+    );
+  }
 
   @override
   void initState() {
@@ -123,61 +266,25 @@ class _TextFieldExState<T> extends State<TextFieldEx> {
 
   @override
   Widget build(BuildContext context) {
+    final bool useAutocomplete =
+        (widget.autocompleteCandidates?.isNotEmpty ?? false) &&
+        !TextFieldEx.popupEdit;
     return InkWell(
       onTap: !TextFieldEx.popupEdit
           ? null
           : () async {
               await showTextFieldInputDialog();
             },
-      child: TextField(
+      child: _buildInputField(
         controller: widget.controller,
         focusNode: TextFieldEx.popupEdit ? _focusNode : widget.focusNode,
         undoController: TextFieldEx.popupEdit ? null : widget.undoController,
-        decoration: widget.decoration,
-        keyboardType: widget.keyboardType,
-        textInputAction: widget.textInputAction,
-        textCapitalization: widget.textCapitalization,
-        style: widget.style,
-        strutStyle: widget.strutStyle,
-        textAlign: widget.textAlign,
-        textAlignVertical: widget.textAlignVertical,
-        textDirection: widget.textDirection,
         readOnly: TextFieldEx.popupEdit || widget.readOnly,
-        //toolbarOptions: widget.toolbarOptions,
-        showCursor: widget.showCursor,
         autofocus: TextFieldEx.popupEdit ? false : widget.autofocus,
-        statesController: widget.statesController,
-        obscuringCharacter: widget.obscuringCharacter,
-        obscureText: widget.obscureText,
-        autocorrect: widget.autocorrect,
-        smartDashesType: widget.smartDashesType,
-        smartQuotesType: widget.smartQuotesType,
-        enableSuggestions: widget.enableSuggestions,
-        maxLines: widget.maxLines,
-        minLines: widget.minLines,
-        expands: widget.expands,
-        maxLength: widget.maxLength,
-        maxLengthEnforcement: widget.maxLengthEnforcement,
         onChanged: TextFieldEx.popupEdit ? null : widget.onChanged,
         onEditingComplete: widget.onEditingComplete,
         onSubmitted: TextFieldEx.popupEdit ? null : widget.onSubmitted,
-        onAppPrivateCommand: widget.onAppPrivateCommand,
-        inputFormatters: widget.inputFormatters,
-        enabled: widget.enabled,
-        ignorePointers: widget.ignorePointers,
-        cursorWidth: widget.cursorWidth,
-        cursorHeight: widget.cursorHeight,
-        cursorRadius: widget.cursorRadius,
-        cursorOpacityAnimates: widget.cursorOpacityAnimates,
-        cursorColor: widget.cursorColor,
-        cursorErrorColor: widget.cursorErrorColor,
-        selectionHeightStyle: widget.selectionHeightStyle,
-        selectionWidthStyle: widget.selectionWidthStyle,
-        keyboardAppearance: widget.keyboardAppearance,
-        scrollPadding: widget.scrollPadding,
-        dragStartBehavior: widget.dragStartBehavior,
-        enableInteractiveSelection: widget.enableInteractiveSelection,
-        selectionControls: widget.selectionControls,
+        enabled: widget.enabled ?? true,
         onTap: TextFieldEx.popupEdit
             ? () async {
                 await showTextFieldInputDialog();
@@ -186,20 +293,8 @@ class _TextFieldExState<T> extends State<TextFieldEx> {
         onTapAlwaysCalled: TextFieldEx.popupEdit
             ? true
             : widget.onTapAlwaysCalled,
-        onTapOutside: widget.onTapOutside,
-        mouseCursor: widget.mouseCursor,
-        buildCounter: widget.buildCounter,
-        scrollController: widget.scrollController,
-        scrollPhysics: widget.scrollPhysics,
-        autofillHints: widget.autofillHints,
-        contentInsertionConfiguration: widget.contentInsertionConfiguration,
-        clipBehavior: widget.clipBehavior,
-        restorationId: widget.restorationId,
-        stylusHandwritingEnabled: widget.stylusHandwritingEnabled,
-        enableIMEPersonalizedLearning: widget.enableIMEPersonalizedLearning,
         canRequestFocus: TextFieldEx.popupEdit ? true : widget.canRequestFocus,
-        spellCheckConfiguration: widget.spellCheckConfiguration,
-        magnifierConfiguration: widget.magnifierConfiguration,
+        useAutocomplete: useAutocomplete,
       ),
     );
   }
@@ -222,35 +317,12 @@ class _TextFieldExState<T> extends State<TextFieldEx> {
           children: [
             Padding(
               padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-              child: TextField(
+              child: _buildInputField(
                 controller: widget.controller,
                 focusNode: widget.focusNode,
                 undoController: widget.undoController,
-                decoration: widget.decoration,
-                keyboardType: widget.keyboardType,
-                textInputAction: widget.textInputAction,
-                textCapitalization: widget.textCapitalization,
-                style: widget.style,
-                strutStyle: widget.strutStyle,
-                textAlign: widget.textAlign,
-                textAlignVertical: widget.textAlignVertical,
-                textDirection: widget.textDirection,
                 readOnly: false,
-                //toolbarOptions: widget.toolbarOptions,
-                showCursor: widget.showCursor,
                 autofocus: true,
-                statesController: widget.statesController,
-                obscuringCharacter: widget.obscuringCharacter,
-                obscureText: widget.obscureText,
-                autocorrect: widget.autocorrect,
-                smartDashesType: widget.smartDashesType,
-                smartQuotesType: widget.smartQuotesType,
-                enableSuggestions: widget.enableSuggestions,
-                maxLines: widget.maxLines,
-                minLines: widget.minLines,
-                expands: widget.expands,
-                maxLength: widget.maxLength,
-                maxLengthEnforcement: widget.maxLengthEnforcement,
                 onChanged: widget.onChanged,
                 onEditingComplete: () {
                   FocusScope.of(
@@ -258,41 +330,12 @@ class _TextFieldExState<T> extends State<TextFieldEx> {
                   ).focusInDirection(TraversalDirection.down);
                 },
                 onSubmitted: widget.onSubmitted,
-                onAppPrivateCommand: widget.onAppPrivateCommand,
-                inputFormatters: widget.inputFormatters,
                 enabled: true,
-                ignorePointers: widget.ignorePointers,
-                cursorWidth: widget.cursorWidth,
-                cursorHeight: widget.cursorHeight,
-                cursorRadius: widget.cursorRadius,
-                cursorOpacityAnimates: widget.cursorOpacityAnimates,
-                cursorColor: widget.cursorColor,
-                cursorErrorColor: widget.cursorErrorColor,
-                selectionHeightStyle: widget.selectionHeightStyle,
-                selectionWidthStyle: widget.selectionWidthStyle,
-                keyboardAppearance: widget.keyboardAppearance,
-                scrollPadding: widget.scrollPadding,
-                dragStartBehavior: widget.dragStartBehavior,
-                enableInteractiveSelection: widget.enableInteractiveSelection,
-                selectionControls: widget.selectionControls,
                 onTap: widget.onTap,
                 onTapAlwaysCalled: widget.onTapAlwaysCalled,
-                onTapOutside: widget.onTapOutside,
-                mouseCursor: widget.mouseCursor,
-                buildCounter: widget.buildCounter,
-                scrollController: widget.scrollController,
-                scrollPhysics: widget.scrollPhysics,
-                autofillHints: widget.autofillHints,
-                contentInsertionConfiguration:
-                    widget.contentInsertionConfiguration,
-                clipBehavior: widget.clipBehavior,
-                restorationId: widget.restorationId,
-                stylusHandwritingEnabled: widget.stylusHandwritingEnabled,
-                enableIMEPersonalizedLearning:
-                    widget.enableIMEPersonalizedLearning,
                 canRequestFocus: true,
-                spellCheckConfiguration: widget.spellCheckConfiguration,
-                magnifierConfiguration: widget.magnifierConfiguration,
+                useAutocomplete:
+                    widget.autocompleteCandidates?.isNotEmpty ?? false,
               ),
             ),
             const SizedBox(height: 20),

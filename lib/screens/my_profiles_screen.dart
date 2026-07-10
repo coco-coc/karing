@@ -40,6 +40,7 @@ import 'package:karing/screens/theme_define.dart';
 import 'package:karing/screens/themes.dart';
 import 'package:karing/screens/widgets/framework.dart';
 import 'package:karing/screens/widgets/sheet.dart';
+import 'package:karing/screens/widgets/text_field.dart';
 import 'package:path/path.dart' as path;
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
@@ -58,9 +59,9 @@ class MyProfilesScreen extends LasyRenderingStatefulWidget {
 
 class MyProfilesScreenState extends LasyRenderingState<MyProfilesScreen> {
   static final Set<String> _expandGroup = {};
+  final _searchController = TextEditingController();
+  String _searchText = "";
   final List<ListViewMultiPartsItem> _listViewParts = [];
-
-  //TapDownDetails _tapDownDetails = TapDownDetails();
 
   Timer? _timer;
   bool _rePaint = false;
@@ -154,8 +155,35 @@ class MyProfilesScreenState extends LasyRenderingState<MyProfilesScreen> {
     return await Biz.startOrRestartIfDirtyVPN(context, "MyProfilesScreen");
   }
 
+  void _loadSearch(String? textVal) {
+    _searchText = (textVal ?? "").toLowerCase();
+    _buildData();
+    setState(() {});
+  }
+
+  void _clearSearch() {
+    _searchController.clear();
+    _searchText = "";
+    _buildData();
+    setState(() {});
+  }
+
   void _buildData() {
     _listViewParts.clear();
+    {
+      ListViewMultiPartsItem item = ListViewMultiPartsItem();
+      item.creator = (data, index, bindNO) {
+        return createSearch();
+      };
+      _listViewParts.add(item);
+    }
+    {
+      ListViewMultiPartsItem item = ListViewMultiPartsItem();
+      item.creator = (data, index, bindNO) {
+        return const SizedBox(height: 10);
+      };
+      _listViewParts.add(item);
+    }
     for (var group in ServerManager.getConfig().items) {
       if (group.groupid == ServerManager.getCustomGroupId()) {
         continue;
@@ -221,6 +249,10 @@ class MyProfilesScreenState extends LasyRenderingState<MyProfilesScreen> {
           servers.addAll(serversLatencyError);
         }
       }
+      if (_searchText.isNotEmpty) {
+        servers = ServerManager.searchIn(servers, _searchText, true);
+      }
+
       int count = 1;
       for (int i = 0; i < servers.length; ++i) {
         ListViewMultiPartsItem item = ListViewMultiPartsItem();
@@ -707,9 +739,7 @@ class MyProfilesScreenState extends LasyRenderingState<MyProfilesScreen> {
         builder: (context) =>
             getLongPressServerWidgets(server, isTesting, isWaitTesting, true),
         child: InkWell(
-          onTapDown: (details) {
-            //  _tapDownDetails = details;
-          },
+          onTapDown: (details) {},
           onLongPress: () async {
             onLongPressServer(server, isTesting, isWaitTesting);
           },
@@ -983,6 +1013,34 @@ class MyProfilesScreenState extends LasyRenderingState<MyProfilesScreen> {
               Expanded(child: ListViewMultiPartsBuilder.build(_listViewParts)),
             ],
           ),
+        ),
+      ),
+    );
+  }
+
+  Container createSearch() {
+    final tcontext = Translations.of(context);
+    return Container(
+      margin: const EdgeInsets.only(top: 10),
+      padding: const EdgeInsets.only(left: 0, right: 0),
+      height: 44,
+      width: double.infinity,
+      decoration: const BoxDecoration(borderRadius: ThemeDefine.kBorderRadius),
+      child: TextFieldEx(
+        controller: _searchController,
+        textInputAction: TextInputAction.done,
+        onChanged: _loadSearch,
+        decoration: InputDecoration(
+          border: InputBorder.none,
+          focusedBorder: InputBorder.none,
+          prefixIcon: Icon(Icons.search_outlined),
+          hintText: tcontext.meta.search,
+          suffixIcon: _searchController.text.isNotEmpty
+              ? IconButton(
+                  icon: const Icon(Icons.clear_outlined),
+                  onPressed: _clearSearch,
+                )
+              : null,
         ),
       ),
     );
@@ -1729,7 +1787,22 @@ class MyProfilesScreenState extends LasyRenderingState<MyProfilesScreen> {
     if (!sbOptions.isValid()) {
       return;
     }
-
+    List<String> autocompleteCandidates = [""];
+    ServerConfigGroupItem customItem = ServerManager.getCustomGroup();
+    for (var ut in customItem.urltests) {
+      if (ut.remark != item.remark) {
+        autocompleteCandidates.add("$kOutboundTagUrltest-${ut.remark}");
+      }
+    }
+    for (var item in ServerManager.getConfig().items) {
+      if (item.enable) {
+        for (var current in item.servers) {
+          if (current.tag != server.tag) {
+            autocompleteCandidates.add(current.tag);
+          }
+        }
+      }
+    }
     Future<List<GroupItem>> getOptions(
       BuildContext context,
       SetStateCallback? setstate,
@@ -1774,6 +1847,7 @@ class MyProfilesScreenState extends LasyRenderingState<MyProfilesScreen> {
                 sbOptions.dialer?.detour = value.trim();
               }
             },
+            autocompleteCandidates: autocompleteCandidates,
           ),
         ),
       ];

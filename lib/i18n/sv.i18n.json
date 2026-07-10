@@ -105,7 +105,8 @@
     },
     "NetConnectionsScreen": {
         "copyAsCSV": "Kopierat till CSV-format",
-        "selectType": "Välj omledningstyp"
+        "selectType": "Välj omledningstyp",
+        "loopbackWarning": "Ett nätverksloop kan ha uppstått. Kontrollera inställningarna för nätverksadaptern"
     },
     "PerAppAndroidScreen": {
         "title": "Proxy per app",
@@ -388,6 +389,7 @@
         "account": "Konto",
         "password": "Lösenord",
         "decryptPassword": "Dekrypterringslösenord",
+        "overwriteOutboundDns": "DNS: Åsidosätt [@:{SettingsScreen.dnsTypeOutbound}]",
         "required": "Krävs",
         "type": "Typ",
         "path": "Sökväg",

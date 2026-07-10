@@ -105,7 +105,8 @@
     },
     "NetConnectionsScreen": {
         "copyAsCSV": "Copied to CSV format",
-        "selectType": "Select Diversion Type"
+        "selectType": "Select Diversion Type",
+        "loopbackWarning": "A network loop may have occurred. Please check your network adapter settings."
     },
     "PerAppAndroidScreen": {
         "title": "Per-App Proxy",
@@ -388,6 +389,7 @@
         "account": "Account",
         "password": "Password",
         "decryptPassword": "Decrypt Password",
+        "overwriteOutboundDns": "DNS: Override [@:{SettingsScreen.dnsTypeOutbound}]",
         "required": "Required",
         "type": "Type",
         "path": "Path",
