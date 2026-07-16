@@ -237,9 +237,8 @@ class _Translations$HomeScreen$it implements Translations$HomeScreen$en {
 	final TranslationsIt _root; // ignore: unused_field
 
 	// Translations
-	@override String get toSelectServer => 'Seleziona un Server';
-	@override String get invalidServer => 'non è valido, seleziona di nuovo';
-	@override String get disabledServer => 'è disabilitato, seleziona di nuovo';
+	@override String invalidServer({required Object p}) => '[${p}] non è più valido, seleziona di nuovo un server';
+	@override String disabledServer({required Object p}) => '[${p}] è stato disabilitato, seleziona di nuovo un server';
 	@override String get expiredServer => 'Nessun server disponibile, i profili potrebbero essere scaduti o disabilitati';
 	@override String systemProxyTips({required Object sp, required Object hp}) => 'socks:${sp},http(s):${hp}';
 	@override String get myLinkEmpty => 'Configura [Link Rapido] prima di usarlo';
@@ -992,9 +991,8 @@ extension on TranslationsIt {
 			'FileContentViewerScreen.title' => 'Visualizzatore Contenuto File',
 			'FileContentViewerScreen.clearFileContent' => 'Sei sicuro di voler cancellare il contenuto del file?',
 			'FileContentViewerScreen.clearFileContentTips' => 'Sei sicuro di voler cancellare il contenuto del file di Profilo? La cancellazione del file di Profilo può causare la perdita di dati o funzioni anomale dell\'applicazione, procedere con cautela',
-			'HomeScreen.toSelectServer' => 'Seleziona un Server',
-			'HomeScreen.invalidServer' => 'non è valido, seleziona di nuovo',
-			'HomeScreen.disabledServer' => 'è disabilitato, seleziona di nuovo',
+			'HomeScreen.invalidServer' => ({required Object p}) => '[${p}] non è più valido, seleziona di nuovo un server',
+			'HomeScreen.disabledServer' => ({required Object p}) => '[${p}] è stato disabilitato, seleziona di nuovo un server',
 			'HomeScreen.expiredServer' => 'Nessun server disponibile, i profili potrebbero essere scaduti o disabilitati',
 			'HomeScreen.systemProxyTips' => ({required Object sp, required Object hp}) => 'socks:${sp},http(s):${hp}',
 			'HomeScreen.myLinkEmpty' => 'Configura [Link Rapido] prima di usarlo',
@@ -1467,9 +1465,9 @@ extension on TranslationsIt {
 			'isp.bind' => 'Associa A [${_root.meta.isp}] ',
 			'isp.unbind' => ({required Object p}) => 'Disassocia[${p}]',
 			'isp.faq' => ({required Object p}) => 'FAQ[${p}]',
+			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
 			_ => null,
 		} ?? switch (path) {
-			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
 			'isp.follow' => ({required Object p}) => 'Segui[${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}] Non valido o scaduto',
 			'permission.camera' => 'Fotocamera',

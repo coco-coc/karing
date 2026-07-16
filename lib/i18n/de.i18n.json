@@ -1,4 +1,4 @@
-{
+﻿{
     "AboutScreen": {
         "installRefer": "Installationsquelle",
         "installTime": "Installationszeit",
@@ -51,9 +51,8 @@
         "clearFileContentTips": "Sind Sie sicher, dass Sie den Inhalt der Profil-Datei löschen möchten? Das Löschen der Profil-Datei kann zu Datenverlust oder abnormalen Anwendungsfunktionen führen, bitte gehen Sie mit Vorsicht vor"
     },
     "HomeScreen": {
-        "toSelectServer": "Bitte wählen Sie einen Server aus",
-        "invalidServer": "ist ungültig, bitte wählen Sie erneut",
-        "disabledServer": "ist deaktiviert, bitte wählen Sie erneut",
+        "invalidServer": "[$p] ist nicht mehr gültig, bitte wählen Sie den Server erneut",
+        "disabledServer": "[$p] wurde deaktiviert, bitte wählen Sie den Server erneut",
         "expiredServer": "Keine Server verfügbar, Profile könnten abgelaufen oder deaktiviert sein",
         "systemProxyTips": "socks:$sp,http(s):$hp",
         "myLinkEmpty": "Bitte richten Sie [Shortcut-Link] ein, bevor Sie ihn verwenden",
@@ -660,3 +659,4 @@
         "pa": "ਪੰਜਾਬੀ"
     }
 }
+

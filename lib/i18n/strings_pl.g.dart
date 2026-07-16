@@ -237,9 +237,8 @@ class _Translations$HomeScreen$pl implements Translations$HomeScreen$en {
 	final TranslationsPl _root; // ignore: unused_field
 
 	// Translations
-	@override String get toSelectServer => 'Wybierz serwer';
-	@override String get invalidServer => 'jest nieprawidłowy, wybierz ponownie';
-	@override String get disabledServer => 'jest wyłączony, wybierz ponownie';
+	@override String invalidServer({required Object p}) => '[${p}] jest już nieprawidłowy, wybierz ponownie serwer';
+	@override String disabledServer({required Object p}) => '[${p}] został wyłączony, wybierz ponownie serwer';
 	@override String get expiredServer => 'Brak dostępnych serwerów, profile mogą być wygasłe lub wyłączone';
 	@override String systemProxyTips({required Object sp, required Object hp}) => 'socks:${sp},http(s):${hp}';
 	@override String get myLinkEmpty => 'Skonfiguruj [Skrót] przed użyciem';
@@ -992,9 +991,8 @@ extension on TranslationsPl {
 			'FileContentViewerScreen.title' => 'Przeglądarka zawartości plików',
 			'FileContentViewerScreen.clearFileContent' => 'Czy na pewno chcesz wyczyścić zawartość pliku?',
 			'FileContentViewerScreen.clearFileContentTips' => 'Czy na pewno chcesz wyczyścić zawartość pliku profilu? Wyczyszczenie pliku profilu może spowodować utratę danych lub nieprawidłowe działanie aplikacji, prosimy o ostrożność',
-			'HomeScreen.toSelectServer' => 'Wybierz serwer',
-			'HomeScreen.invalidServer' => 'jest nieprawidłowy, wybierz ponownie',
-			'HomeScreen.disabledServer' => 'jest wyłączony, wybierz ponownie',
+			'HomeScreen.invalidServer' => ({required Object p}) => '[${p}] jest już nieprawidłowy, wybierz ponownie serwer',
+			'HomeScreen.disabledServer' => ({required Object p}) => '[${p}] został wyłączony, wybierz ponownie serwer',
 			'HomeScreen.expiredServer' => 'Brak dostępnych serwerów, profile mogą być wygasłe lub wyłączone',
 			'HomeScreen.systemProxyTips' => ({required Object sp, required Object hp}) => 'socks:${sp},http(s):${hp}',
 			'HomeScreen.myLinkEmpty' => 'Skonfiguruj [Skrót] przed użyciem',
@@ -1467,9 +1465,9 @@ extension on TranslationsPl {
 			'isp.bind' => 'Powiąż z [${_root.meta.isp}] ',
 			'isp.unbind' => ({required Object p}) => 'Odwiąż[${p}]',
 			'isp.faq' => ({required Object p}) => 'FAQ[${p}]',
+			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
 			_ => null,
 		} ?? switch (path) {
-			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
 			'isp.follow' => ({required Object p}) => 'Śledź[${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}] Nieprawidłowy lub wygasły',
 			'permission.camera' => 'Aparat',

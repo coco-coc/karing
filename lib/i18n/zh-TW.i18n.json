@@ -1,4 +1,4 @@
-{
+﻿{
     "AboutScreen": {
         "installRefer": "安裝參考",
         "installTime": "安裝時間",
@@ -51,9 +51,8 @@
         "clearFileContentTips": "確認清空設定檔內容? 清空設定檔可能會導致數據丟失或應用功能異常, 請謹慎操作"
     },
     "HomeScreen": {
-        "toSelectServer": "請選擇伺服器",
-        "invalidServer": "已失效, 請重新選擇",
-        "disabledServer": "已被停用, 請重新選擇",
+        "invalidServer": "[$p]已失效,請重新選擇伺服器",
+        "disabledServer": "[$p]已被停用,請重新選擇伺服器",
         "expiredServer": "無可用伺服器: 設定可能已過期或被停用",
         "systemProxyTips": "SOCKS代理連接埠:$sp, HTTP(S)代理連接埠:$hp",
         "myLinkEmpty": "請先設定 [快捷連結] 後再使用",
@@ -660,3 +659,4 @@
         "pa": "ਪੰਜਾਬੀ"
     }
 }
+

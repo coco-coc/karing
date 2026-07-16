@@ -237,9 +237,8 @@ class _Translations$HomeScreen$fr implements Translations$HomeScreen$en {
 	final TranslationsFr _root; // ignore: unused_field
 
 	// Translations
-	@override String get toSelectServer => 'Veuillez sélectionner un serveur';
-	@override String get invalidServer => 'est invalide, veuillez sélectionner à nouveau';
-	@override String get disabledServer => 'est désactivé, veuillez sélectionner à nouveau';
+	@override String invalidServer({required Object p}) => '[${p}] n\'est plus valide, veuillez sélectionner à nouveau un serveur';
+	@override String disabledServer({required Object p}) => '[${p}] a été désactivé, veuillez sélectionner à nouveau un serveur';
 	@override String get expiredServer => 'Aucun serveur disponible, les profils peuvent être expirés ou désactivés';
 	@override String systemProxyTips({required Object sp, required Object hp}) => 'socks : ${sp}, http(s) : ${hp}';
 	@override String get myLinkEmpty => 'Veuillez configurer un [Lien raccourci] avant de l\'utiliser';
@@ -992,9 +991,8 @@ extension on TranslationsFr {
 			'FileContentViewerScreen.title' => 'Visionneuse de contenu de fichier',
 			'FileContentViewerScreen.clearFileContent' => 'Êtes-vous sûr de vouloir effacer le contenu du fichier ?',
 			'FileContentViewerScreen.clearFileContentTips' => 'Êtes-vous sûr de vouloir effacer le contenu du fichier de profil ? L\'effacement du fichier de profil peut entraîner une perte de données ou des dysfonctionnements de l\'application, veuillez agir avec prudence',
-			'HomeScreen.toSelectServer' => 'Veuillez sélectionner un serveur',
-			'HomeScreen.invalidServer' => 'est invalide, veuillez sélectionner à nouveau',
-			'HomeScreen.disabledServer' => 'est désactivé, veuillez sélectionner à nouveau',
+			'HomeScreen.invalidServer' => ({required Object p}) => '[${p}] n\'est plus valide, veuillez sélectionner à nouveau un serveur',
+			'HomeScreen.disabledServer' => ({required Object p}) => '[${p}] a été désactivé, veuillez sélectionner à nouveau un serveur',
 			'HomeScreen.expiredServer' => 'Aucun serveur disponible, les profils peuvent être expirés ou désactivés',
 			'HomeScreen.systemProxyTips' => ({required Object sp, required Object hp}) => 'socks : ${sp}, http(s) : ${hp}',
 			'HomeScreen.myLinkEmpty' => 'Veuillez configurer un [Lien raccourci] avant de l\'utiliser',
@@ -1467,9 +1465,9 @@ extension on TranslationsFr {
 			'isp.bind' => 'Lier à [${_root.meta.isp}] ',
 			'isp.unbind' => ({required Object p}) => 'Délier [${p}]',
 			'isp.faq' => ({required Object p}) => 'FAQ [${p}]',
+			'isp.customerService' => ({required Object p}) => 'Telegram [${p}]',
 			_ => null,
 		} ?? switch (path) {
-			'isp.customerService' => ({required Object p}) => 'Telegram [${p}]',
 			'isp.follow' => ({required Object p}) => 'Suivre [${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}] Invalide ou expiré',
 			'permission.camera' => 'Appareil photo',

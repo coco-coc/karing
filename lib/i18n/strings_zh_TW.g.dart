@@ -237,9 +237,8 @@ class Translations$HomeScreen$zh_TW implements Translations$HomeScreen$en {
 	final TranslationsZhTw _root; // ignore: unused_field
 
 	// Translations
-	@override String get toSelectServer => '請選擇伺服器';
-	@override String get invalidServer => '已失效, 請重新選擇';
-	@override String get disabledServer => '已被停用, 請重新選擇';
+	@override String invalidServer({required Object p}) => '[${p}]已失效,請重新選擇伺服器';
+	@override String disabledServer({required Object p}) => '[${p}]已被停用,請重新選擇伺服器';
 	@override String get expiredServer => '無可用伺服器: 設定可能已過期或被停用';
 	@override String systemProxyTips({required Object sp, required Object hp}) => 'SOCKS代理連接埠:${sp}, HTTP(S)代理連接埠:${hp}';
 	@override String get myLinkEmpty => '請先設定 [快捷連結] 後再使用';
@@ -992,9 +991,8 @@ extension on TranslationsZhTw {
 			'FileContentViewerScreen.title' => '檔案內容查看',
 			'FileContentViewerScreen.clearFileContent' => '確認清空檔案內容?',
 			'FileContentViewerScreen.clearFileContentTips' => '確認清空設定檔內容? 清空設定檔可能會導致數據丟失或應用功能異常, 請謹慎操作',
-			'HomeScreen.toSelectServer' => '請選擇伺服器',
-			'HomeScreen.invalidServer' => '已失效, 請重新選擇',
-			'HomeScreen.disabledServer' => '已被停用, 請重新選擇',
+			'HomeScreen.invalidServer' => ({required Object p}) => '[${p}]已失效,請重新選擇伺服器',
+			'HomeScreen.disabledServer' => ({required Object p}) => '[${p}]已被停用,請重新選擇伺服器',
 			'HomeScreen.expiredServer' => '無可用伺服器: 設定可能已過期或被停用',
 			'HomeScreen.systemProxyTips' => ({required Object sp, required Object hp}) => 'SOCKS代理連接埠:${sp}, HTTP(S)代理連接埠:${hp}',
 			'HomeScreen.myLinkEmpty' => '請先設定 [快捷連結] 後再使用',
@@ -1467,9 +1465,9 @@ extension on TranslationsZhTw {
 			'isp.bind' => '綁定到 [${_root.meta.isp}]',
 			'isp.unbind' => ({required Object p}) => '解除綁定 [${p}]',
 			'isp.faq' => ({required Object p}) => '常見問題 [${p}]',
+			'isp.customerService' => ({required Object p}) => '客服 [${p}]',
 			_ => null,
 		} ?? switch (path) {
-			'isp.customerService' => ({required Object p}) => '客服 [${p}]',
 			'isp.follow' => ({required Object p}) => '關注 [${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}] 無效或已過期',
 			'permission.camera' => '攝像頭',

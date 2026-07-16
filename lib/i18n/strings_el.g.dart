@@ -237,9 +237,8 @@ class _Translations$HomeScreen$el implements Translations$HomeScreen$en {
 	final TranslationsEl _root; // ignore: unused_field
 
 	// Translations
-	@override String get toSelectServer => 'Παρακαλώ επιλέξτε έναν διακομιστή';
-	@override String get invalidServer => 'είναι μη έγκυρο, παρακαλώ επιλέξτε ξανά';
-	@override String get disabledServer => 'είναι απενεργοποιημένο, παρακαλώ επιλέξτε ξανά';
+	@override String invalidServer({required Object p}) => '[${p}] δεν είναι πλέον έγκυρος, επιλέξτε ξανά διακομιστή';
+	@override String disabledServer({required Object p}) => '[${p}] έχει απενεργοποιηθεί, επιλέξτε ξανά διακομιστή';
 	@override String get expiredServer => 'Δεν υπάρχουν διαθέσιμοι διακομιστές, τα προφίλ ενδέχεται να έχουν λήξει ή να είναι απενεργοποιημένα';
 	@override String systemProxyTips({required Object sp, required Object hp}) => 'socks:${sp},http(s):${hp}';
 	@override String get myLinkEmpty => 'Παρακαλώ ρυθμίστε το [Σύνδεσμο συντόμευσης] πριν τον χρησιμοποιήσετε';
@@ -992,9 +991,8 @@ extension on TranslationsEl {
 			'FileContentViewerScreen.title' => 'Προβολή περιεχομένου αρχείου',
 			'FileContentViewerScreen.clearFileContent' => 'Είστε βέβαιοι ότι θέλετε να εκκαθαρίσετε το περιεχόμενο του αρχείου;',
 			'FileContentViewerScreen.clearFileContentTips' => 'Είστε βέβαιοι ότι θέλετε να εκκαθαρίσετε το περιεχόμενο του αρχείου Προφίλ; Η εκκαθάριση του αρχείου Προφίλ μπορεί να προκαλέσει απώλεια δεδομένων ή μη φυσιολογικές λειτουργίες της εφαρμογής, παρακαλούμε ενεργήστε με προσοχή',
-			'HomeScreen.toSelectServer' => 'Παρακαλώ επιλέξτε έναν διακομιστή',
-			'HomeScreen.invalidServer' => 'είναι μη έγκυρο, παρακαλώ επιλέξτε ξανά',
-			'HomeScreen.disabledServer' => 'είναι απενεργοποιημένο, παρακαλώ επιλέξτε ξανά',
+			'HomeScreen.invalidServer' => ({required Object p}) => '[${p}] δεν είναι πλέον έγκυρος, επιλέξτε ξανά διακομιστή',
+			'HomeScreen.disabledServer' => ({required Object p}) => '[${p}] έχει απενεργοποιηθεί, επιλέξτε ξανά διακομιστή',
 			'HomeScreen.expiredServer' => 'Δεν υπάρχουν διαθέσιμοι διακομιστές, τα προφίλ ενδέχεται να έχουν λήξει ή να είναι απενεργοποιημένα',
 			'HomeScreen.systemProxyTips' => ({required Object sp, required Object hp}) => 'socks:${sp},http(s):${hp}',
 			'HomeScreen.myLinkEmpty' => 'Παρακαλώ ρυθμίστε το [Σύνδεσμο συντόμευσης] πριν τον χρησιμοποιήσετε',
@@ -1467,9 +1465,9 @@ extension on TranslationsEl {
 			'isp.bind' => 'Σύνδεση με [${_root.meta.isp}] ',
 			'isp.unbind' => ({required Object p}) => 'Αποσύνδεση[${p}]',
 			'isp.faq' => ({required Object p}) => 'Συχνές ερωτήσεις[${p}]',
+			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
 			_ => null,
 		} ?? switch (path) {
-			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
 			'isp.follow' => ({required Object p}) => 'Ακολουθήστε[${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}] Μη έγκυρο ή ληγμένο',
 			'permission.camera' => 'Κάμερα',

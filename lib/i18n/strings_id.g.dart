@@ -237,9 +237,8 @@ class _Translations$HomeScreen$id implements Translations$HomeScreen$en {
 	final TranslationsId _root; // ignore: unused_field
 
 	// Translations
-	@override String get toSelectServer => 'Silakan pilih server';
-	@override String get invalidServer => 'Sudah tidak valid, silakan pilih lagi';
-	@override String get disabledServer => 'Telah dinonaktifkan, silakan pilih lagi';
+	@override String invalidServer({required Object p}) => '[${p}] sudah tidak valid, silakan pilih server lagi';
+	@override String disabledServer({required Object p}) => '[${p}] telah dinonaktifkan, silakan pilih server lagi';
 	@override String get expiredServer => 'Tidak ada server yang tersedia: konfigurasi mungkin telah kedaluwarsa atau dinonaktifkan';
 	@override String systemProxyTips({required Object sp, required Object hp}) => 'Port proxy SOCKS:${sp}, port proxy HTTP(S):${hp}';
 	@override String get myLinkEmpty => 'Silakan atur [Tautan cepat] terlebih dahulu sebelum digunakan';
@@ -992,9 +991,8 @@ extension on TranslationsId {
 			'FileContentViewerScreen.title' => 'Lihat isi file',
 			'FileContentViewerScreen.clearFileContent' => 'Konfirmasi hapus isi file?',
 			'FileContentViewerScreen.clearFileContentTips' => 'Konfirmasi hapus isi file konfigurasi? Menghapus isi file konfigurasi dapat menyebabkan kehilangan data atau fungsi aplikasi tidak normal, harap lakukan dengan hati-hati',
-			'HomeScreen.toSelectServer' => 'Silakan pilih server',
-			'HomeScreen.invalidServer' => 'Sudah tidak valid, silakan pilih lagi',
-			'HomeScreen.disabledServer' => 'Telah dinonaktifkan, silakan pilih lagi',
+			'HomeScreen.invalidServer' => ({required Object p}) => '[${p}] sudah tidak valid, silakan pilih server lagi',
+			'HomeScreen.disabledServer' => ({required Object p}) => '[${p}] telah dinonaktifkan, silakan pilih server lagi',
 			'HomeScreen.expiredServer' => 'Tidak ada server yang tersedia: konfigurasi mungkin telah kedaluwarsa atau dinonaktifkan',
 			'HomeScreen.systemProxyTips' => ({required Object sp, required Object hp}) => 'Port proxy SOCKS:${sp}, port proxy HTTP(S):${hp}',
 			'HomeScreen.myLinkEmpty' => 'Silakan atur [Tautan cepat] terlebih dahulu sebelum digunakan',
@@ -1467,9 +1465,9 @@ extension on TranslationsId {
 			'isp.bind' => 'Ikat ke [${_root.meta.isp}]',
 			'isp.unbind' => ({required Object p}) => 'Lepaskan ikatan [${p}]',
 			'isp.faq' => ({required Object p}) => 'Pertanyaan umum [${p}]',
+			'isp.customerService' => ({required Object p}) => 'Layanan pelanggan [${p}]',
 			_ => null,
 		} ?? switch (path) {
-			'isp.customerService' => ({required Object p}) => 'Layanan pelanggan [${p}]',
 			'isp.follow' => ({required Object p}) => 'Ikuti [${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}] tidak valid atau telah kedaluwarsa',
 			'permission.camera' => 'Kamera',

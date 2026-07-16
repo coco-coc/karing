@@ -1,4 +1,4 @@
-{
+﻿{
     "AboutScreen": {
         "installRefer": "インストールリファラー",
         "installTime": "インストール時間",
@@ -51,9 +51,8 @@
         "clearFileContentTips": "プロファイルファイルの内容を消去してもよろしいですか？プロファイルファイルを消去すると、データが失われたり、アプリが正常に動作しなくなったりする可能性があります。慎重に行ってください。"
     },
     "HomeScreen": {
-        "toSelectServer": "サーバーを選択してください",
-        "invalidServer": "は無効です。再選択してください",
-        "disabledServer": "は無効になっています。再選択してください",
+        "invalidServer": "[$p] は無効になりました。サーバーを再選択してください",
+        "disabledServer": "[$p] は無効化されています。サーバーを再選択してください",
         "expiredServer": "利用可能なサーバーがありません。プロファイルが期限切れか無効になっている可能性があります",
         "systemProxyTips": "socks: $sp, http(s): $hp",
         "myLinkEmpty": "使用する前に [ショートカットリンク] を設定してください",
@@ -660,3 +659,4 @@
         "pa": "ਪੰਜਾਬੀ"
     }
 }
+

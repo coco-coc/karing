@@ -237,9 +237,8 @@ class _Translations$HomeScreen$ja implements Translations$HomeScreen$en {
 	final TranslationsJa _root; // ignore: unused_field
 
 	// Translations
-	@override String get toSelectServer => 'サーバーを選択してください';
-	@override String get invalidServer => 'は無効です。再選択してください';
-	@override String get disabledServer => 'は無効になっています。再選択してください';
+	@override String invalidServer({required Object p}) => '[${p}] は無効になりました。サーバーを再選択してください';
+	@override String disabledServer({required Object p}) => '[${p}] は無効化されています。サーバーを再選択してください';
 	@override String get expiredServer => '利用可能なサーバーがありません。プロファイルが期限切れか無効になっている可能性があります';
 	@override String systemProxyTips({required Object sp, required Object hp}) => 'socks: ${sp}, http(s): ${hp}';
 	@override String get myLinkEmpty => '使用する前に [ショートカットリンク] を設定してください';
@@ -992,9 +991,8 @@ extension on TranslationsJa {
 			'FileContentViewerScreen.title' => 'ファイル内容ビューアー',
 			'FileContentViewerScreen.clearFileContent' => 'ファイルの内容を消去してもよろしいですか？',
 			'FileContentViewerScreen.clearFileContentTips' => 'プロファイルファイルの内容を消去してもよろしいですか？プロファイルファイルを消去すると、データが失われたり、アプリが正常に動作しなくなったりする可能性があります。慎重に行ってください。',
-			'HomeScreen.toSelectServer' => 'サーバーを選択してください',
-			'HomeScreen.invalidServer' => 'は無効です。再選択してください',
-			'HomeScreen.disabledServer' => 'は無効になっています。再選択してください',
+			'HomeScreen.invalidServer' => ({required Object p}) => '[${p}] は無効になりました。サーバーを再選択してください',
+			'HomeScreen.disabledServer' => ({required Object p}) => '[${p}] は無効化されています。サーバーを再選択してください',
 			'HomeScreen.expiredServer' => '利用可能なサーバーがありません。プロファイルが期限切れか無効になっている可能性があります',
 			'HomeScreen.systemProxyTips' => ({required Object sp, required Object hp}) => 'socks: ${sp}, http(s): ${hp}',
 			'HomeScreen.myLinkEmpty' => '使用する前に [ショートカットリンク] を設定してください',
@@ -1467,9 +1465,9 @@ extension on TranslationsJa {
 			'isp.bind' => '[${_root.meta.isp}] にバインドする',
 			'isp.unbind' => ({required Object p}) => 'バインド解除 [${p}]',
 			'isp.faq' => ({required Object p}) => 'よくある質問 [${p}]',
+			'isp.customerService' => ({required Object p}) => 'Telegram [${p}]',
 			_ => null,
 		} ?? switch (path) {
-			'isp.customerService' => ({required Object p}) => 'Telegram [${p}]',
 			'isp.follow' => ({required Object p}) => 'フォロー [${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}] が無効または期限切れです',
 			'permission.camera' => 'カメラ',

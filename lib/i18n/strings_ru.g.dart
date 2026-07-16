@@ -237,9 +237,8 @@ class _Translations$HomeScreen$ru implements Translations$HomeScreen$en {
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get toSelectServer => 'Выберите сервер';
-	@override String get invalidServer => 'Не работает. Пожалуйста, выберите другой';
-	@override String get disabledServer => 'Был отключен. Пожалуйста, выберите другой';
+	@override String invalidServer({required Object p}) => '[${p}] больше недействителен, пожалуйста, выберите сервер снова';
+	@override String disabledServer({required Object p}) => '[${p}] отключен, пожалуйста, выберите сервер снова';
 	@override String get expiredServer => 'Нет доступного сервера: возможно, профиль устарел или отключен';
 	@override String systemProxyTips({required Object sp, required Object hp}) => 'socks:${sp},http(s):${hp}';
 	@override String get myLinkEmpty => 'Пожалуйста, настройте [Быструю ссылку] перед использованием';
@@ -992,9 +991,8 @@ extension on TranslationsRu {
 			'FileContentViewerScreen.title' => 'Просмотр содержимого файла',
 			'FileContentViewerScreen.clearFileContent' => 'Вы уверены, что хотите очистить содержимое файла?',
 			'FileContentViewerScreen.clearFileContentTips' => 'Вы уверены, что  хотите очистить содержимое файла профиля? Очистка файла профиля может привести к потере данных или некорректной работе приложения. Действуйте осторожно.',
-			'HomeScreen.toSelectServer' => 'Выберите сервер',
-			'HomeScreen.invalidServer' => 'Не работает. Пожалуйста, выберите другой',
-			'HomeScreen.disabledServer' => 'Был отключен. Пожалуйста, выберите другой',
+			'HomeScreen.invalidServer' => ({required Object p}) => '[${p}] больше недействителен, пожалуйста, выберите сервер снова',
+			'HomeScreen.disabledServer' => ({required Object p}) => '[${p}] отключен, пожалуйста, выберите сервер снова',
 			'HomeScreen.expiredServer' => 'Нет доступного сервера: возможно, профиль устарел или отключен',
 			'HomeScreen.systemProxyTips' => ({required Object sp, required Object hp}) => 'socks:${sp},http(s):${hp}',
 			'HomeScreen.myLinkEmpty' => 'Пожалуйста, настройте [Быструю ссылку] перед использованием',
@@ -1467,9 +1465,9 @@ extension on TranslationsRu {
 			'isp.bind' => 'Привязать к [${_root.meta.isp}]',
 			'isp.unbind' => ({required Object p}) => 'Отвязать[${p}]',
 			'isp.faq' => ({required Object p}) => 'Часто задаваемые вопросы[${p}]',
+			'isp.customerService' => ({required Object p}) => 'Служба поддержки клиентов[${p}]',
 			_ => null,
 		} ?? switch (path) {
-			'isp.customerService' => ({required Object p}) => 'Служба поддержки клиентов[${p}]',
 			'isp.follow' => ({required Object p}) => 'Следуйте[${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}]Недействительно, или срок действия истек',
 			'permission.camera' => 'Камера',

@@ -237,9 +237,8 @@ class _Translations$HomeScreen$de implements Translations$HomeScreen$en {
 	final TranslationsDe _root; // ignore: unused_field
 
 	// Translations
-	@override String get toSelectServer => 'Bitte wählen Sie einen Server aus';
-	@override String get invalidServer => 'ist ungültig, bitte wählen Sie erneut';
-	@override String get disabledServer => 'ist deaktiviert, bitte wählen Sie erneut';
+	@override String invalidServer({required Object p}) => '[${p}] ist nicht mehr gültig, bitte wählen Sie den Server erneut';
+	@override String disabledServer({required Object p}) => '[${p}] wurde deaktiviert, bitte wählen Sie den Server erneut';
 	@override String get expiredServer => 'Keine Server verfügbar, Profile könnten abgelaufen oder deaktiviert sein';
 	@override String systemProxyTips({required Object sp, required Object hp}) => 'socks:${sp},http(s):${hp}';
 	@override String get myLinkEmpty => 'Bitte richten Sie [Shortcut-Link] ein, bevor Sie ihn verwenden';
@@ -992,9 +991,8 @@ extension on TranslationsDe {
 			'FileContentViewerScreen.title' => 'Dateiinhaltsbetrachter',
 			'FileContentViewerScreen.clearFileContent' => 'Sind Sie sicher, dass Sie den Inhalt der Datei löschen möchten?',
 			'FileContentViewerScreen.clearFileContentTips' => 'Sind Sie sicher, dass Sie den Inhalt der Profil-Datei löschen möchten? Das Löschen der Profil-Datei kann zu Datenverlust oder abnormalen Anwendungsfunktionen führen, bitte gehen Sie mit Vorsicht vor',
-			'HomeScreen.toSelectServer' => 'Bitte wählen Sie einen Server aus',
-			'HomeScreen.invalidServer' => 'ist ungültig, bitte wählen Sie erneut',
-			'HomeScreen.disabledServer' => 'ist deaktiviert, bitte wählen Sie erneut',
+			'HomeScreen.invalidServer' => ({required Object p}) => '[${p}] ist nicht mehr gültig, bitte wählen Sie den Server erneut',
+			'HomeScreen.disabledServer' => ({required Object p}) => '[${p}] wurde deaktiviert, bitte wählen Sie den Server erneut',
 			'HomeScreen.expiredServer' => 'Keine Server verfügbar, Profile könnten abgelaufen oder deaktiviert sein',
 			'HomeScreen.systemProxyTips' => ({required Object sp, required Object hp}) => 'socks:${sp},http(s):${hp}',
 			'HomeScreen.myLinkEmpty' => 'Bitte richten Sie [Shortcut-Link] ein, bevor Sie ihn verwenden',
@@ -1467,9 +1465,9 @@ extension on TranslationsDe {
 			'isp.bind' => 'An [${_root.meta.isp}] binden',
 			'isp.unbind' => ({required Object p}) => 'Entbinden[${p}]',
 			'isp.faq' => ({required Object p}) => 'FAQ[${p}]',
+			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
 			_ => null,
 		} ?? switch (path) {
-			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
 			'isp.follow' => ({required Object p}) => 'Folgen[${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}] Ungültig oder abgelaufen',
 			'permission.camera' => 'Kamera',

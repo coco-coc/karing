@@ -237,9 +237,8 @@ class _Translations$HomeScreen$tr implements Translations$HomeScreen$en {
 	final TranslationsTr _root; // ignore: unused_field
 
 	// Translations
-	@override String get toSelectServer => 'Lütfen bir Sunucu Seçin';
-	@override String get invalidServer => 'geçersiz, lütfen tekrar seçin';
-	@override String get disabledServer => 'devre dışı, lütfen tekrar seçin';
+	@override String invalidServer({required Object p}) => '[${p}] artık geçerli değil, lütfen sunucuyu tekrar seçin';
+	@override String disabledServer({required Object p}) => '[${p}] devre dışı bırakıldı, lütfen sunucuyu tekrar seçin';
 	@override String get expiredServer => 'Kullanılabilir sunucu yok, profillerin süresi dolmuş veya devre dışı bırakılmış olabilir';
 	@override String systemProxyTips({required Object sp, required Object hp}) => 'socks: ${sp}, http(s): ${hp}';
 	@override String get myLinkEmpty => 'Lütfen kullanmadan önce [Kısayol Bağlantısı] kurulumunu yapın';
@@ -992,9 +991,8 @@ extension on TranslationsTr {
 			'FileContentViewerScreen.title' => 'Dosya İçeriği Görüntüleyici',
 			'FileContentViewerScreen.clearFileContent' => 'Dosya içeriğini temizlemek istediğinizden emin misiniz?',
 			'FileContentViewerScreen.clearFileContentTips' => 'Profil dosyası içeriğini temizlemek istediğinizden emin misiniz? Profil dosyasının temizlenmesi veri kaybına veya anormal uygulama işlevlerine neden olabilir, lütfen dikkatli olun',
-			'HomeScreen.toSelectServer' => 'Lütfen bir Sunucu Seçin',
-			'HomeScreen.invalidServer' => 'geçersiz, lütfen tekrar seçin',
-			'HomeScreen.disabledServer' => 'devre dışı, lütfen tekrar seçin',
+			'HomeScreen.invalidServer' => ({required Object p}) => '[${p}] artık geçerli değil, lütfen sunucuyu tekrar seçin',
+			'HomeScreen.disabledServer' => ({required Object p}) => '[${p}] devre dışı bırakıldı, lütfen sunucuyu tekrar seçin',
 			'HomeScreen.expiredServer' => 'Kullanılabilir sunucu yok, profillerin süresi dolmuş veya devre dışı bırakılmış olabilir',
 			'HomeScreen.systemProxyTips' => ({required Object sp, required Object hp}) => 'socks: ${sp}, http(s): ${hp}',
 			'HomeScreen.myLinkEmpty' => 'Lütfen kullanmadan önce [Kısayol Bağlantısı] kurulumunu yapın',
@@ -1467,9 +1465,9 @@ extension on TranslationsTr {
 			'isp.bind' => '[${_root.meta.isp}]\'e Bağla',
 			'isp.unbind' => ({required Object p}) => 'Bağlantıyı Kes [${p}]',
 			'isp.faq' => ({required Object p}) => 'SSS [${p}]',
+			'isp.customerService' => ({required Object p}) => 'Telegram [${p}]',
 			_ => null,
 		} ?? switch (path) {
-			'isp.customerService' => ({required Object p}) => 'Telegram [${p}]',
 			'isp.follow' => ({required Object p}) => 'Takip Et [${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}] Geçersiz veya süresi dolmuş',
 			'permission.camera' => 'Kamera',

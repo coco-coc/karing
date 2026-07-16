@@ -238,8 +238,8 @@ class Translations$HomeScreen$zh_CN implements Translations$HomeScreen$en {
 
 	// Translations
 	@override String get toSelectServer => '请选择服务器';
-	@override String get invalidServer => '已失效,请重新选择';
-	@override String get disabledServer => '已被禁用,请重新选择';
+	@override String invalidServer({required Object p}) => '[${p}]已失效,请重新选择服务器';
+	@override String disabledServer({required Object p}) => '[${p}]已被禁用,请重新选择服务器';
 	@override String get expiredServer => '无可用服务器:配置可能已过期或被禁用';
 	@override String systemProxyTips({required Object sp, required Object hp}) => 'SOCKS代理端口:${sp}, HTTP(S)代理端口:${hp}';
 	@override String get myLinkEmpty => '请先设置[快捷链接]后再使用';
@@ -993,8 +993,8 @@ extension on TranslationsZhCn {
 			'FileContentViewerScreen.clearFileContent' => '确认清空文件内容?',
 			'FileContentViewerScreen.clearFileContentTips' => '确认清空配置文件内容? 清空配置文件可能会导致数据丢失或应用功能异常, 请谨慎操作',
 			'HomeScreen.toSelectServer' => '请选择服务器',
-			'HomeScreen.invalidServer' => '已失效,请重新选择',
-			'HomeScreen.disabledServer' => '已被禁用,请重新选择',
+			'HomeScreen.invalidServer' => ({required Object p}) => '[${p}]已失效,请重新选择服务器',
+			'HomeScreen.disabledServer' => ({required Object p}) => '[${p}]已被禁用,请重新选择服务器',
 			'HomeScreen.expiredServer' => '无可用服务器:配置可能已过期或被禁用',
 			'HomeScreen.systemProxyTips' => ({required Object sp, required Object hp}) => 'SOCKS代理端口:${sp}, HTTP(S)代理端口:${hp}',
 			'HomeScreen.myLinkEmpty' => '请先设置[快捷链接]后再使用',

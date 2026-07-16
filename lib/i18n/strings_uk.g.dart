@@ -237,9 +237,8 @@ class _Translations$HomeScreen$uk implements Translations$HomeScreen$en {
 	final TranslationsUk _root; // ignore: unused_field
 
 	// Translations
-	@override String get toSelectServer => 'Будь ласка, виберіть сервер';
-	@override String get invalidServer => 'некоректний, будь ласка, виберіть знову';
-	@override String get disabledServer => 'вимкнено, будь ласка, виберіть знову';
+	@override String invalidServer({required Object p}) => '[${p}] більше не дійсний, будь ласка, виберіть сервер знову';
+	@override String disabledServer({required Object p}) => '[${p}] вимкнено, будь ласка, виберіть сервер знову';
 	@override String get expiredServer => 'Немає доступних серверів, термін дії профілів може закінчитися або вони вимкнені';
 	@override String systemProxyTips({required Object sp, required Object hp}) => 'socks:${sp},http(s):${hp}';
 	@override String get myLinkEmpty => 'Будь ласка, налаштуйте [Посилання швидкого доступу] перед використанням';
@@ -992,9 +991,8 @@ extension on TranslationsUk {
 			'FileContentViewerScreen.title' => 'Переглядач вмісту файлів',
 			'FileContentViewerScreen.clearFileContent' => 'Ви впевнені, що хочете очистити вміст файлу?',
 			'FileContentViewerScreen.clearFileContentTips' => 'Ви впевнені, що хочете очистити вміст файлу профілю? Очищення файлу профілю може призвести до втрати даних або порушення функцій програми, будь ласка, дійте обережно',
-			'HomeScreen.toSelectServer' => 'Будь ласка, виберіть сервер',
-			'HomeScreen.invalidServer' => 'некоректний, будь ласка, виберіть знову',
-			'HomeScreen.disabledServer' => 'вимкнено, будь ласка, виберіть знову',
+			'HomeScreen.invalidServer' => ({required Object p}) => '[${p}] більше не дійсний, будь ласка, виберіть сервер знову',
+			'HomeScreen.disabledServer' => ({required Object p}) => '[${p}] вимкнено, будь ласка, виберіть сервер знову',
 			'HomeScreen.expiredServer' => 'Немає доступних серверів, термін дії профілів може закінчитися або вони вимкнені',
 			'HomeScreen.systemProxyTips' => ({required Object sp, required Object hp}) => 'socks:${sp},http(s):${hp}',
 			'HomeScreen.myLinkEmpty' => 'Будь ласка, налаштуйте [Посилання швидкого доступу] перед використанням',
@@ -1467,9 +1465,9 @@ extension on TranslationsUk {
 			'isp.bind' => 'Прив\'язати до [${_root.meta.isp}] ',
 			'isp.unbind' => ({required Object p}) => 'Відв\'язати[${p}]',
 			'isp.faq' => ({required Object p}) => 'FAQ[${p}]',
+			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
 			_ => null,
 		} ?? switch (path) {
-			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
 			'isp.follow' => ({required Object p}) => 'Слідкувати[${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}] Некоректний або термін дії закінчився',
 			'permission.camera' => 'Камера',

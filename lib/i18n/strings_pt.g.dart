@@ -237,9 +237,8 @@ class _Translations$HomeScreen$pt implements Translations$HomeScreen$en {
 	final TranslationsPt _root; // ignore: unused_field
 
 	// Translations
-	@override String get toSelectServer => 'Por favor Selecione um Servidor';
-	@override String get invalidServer => 'é inválido, por favor selecione novamente';
-	@override String get disabledServer => 'está desativado, por favor selecione novamente';
+	@override String invalidServer({required Object p}) => '[${p}] não é mais válido, selecione novamente um servidor';
+	@override String disabledServer({required Object p}) => '[${p}] foi desativado, selecione novamente um servidor';
 	@override String get expiredServer => 'Nenhum servidor disponível, os perfis podem estar expirados ou desativados';
 	@override String systemProxyTips({required Object sp, required Object hp}) => 'socks:${sp},http(s):${hp}';
 	@override String get myLinkEmpty => 'Por favor configure o [Link de Atalho] antes de o usar';
@@ -992,9 +991,8 @@ extension on TranslationsPt {
 			'FileContentViewerScreen.title' => 'Visualizador de Conteúdo de Ficheiro',
 			'FileContentViewerScreen.clearFileContent' => 'Tem a certeza de que deseja limpar o conteúdo do ficheiro?',
 			'FileContentViewerScreen.clearFileContentTips' => 'Tem a certeza de que deseja limpar o conteúdo do ficheiro de Perfil? Limpar o ficheiro de Perfil pode causar perda de dados ou funções anormais da aplicação, por favor opere com cautela',
-			'HomeScreen.toSelectServer' => 'Por favor Selecione um Servidor',
-			'HomeScreen.invalidServer' => 'é inválido, por favor selecione novamente',
-			'HomeScreen.disabledServer' => 'está desativado, por favor selecione novamente',
+			'HomeScreen.invalidServer' => ({required Object p}) => '[${p}] não é mais válido, selecione novamente um servidor',
+			'HomeScreen.disabledServer' => ({required Object p}) => '[${p}] foi desativado, selecione novamente um servidor',
 			'HomeScreen.expiredServer' => 'Nenhum servidor disponível, os perfis podem estar expirados ou desativados',
 			'HomeScreen.systemProxyTips' => ({required Object sp, required Object hp}) => 'socks:${sp},http(s):${hp}',
 			'HomeScreen.myLinkEmpty' => 'Por favor configure o [Link de Atalho] antes de o usar',
@@ -1467,9 +1465,9 @@ extension on TranslationsPt {
 			'isp.bind' => 'Vincular a [${_root.meta.isp}] ',
 			'isp.unbind' => ({required Object p}) => 'Desvincular[${p}]',
 			'isp.faq' => ({required Object p}) => 'FAQ[${p}]',
+			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
 			_ => null,
 		} ?? switch (path) {
-			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
 			'isp.follow' => ({required Object p}) => 'Seguir[${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}] Inválido ou expirado',
 			'permission.camera' => 'Câmara',

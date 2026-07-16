@@ -237,9 +237,8 @@ class _Translations$HomeScreen$nl implements Translations$HomeScreen$en {
 	final TranslationsNl _root; // ignore: unused_field
 
 	// Translations
-	@override String get toSelectServer => 'Selecteer een server';
-	@override String get invalidServer => 'is ongeldig, selecteer opnieuw';
-	@override String get disabledServer => 'is uitgeschakeld, selecteer opnieuw';
+	@override String invalidServer({required Object p}) => '[${p}] is niet meer geldig, selecteer opnieuw een server';
+	@override String disabledServer({required Object p}) => '[${p}] is uitgeschakeld, selecteer opnieuw een server';
 	@override String get expiredServer => 'Geen servers beschikbaar, profielen kunnen verlopen of uitgeschakeld zijn';
 	@override String systemProxyTips({required Object sp, required Object hp}) => 'socks:${sp},http(s):${hp}';
 	@override String get myLinkEmpty => 'Stel [Snelkoppeling] in voordat u deze gebruikt';
@@ -992,9 +991,8 @@ extension on TranslationsNl {
 			'FileContentViewerScreen.title' => 'Bestandsinhoud bekijken',
 			'FileContentViewerScreen.clearFileContent' => 'Weet u zeker dat u de inhoud van het bestand wilt wissen?',
 			'FileContentViewerScreen.clearFileContentTips' => 'Weet u zeker dat u de inhoud van het profielbestand wilt wissen? Het wissen van het profielbestand kan leiden tot gegevensverlies of abnormale app-functies, ga voorzichtig te werk',
-			'HomeScreen.toSelectServer' => 'Selecteer een server',
-			'HomeScreen.invalidServer' => 'is ongeldig, selecteer opnieuw',
-			'HomeScreen.disabledServer' => 'is uitgeschakeld, selecteer opnieuw',
+			'HomeScreen.invalidServer' => ({required Object p}) => '[${p}] is niet meer geldig, selecteer opnieuw een server',
+			'HomeScreen.disabledServer' => ({required Object p}) => '[${p}] is uitgeschakeld, selecteer opnieuw een server',
 			'HomeScreen.expiredServer' => 'Geen servers beschikbaar, profielen kunnen verlopen of uitgeschakeld zijn',
 			'HomeScreen.systemProxyTips' => ({required Object sp, required Object hp}) => 'socks:${sp},http(s):${hp}',
 			'HomeScreen.myLinkEmpty' => 'Stel [Snelkoppeling] in voordat u deze gebruikt',
@@ -1467,9 +1465,9 @@ extension on TranslationsNl {
 			'isp.bind' => 'Koppelen aan [${_root.meta.isp}] ',
 			'isp.unbind' => ({required Object p}) => 'Ontkoppelen[${p}]',
 			'isp.faq' => ({required Object p}) => 'FAQ[${p}]',
+			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
 			_ => null,
 		} ?? switch (path) {
-			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
 			'isp.follow' => ({required Object p}) => 'Volgen[${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}] Ongeldig of verlopen',
 			'permission.camera' => 'Camera',

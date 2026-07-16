@@ -1,4 +1,4 @@
-{
+﻿{
     "AboutScreen": {
         "installRefer": "Źródło instalacji",
         "installTime": "Czas instalacji",
@@ -51,9 +51,8 @@
         "clearFileContentTips": "Czy na pewno chcesz wyczyścić zawartość pliku profilu? Wyczyszczenie pliku profilu może spowodować utratę danych lub nieprawidłowe działanie aplikacji, prosimy o ostrożność"
     },
     "HomeScreen": {
-        "toSelectServer": "Wybierz serwer",
-        "invalidServer": "jest nieprawidłowy, wybierz ponownie",
-        "disabledServer": "jest wyłączony, wybierz ponownie",
+        "invalidServer": "[$p] jest już nieprawidłowy, wybierz ponownie serwer",
+        "disabledServer": "[$p] został wyłączony, wybierz ponownie serwer",
         "expiredServer": "Brak dostępnych serwerów, profile mogą być wygasłe lub wyłączone",
         "systemProxyTips": "socks:$sp,http(s):$hp",
         "myLinkEmpty": "Skonfiguruj [Skrót] przed użyciem",
@@ -660,3 +659,4 @@
         "pa": "ਪੰਜਾਬੀ"
     }
 }
+

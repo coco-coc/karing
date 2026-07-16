@@ -237,9 +237,8 @@ class _Translations$HomeScreen$th implements Translations$HomeScreen$en {
 	final TranslationsTh _root; // ignore: unused_field
 
 	// Translations
-	@override String get toSelectServer => 'โปรดเลือกเซิร์ฟเวอร์';
-	@override String get invalidServer => 'ไม่ถูกต้อง โปรดเลือกอีกครั้ง';
-	@override String get disabledServer => 'ถูกปิดใช้งาน โปรดเลือกอีกครั้ง';
+	@override String invalidServer({required Object p}) => '[${p}] ไม่ถูกต้องแล้ว โปรดเลือกเซิร์ฟเวอร์อีกครั้ง';
+	@override String disabledServer({required Object p}) => '[${p}] ถูกปิดใช้งานแล้ว โปรดเลือกเซิร์ฟเวอร์อีกครั้ง';
 	@override String get expiredServer => 'ไม่มีเซิร์ฟเวอร์ที่พร้อมใช้งาน โปรไฟล์อาจหมดอายุหรือถูกปิดใช้งาน';
 	@override String systemProxyTips({required Object sp, required Object hp}) => 'socks:${sp},http(s):${hp}';
 	@override String get myLinkEmpty => 'โปรดตั้งค่า [ลิงก์ลัด] ก่อนใช้งาน';
@@ -992,9 +991,8 @@ extension on TranslationsTh {
 			'FileContentViewerScreen.title' => 'โปรแกรมดูเนื้อหาไฟล์',
 			'FileContentViewerScreen.clearFileContent' => 'คุณแน่ใจไหมว่าต้องการล้างเนื้อหาของไฟล์?',
 			'FileContentViewerScreen.clearFileContentTips' => 'คุณแน่ใจไหมว่าต้องการล้างเนื้อหาของไฟล์โปรไฟล์? การล้างไฟล์โปรไฟล์อาจทำให้เสียข้อมูลหรือฟังก์ชันแอปพลิเคชันผิดปกติ โปรดดำเนินการด้วยความระมัดระวัง',
-			'HomeScreen.toSelectServer' => 'โปรดเลือกเซิร์ฟเวอร์',
-			'HomeScreen.invalidServer' => 'ไม่ถูกต้อง โปรดเลือกอีกครั้ง',
-			'HomeScreen.disabledServer' => 'ถูกปิดใช้งาน โปรดเลือกอีกครั้ง',
+			'HomeScreen.invalidServer' => ({required Object p}) => '[${p}] ไม่ถูกต้องแล้ว โปรดเลือกเซิร์ฟเวอร์อีกครั้ง',
+			'HomeScreen.disabledServer' => ({required Object p}) => '[${p}] ถูกปิดใช้งานแล้ว โปรดเลือกเซิร์ฟเวอร์อีกครั้ง',
 			'HomeScreen.expiredServer' => 'ไม่มีเซิร์ฟเวอร์ที่พร้อมใช้งาน โปรไฟล์อาจหมดอายุหรือถูกปิดใช้งาน',
 			'HomeScreen.systemProxyTips' => ({required Object sp, required Object hp}) => 'socks:${sp},http(s):${hp}',
 			'HomeScreen.myLinkEmpty' => 'โปรดตั้งค่า [ลิงก์ลัด] ก่อนใช้งาน',
@@ -1467,9 +1465,9 @@ extension on TranslationsTh {
 			'isp.bind' => 'ผูกไว้กับ [${_root.meta.isp}] ',
 			'isp.unbind' => ({required Object p}) => 'ยกเลิกการผูก[${p}]',
 			'isp.faq' => ({required Object p}) => 'คำถามที่พบบ่อย[${p}]',
+			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
 			_ => null,
 		} ?? switch (path) {
-			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
 			'isp.follow' => ({required Object p}) => 'ติดตาม[${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}] ไม่ถูกต้องหรือหมดอายุ',
 			'permission.camera' => 'กล้อง',

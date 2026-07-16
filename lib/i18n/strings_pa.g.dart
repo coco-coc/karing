@@ -237,9 +237,8 @@ class _Translations$HomeScreen$pa implements Translations$HomeScreen$en {
 	final TranslationsPa _root; // ignore: unused_field
 
 	// Translations
-	@override String get toSelectServer => 'कृपया एक सर्वर चुनें';
-	@override String get invalidServer => 'अमान्य है, कृपया पुनः चुनें';
-	@override String get disabledServer => 'अक्षम है, कृपया पुनः चुनें';
+	@override String invalidServer({required Object p}) => '[${p}] ਹੁਣ ਵੈਧ ਨਹੀਂ ਹੈ, ਕਿਰਪਾ ਕਰਕੇ ਸਰਵਰ ਮੁੜ ਚੁਣੋ';
+	@override String disabledServer({required Object p}) => '[${p}] ਅਯੋਗ ਕੀਤਾ ਗਿਆ ਹੈ, ਕਿਰਪਾ ਕਰਕੇ ਸਰਵਰ ਮੁੜ ਚੁਣੋ';
 	@override String get expiredServer => 'कोई सर्वर उपलब्ध नहीं है, प्रोफ़ाइल समाप्त या अक्षम हो सकती हैं';
 	@override String systemProxyTips({required Object sp, required Object hp}) => 'socks:${sp},http(s):${hp}';
 	@override String get myLinkEmpty => 'कृपया उपयोग करने से पहले [शॉर्टकट लिंक] सेट करें';
@@ -992,9 +991,8 @@ extension on TranslationsPa {
 			'FileContentViewerScreen.title' => 'फ़ाइल सामग्री दर्शक',
 			'FileContentViewerScreen.clearFileContent' => 'क्या आप वाकई फ़ाइल की सामग्री साफ़ करना चाहते हैं?',
 			'FileContentViewerScreen.clearFileContentTips' => 'क्या आप वाकई प्रोफ़ाइल फ़ाइल की सामग्री साफ़ करना चाहते हैं? प्रोफ़ाइल फ़ाइल को साफ़ करने से डेटा हानि या असामान्य ऐप कार्य हो सकते हैं, कृपया सावधानी से काम करें',
-			'HomeScreen.toSelectServer' => 'कृपया एक सर्वर चुनें',
-			'HomeScreen.invalidServer' => 'अमान्य है, कृपया पुनः चुनें',
-			'HomeScreen.disabledServer' => 'अक्षम है, कृपया पुनः चुनें',
+			'HomeScreen.invalidServer' => ({required Object p}) => '[${p}] ਹੁਣ ਵੈਧ ਨਹੀਂ ਹੈ, ਕਿਰਪਾ ਕਰਕੇ ਸਰਵਰ ਮੁੜ ਚੁਣੋ',
+			'HomeScreen.disabledServer' => ({required Object p}) => '[${p}] ਅਯੋਗ ਕੀਤਾ ਗਿਆ ਹੈ, ਕਿਰਪਾ ਕਰਕੇ ਸਰਵਰ ਮੁੜ ਚੁਣੋ',
 			'HomeScreen.expiredServer' => 'कोई सर्वर उपलब्ध नहीं है, प्रोफ़ाइल समाप्त या अक्षम हो सकती हैं',
 			'HomeScreen.systemProxyTips' => ({required Object sp, required Object hp}) => 'socks:${sp},http(s):${hp}',
 			'HomeScreen.myLinkEmpty' => 'कृपया उपयोग करने से पहले [शॉर्टकट लिंक] सेट करें',
@@ -1467,9 +1465,9 @@ extension on TranslationsPa {
 			'isp.bind' => '[${_root.meta.isp}] से बांधें ',
 			'isp.unbind' => ({required Object p}) => 'अनबाइंड करें[${p}]',
 			'isp.faq' => ({required Object p}) => 'FAQ[${p}]',
+			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
 			_ => null,
 		} ?? switch (path) {
-			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
 			'isp.follow' => ({required Object p}) => 'फॉलो करें[${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}] अमान्य या समाप्त हो गया',
 			'permission.camera' => 'कैमरा',

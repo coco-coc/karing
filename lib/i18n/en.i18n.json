@@ -1,4 +1,4 @@
-{
+﻿{
     "AboutScreen": {
         "installRefer": "Install Refer",
         "installTime": "Install Time",
@@ -51,9 +51,8 @@
         "clearFileContentTips": "Are you sure to clear the content of the Profile file? Clearing the Profile file may cause data loss or abnormal application functions, please operate with caution"
     },
     "HomeScreen": {
-        "toSelectServer": "Please Select a Server",
-        "invalidServer": "is invalid, please select again",
-        "disabledServer": "is disabled, please select again",
+        "invalidServer": "[$p] is no longer valid. Please select a server again.",
+        "disabledServer": "[$p] has been disabled. Please select a server again.",
         "expiredServer": "No servers available, profiles may be expired or disabled",
         "systemProxyTips": "socks:$sp,http(s):$hp",
         "myLinkEmpty": "Please set up [Shortcut Link] before using it",
@@ -660,3 +659,4 @@
         "pa": "ਪੰਜਾਬੀ"
     }
 }
+

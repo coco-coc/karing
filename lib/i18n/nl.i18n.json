@@ -1,4 +1,4 @@
-{
+﻿{
     "AboutScreen": {
         "installRefer": "Installatiebron",
         "installTime": "Installatietijd",
@@ -51,9 +51,8 @@
         "clearFileContentTips": "Weet u zeker dat u de inhoud van het profielbestand wilt wissen? Het wissen van het profielbestand kan leiden tot gegevensverlies of abnormale app-functies, ga voorzichtig te werk"
     },
     "HomeScreen": {
-        "toSelectServer": "Selecteer een server",
-        "invalidServer": "is ongeldig, selecteer opnieuw",
-        "disabledServer": "is uitgeschakeld, selecteer opnieuw",
+        "invalidServer": "[$p] is niet meer geldig, selecteer opnieuw een server",
+        "disabledServer": "[$p] is uitgeschakeld, selecteer opnieuw een server",
         "expiredServer": "Geen servers beschikbaar, profielen kunnen verlopen of uitgeschakeld zijn",
         "systemProxyTips": "socks:$sp,http(s):$hp",
         "myLinkEmpty": "Stel [Snelkoppeling] in voordat u deze gebruikt",
@@ -660,3 +659,4 @@
         "pa": "ਪੰਜਾਬੀ"
     }
 }
+

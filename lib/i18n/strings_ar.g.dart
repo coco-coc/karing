@@ -237,9 +237,8 @@ class _Translations$HomeScreen$ar implements Translations$HomeScreen$en {
 	final TranslationsAr _root; // ignore: unused_field
 
 	// Translations
-	@override String get toSelectServer => 'الرجاء تحديد خادم';
-	@override String get invalidServer => 'غير صالح ، الرجاء اختيار مرة أخرى';
-	@override String get disabledServer => 'معطل ، الرجاء اختيار مرة أخرى';
+	@override String invalidServer({required Object p}) => '[${p}] غير صالح، يرجى إعادة اختيار الخادم';
+	@override String disabledServer({required Object p}) => '[${p}] تم تعطيله، يرجى إعادة اختيار الخادم';
 	@override String get expiredServer => 'لا يوجد خادم متاح: قد يكون التكوين قديمًا أو معطلاً';
 	@override String systemProxyTips({required Object sp, required Object hp}) => 'جوارب:${sp},http(s):${hp}';
 	@override String get myLinkEmpty => 'الرجاء الإعداد [الاختصار وصلة] قبل استخدامه';
@@ -992,9 +991,8 @@ extension on TranslationsAr {
 			'FileContentViewerScreen.title' => 'ملف محتوى الملف',
 			'FileContentViewerScreen.clearFileContent' => 'هل أنت متأكد من مسح محتوى الملف؟',
 			'FileContentViewerScreen.clearFileContentTips' => 'هل أنت متأكد من مسح محتوى ملف الملف الشخصي؟قد يتسبب تطهير ملف الملف الشخصي في فقدان البيانات أو وظائف التطبيق غير الطبيعية ، يرجى العمل بحذر',
-			'HomeScreen.toSelectServer' => 'الرجاء تحديد خادم',
-			'HomeScreen.invalidServer' => 'غير صالح ، الرجاء اختيار مرة أخرى',
-			'HomeScreen.disabledServer' => 'معطل ، الرجاء اختيار مرة أخرى',
+			'HomeScreen.invalidServer' => ({required Object p}) => '[${p}] غير صالح، يرجى إعادة اختيار الخادم',
+			'HomeScreen.disabledServer' => ({required Object p}) => '[${p}] تم تعطيله، يرجى إعادة اختيار الخادم',
 			'HomeScreen.expiredServer' => 'لا يوجد خادم متاح: قد يكون التكوين قديمًا أو معطلاً',
 			'HomeScreen.systemProxyTips' => ({required Object sp, required Object hp}) => 'جوارب:${sp},http(s):${hp}',
 			'HomeScreen.myLinkEmpty' => 'الرجاء الإعداد [الاختصار وصلة] قبل استخدامه',
@@ -1467,9 +1465,9 @@ extension on TranslationsAr {
 			'isp.bind' => 'الارتباط بـ [${_root.meta.isp}]',
 			'isp.unbind' => ({required Object p}) => 'فك الارتباط[${p}]',
 			'isp.faq' => ({required Object p}) => 'الأسئلة الشائعة[${p}]',
+			'isp.customerService' => ({required Object p}) => 'خدمة العملاء[${p}]',
 			_ => null,
 		} ?? switch (path) {
-			'isp.customerService' => ({required Object p}) => 'خدمة العملاء[${p}]',
 			'isp.follow' => ({required Object p}) => 'متابعة[${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}]غير صالح أو منتهية الصلاحية',
 			'permission.camera' => 'الكاميرا',

@@ -237,9 +237,8 @@ class _Translations$HomeScreen$sv implements Translations$HomeScreen$en {
 	final TranslationsSv _root; // ignore: unused_field
 
 	// Translations
-	@override String get toSelectServer => 'Välj en server';
-	@override String get invalidServer => 'är ogiltig, välj igen';
-	@override String get disabledServer => 'är inaktiverad, välj igen';
+	@override String invalidServer({required Object p}) => '[${p}] är inte längre giltig, välj server igen';
+	@override String disabledServer({required Object p}) => '[${p}] är inaktiverad, välj server igen';
 	@override String get expiredServer => 'Inga servrar tillgängliga, profiler kan ha gått ut eller vara inaktiverade';
 	@override String systemProxyTips({required Object sp, required Object hp}) => 'socks:${sp},http(s):${hp}';
 	@override String get myLinkEmpty => 'Ställ in [Genvägslänk] innan du använder den';
@@ -992,9 +991,8 @@ extension on TranslationsSv {
 			'FileContentViewerScreen.title' => 'Filinnehållsvisare',
 			'FileContentViewerScreen.clearFileContent' => 'Är du säker på att du vill rensa filens innehåll?',
 			'FileContentViewerScreen.clearFileContentTips' => 'Är du säker på att du vill rensa innehållet i profilfilen? Om du rensar profilfilen kan det leda till dataförlust eller onormala appfunktioner, var försiktig',
-			'HomeScreen.toSelectServer' => 'Välj en server',
-			'HomeScreen.invalidServer' => 'är ogiltig, välj igen',
-			'HomeScreen.disabledServer' => 'är inaktiverad, välj igen',
+			'HomeScreen.invalidServer' => ({required Object p}) => '[${p}] är inte längre giltig, välj server igen',
+			'HomeScreen.disabledServer' => ({required Object p}) => '[${p}] är inaktiverad, välj server igen',
 			'HomeScreen.expiredServer' => 'Inga servrar tillgängliga, profiler kan ha gått ut eller vara inaktiverade',
 			'HomeScreen.systemProxyTips' => ({required Object sp, required Object hp}) => 'socks:${sp},http(s):${hp}',
 			'HomeScreen.myLinkEmpty' => 'Ställ in [Genvägslänk] innan du använder den',
@@ -1467,9 +1465,9 @@ extension on TranslationsSv {
 			'isp.bind' => 'Bind till [${_root.meta.isp}] ',
 			'isp.unbind' => ({required Object p}) => 'Ta bort bindning[${p}]',
 			'isp.faq' => ({required Object p}) => 'FAQ[${p}]',
+			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
 			_ => null,
 		} ?? switch (path) {
-			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
 			'isp.follow' => ({required Object p}) => 'Följ[${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}] Ogiltig eller utgången',
 			'permission.camera' => 'Kamera',

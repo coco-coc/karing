@@ -237,9 +237,8 @@ class _Translations$HomeScreen$ur implements Translations$HomeScreen$en {
 	final TranslationsUr _root; // ignore: unused_field
 
 	// Translations
-	@override String get toSelectServer => 'براہ کرم ایک سرور منتخب کریں';
-	@override String get invalidServer => 'غلط ہے، براہ کرم دوبارہ منتخب کریں';
-	@override String get disabledServer => 'غیر فعال ہے، براہ کرم دوبارہ منتخب کریں';
+	@override String invalidServer({required Object p}) => '[${p}] اب درست نہیں ہے، براہ کرم سرور دوبارہ منتخب کریں';
+	@override String disabledServer({required Object p}) => '[${p}] غیر فعال کر دیا گیا ہے، براہ کرم سرور دوبارہ منتخب کریں';
 	@override String get expiredServer => 'کوئی سرور دستیاب نہیں ہے، پروفائلز کی میعاد ختم ہو سکتی ہے یا وہ غیر فعال ہو سکتے ہیں';
 	@override String systemProxyTips({required Object sp, required Object hp}) => 'socks:${sp},http(s):${hp}';
 	@override String get myLinkEmpty => 'براہ کرم استعمال کرنے سے پہلے [شارٹ کٹ لنک] ترتیب دیں';
@@ -992,9 +991,8 @@ extension on TranslationsUr {
 			'FileContentViewerScreen.title' => 'فائل کے مواد کا ناظر',
 			'FileContentViewerScreen.clearFileContent' => 'کیا آپ واقعی فائل کے مواد کو صاف کرنا چاہتے ہیں؟',
 			'FileContentViewerScreen.clearFileContentTips' => 'کیا آپ واقعی پروفائل فائل کے مواد کو صاف کرنا چاہتے ہیں؟ پروفائل فائل کو صاف کرنے سے ڈیٹا کا نقصان یا ایپ کے غیر معمولی افعال ہو سکتے ہیں، براہ کرم احتیاط سے کام کریں',
-			'HomeScreen.toSelectServer' => 'براہ کرم ایک سرور منتخب کریں',
-			'HomeScreen.invalidServer' => 'غلط ہے، براہ کرم دوبارہ منتخب کریں',
-			'HomeScreen.disabledServer' => 'غیر فعال ہے، براہ کرم دوبارہ منتخب کریں',
+			'HomeScreen.invalidServer' => ({required Object p}) => '[${p}] اب درست نہیں ہے، براہ کرم سرور دوبارہ منتخب کریں',
+			'HomeScreen.disabledServer' => ({required Object p}) => '[${p}] غیر فعال کر دیا گیا ہے، براہ کرم سرور دوبارہ منتخب کریں',
 			'HomeScreen.expiredServer' => 'کوئی سرور دستیاب نہیں ہے، پروفائلز کی میعاد ختم ہو سکتی ہے یا وہ غیر فعال ہو سکتے ہیں',
 			'HomeScreen.systemProxyTips' => ({required Object sp, required Object hp}) => 'socks:${sp},http(s):${hp}',
 			'HomeScreen.myLinkEmpty' => 'براہ کرم استعمال کرنے سے پہلے [شارٹ کٹ لنک] ترتیب دیں',
@@ -1467,9 +1465,9 @@ extension on TranslationsUr {
 			'isp.bind' => '[${_root.meta.isp}] سے منسلک کریں ',
 			'isp.unbind' => ({required Object p}) => 'علیحدہ کریں[${p}]',
 			'isp.faq' => ({required Object p}) => 'FAQ[${p}]',
+			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
 			_ => null,
 		} ?? switch (path) {
-			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
 			'isp.follow' => ({required Object p}) => 'فالو کریں[${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}] غلط یا ختم ہو گیا',
 			'permission.camera' => 'کیمرہ',

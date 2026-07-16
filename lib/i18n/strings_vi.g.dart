@@ -237,9 +237,8 @@ class _Translations$HomeScreen$vi implements Translations$HomeScreen$en {
 	final TranslationsVi _root; // ignore: unused_field
 
 	// Translations
-	@override String get toSelectServer => 'Vui lòng chọn một máy chủ';
-	@override String get invalidServer => 'không hợp lệ, vui lòng chọn lại';
-	@override String get disabledServer => 'đã bị vô hiệu hóa, vui lòng chọn lại';
+	@override String invalidServer({required Object p}) => '[${p}] không còn hợp lệ, vui lòng chọn lại máy chủ';
+	@override String disabledServer({required Object p}) => '[${p}] đã bị vô hiệu hóa, vui lòng chọn lại máy chủ';
 	@override String get expiredServer => 'Không có máy chủ khả dụng, cấu hình có thể đã hết hạn hoặc bị vô hiệu hóa';
 	@override String systemProxyTips({required Object sp, required Object hp}) => 'socks: ${sp}, http(s): ${hp}';
 	@override String get myLinkEmpty => 'Vui lòng thiết lập [Liên kết nhanh] trước khi sử dụng';
@@ -992,9 +991,8 @@ extension on TranslationsVi {
 			'FileContentViewerScreen.title' => 'Trình xem nội dung tệp',
 			'FileContentViewerScreen.clearFileContent' => 'Bạn có chắc chắn muốn xóa nội dung tệp không?',
 			'FileContentViewerScreen.clearFileContentTips' => 'Bạn có chắc chắn muốn xóa nội dung của tệp cấu hình không? Việc xóa tệp cấu hình có thể gây mất dữ liệu hoặc lỗi ứng dụng, vui lòng thực hiện thận trọng',
-			'HomeScreen.toSelectServer' => 'Vui lòng chọn một máy chủ',
-			'HomeScreen.invalidServer' => 'không hợp lệ, vui lòng chọn lại',
-			'HomeScreen.disabledServer' => 'đã bị vô hiệu hóa, vui lòng chọn lại',
+			'HomeScreen.invalidServer' => ({required Object p}) => '[${p}] không còn hợp lệ, vui lòng chọn lại máy chủ',
+			'HomeScreen.disabledServer' => ({required Object p}) => '[${p}] đã bị vô hiệu hóa, vui lòng chọn lại máy chủ',
 			'HomeScreen.expiredServer' => 'Không có máy chủ khả dụng, cấu hình có thể đã hết hạn hoặc bị vô hiệu hóa',
 			'HomeScreen.systemProxyTips' => ({required Object sp, required Object hp}) => 'socks: ${sp}, http(s): ${hp}',
 			'HomeScreen.myLinkEmpty' => 'Vui lòng thiết lập [Liên kết nhanh] trước khi sử dụng',
@@ -1467,9 +1465,9 @@ extension on TranslationsVi {
 			'isp.bind' => 'Liên kết với [${_root.meta.isp}] ',
 			'isp.unbind' => ({required Object p}) => 'Hủy liên kết [${p}]',
 			'isp.faq' => ({required Object p}) => 'Câu hỏi thường gặp [${p}]',
+			'isp.customerService' => ({required Object p}) => 'Telegram [${p}]',
 			_ => null,
 		} ?? switch (path) {
-			'isp.customerService' => ({required Object p}) => 'Telegram [${p}]',
 			'isp.follow' => ({required Object p}) => 'Theo dõi [${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}] không hợp lệ hoặc hết hạn',
 			'permission.camera' => 'Máy ảnh',

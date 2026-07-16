@@ -237,9 +237,8 @@ class _Translations$HomeScreen$no implements Translations$HomeScreen$en {
 	final TranslationsNo _root; // ignore: unused_field
 
 	// Translations
-	@override String get toSelectServer => 'Vennligst velg en server';
-	@override String get invalidServer => 'er ugyldig, vennligst velg på nytt';
-	@override String get disabledServer => 'er deaktivert, vennligst velg på nytt';
+	@override String invalidServer({required Object p}) => '[${p}] er ikke lenger gyldig, velg server på nytt';
+	@override String disabledServer({required Object p}) => '[${p}] er deaktivert, velg server på nytt';
 	@override String get expiredServer => 'Ingen servere tilgjengelig, profiler kan ha utløpt eller være deaktivert';
 	@override String systemProxyTips({required Object sp, required Object hp}) => 'socks:${sp},http(s):${hp}';
 	@override String get myLinkEmpty => 'Vennligst sett opp [Snarveiskobling] før du bruker den';
@@ -992,9 +991,8 @@ extension on TranslationsNo {
 			'FileContentViewerScreen.title' => 'Filinnholdsvisning',
 			'FileContentViewerScreen.clearFileContent' => 'Er du sikker på at du vil slette filinnholdet?',
 			'FileContentViewerScreen.clearFileContentTips' => 'Er du sikker på at du vil slette innholdet i profilfilen? Sletting av profilfilen kan føre til tap av data eller unormale appfunksjoner, vær forsiktig',
-			'HomeScreen.toSelectServer' => 'Vennligst velg en server',
-			'HomeScreen.invalidServer' => 'er ugyldig, vennligst velg på nytt',
-			'HomeScreen.disabledServer' => 'er deaktivert, vennligst velg på nytt',
+			'HomeScreen.invalidServer' => ({required Object p}) => '[${p}] er ikke lenger gyldig, velg server på nytt',
+			'HomeScreen.disabledServer' => ({required Object p}) => '[${p}] er deaktivert, velg server på nytt',
 			'HomeScreen.expiredServer' => 'Ingen servere tilgjengelig, profiler kan ha utløpt eller være deaktivert',
 			'HomeScreen.systemProxyTips' => ({required Object sp, required Object hp}) => 'socks:${sp},http(s):${hp}',
 			'HomeScreen.myLinkEmpty' => 'Vennligst sett opp [Snarveiskobling] før du bruker den',
@@ -1467,9 +1465,9 @@ extension on TranslationsNo {
 			'isp.bind' => 'Bind til [${_root.meta.isp}] ',
 			'isp.unbind' => ({required Object p}) => 'Fjern binding[${p}]',
 			'isp.faq' => ({required Object p}) => 'FAQ[${p}]',
+			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
 			_ => null,
 		} ?? switch (path) {
-			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
 			'isp.follow' => ({required Object p}) => 'Følg[${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}] Ugyldig eller utløpt',
 			'permission.camera' => 'Kamera',

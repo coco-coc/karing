@@ -1,4 +1,4 @@
-{
+﻿{
     "AboutScreen": {
         "installRefer": "Kurulum Referansı",
         "installTime": "Kurulum Zamanı",
@@ -51,9 +51,8 @@
         "clearFileContentTips": "Profil dosyası içeriğini temizlemek istediğinizden emin misiniz? Profil dosyasının temizlenmesi veri kaybına veya anormal uygulama işlevlerine neden olabilir, lütfen dikkatli olun"
     },
     "HomeScreen": {
-        "toSelectServer": "Lütfen bir Sunucu Seçin",
-        "invalidServer": "geçersiz, lütfen tekrar seçin",
-        "disabledServer": "devre dışı, lütfen tekrar seçin",
+        "invalidServer": "[$p] artık geçerli değil, lütfen sunucuyu tekrar seçin",
+        "disabledServer": "[$p] devre dışı bırakıldı, lütfen sunucuyu tekrar seçin",
         "expiredServer": "Kullanılabilir sunucu yok, profillerin süresi dolmuş veya devre dışı bırakılmış olabilir",
         "systemProxyTips": "socks: $sp, http(s): $hp",
         "myLinkEmpty": "Lütfen kullanmadan önce [Kısayol Bağlantısı] kurulumunu yapın",
@@ -660,3 +659,4 @@
         "pa": "ਪੰਜਾਬੀ"
     }
 }
+

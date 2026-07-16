@@ -237,9 +237,8 @@ class _Translations$HomeScreen$da implements Translations$HomeScreen$en {
 	final TranslationsDa _root; // ignore: unused_field
 
 	// Translations
-	@override String get toSelectServer => 'Vælg venligst en server';
-	@override String get invalidServer => 'er ugyldig, vælg venligst igen';
-	@override String get disabledServer => 'er deaktiveret, vælg venligst igen';
+	@override String invalidServer({required Object p}) => '[${p}] er ikke længere gyldig, vælg venligst en server igen';
+	@override String disabledServer({required Object p}) => '[${p}] er deaktiveret, vælg venligst en server igen';
 	@override String get expiredServer => 'Ingen servere tilgængelige, profiler kan være udløbet eller deaktiveret';
 	@override String systemProxyTips({required Object sp, required Object hp}) => 'socks:${sp},http(s):${hp}';
 	@override String get myLinkEmpty => 'Opsæt venligst [Genvejslink] før brug';
@@ -992,9 +991,8 @@ extension on TranslationsDa {
 			'FileContentViewerScreen.title' => 'Filindholdsvisning',
 			'FileContentViewerScreen.clearFileContent' => 'Er du sikker på, at du vil slette filindholdet?',
 			'FileContentViewerScreen.clearFileContentTips' => 'Er du sikker på, at du vil slette indholdet af profilfilen? Sletning af profilfilen kan føre til tab af data eller unormale app-funktioner, vær forsigtig',
-			'HomeScreen.toSelectServer' => 'Vælg venligst en server',
-			'HomeScreen.invalidServer' => 'er ugyldig, vælg venligst igen',
-			'HomeScreen.disabledServer' => 'er deaktiveret, vælg venligst igen',
+			'HomeScreen.invalidServer' => ({required Object p}) => '[${p}] er ikke længere gyldig, vælg venligst en server igen',
+			'HomeScreen.disabledServer' => ({required Object p}) => '[${p}] er deaktiveret, vælg venligst en server igen',
 			'HomeScreen.expiredServer' => 'Ingen servere tilgængelige, profiler kan være udløbet eller deaktiveret',
 			'HomeScreen.systemProxyTips' => ({required Object sp, required Object hp}) => 'socks:${sp},http(s):${hp}',
 			'HomeScreen.myLinkEmpty' => 'Opsæt venligst [Genvejslink] før brug',
@@ -1467,9 +1465,9 @@ extension on TranslationsDa {
 			'isp.bind' => 'Bind til [${_root.meta.isp}] ',
 			'isp.unbind' => ({required Object p}) => 'Fjern binding[${p}]',
 			'isp.faq' => ({required Object p}) => 'FAQ[${p}]',
+			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
 			_ => null,
 		} ?? switch (path) {
-			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
 			'isp.follow' => ({required Object p}) => 'Følg[${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}] Ugyldig eller udløbet',
 			'permission.camera' => 'Kamera',

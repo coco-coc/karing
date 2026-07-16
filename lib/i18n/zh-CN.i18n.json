@@ -1,4 +1,4 @@
-{
+﻿{
     "AboutScreen": {
         "installRefer": "安装参考",
         "installTime": "安装时间",
@@ -52,8 +52,8 @@
     },
     "HomeScreen": {
         "toSelectServer": "请选择服务器",
-        "invalidServer": "已失效,请重新选择",
-        "disabledServer": "已被禁用,请重新选择",
+        "invalidServer": "[$p]已失效,请重新选择服务器",
+        "disabledServer": "[$p]已被禁用,请重新选择服务器",
         "expiredServer": "无可用服务器:配置可能已过期或被禁用",
         "systemProxyTips": "SOCKS代理端口:$sp, HTTP(S)代理端口:$hp",
         "myLinkEmpty": "请先设置[快捷链接]后再使用",

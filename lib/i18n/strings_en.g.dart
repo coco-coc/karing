@@ -379,14 +379,11 @@ class Translations$HomeScreen$en {
 
 	// Translations
 
-	/// en: 'Please Select a Server'
-	String get toSelectServer => 'Please Select a Server';
+	/// en: '[$p] is no longer valid. Please select a server again.'
+	String invalidServer({required Object p}) => '[${p}] is no longer valid. Please select a server again.';
 
-	/// en: 'is invalid, please select again'
-	String get invalidServer => 'is invalid, please select again';
-
-	/// en: 'is disabled, please select again'
-	String get disabledServer => 'is disabled, please select again';
+	/// en: '[$p] has been disabled. Please select a server again.'
+	String disabledServer({required Object p}) => '[${p}] has been disabled. Please select a server again.';
 
 	/// en: 'No servers available, profiles may be expired or disabled'
 	String get expiredServer => 'No servers available, profiles may be expired or disabled';
@@ -2133,9 +2130,8 @@ extension on Translations {
 			'FileContentViewerScreen.title' => 'File Content Viewer',
 			'FileContentViewerScreen.clearFileContent' => 'Are you sure to clear the content of the file?',
 			'FileContentViewerScreen.clearFileContentTips' => 'Are you sure to clear the content of the Profile file? Clearing the Profile file may cause data loss or abnormal application functions, please operate with caution',
-			'HomeScreen.toSelectServer' => 'Please Select a Server',
-			'HomeScreen.invalidServer' => 'is invalid, please select again',
-			'HomeScreen.disabledServer' => 'is disabled, please select again',
+			'HomeScreen.invalidServer' => ({required Object p}) => '[${p}] is no longer valid. Please select a server again.',
+			'HomeScreen.disabledServer' => ({required Object p}) => '[${p}] has been disabled. Please select a server again.',
 			'HomeScreen.expiredServer' => 'No servers available, profiles may be expired or disabled',
 			'HomeScreen.systemProxyTips' => ({required Object sp, required Object hp}) => 'socks:${sp},http(s):${hp}',
 			'HomeScreen.myLinkEmpty' => 'Please set up [Shortcut Link] before using it',
@@ -2608,9 +2604,9 @@ extension on Translations {
 			'isp.bind' => 'Bind To [${_root.meta.isp}] ',
 			'isp.unbind' => ({required Object p}) => 'Unbind[${p}]',
 			'isp.faq' => ({required Object p}) => 'FAQ[${p}]',
+			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
 			_ => null,
 		} ?? switch (path) {
-			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
 			'isp.follow' => ({required Object p}) => 'Follow[${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}] Invalid or expired',
 			'permission.camera' => 'Camera',

@@ -1,4 +1,4 @@
-{
+﻿{
     "AboutScreen": {
         "installRefer": "Referensi instalasi",
         "installTime": "Waktu instalasi",
@@ -51,9 +51,8 @@
         "clearFileContentTips": "Konfirmasi hapus isi file konfigurasi? Menghapus isi file konfigurasi dapat menyebabkan kehilangan data atau fungsi aplikasi tidak normal, harap lakukan dengan hati-hati"
     },
     "HomeScreen": {
-        "toSelectServer": "Silakan pilih server",
-        "invalidServer": "Sudah tidak valid, silakan pilih lagi",
-        "disabledServer": "Telah dinonaktifkan, silakan pilih lagi",
+        "invalidServer": "[$p] sudah tidak valid, silakan pilih server lagi",
+        "disabledServer": "[$p] telah dinonaktifkan, silakan pilih server lagi",
         "expiredServer": "Tidak ada server yang tersedia: konfigurasi mungkin telah kedaluwarsa atau dinonaktifkan",
         "systemProxyTips": "Port proxy SOCKS:$sp, port proxy HTTP(S):$hp",
         "myLinkEmpty": "Silakan atur [Tautan cepat] terlebih dahulu sebelum digunakan",
@@ -660,3 +659,4 @@
         "pa": "ਪੰਜਾਬੀ"
     }
 }
+

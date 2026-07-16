@@ -1,4 +1,4 @@
-{
+﻿{
     "AboutScreen": {
         "installRefer": "Mã giới thiệu cài đặt",
         "installTime": "Thời gian cài đặt",
@@ -51,9 +51,8 @@
         "clearFileContentTips": "Bạn có chắc chắn muốn xóa nội dung của tệp cấu hình không? Việc xóa tệp cấu hình có thể gây mất dữ liệu hoặc lỗi ứng dụng, vui lòng thực hiện thận trọng"
     },
     "HomeScreen": {
-        "toSelectServer": "Vui lòng chọn một máy chủ",
-        "invalidServer": "không hợp lệ, vui lòng chọn lại",
-        "disabledServer": "đã bị vô hiệu hóa, vui lòng chọn lại",
+        "invalidServer": "[$p] không còn hợp lệ, vui lòng chọn lại máy chủ",
+        "disabledServer": "[$p] đã bị vô hiệu hóa, vui lòng chọn lại máy chủ",
         "expiredServer": "Không có máy chủ khả dụng, cấu hình có thể đã hết hạn hoặc bị vô hiệu hóa",
         "systemProxyTips": "socks: $sp, http(s): $hp",
         "myLinkEmpty": "Vui lòng thiết lập [Liên kết nhanh] trước khi sử dụng",
@@ -660,3 +659,4 @@
         "pa": "ਪੰਜਾਬੀ"
     }
 }
+

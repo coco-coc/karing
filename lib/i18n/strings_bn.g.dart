@@ -237,9 +237,8 @@ class _Translations$HomeScreen$bn implements Translations$HomeScreen$en {
 	final TranslationsBn _root; // ignore: unused_field
 
 	// Translations
-	@override String get toSelectServer => 'অনুগ্রহ করে একটি সার্ভার নির্বাচন করুন';
-	@override String get invalidServer => 'অকার্যকর, অনুগ্রহ করে আবার নির্বাচন করুন';
-	@override String get disabledServer => 'নিষ্ক্রিয় করা হয়েছে, অনুগ্রহ করে আবার নির্বাচন করুন';
+	@override String invalidServer({required Object p}) => '[${p}] আর বৈধ নয়, অনুগ্রহ করে আবার সার্ভার নির্বাচন করুন';
+	@override String disabledServer({required Object p}) => '[${p}] নিষ্ক্রিয় করা হয়েছে, অনুগ্রহ করে আবার সার্ভার নির্বাচন করুন';
 	@override String get expiredServer => 'কোনো সার্ভার উপলব্ধ নেই, প্রোফাইলগুলির মেয়াদ শেষ হতে পারে বা নিষ্ক্রিয় হতে পারে';
 	@override String systemProxyTips({required Object sp, required Object hp}) => 'socks:${sp},http(s):${hp}';
 	@override String get myLinkEmpty => 'ব্যবহার করার আগে অনুগ্রহ করে [শর্টকাট লিঙ্ক] সেট আপ করুন';
@@ -992,9 +991,8 @@ extension on TranslationsBn {
 			'FileContentViewerScreen.title' => 'ফাইল কন্টেন্ট ভিউয়ার',
 			'FileContentViewerScreen.clearFileContent' => 'আপনি কি নিশ্চিত যে আপনি ফাইলের বিষয়বস্তু মুছতে চান?',
 			'FileContentViewerScreen.clearFileContentTips' => 'আপনি কি নিশ্চিত যে আপনি প্রোফাইল ফাইলের বিষয়বস্তু মুছতে চান? প্রোফাইল ফাইল মুছলে ডেটা হারানো বা অ্যাপের অস্বাভাবিক কাজ হতে পারে, অনুগ্রহ করে সাবধানে কাজ করুন',
-			'HomeScreen.toSelectServer' => 'অনুগ্রহ করে একটি সার্ভার নির্বাচন করুন',
-			'HomeScreen.invalidServer' => 'অকার্যকর, অনুগ্রহ করে আবার নির্বাচন করুন',
-			'HomeScreen.disabledServer' => 'নিষ্ক্রিয় করা হয়েছে, অনুগ্রহ করে আবার নির্বাচন করুন',
+			'HomeScreen.invalidServer' => ({required Object p}) => '[${p}] আর বৈধ নয়, অনুগ্রহ করে আবার সার্ভার নির্বাচন করুন',
+			'HomeScreen.disabledServer' => ({required Object p}) => '[${p}] নিষ্ক্রিয় করা হয়েছে, অনুগ্রহ করে আবার সার্ভার নির্বাচন করুন',
 			'HomeScreen.expiredServer' => 'কোনো সার্ভার উপলব্ধ নেই, প্রোফাইলগুলির মেয়াদ শেষ হতে পারে বা নিষ্ক্রিয় হতে পারে',
 			'HomeScreen.systemProxyTips' => ({required Object sp, required Object hp}) => 'socks:${sp},http(s):${hp}',
 			'HomeScreen.myLinkEmpty' => 'ব্যবহার করার আগে অনুগ্রহ করে [শর্টকাট লিঙ্ক] সেট আপ করুন',
@@ -1467,9 +1465,9 @@ extension on TranslationsBn {
 			'isp.bind' => '[${_root.meta.isp}] এর সাথে লিঙ্ক করুন ',
 			'isp.unbind' => ({required Object p}) => 'আনলিঙ্ক করুন[${p}]',
 			'isp.faq' => ({required Object p}) => 'FAQ[${p}]',
+			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
 			_ => null,
 		} ?? switch (path) {
-			'isp.customerService' => ({required Object p}) => 'Telegram[${p}]',
 			'isp.follow' => ({required Object p}) => 'অনুসরণ করুন[${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}] অকার্যকর বা মেয়াদ শেষ',
 			'permission.camera' => 'ক্যামেরা',

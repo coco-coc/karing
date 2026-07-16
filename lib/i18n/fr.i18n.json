@@ -1,4 +1,4 @@
-{
+﻿{
     "AboutScreen": {
         "installRefer": "Référent d'installation",
         "installTime": "Heure d'installation",
@@ -51,9 +51,8 @@
         "clearFileContentTips": "Êtes-vous sûr de vouloir effacer le contenu du fichier de profil ? L'effacement du fichier de profil peut entraîner une perte de données ou des dysfonctionnements de l'application, veuillez agir avec prudence"
     },
     "HomeScreen": {
-        "toSelectServer": "Veuillez sélectionner un serveur",
-        "invalidServer": "est invalide, veuillez sélectionner à nouveau",
-        "disabledServer": "est désactivé, veuillez sélectionner à nouveau",
+        "invalidServer": "[$p] n'est plus valide, veuillez sélectionner à nouveau un serveur",
+        "disabledServer": "[$p] a été désactivé, veuillez sélectionner à nouveau un serveur",
         "expiredServer": "Aucun serveur disponible, les profils peuvent être expirés ou désactivés",
         "systemProxyTips": "socks : $sp, http(s) : $hp",
         "myLinkEmpty": "Veuillez configurer un [Lien raccourci] avant de l'utiliser",
@@ -660,3 +659,4 @@
         "pa": "ਪੰਜਾਬੀ"
     }
 }
+
