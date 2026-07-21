@@ -51,7 +51,6 @@
         "clearFileContentTips": "确认清空配置文件内容? 清空配置文件可能会导致数据丢失或应用功能异常, 请谨慎操作"
     },
     "HomeScreen": {
-        "toSelectServer": "请选择服务器",
         "invalidServer": "[$p]已失效,请重新选择服务器",
         "disabledServer": "[$p]已被禁用,请重新选择服务器",
         "expiredServer": "无可用服务器:配置可能已过期或被禁用",

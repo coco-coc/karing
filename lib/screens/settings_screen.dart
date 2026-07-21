@@ -2905,7 +2905,7 @@ class _SettingScreenState extends LasyRenderingState<SettingsScreen> {
     }
     try {
       List<String> extensions = ["png", "jpg", "gif", "bmp"];
-      FilePickerResult? result = await FilePicker.platform.pickFiles(
+      FilePickerResult? result = await FilePicker.pickFiles(
         type: FileType.custom,
         allowedExtensions: extensions,
       );

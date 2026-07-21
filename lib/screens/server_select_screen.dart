@@ -117,7 +117,6 @@ class _ServerSelectScreenState extends LasyRenderingState<ServerSelectScreen> {
   Timer? _timer;
   Timer? _updateLatencyByHistoryTimer;
   bool _rePaint = false;
-  // TapDownDetails _tapDownDetails = TapDownDetails();
   @override
   void initState() {
     ServerConfigGroupItem item = ServerManager.getCustomGroup();
@@ -1234,9 +1233,7 @@ class _ServerSelectScreenState extends LasyRenderingState<ServerSelectScreen> {
 
                   Navigator.pop(context, server);
                 },
-          onTapDown: (details) {
-            // _tapDownDetails = details;
-          },
+          onTapDown: (details) {},
           onLongPress:
               (widget.singleSelect == null ||
                   server.type == kOutboundTypeUrltest)

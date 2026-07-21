@@ -13,7 +13,7 @@ import 'package:karing/app/utils/path_utils.dart';
 import 'package:karing/app/utils/platform_utils.dart';
 import 'package:karing/app/utils/proxy_conf_utils.dart';
 import 'package:karing/i18n/strings.g.dart';
-import 'package:karing/screens/antdesign.dart';
+import 'package:ant_icons_plus/ant_icons_plus.dart';
 import 'package:karing/screens/dialog_utils.dart';
 import 'package:karing/screens/diversion_group_custom_edit_screen.dart';
 import 'package:karing/screens/diversion_rules_custom_set_screen.dart';
@@ -150,7 +150,7 @@ class _DiversionGroupCustomScreenState
       children: _groupData.map((item) {
         return createWidget(item);
       }).toList(),
-      onReorder: (int oldIndex, int newIndex) {
+      onReorderItem: (int oldIndex, int newIndex) {
         if (oldIndex < newIndex) {
           newIndex -= 1;
         }
@@ -269,7 +269,7 @@ class _DiversionGroupCustomScreenState
       ),
       ListTile(
         title: Text(tcontext.meta.import),
-        leading: Icon(AntDesign.import_outline),
+        leading: Icon(AntIcons.importOutlined),
         onTap: () async {
           Navigator.pop(context);
           onTapAddImport();
@@ -277,7 +277,7 @@ class _DiversionGroupCustomScreenState
       ),
       ListTile(
         title: Text(tcontext.meta.export),
-        leading: Icon(AntDesign.export_outline),
+        leading: Icon(AntIcons.exportOutlined),
         onTap: () async {
           Navigator.pop(context);
           onTapExport();
@@ -291,7 +291,7 @@ class _DiversionGroupCustomScreenState
     final tcontext = Translations.of(context);
     List<String> extensions = ['json'];
     try {
-      FilePickerResult? fresult = await FilePicker.platform.pickFiles(
+      FilePickerResult? fresult = await FilePicker.pickFiles(
         type: Platform.isAndroid ? FileType.any : FileType.custom,
         allowedExtensions: Platform.isAndroid ? null : extensions,
       );
@@ -372,7 +372,7 @@ class _DiversionGroupCustomScreenState
         String dir = await PathUtils.cacheDir();
         filePath = path.join(dir, fileName);
       } else {
-        filePath = await FilePicker.platform.saveFile(
+        filePath = await FilePicker.saveFile(
           fileName: fileName,
           lockParentWindow: true,
         );

@@ -489,7 +489,7 @@ class _AddProfileByScanQrcodeScanScreenState
 
     try {
       List<String> extensions = ['png', 'jpg'];
-      FilePickerResult? result = await FilePicker.platform.pickFiles(
+      FilePickerResult? result = await FilePicker.pickFiles(
         type: Platform.isAndroid ? FileType.any : FileType.custom,
         allowedExtensions: Platform.isAndroid ? null : extensions,
       );

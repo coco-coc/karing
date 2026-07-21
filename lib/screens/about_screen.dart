@@ -545,7 +545,7 @@ class AboutScreenState extends LasyRenderingState<AboutScreen> {
     }
     try {
       List<String> extensions = ["json"];
-      FilePickerResult? result = await FilePicker.platform.pickFiles(
+      FilePickerResult? result = await FilePicker.pickFiles(
         type: FileType.custom,
         allowedExtensions: extensions,
       );

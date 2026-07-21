@@ -237,7 +237,6 @@ class Translations$HomeScreen$zh_CN implements Translations$HomeScreen$en {
 	final TranslationsZhCn _root; // ignore: unused_field
 
 	// Translations
-	@override String get toSelectServer => '请选择服务器';
 	@override String invalidServer({required Object p}) => '[${p}]已失效,请重新选择服务器';
 	@override String disabledServer({required Object p}) => '[${p}]已被禁用,请重新选择服务器';
 	@override String get expiredServer => '无可用服务器:配置可能已过期或被禁用';
@@ -992,7 +991,6 @@ extension on TranslationsZhCn {
 			'FileContentViewerScreen.title' => '文件内容查看',
 			'FileContentViewerScreen.clearFileContent' => '确认清空文件内容?',
 			'FileContentViewerScreen.clearFileContentTips' => '确认清空配置文件内容? 清空配置文件可能会导致数据丢失或应用功能异常, 请谨慎操作',
-			'HomeScreen.toSelectServer' => '请选择服务器',
 			'HomeScreen.invalidServer' => ({required Object p}) => '[${p}]已失效,请重新选择服务器',
 			'HomeScreen.disabledServer' => ({required Object p}) => '[${p}]已被禁用,请重新选择服务器',
 			'HomeScreen.expiredServer' => '无可用服务器:配置可能已过期或被禁用',
@@ -1467,9 +1465,9 @@ extension on TranslationsZhCn {
 			'isp.bind' => '绑定到[${_root.meta.isp}]',
 			'isp.unbind' => ({required Object p}) => '解除绑定[${p}]',
 			'isp.faq' => ({required Object p}) => '常见问题[${p}]',
+			'isp.customerService' => ({required Object p}) => '客服[${p}]',
 			_ => null,
 		} ?? switch (path) {
-			'isp.customerService' => ({required Object p}) => '客服[${p}]',
 			'isp.follow' => ({required Object p}) => '关注[${p}]',
 			'isp.invalidOrExpired' => '[${_root.meta.isp}]无效或已过期',
 			'permission.camera' => '摄像头',

@@ -34,6 +34,7 @@ import 'package:karing/screens/listview_multi_parts_builder.dart';
 import 'package:karing/screens/my_profiles_edit_screen.dart';
 import 'package:karing/screens/my_profiles_merge_screen.dart';
 import 'package:karing/screens/my_profiles_reorder_screen.dart';
+import 'package:karing/screens/server_select_keywords_screen.dart';
 import 'package:karing/screens/qrcode_screen.dart';
 import 'package:karing/screens/theme_config.dart';
 import 'package:karing/screens/theme_define.dart';
@@ -164,6 +165,27 @@ class MyProfilesScreenState extends LasyRenderingState<MyProfilesScreen> {
   void _clearSearch() {
     _searchController.clear();
     _searchText = "";
+    _buildData();
+    setState(() {});
+  }
+
+  void _pushSearchSelect() async {
+    String? searchText = await Navigator.push(
+      context,
+      MaterialPageRoute(
+        settings: ServerSelectKeywordsScreen.routSettings(),
+        builder: (context) => const ServerSelectKeywordsScreen(),
+      ),
+    );
+    if (searchText == null) {
+      _buildData();
+      setState(() {});
+      return;
+    }
+    _searchText = searchText;
+    _searchController.value = _searchController.value.copyWith(
+      text: _searchText,
+    );
     _buildData();
     setState(() {});
   }
@@ -1040,7 +1062,13 @@ class MyProfilesScreenState extends LasyRenderingState<MyProfilesScreen> {
                   icon: const Icon(Icons.clear_outlined),
                   onPressed: _clearSearch,
                 )
-              : null,
+              : Tooltip(
+                  message: tcontext.meta.candidateWord,
+                  child: IconButton(
+                    icon: const Icon(Icons.arrow_forward_ios_outlined),
+                    onPressed: _pushSearchSelect,
+                  ),
+                ),
         ),
       ),
     );

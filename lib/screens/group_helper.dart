@@ -1113,7 +1113,7 @@ class GroupHelper {
   ) async {
     try {
       List<String> extensions = ["db"];
-      FilePickerResult? result = await FilePicker.platform.pickFiles(
+      FilePickerResult? result = await FilePicker.pickFiles(
         initialDirectory: path.dirname(dbPath),
         type: FileType.custom,
         allowedExtensions: extensions,
@@ -3314,7 +3314,7 @@ class GroupHelper {
     final tcontext = Translations.of(context);
     List<String> extensions = [BackupAndSyncUtils.zipExtension];
     try {
-      FilePickerResult? pickResult = await FilePicker.platform.pickFiles(
+      FilePickerResult? pickResult = await FilePicker.pickFiles(
         type: FileType.custom,
         allowedExtensions: extensions,
       );
@@ -3392,7 +3392,7 @@ class GroupHelper {
         String dir = await PathUtils.cacheDir();
         filePath = path.join(dir, BackupAndSyncUtils.getZipFileName());
       } else {
-        filePath = await FilePicker.platform.saveFile(
+        filePath = await FilePicker.saveFile(
           fileName: BackupAndSyncUtils.getZipFileName(),
           lockParentWindow: true,
         );

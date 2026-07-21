@@ -41,6 +41,7 @@ import 'package:karing/screens/themes.dart';
 import 'package:karing/screens/widgets/routes.dart';
 import 'package:path/path.dart' as path;
 import 'package:provider/provider.dart';
+import 'package:screen_retriever/screen_retriever.dart';
 import 'package:tray_manager/tray_manager.dart';
 import 'package:vpn_service/vpn_service.dart';
 import 'package:window_manager/window_manager.dart';
@@ -49,6 +50,58 @@ import 'package:flutter_single_instance/flutter_single_instance.dart';
 List<String> processArgs = [];
 StartFailedReason? startFailedReason;
 String? startFailedReasonDesc;
+
+// Restores the window to its last saved position/size
+Future<bool> _loadWindowBounds() async {
+  final windowConfig = SettingManager.getConfig().window;
+  if (windowConfig.width <= 0 || windowConfig.height <= 0) {
+    return false;
+  }
+  if (windowConfig.x < 0) {
+    windowConfig.x = 0;
+  }
+  if (windowConfig.y < 0) {
+    windowConfig.y = 0;
+  }
+  if (windowConfig.width < SettingConfigItemWindow.kMinWindowSize.width) {
+    windowConfig.width = SettingConfigItemWindow.kMinWindowSize.width;
+  }
+  if (windowConfig.height < SettingConfigItemWindow.kMinWindowSize.height) {
+    windowConfig.height = SettingConfigItemWindow.kMinWindowSize.height;
+  }
+  final bounds = Rect.fromLTWH(
+    windowConfig.x,
+    windowConfig.y,
+    windowConfig.width,
+    windowConfig.height,
+  );
+  try {
+    final displays = await screenRetriever.getAllDisplays();
+    final fitsAnyDisplay = displays.any((display) {
+      final visiblePosition = display.visiblePosition ?? Offset.zero;
+      final visibleSize = display.visibleSize ?? display.size;
+      return (visiblePosition & visibleSize).overlaps(bounds);
+    });
+    if (!fitsAnyDisplay) {
+      return false;
+    }
+  } catch (err) {
+    return false;
+  }
+
+  await windowManager.setBounds(bounds);
+  return true;
+}
+
+Future<void> _saveWindowBounds() async {
+  final windowConfig = SettingManager.getConfig().window;
+  final bounds = await windowManager.getBounds();
+  windowConfig.x = bounds.left;
+  windowConfig.y = bounds.top;
+  windowConfig.width = bounds.width;
+  windowConfig.height = bounds.height;
+  await SettingManager.save();
+}
 
 void main(List<String> args) async {
   /* String dir = "E:\\dev\\KaringX\\karing-ruleset\\geo\\geoip";
@@ -68,7 +121,7 @@ void main(List<String> args) async {
   if (!SettingManager.getConfig().disableAppImproveData) {
     await SentryUtilsPrivate.init();
   }
-  if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
+  if (PlatformUtils.isPC()) {
     await _ensureSingleInstanceOrExit();
   }
 
@@ -161,14 +214,14 @@ Future<void> run(List<String> args) async {
       if (inProduction) {
         //await windowManager.setResizable(false);
         //await windowManager.setMaximizable(false);
-        if (Platform.isLinux) {
-          await windowManager.setMinimumSize(Size(400, 740));
-        } else {
-          await windowManager.setMinimumSize(Size(400, 700));
-        }
+        await windowManager.setMinimumSize(
+          SettingConfigItemWindow.kMinWindowSize,
+        );
       }
 
-      await windowManager.center();
+      if (!await _loadWindowBounds()) {
+        await windowManager.center();
+      }
     }
 
     await AutoUpdateManager.init();
@@ -510,6 +563,7 @@ class MyAppState extends State<MyApp>
 
   Future<void> _uninit() async {
     if (PlatformUtils.isPC()) {
+      await _saveWindowBounds();
       await windowManager.hide();
     }
     if (startFailedReason == null) {

@@ -7,7 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:karing/app/modules/setting_manager.dart';
 import 'package:karing/app/utils/app_utils.dart';
 import 'package:karing/i18n/strings.g.dart';
-import 'package:karing/screens/antdesign.dart';
+import 'package:ant_icons_plus/ant_icons_plus.dart';
 import 'package:karing/screens/dialog_utils.dart';
 import 'package:karing/screens/group_item_creator.dart';
 import 'package:karing/screens/group_item_options.dart';
@@ -428,7 +428,7 @@ class _PerAppMacosScreenState extends LasyRenderingState<PerAppMacosScreen> {
     List<Widget> widgets = [
       ListTile(
         title: Text(tcontext.meta.importFromClipboard),
-        leading: Icon(AntDesign.import_outline),
+        leading: Icon(AntIcons.importOutlined),
         onTap: () async {
           Navigator.pop(context);
           onTapImport();
@@ -436,7 +436,7 @@ class _PerAppMacosScreenState extends LasyRenderingState<PerAppMacosScreen> {
       ),
       ListTile(
         title: Text(tcontext.meta.exportToClipboard),
-        leading: Icon(AntDesign.export_outline),
+        leading: Icon(AntIcons.exportOutlined),
         onTap: () async {
           Navigator.pop(context);
           onTapExport();

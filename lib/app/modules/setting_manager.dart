@@ -197,6 +197,38 @@ class SettingConfigItemUI {
   }
 }
 
+class SettingConfigItemWindow {
+  static Size kMinWindowSize = Platform.isLinux
+      ? const Size(400, 740)
+      : const Size(400, 700);
+  double x = 0;
+  double y = 0;
+  double width = 0;
+  double height = 0;
+
+  Map<String, dynamic> toJson() => {
+    'x': x.toInt(),
+    'y': y.toInt(),
+    'width': width.toInt(),
+    'height': height.toInt(),
+  };
+  void fromJson(Map<String, dynamic>? map) {
+    if (map == null) {
+      return;
+    }
+    x = (map["x"] ?? 0).toDouble();
+    y = (map["y"] ?? 0).toDouble();
+    width = (map["width"] ?? 0).toDouble();
+    height = (map["height"] ?? 0).toDouble();
+  }
+
+  static SettingConfigItemWindow fromJsonStatic(Map<String, dynamic>? map) {
+    SettingConfigItemWindow config = SettingConfigItemWindow();
+    config.fromJson(map);
+    return config;
+  }
+}
+
 class SettingConfigItemUIScreen {
   static const String backgroundTypeLocal = "local";
   static const String backgroundTypeRemote = "remote";
@@ -1526,9 +1558,10 @@ class SettingConfig {
   ];
 
   static const List<String> kUserAgentList = [
-    "mihomo/1.19.27",
+    "mihomo/1.19.28",
     "clash-verge",
     "FLClash",
+    "mihomo.party/v2.0.0 (clash.meta)",
     "ClashMeta",
     "v2ray",
     "sing-box $kCoreVersion",
@@ -1537,10 +1570,11 @@ class SettingConfig {
   ];
   static const Map<String, String> kUserAgentListOldUpgrade = {
     "sing-box": "sing-box $kCoreVersion",
-    "mihomo/1.19.9": "mihomo/1.19.27",
-    "mihomo/1.19.12": "mihomo/1.19.27",
-    "mihomo/1.19.16": "mihomo/1.19.27",
-    "mihomo/1.19.23": "mihomo/1.19.27",
+    "mihomo/1.19.9": "mihomo/1.19.28",
+    "mihomo/1.19.12": "mihomo/1.19.28",
+    "mihomo/1.19.16": "mihomo/1.19.28",
+    "mihomo/1.19.23": "mihomo/1.19.28",
+    "mihomo/1.19.27": "mihomo/1.19.28",
     "NekoBox/Android/1.3.1 (Prefer ClashMeta Format)":
         "NekoBox/Android/1.4.1 (Prefer ClashMeta Format)",
     "NekoBox/Android/1.3.4 (Prefer ClashMeta Format)":
@@ -1554,6 +1588,7 @@ class SettingConfig {
   SettingConfigItemDev dev = SettingConfigItemDev();
   SettingConfigItemUI ui = SettingConfigItemUI();
   SettingConfigItemUIScreen uiScreen = SettingConfigItemUIScreen();
+  SettingConfigItemWindow window = SettingConfigItemWindow();
   SettingConfigItemProxy proxy = SettingConfigItemProxy();
   SettingConfigItemNTP ntp = SettingConfigItemNTP();
   SettingConfigItemTUN tun = SettingConfigItemTUN();
@@ -1602,6 +1637,7 @@ class SettingConfig {
     'ui': ui,
     'dev': dev,
     'ui_screen': uiScreen,
+    'window': window,
     'ntp': ntp,
     'proxy': proxy,
     'tun': tun,
@@ -1654,6 +1690,7 @@ class SettingConfig {
     uiScreen = SettingConfigItemUIScreen.fromJsonStatic(
       map["ui_screen"] ?? map,
     );
+    window = SettingConfigItemWindow.fromJsonStatic(map["window"]);
     if (map["ntp"] is Map) {
       ntp = SettingConfigItemNTP.fromJsonStatic(map["ntp"]);
     } else {
@@ -1935,7 +1972,7 @@ class SettingManager {
     }
   }
 
-  static void save() async {
+  static Future<void> save() async {
     if (_savingConfig) {
       return;
     }

@@ -50,7 +50,7 @@ import 'package:karing/app/utils/url_launcher_utils.dart';
 import 'package:karing/app/utils/vpn_action_handler.dart';
 import 'package:karing/i18n/strings.g.dart';
 import 'package:karing/screens/accessibility_screen.dart';
-import 'package:karing/screens/antdesign.dart';
+import 'package:ant_icons_plus/ant_icons_plus.dart';
 import 'package:karing/screens/common_dialog.dart';
 import 'package:karing/screens/dialog_utils.dart';
 import 'package:karing/screens/diversion_rules_custom_set_screen.dart';
@@ -1831,7 +1831,7 @@ class _HomeScreenState extends LasyRenderingState<HomeScreen>
     final tcontext = Translations.of(context);
     List<String> extensions = ['json'];
     try {
-      FilePickerResult? fresult = await FilePicker.platform.pickFiles(
+      FilePickerResult? fresult = await FilePicker.pickFiles(
         type: Platform.isAndroid ? FileType.any : FileType.custom,
         allowedExtensions: Platform.isAndroid ? null : extensions,
       );
@@ -1907,7 +1907,7 @@ class _HomeScreenState extends LasyRenderingState<HomeScreen>
         String dir = await PathUtils.cacheDir();
         filePath = path.join(dir, fileName);
       } else {
-        filePath = await FilePicker.platform.saveFile(
+        filePath = await FilePicker.saveFile(
           fileName: fileName,
           lockParentWindow: true,
         );
@@ -2571,7 +2571,7 @@ class _HomeScreenState extends LasyRenderingState<HomeScreen>
                             child: const SizedBox(
                               width: 50,
                               height: 30,
-                              child: Icon(AntDesign.import_outline, size: 26),
+                              child: Icon(AntIcons.importOutlined, size: 26),
                             ),
                           ),
                         ),
@@ -2584,7 +2584,7 @@ class _HomeScreenState extends LasyRenderingState<HomeScreen>
                             child: const SizedBox(
                               width: 50,
                               height: 30,
-                              child: Icon(AntDesign.export_outline, size: 26),
+                              child: Icon(AntIcons.exportOutlined, size: 26),
                             ),
                           ),
                         ),

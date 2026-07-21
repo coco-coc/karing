@@ -445,11 +445,10 @@ class _DiversionGroupCustomEditScreenState
               () async {
                 try {
                   List<String> extensions = Platform.isWindows ? ["exe"] : [""];
-                  FilePickerResult? result = await FilePicker.platform
-                      .pickFiles(
-                        type: FileType.custom,
-                        allowedExtensions: extensions,
-                      );
+                  FilePickerResult? result = await FilePicker.pickFiles(
+                    type: FileType.custom,
+                    allowedExtensions: extensions,
+                  );
                   if (result != null) {
                     String filePath = result.files.first.path!;
                     return [path.basename(filePath)];
@@ -495,11 +494,10 @@ class _DiversionGroupCustomEditScreenState
               () async {
                 try {
                   List<String> extensions = Platform.isWindows ? ["exe"] : [""];
-                  FilePickerResult? result = await FilePicker.platform
-                      .pickFiles(
-                        type: FileType.custom,
-                        allowedExtensions: extensions,
-                      );
+                  FilePickerResult? result = await FilePicker.pickFiles(
+                    type: FileType.custom,
+                    allowedExtensions: extensions,
+                  );
                   if (result != null) {
                     String filePath = result.files.first.path!;
                     return [filePath];
@@ -545,11 +543,10 @@ class _DiversionGroupCustomEditScreenState
               () async {
                 try {
                   List<String> extensions = ["app"];
-                  FilePickerResult? result = await FilePicker.platform
-                      .pickFiles(
-                        type: FileType.custom,
-                        allowedExtensions: extensions,
-                      );
+                  FilePickerResult? result = await FilePicker.pickFiles(
+                    type: FileType.custom,
+                    allowedExtensions: extensions,
+                  );
                   if (result != null) {
                     String filePath = result.files.first.path!;
                     final dirs = ["/Applications/", "/Users/"];
@@ -585,7 +582,7 @@ class _DiversionGroupCustomEditScreenState
               processDir,
               () async {
                 try {
-                  String? result = await FilePicker.platform.getDirectoryPath(
+                  String? result = await FilePicker.getDirectoryPath(
                     dialogTitle: tcontext.meta.processDir,
                     lockParentWindow: false,
                   );

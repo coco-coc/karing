@@ -66,13 +66,20 @@ akiko
 alibaba
 alibaba@!cn
 alibaba@ads
+alibaba@cn
 alibabacloud
 alibabacloud@!cn
+alibabacloud@cn
+aligames
 aliyun-drive
 aliyun
 aliyun@!cn
 aliyun@ads
 aljazeera
+alphabet
+alphabet@!cn
+alphabet@ads
+alphabet@cn
 amap
 amap@ads
 amazon
@@ -106,8 +113,12 @@ apple-cn
 apple-dev
 apple-dev@cn
 apple-intelligence
+apple-music
+apple-music@cn
 apple-pki
 apple-pki@cn
+apple-podcasts
+apple-podcasts@cn
 apple-tvplus
 apple-update
 apple
@@ -135,10 +146,13 @@ att
 att@cn
 attwatchtv
 autodesk
+auxgroup
+auxgroup@!cn
 available-only-inside@ru
 avaxhome
 aviasales
 avito
+avito@ads
 avmoo
 awempire
 aws-cn
@@ -166,6 +180,7 @@ beget
 beisen
 bestbuy
 bestbuy@cn
+bestchange
 bestore
 bestv
 betboom
@@ -271,6 +286,7 @@ category-ai-chat-!cn
 category-ai-chat-!cn@!cn
 category-ai-chat-!cn@ads
 category-ai-cn
+category-ai-ru
 category-android-app-download
 category-anticensorship
 category-antivirus
@@ -300,6 +316,7 @@ category-companies
 category-companies@!cn
 category-companies@ads
 category-companies@cn
+category-consent-management
 category-container
 category-cryptocurrency
 category-cryptocurrency@cn
@@ -407,6 +424,7 @@ category-ru@ads
 category-ru@cn
 category-scholar-!cn
 category-scholar-cn
+category-scholar-hk
 category-scholar-ir
 category-scholar-uk
 category-securities-cn
@@ -446,6 +464,7 @@ cerebras
 cern
 certinomis
 certum
+changyou
 chaoxing
 chatango
 chatwhores
@@ -469,6 +488,7 @@ cisco@cn
 citic
 citic@!cn
 citizenlab
+cityu-hk
 ciweimao
 ck101
 clarivate
@@ -511,6 +531,7 @@ comfy
 comodo
 comssone
 connectivity-check
+connectivity-check@cn
 contentful
 coolapk
 coomer
@@ -531,6 +552,7 @@ ctexcel@!cn
 ctrip
 ctrip@!cn
 ctyun
+cuhk
 cuinc
 curseforge
 cursor
@@ -540,6 +562,7 @@ cygames
 cylink
 dailymail
 dailymotion
+dandanplay
 dandanzan
 dangdang
 dart
@@ -572,6 +595,7 @@ digitalplayground
 dingdatech
 dingtalk
 discord
+discourse
 discoveryplus
 discuz
 disney
@@ -626,6 +650,7 @@ ebay
 ebay@cn
 ebuyer
 economist
+eduhk
 edx
 egghead
 ehentai
@@ -656,6 +681,7 @@ eset
 eset@cn
 espn
 espressif
+espressif@!cn
 esri
 ethereum
 everbright
@@ -697,6 +723,7 @@ flatpak
 flibusta
 flickr
 flowus
+flowwow
 flurry-ads
 flutter
 fonbet
@@ -715,12 +742,14 @@ freecodecamp
 freenode
 ft
 ftv
+funpay
 futu
 futu@cn
 fzdm
 gaijin
 gamersky
 gamersky@ads
+gamesplanet
 gandi
 ganji
 gannett
@@ -764,6 +793,7 @@ gmo-internet@cn
 godaddy
 gofundme
 gog
+gog@ads
 gog@cn
 golang
 goodreads
@@ -822,14 +852,18 @@ hiido-ads
 hikvision
 hinet-eca
 hinet
+hisense
 hitun
 hkbn
+hkbu
 hkedcity
 hketgroup
 hketgroup@cn
 hkgolden
 hkopentv
 hkt
+hku
+hkust
 hm
 hm@cn
 homebrew
@@ -860,6 +894,7 @@ hugecore
 huggingface
 hujiang
 hulu
+humblebundle
 hunantv
 hunantv@ads
 huobi
@@ -972,6 +1007,7 @@ kemono
 kernel
 keybase
 khanacademy
+kick
 kindle
 kindle4rss
 kindle@cn
@@ -1002,6 +1038,8 @@ kucoin
 kugou
 kugou@ads
 kurogames
+kurogames@!cn
+kurogames@ads
 kuwo
 kyodonews
 lagou
@@ -1028,7 +1066,9 @@ libgen
 liepin
 lifewire
 ligastavok
+lighter
 lihkg
+likee
 limelight
 linakesi
 line
@@ -1040,6 +1080,7 @@ linux
 linuxdo
 lisiku
 litv
+livejournal
 liveperson
 lizhi
 lkcoffee
@@ -1133,6 +1174,7 @@ modrinth
 mogujie
 mojang
 moji
+moji@ads
 momo
 mongodb
 monotype
@@ -1194,6 +1236,8 @@ nexon
 nga
 nginx
 ngrok
+nhk
+nic-ru
 nicegram
 nicegram@ads
 niconico
@@ -1279,6 +1323,7 @@ paofuyun
 paskoocheh
 pastebin
 patreon
+pawchive
 paypal
 paypal@cn
 pbs
@@ -1289,6 +1334,7 @@ pearson@cn
 peppy
 perl
 perplexity
+petrochina
 pgyer
 phishing
 phoenix
@@ -1321,9 +1367,11 @@ pocoiq-ads
 poe
 polocloud
 polymer
+polyu
 polyv
 pornhub
 pornpros
+positive-technologies
 postimages
 pptv
 primevideo
@@ -1385,6 +1433,7 @@ redhat
 redis
 redotpay
 redtube
+regru
 remirepo
 renren
 reurl
@@ -1395,10 +1444,12 @@ riot@cn
 roblox
 rockstar
 roku
+rossiyasegodnya
 rostelecom
 rostelecom@ads
 rsshub-3rd
 rsshub
+rt
 rthk
 ru
 ruanmei
@@ -1410,6 +1461,7 @@ rust
 ruten
 rutracker
 rutube
+safepal
 sakurafrp
 salesforce
 samsung
@@ -1440,6 +1492,7 @@ segmentfault
 sehuatang
 selectel
 sentry
+servicepipe
 setapp
 setn
 sf-express
@@ -1453,6 +1506,7 @@ shopee@cn
 shopify
 shorturl
 showtimeanytime
+shuqi
 signal
 sina
 sina@!cn
@@ -1554,6 +1608,7 @@ synology@cn
 t2-ru
 taboola
 tagtic-ads
+taihe
 taikang
 tailscale
 take-two
@@ -1582,6 +1637,8 @@ temp-mail
 tencent-dev
 tencent-dev@ads
 tencent-games
+tencent-tme
+tencent-tme@ads
 tencent
 tencent@!cn
 tencent@ads
@@ -1639,6 +1696,7 @@ trackernetwork
 trae
 translatewiki
 trello
+trustasia
 trustwallet
 trustwave
 truyen-hentai
@@ -1678,6 +1736,7 @@ udemy
 udn
 umeng
 umeng@ads
+unext
 unionpay
 unity
 unity@ads
@@ -1734,6 +1793,7 @@ walmart
 walmart@cn
 wanfang
 wangsu
+wanmei
 wantmedia
 wargaming
 wasu
@@ -1808,6 +1868,7 @@ ximalaya@ads
 xingkongwuxianmedia
 xingrz
 xnxx
+xtom
 xueersi
 xueqiu
 xunlei
@@ -1827,6 +1888,7 @@ yostar
 yostar@cn
 youjizz
 youku
+youku@!cn
 youku@ads
 youmind
 youporn
