@@ -639,6 +639,7 @@ class _Translations$meta$pa implements Translations$meta$en {
 	@override String get check => 'जांचें';
 	@override String get detect => 'पहचानें';
 	@override String get cache => 'कैश';
+	@override String get cacheLimit => 'ਕੈਸ਼ ਦੀ ਸੀਮਾ';
 	@override String get days => 'दिन';
 	@override String get hours => 'घंटे';
 	@override String get minutes => 'मिनट';
@@ -1277,6 +1278,7 @@ extension on TranslationsPa {
 			'meta.check' => 'जांचें',
 			'meta.detect' => 'पहचानें',
 			'meta.cache' => 'कैश',
+			'meta.cacheLimit' => 'ਕੈਸ਼ ਦੀ ਸੀਮਾ',
 			'meta.days' => 'दिन',
 			'meta.hours' => 'घंटे',
 			'meta.minutes' => 'मिनट',
@@ -1484,9 +1486,9 @@ extension on TranslationsPa {
 			'meta.profileAddNoServerAvaliable' => 'कोई सर्वर उपलब्ध नहीं है, सुनिश्चित करें कि प्रोफ़ाइल लिंक या प्रोफ़ाइल फ़ाइल मान्य है; यदि आपकी प्रोफ़ाइल GitHub से है, तो कृपया पृष्ठ पर [Raw] बटन के माध्यम से लिंक प्राप्त करें',
 			'meta.profileAddWrapSuccess' => 'प्रोफ़ाइल सफलतापूर्वक उत्पन्न हुई, कृपया देखने के लिए [${_root.meta.myProfiles}] पर जाएं',
 			'diversionRulesKeep' => '[${_root.meta.isp}] के [${_root.meta.diversionRules}] को बनाए रखें',
-			'diversionCustomGroupPreset' => 'प्रीसेट [${_root.meta.diversionCustomGroup}]',
 			_ => null,
 		} ?? switch (path) {
+			'diversionCustomGroupPreset' => 'प्रीसेट [${_root.meta.diversionCustomGroup}]',
 			'diversionCustomGroupPresetTips' => 'नोट: सक्षम किए गए आइटम [${_root.meta.diversionCustomGroup}] और [${_root.meta.diversionRules}] में जोड़े/ओवरराइट किए जाएंगे',
 			'diversionCustomGroupAddTips' => 'नोट: जोड़ने के बाद, आपको क्रम को मैन्युअल रूप से समायोजित करने की आवश्यकता हो सकती है, अन्यथा नया जोड़ा गया विचलन प्रभावी नहीं हो सकता है',
 			'rulesetEnableTips' => 'टिप: विकल्पों को चालू करने के बाद, कृपया प्रासंगिक नियम सेट करने के लिए [${_root.meta.diversionRules}] पर जाएं, अन्यथा वे प्रभावी नहीं होंगे',

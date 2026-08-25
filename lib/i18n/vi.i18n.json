@@ -350,6 +350,7 @@
         "check": "Kiểm tra",
         "detect": "Phát hiện",
         "cache": "Bộ nhớ đệm",
+        "cacheLimit": "Giới hạn bộ nhớ đệm",
         "days": "Ngày",
         "hours": "Giờ",
         "minutes": "Phút",

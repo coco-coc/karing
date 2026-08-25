@@ -639,6 +639,7 @@ class _Translations$meta$th implements Translations$meta$en {
 	@override String get check => 'ตรวจสอบ';
 	@override String get detect => 'ตรวจจับ';
 	@override String get cache => 'แคช';
+	@override String get cacheLimit => 'ขีดจำกัดแคช';
 	@override String get days => 'วัน';
 	@override String get hours => 'ชั่วโมง';
 	@override String get minutes => 'นาที';
@@ -1277,6 +1278,7 @@ extension on TranslationsTh {
 			'meta.check' => 'ตรวจสอบ',
 			'meta.detect' => 'ตรวจจับ',
 			'meta.cache' => 'แคช',
+			'meta.cacheLimit' => 'ขีดจำกัดแคช',
 			'meta.days' => 'วัน',
 			'meta.hours' => 'ชั่วโมง',
 			'meta.minutes' => 'นาที',
@@ -1484,9 +1486,9 @@ extension on TranslationsTh {
 			'meta.profileAddNoServerAvaliable' => 'ไม่มีเซิร์ฟเวอร์ที่พร้อมใช้งาน ตรวจสอบให้แน่ใจว่าลิงก์โปรไฟล์หรือไฟล์โปรไฟล์ถูกต้อง หากโปรไฟล์ของคุณมาจาก GitHub โปรดรับลิงก์จากปุ่ม [Raw] ในหน้า',
 			'meta.profileAddWrapSuccess' => 'โปรไฟล์สร้างสำเร็จ โปรดไปที่ [${_root.meta.myProfiles}] เพื่อดู',
 			'diversionRulesKeep' => 'เก็บ [${_root.meta.isp}] ${_root.meta.diversionRules}',
-			'diversionCustomGroupPreset' => 'ตั้งค่า [${_root.meta.diversionCustomGroup}]',
 			_ => null,
 		} ?? switch (path) {
+			'diversionCustomGroupPreset' => 'ตั้งค่า [${_root.meta.diversionCustomGroup}]',
 			'diversionCustomGroupPresetTips' => 'หมายเหตุ: รายการที่เปิดใช้งานจะถูกเพิ่ม/เขียนทับไปยัง [${_root.meta.diversionCustomGroup}] และ [${_root.meta.diversionRules}]',
 			'diversionCustomGroupAddTips' => 'หมายเหตุ: หลังจากเพิ่ม คุณอาจต้องปรับเปลี่ยนการจัดลำดับด้วยตนเอง มิฉะนั้นการเปลี่ยนเส้นทางที่เพิ่มใหม่อาจไม่ทำให้เกิดผล',
 			'rulesetEnableTips' => 'เคล็ดลับ: หลังจากเปิดใช้งานตัวเลือก โปรดไปที่ [${_root.meta.diversionRules}] เพื่อตั้งค่ากฎที่เกี่ยวข้อง มิฉะนั้นจะไม่มีผล',

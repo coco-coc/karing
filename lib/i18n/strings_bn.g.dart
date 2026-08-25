@@ -639,6 +639,7 @@ class _Translations$meta$bn implements Translations$meta$en {
 	@override String get check => 'চেক করুন';
 	@override String get detect => 'শনাক্ত করুন';
 	@override String get cache => 'ক্যাশে';
+	@override String get cacheLimit => 'ক্যাশের সর্বোচ্চ সীমা';
 	@override String get days => 'দিন';
 	@override String get hours => 'ঘণ্টা';
 	@override String get minutes => 'মিনিট';
@@ -1277,6 +1278,7 @@ extension on TranslationsBn {
 			'meta.check' => 'চেক করুন',
 			'meta.detect' => 'শনাক্ত করুন',
 			'meta.cache' => 'ক্যাশে',
+			'meta.cacheLimit' => 'ক্যাশের সর্বোচ্চ সীমা',
 			'meta.days' => 'দিন',
 			'meta.hours' => 'ঘণ্টা',
 			'meta.minutes' => 'মিনিট',
@@ -1484,9 +1486,9 @@ extension on TranslationsBn {
 			'meta.profileAddNoServerAvaliable' => 'কোনো সার্ভার উপলব্ধ নেই, নিশ্চিত করুন যে প্রোফাইল লিঙ্ক বা প্রোফাইল ফাইলটি বৈধ; যদি আপনার প্রোফাইল GitHub থেকে হয়, তবে অনুগ্রহ করে পৃষ্ঠার [Raw] বাটনের মাধ্যমে লিঙ্কটি পান',
 			'meta.profileAddWrapSuccess' => 'প্রোফাইল সফলভাবে তৈরি হয়েছে, অনুগ্রহ করে দেখার জন্য [${_root.meta.myProfiles}]-এ যান',
 			'diversionRulesKeep' => '[${_root.meta.isp}] এর [${_root.meta.diversionRules}] বজায় রাখুন',
-			'diversionCustomGroupPreset' => 'প্রিসেট [${_root.meta.diversionCustomGroup}]',
 			_ => null,
 		} ?? switch (path) {
+			'diversionCustomGroupPreset' => 'প্রিসেট [${_root.meta.diversionCustomGroup}]',
 			'diversionCustomGroupPresetTips' => 'দ্রষ্টব্য: সক্ষম করা আইটেমগুলি [${_root.meta.diversionCustomGroup}] এবং [${_root.meta.diversionRules}]-এ যুক্ত/ওভাররাইট করা হবে',
 			'diversionCustomGroupAddTips' => 'দ্রষ্টব্য: যুক্ত করার পরে, আপনাকে ম্যানুয়ালি ক্রম সামঞ্জস্য করতে হতে পারে, অন্যথায় নতুন যুক্ত করা ডাইভারশন কার্যকর নাও হতে পারে',
 			'rulesetEnableTips' => 'টিপ: অপশনগুলি চালু করার পরে, প্রাসঙ্গিক রুল সেট করতে অনুগ্রহ করে [${_root.meta.diversionRules}]-এ যান, অন্যথায় সেগুলি কার্যকর হবে না',

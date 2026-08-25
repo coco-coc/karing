@@ -350,6 +350,7 @@
         "check": "Verificar",
         "detect": "Detetar",
         "cache": "Cache",
+        "cacheLimit": "Limite do cache",
         "days": "Dias",
         "hours": "Horas",
         "minutes": "Minutos",

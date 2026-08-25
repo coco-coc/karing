@@ -416,10 +416,10 @@ class _HomeTVOSScreenState extends LasyRenderingState<HomeTVOSScreen>
       null,
       null,
     );
+    if (!mounted) {
+      return;
+    }
     if (result.error != null) {
-      if (!mounted) {
-        return;
-      }
       if (result.error!.message.contains("404")) {
         final tcontext = Translations.of(context);
         DialogUtils.showAlertDialog(

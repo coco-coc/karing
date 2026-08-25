@@ -350,6 +350,7 @@
         "check": "Sjekk",
         "detect": "Oppdag",
         "cache": "Buffer",
+        "cacheLimit": "Cachegrense",
         "days": "Dager",
         "hours": "Timer",
         "minutes": "Minutter",

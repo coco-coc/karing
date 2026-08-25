@@ -23,7 +23,7 @@ class PersistStorage {
       //await migrations.migrate(_db);
       print('PersistStorage done');
     } catch (err) {
-      Log.e("PersistStorage init ${e.toString()}");
+      Log.e("PersistStorage init ${err.toString()}");
     }
   }
 
@@ -62,7 +62,7 @@ class PersistStorage {
   static Future<void> cleanAll() async {
     return;
     try {
-      await _db.execute('DELETE * FROM ${_tableName};');
+      await _db.execute('DELETE FROM ${_tableName};');
     } catch (err) {
       Log.w(err);
     }
@@ -71,7 +71,7 @@ class PersistStorage {
   static Future<void> remove(String key) async {
     return;
     try {
-      await _db.execute('DELETE * FROM ${_tableName} WHERE id=?;', [key]);
+      await _db.execute('DELETE FROM ${_tableName} WHERE id=?;', [key]);
     } catch (err) {
       Log.w(err);
     }

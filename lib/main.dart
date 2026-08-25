@@ -355,7 +355,7 @@ class MyAppState extends State<MyApp>
       _setTray(true, false, true);
     }
     AppLifecycleStateNofity.init();
-    LocaleSettings.getLocaleStream().listen((event) {});
+    //LocaleSettings.getLocaleStream().listen((event) {});
     String launchStartupArg = processArgs.firstWhere(
       (element) => element == AppArgs.launchStartup,
       orElse: () => '',
@@ -436,7 +436,7 @@ class MyAppState extends State<MyApp>
     }
 
     return MultiProvider(
-      providers: [ChangeNotifierProvider.value(value: Themes())],
+      providers: [ChangeNotifierProvider(create: (_) => Themes())],
       child: Consumer<Themes>(
         builder: (context, appTheme, _) {
           Provider.of<Themes>(
@@ -452,7 +452,10 @@ class MyAppState extends State<MyApp>
               debugShowCheckedModeBanner: false,
               locale: TranslationProvider.of(context).flutterLocale,
               supportedLocales: AppLocaleUtils.supportedLocales,
-              localizationsDelegates: GlobalMaterialLocalizations.delegates,
+              localizationsDelegates: const [
+                ...GlobalMaterialLocalizations.delegates,
+                GlobalCupertinoLocalizations.delegate,
+              ],
               navigatorObservers: observers,
               /*shortcuts: {
                   ...WidgetsApp.defaultShortcuts,
@@ -643,7 +646,7 @@ class MyAppState extends State<MyApp>
         }
         _trayGrey = grey;
       } catch (err, stacktrace) {
-        Log.w("setIcon exception: ${err.toString()}");
+        Log.w("setIcon exception: ${err.toString()}, quit");
         if (quitIfFailed) {
           Future.delayed(const Duration(milliseconds: 1000), () async {
             _quit();

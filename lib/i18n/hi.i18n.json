@@ -350,6 +350,7 @@
         "check": "जांचें",
         "detect": "पहचानें",
         "cache": "कैश",
+        "cacheLimit": "कैश सीमा",
         "days": "दिन",
         "hours": "घंटे",
         "minutes": "मिनट",

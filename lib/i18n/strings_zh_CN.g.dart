@@ -639,6 +639,7 @@ class Translations$meta$zh_CN implements Translations$meta$en {
 	@override String get check => '检测';
 	@override String get detect => '探测';
 	@override String get cache => '缓存';
+	@override String get cacheLimit => '缓存上限';
 	@override String get days => '天';
 	@override String get hours => '时';
 	@override String get minutes => '分';
@@ -1277,6 +1278,7 @@ extension on TranslationsZhCn {
 			'meta.check' => '检测',
 			'meta.detect' => '探测',
 			'meta.cache' => '缓存',
+			'meta.cacheLimit' => '缓存上限',
 			'meta.days' => '天',
 			'meta.hours' => '时',
 			'meta.minutes' => '分',
@@ -1484,9 +1486,9 @@ extension on TranslationsZhCn {
 			'meta.profileAddNoServerAvaliable' => '无可用服务器,请确保配置链接或配置文件有效;如果你的配置来源于GitHub,请从页面上的[Raw]按钮获取链接地址',
 			'meta.profileAddWrapSuccess' => '配置生成成功,请到[${_root.meta.myProfiles}]查看',
 			'diversionRulesKeep' => '保留[${_root.meta.isp}]${_root.meta.diversionRules}',
-			'diversionCustomGroupPreset' => '预置[${_root.meta.diversionCustomGroup}]',
 			_ => null,
 		} ?? switch (path) {
+			'diversionCustomGroupPreset' => '预置[${_root.meta.diversionCustomGroup}]',
 			'diversionCustomGroupPresetTips' => '注意:启用的项会添加/覆盖到[${_root.meta.diversionCustomGroup}]和[${_root.meta.diversionRules}]',
 			'diversionCustomGroupAddTips' => '注意:添加完毕后可能需要手动调整排序,否则新添加的分流可能不会生效',
 			'rulesetEnableTips' => '提示:开启选项后,请到[${_root.meta.diversionRules}]设置相关规则,否则不会生效',

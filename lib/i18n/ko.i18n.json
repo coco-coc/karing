@@ -350,6 +350,7 @@
         "check": "확인",
         "detect": "감지",
         "cache": "캐시",
+        "cacheLimit": "캐시 제한",
         "days": "일",
         "hours": "시간",
         "minutes": "분",

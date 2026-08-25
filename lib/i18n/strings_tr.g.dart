@@ -639,6 +639,7 @@ class _Translations$meta$tr implements Translations$meta$en {
 	@override String get check => 'Kontrol Et';
 	@override String get detect => 'Tespit Et';
 	@override String get cache => 'Önbellek';
+	@override String get cacheLimit => 'Önbellek sınırı';
 	@override String get days => 'Gün';
 	@override String get hours => 'Saat';
 	@override String get minutes => 'Dakika';
@@ -1277,6 +1278,7 @@ extension on TranslationsTr {
 			'meta.check' => 'Kontrol Et',
 			'meta.detect' => 'Tespit Et',
 			'meta.cache' => 'Önbellek',
+			'meta.cacheLimit' => 'Önbellek sınırı',
 			'meta.days' => 'Gün',
 			'meta.hours' => 'Saat',
 			'meta.minutes' => 'Dakika',
@@ -1484,9 +1486,9 @@ extension on TranslationsTr {
 			'meta.profileAddNoServerAvaliable' => 'Kullanılabilir sunucu yok, Profil Bağlantısının veya Profil Dosyasının geçerli olduğundan emin olun; Profiliniz GitHub\'dan geliyorsa lütfen bağlantıyı sayfadaki [Raw] düğmesinden alın',
 			'meta.profileAddWrapSuccess' => 'Profil başarıyla oluşturuldu, görüntülemek için lütfen [${_root.meta.myProfiles}] bölümüne gidin',
 			'diversionRulesKeep' => '[${_root.meta.isp}] ${_root.meta.diversionRules} Koru',
-			'diversionCustomGroupPreset' => 'Ön ayar [${_root.meta.diversionCustomGroup}]',
 			_ => null,
 		} ?? switch (path) {
+			'diversionCustomGroupPreset' => 'Ön ayar [${_root.meta.diversionCustomGroup}]',
 			'diversionCustomGroupPresetTips' => 'Not: Etkinleştirilen öğeler [${_root.meta.diversionCustomGroup}] ve [${_root.meta.diversionRules}] bölümlerine eklenecek/üzerine yazılacaktır',
 			'diversionCustomGroupAddTips' => 'Not: Ekledikten sonra sırayı manuel olarak ayarlamanız gerekebilir, aksi takdirde yeni eklenen yönlendirme etkili olmayabilir',
 			'rulesetEnableTips' => 'İpucu: Seçenekleri açtıktan sonra ilgili kuralları ayarlamak için lütfen [${_root.meta.diversionRules}] bölümüne gidin, aksi takdirde etkili olmayacaktır',

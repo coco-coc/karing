@@ -639,6 +639,7 @@ class _Translations$meta$ru implements Translations$meta$en {
 	@override String get check => 'Тест';
 	@override String get detect => 'Тест';
 	@override String get cache => 'кэш';
+	@override String get cacheLimit => 'Лимит кэша';
 	@override String get days => 'дни';
 	@override String get hours => 'часы';
 	@override String get minutes => 'минуты';
@@ -1277,6 +1278,7 @@ extension on TranslationsRu {
 			'meta.check' => 'Тест',
 			'meta.detect' => 'Тест',
 			'meta.cache' => 'кэш',
+			'meta.cacheLimit' => 'Лимит кэша',
 			'meta.days' => 'дни',
 			'meta.hours' => 'часы',
 			'meta.minutes' => 'минуты',
@@ -1484,9 +1486,9 @@ extension on TranslationsRu {
 			'meta.profileAddNoServerAvaliable' => 'Нет доступных серверов, убедитесь что подписка или файл профиля корректен. Если ваша конфигурация взята из GitHub, получите адрес ссылки, нажав кнопку [Raw] на странице.',
 			'meta.profileAddWrapSuccess' => 'Конфигурация сгенерирована успешно. Для просмотра перейдите в [${_root.meta.myProfiles}]',
 			'diversionRulesKeep' => 'Сохраните [${_root.meta.isp}]${_root.meta.diversionRules}',
-			'diversionCustomGroupPreset' => 'Шаблоны для личных правил',
 			_ => null,
 		} ?? switch (path) {
+			'diversionCustomGroupPreset' => 'Шаблоны для личных правил',
 			'diversionCustomGroupPresetTips' => 'На основе выбранных шаблонов будут созданы/перезаписаны правила в[${_root.meta.diversionCustomGroup}] и в [${_root.meta.diversionRules}].',
 			'diversionCustomGroupAddTips' => 'Примечание. Возможно, вам придется вручную настроить порядок правил после их добавления, иначе добавленное перенаправление может работать не так, как ожидалось.',
 			'rulesetEnableTips' => 'Совет: После включения опции перейдите в [${_root.meta.diversionRules}] и установите их, иначе опция не будет действовать',

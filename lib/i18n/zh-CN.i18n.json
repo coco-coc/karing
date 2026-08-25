@@ -350,6 +350,7 @@
         "check": "检测",
         "detect": "探测",
         "cache": "缓存",
+        "cacheLimit": "缓存上限",
         "days": "天",
         "hours": "时",
         "minutes": "分",

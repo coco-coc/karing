@@ -639,6 +639,7 @@ class _Translations$meta$ar implements Translations$meta$en {
 	@override String get check => 'يفحص';
 	@override String get detect => 'يكشف';
 	@override String get cache => 'مخبأ';
+	@override String get cacheLimit => 'حد الذاكرة المؤقتة';
 	@override String get days => 'أيام';
 	@override String get hours => 'ساعات';
 	@override String get minutes => 'دقائق';
@@ -1277,6 +1278,7 @@ extension on TranslationsAr {
 			'meta.check' => 'يفحص',
 			'meta.detect' => 'يكشف',
 			'meta.cache' => 'مخبأ',
+			'meta.cacheLimit' => 'حد الذاكرة المؤقتة',
 			'meta.days' => 'أيام',
 			'meta.hours' => 'ساعات',
 			'meta.minutes' => 'دقائق',
@@ -1484,9 +1486,9 @@ extension on TranslationsAr {
 			'meta.profileAddNoServerAvaliable' => 'لا يوجد خادم متاح، يرجى التأكد من صلاحية رابط التكوين أو ملف التكوين؛ وإذا كان التكوين الخاص بك يأتي من GitHub، فيرجى الحصول على عنوان الرابط من الزر [Raw] الموجود في الصفحة',
 			'meta.profileAddWrapSuccess' => 'تم إنشاء التكوين بنجاح، يرجى الانتقال إلى [${_root.meta.myProfiles}] للعرض',
 			'diversionRulesKeep' => 'احتفظ بـ [${_root.meta.isp}]${_root.meta.diversionRules}',
-			'diversionCustomGroupPreset' => 'الإعداد المسبق [مجموعة تحويل مخصصة]',
 			_ => null,
 		} ?? switch (path) {
+			'diversionCustomGroupPreset' => 'الإعداد المسبق [مجموعة تحويل مخصصة]',
 			'diversionCustomGroupPresetTips' => 'ملاحظة: ستتم إضافة/تغطية العناصر الممكّنة إلى [مجموعة التحويل المخصصة] و[قواعد التحويل]',
 			'diversionCustomGroupAddTips' => 'ملاحظة: قد تحتاج إلى ضبط الفرز يدويًا بعد إضافته، وإلا فإن التحويل المضاف حديثًا قد لا يسري مفعوله.',
 			'rulesetEnableTips' => 'نصيحة: بعد تشغيل الخيارات ، يرجى الانتقال إلى [قواعد التحويل] لتعيين القواعد ذات الصلة ، وإلا فلن تدخل ساري المفعول ',

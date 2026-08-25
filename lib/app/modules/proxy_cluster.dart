@@ -31,8 +31,7 @@ class ProxyCluster {
   static const int kOutboundMaxCount = 380; //windows
   static HttpServer? _server;
   static List<ProxyClusterNode> _proxyNodes = [];
-  static final List<String> _routerGet = [];
-  static final List<Function> _requestCallback = [];
+  static final Map<String, Future<void> Function(HttpRequest)> _routes = {};
   static final Map<String, int> _tagPorts = {};
 
   static Future<String?> start() async {
@@ -46,7 +45,24 @@ class ProxyCluster {
     } catch (err, stacktrace) {
       return err.toString();
     }
-
+    get("/get_proxies", (HttpRequest httpRequest) async {
+      if (proxy.clusterSecret.isNotEmpty) {
+        final secret = httpRequest.uri.queryParameters["secret"];
+        if (secret != proxy.clusterSecret) {
+          httpRequest.response
+            ..statusCode = HttpStatus.unauthorized
+            ..close();
+          return;
+        }
+      }
+      const JsonEncoder encoder = JsonEncoder.withIndent('  ');
+      String configContent = encoder.convert(_proxyNodes);
+      httpRequest.response
+        ..statusCode = HttpStatus.ok
+        ..headers.contentType = ContentType.json
+        ..write(configContent)
+        ..close();
+    });
     _server!.listen((HttpRequest req) async {
       switch (req.method) {
         case "GET":
@@ -61,45 +77,33 @@ class ProxyCluster {
       }
     });
 
-    get("/get_proxies", (HttpRequest httpRequest) async {
-      if (proxy.clusterSecret.isNotEmpty) {
-        final secret = httpRequest.uri.queryParameters["secret"];
-        if (secret != proxy.clusterSecret) {
-          return httpRequest.response
-            ..statusCode = HttpStatus.unauthorized
-            ..close();
-        }
-      }
-      const JsonEncoder encoder = JsonEncoder.withIndent('  ');
-      String configContent = encoder.convert(_proxyNodes);
-      return httpRequest.response
-        ..statusCode = HttpStatus.ok
-        ..headers.contentType = ContentType.json
-        ..write(configContent)
-        ..close();
-    });
-
     return null;
   }
 
   static Future<void> stop() async {
-    _routerGet.clear();
-    _requestCallback.clear();
+    _routes.clear();
     if (_server != null) {
       await _server!.close();
       _server = null;
     }
   }
 
-  static void get(String routing, Function(HttpRequest httpRequest) callback) {
-    _routerGet.add(routing);
-    _requestCallback.add(callback);
+  static void get(
+    String routing,
+    Future<void> Function(HttpRequest httpRequest) callback,
+  ) {
+    _routes[routing] = callback;
   }
 
   static void _getRouting(String routing, HttpRequest httpRequest) {
-    if (_routerGet.contains(routing)) {
-      int index = _routerGet.indexOf(routing);
-      _requestCallback.elementAt(index).call(httpRequest);
+    final callback = _routes[routing];
+    if (callback != null) {
+      callback(httpRequest);
+    } else {
+      httpRequest.response
+        ..statusCode = HttpStatus.notFound
+        ..write('Not Found')
+        ..close();
     }
   }
 
@@ -161,6 +165,9 @@ class ProxyCluster {
           "outbound": node.name,
         });
         if (rules.length >= kOutboundMaxCount) {
+          Log.w(
+            "ProxyCluster.inboundsAndRulesFrom rules.length >= $kOutboundMaxCount",
+          );
           break;
         }
       }

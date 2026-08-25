@@ -639,6 +639,7 @@ class _Translations$meta$fa implements Translations$meta$en {
 	@override String get check => 'بررسی';
 	@override String get detect => 'کشف';
 	@override String get cache => 'حافظه نهان';
+	@override String get cacheLimit => 'محدودیت حافظه نهان';
 	@override String get days => 'روز';
 	@override String get hours => 'ساعت';
 	@override String get minutes => 'دقیقه';
@@ -1277,6 +1278,7 @@ extension on TranslationsFa {
 			'meta.check' => 'بررسی',
 			'meta.detect' => 'کشف',
 			'meta.cache' => 'حافظه نهان',
+			'meta.cacheLimit' => 'محدودیت حافظه نهان',
 			'meta.days' => 'روز',
 			'meta.hours' => 'ساعت',
 			'meta.minutes' => 'دقیقه',
@@ -1484,9 +1486,9 @@ extension on TranslationsFa {
 			'meta.profileAddNoServerAvaliable' => 'هیچ سروری در دسترس نیست، لطفاً مطمئن شوید که پیوند پیکربندی یا فایل پیکربندی معتبر است، اگر پیکربندی شما از GitHub آمده است، لطفاً آدرس پیوند را از دکمه [Raw] در صفحه دریافت کنید',
 			'meta.profileAddWrapSuccess' => 'پیکربندی با موفقیت ایجاد شد، لطفاً برای مشاهده به [${_root.meta.myProfiles}] بروید',
 			'diversionRulesKeep' => '[${_root.meta.isp}]${_root.meta.diversionRules} را نگه دارید',
-			'diversionCustomGroupPreset' => 'از پیش تنظیم شده [گروه انحراف سفارشی]',
 			_ => null,
 		} ?? switch (path) {
+			'diversionCustomGroupPreset' => 'از پیش تنظیم شده [گروه انحراف سفارشی]',
 			'diversionCustomGroupPresetTips' => 'توجه: موارد فعال به [گروه انحراف سفارشی] و [قوانین انحراف] اضافه/پوشش داده خواهند شد',
 			'diversionCustomGroupAddTips' => 'توجه: ممکن است لازم باشد پس از افزودن مرتب‌سازی به‌صورت دستی آن را تنظیم کنید، در غیر این صورت انحراف تازه اضافه‌شده ممکن است اعمال نشود.',
 			'rulesetEnableTips' => 'راهنمایی: پس‌از ذخیره کردن لطفا به [قوانین انحراف] رفته و قوانین مربوط زا تنظیم کنید؛ درغیراین صورت اعمال نخواهند شد',

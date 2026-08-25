@@ -639,6 +639,7 @@ class Translations$meta$zh_TW implements Translations$meta$en {
 	@override String get check => '檢測';
 	@override String get detect => '探測';
 	@override String get cache => '快取';
+	@override String get cacheLimit => '快取上限';
 	@override String get days => '天';
 	@override String get hours => '時';
 	@override String get minutes => '分';
@@ -1277,6 +1278,7 @@ extension on TranslationsZhTw {
 			'meta.check' => '檢測',
 			'meta.detect' => '探測',
 			'meta.cache' => '快取',
+			'meta.cacheLimit' => '快取上限',
 			'meta.days' => '天',
 			'meta.hours' => '時',
 			'meta.minutes' => '分',
@@ -1484,9 +1486,9 @@ extension on TranslationsZhTw {
 			'meta.profileAddNoServerAvaliable' => '無可用伺服器, 請確保配置連結或設定檔有效; 如果你的配置來源於 GitHub, 請從頁面上的 [Raw] 按鈕獲取連結位址',
 			'meta.profileAddWrapSuccess' => '配置生成成功, 請到 [${_root.meta.myProfiles}] 查看',
 			'diversionRulesKeep' => '保留 [${_root.meta.isp}] ${_root.meta.diversionRules}',
-			'diversionCustomGroupPreset' => '預置 [${_root.meta.diversionCustomGroup}]',
 			_ => null,
 		} ?? switch (path) {
+			'diversionCustomGroupPreset' => '預置 [${_root.meta.diversionCustomGroup}]',
 			'diversionCustomGroupPresetTips' => '注意: 啟用的項會新增/覆蓋到 [${_root.meta.diversionCustomGroup}] 和 [${_root.meta.diversionRules}]',
 			'diversionCustomGroupAddTips' => '注意: 新增完畢後可能需要手動調整排序, 否則新新增的分流可能不會生效',
 			'rulesetEnableTips' => '提示: 開啟選項後, 請到 [${_root.meta.diversionRules}] 設定相關規則, 否則不會生效',

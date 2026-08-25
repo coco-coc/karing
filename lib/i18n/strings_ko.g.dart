@@ -639,6 +639,7 @@ class _Translations$meta$ko implements Translations$meta$en {
 	@override String get check => '확인';
 	@override String get detect => '감지';
 	@override String get cache => '캐시';
+	@override String get cacheLimit => '캐시 제한';
 	@override String get days => '일';
 	@override String get hours => '시간';
 	@override String get minutes => '분';
@@ -1277,6 +1278,7 @@ extension on TranslationsKo {
 			'meta.check' => '확인',
 			'meta.detect' => '감지',
 			'meta.cache' => '캐시',
+			'meta.cacheLimit' => '캐시 제한',
 			'meta.days' => '일',
 			'meta.hours' => '시간',
 			'meta.minutes' => '분',
@@ -1484,9 +1486,9 @@ extension on TranslationsKo {
 			'meta.profileAddNoServerAvaliable' => '사용 가능한 서버가 없습니다. 구성 링크 또는 파일이 유효한지 확인하십시오. 구성이 GitHub인 경우 페이지의 [Raw] 버튼에서 링크를 가져오십시오',
 			'meta.profileAddWrapSuccess' => '구성이 성공적으로 생성되었습니다. [${_root.meta.myProfiles}]로 이동하여 확인하십시오',
 			'diversionRulesKeep' => '[${_root.meta.isp}]의 ${_root.meta.diversionRules} 유지',
-			'diversionCustomGroupPreset' => '사전 설정 [${_root.meta.diversionCustomGroup}]',
 			_ => null,
 		} ?? switch (path) {
+			'diversionCustomGroupPreset' => '사전 설정 [${_root.meta.diversionCustomGroup}]',
 			'diversionCustomGroupPresetTips' => '참고: 활성화된 항목은 [${_root.meta.diversionCustomGroup}] 및 [${_root.meta.diversionRules}]에 추가/덮어쓰기됩니다',
 			'diversionCustomGroupAddTips' => '참고: 추가 후 순서를 수동으로 조정해야 할 수 있습니다. 그렇지 않으면 새로 추가된 분류가 적용되지 않을 수 있습니다',
 			'rulesetEnableTips' => '팁: 옵션을 켠 후 [${_root.meta.diversionRules}]로 이동하여 관련 규칙을 설정하십시오. 그렇지 않으면 적용되지 않습니다',

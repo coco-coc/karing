@@ -350,6 +350,7 @@
         "check": "Prüfen",
         "detect": "Erkennen",
         "cache": "Cache",
+        "cacheLimit": "Cachebegrenzung",
         "days": "Tage",
         "hours": "Stunden",
         "minutes": "Minuten",

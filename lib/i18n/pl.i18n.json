@@ -350,6 +350,7 @@
         "check": "Sprawdź",
         "detect": "Wykryj",
         "cache": "Pamięć podręczna",
+        "cacheLimit": "Limit pamięci podręcznej",
         "days": "Dni",
         "hours": "Godziny",
         "minutes": "Minuty",

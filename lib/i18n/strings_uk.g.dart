@@ -639,6 +639,7 @@ class _Translations$meta$uk implements Translations$meta$en {
 	@override String get check => 'Перевірити';
 	@override String get detect => 'Виявити';
 	@override String get cache => 'Кеш';
+	@override String get cacheLimit => 'Ліміт кешу';
 	@override String get days => 'Днів';
 	@override String get hours => 'Годин';
 	@override String get minutes => 'Хвилин';
@@ -1277,6 +1278,7 @@ extension on TranslationsUk {
 			'meta.check' => 'Перевірити',
 			'meta.detect' => 'Виявити',
 			'meta.cache' => 'Кеш',
+			'meta.cacheLimit' => 'Ліміт кешу',
 			'meta.days' => 'Днів',
 			'meta.hours' => 'Годин',
 			'meta.minutes' => 'Хвилин',
@@ -1484,9 +1486,9 @@ extension on TranslationsUk {
 			'meta.profileAddNoServerAvaliable' => 'Немає доступних серверів, переконайтеся, що посилання на профіль або файл профілю коректні; якщо ваш профіль з GitHub, отримайте посилання за допомогою кнопки [Raw] на сторінці',
 			'meta.profileAddWrapSuccess' => 'Профіль успішно згенеровано, перейдіть до [${_root.meta.myProfiles}] для перегляду',
 			'diversionRulesKeep' => 'Зберегти [${_root.meta.diversionRules}] від [${_root.meta.isp}]',
-			'diversionCustomGroupPreset' => 'Попередньо встановлена [${_root.meta.diversionCustomGroup}]',
 			_ => null,
 		} ?? switch (path) {
+			'diversionCustomGroupPreset' => 'Попередньо встановлена [${_root.meta.diversionCustomGroup}]',
 			'diversionCustomGroupPresetTips' => 'Примітка: Увімкнені елементи будуть додані/перезаписані в [${_root.meta.diversionCustomGroup}] та [${_root.meta.diversionRules}]',
 			'diversionCustomGroupAddTips' => 'Примітка: Після додавання вам може знадобитися вручну відрегулювати порядок, інакше нещодавно додане відхилення може не набрати чинності',
 			'rulesetEnableTips' => 'Порада: Після ввімкнення параметрів перейдіть до [${_root.meta.diversionRules}], щоб встановити відповідні правила, інакше вони не наберуть чинності',

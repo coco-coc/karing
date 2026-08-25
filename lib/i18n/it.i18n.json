@@ -350,6 +350,7 @@
         "check": "Controlla",
         "detect": "Rileva",
         "cache": "Cache",
+        "cacheLimit": "Limite cache",
         "days": "Giorni",
         "hours": "Ore",
         "minutes": "Minuti",

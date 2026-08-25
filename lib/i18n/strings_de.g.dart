@@ -639,6 +639,7 @@ class _Translations$meta$de implements Translations$meta$en {
 	@override String get check => 'Prüfen';
 	@override String get detect => 'Erkennen';
 	@override String get cache => 'Cache';
+	@override String get cacheLimit => 'Cachebegrenzung';
 	@override String get days => 'Tage';
 	@override String get hours => 'Stunden';
 	@override String get minutes => 'Minuten';
@@ -1277,6 +1278,7 @@ extension on TranslationsDe {
 			'meta.check' => 'Prüfen',
 			'meta.detect' => 'Erkennen',
 			'meta.cache' => 'Cache',
+			'meta.cacheLimit' => 'Cachebegrenzung',
 			'meta.days' => 'Tage',
 			'meta.hours' => 'Stunden',
 			'meta.minutes' => 'Minuten',
@@ -1484,9 +1486,9 @@ extension on TranslationsDe {
 			'meta.profileAddNoServerAvaliable' => 'Kein Server verfügbar, stellen Sie sicher, dass der Profil-Link oder die Profil-Datei gültig ist; wenn Ihr Profil von GitHub stammt, rufen Sie den Link bitte über die Schaltfläche [Raw] auf der Seite ab',
 			'meta.profileAddWrapSuccess' => 'Profil erfolgreich generiert, bitte gehen Sie zu [${_root.meta.myProfiles}], um es anzusehen',
 			'diversionRulesKeep' => '[${_root.meta.isp}] ${_root.meta.diversionRules} beibehalten',
-			'diversionCustomGroupPreset' => 'Voreingestellte [${_root.meta.diversionCustomGroup}]',
 			_ => null,
 		} ?? switch (path) {
+			'diversionCustomGroupPreset' => 'Voreingestellte [${_root.meta.diversionCustomGroup}]',
 			'diversionCustomGroupPresetTips' => 'Hinweis: Aktivierte Elemente werden zu [${_root.meta.diversionCustomGroup}] und [${_root.meta.diversionRules}] hinzugefügt/überschrieben',
 			'diversionCustomGroupAddTips' => 'Hinweis: Nach dem Hinzufügen müssen Sie die Reihenfolge möglicherweise manuell anpassen, da die neu hinzugefügte Umleitung sonst möglicherweise nicht wirksam wird',
 			'rulesetEnableTips' => 'Tipp: Nach dem Einschalten der Optionen gehen Sie bitte zu [${_root.meta.diversionRules}], um die entsprechenden Regeln festzulegen, andernfalls werden sie nicht wirksam',

@@ -639,6 +639,7 @@ class _Translations$meta$ur implements Translations$meta$en {
 	@override String get check => 'چیک کریں';
 	@override String get detect => 'پتہ لگائیں';
 	@override String get cache => 'کیشے';
+	@override String get cacheLimit => 'کیشے کی حد';
 	@override String get days => 'دن';
 	@override String get hours => 'گھنٹے';
 	@override String get minutes => 'منٹ';
@@ -1277,6 +1278,7 @@ extension on TranslationsUr {
 			'meta.check' => 'چیک کریں',
 			'meta.detect' => 'پتہ لگائیں',
 			'meta.cache' => 'کیشے',
+			'meta.cacheLimit' => 'کیشے کی حد',
 			'meta.days' => 'دن',
 			'meta.hours' => 'گھنٹے',
 			'meta.minutes' => 'منٹ',
@@ -1484,9 +1486,9 @@ extension on TranslationsUr {
 			'meta.profileAddNoServerAvaliable' => 'کوئی سرور دستیاب نہیں ہے، یقینی بنائیں کہ پروفائل لنک یا پروفائل فائل درست ہے؛ اگر آپ کا پروفائل GitHub سے ہے تو براہ کرم صفحہ پر [Raw] بٹن کے ذریعے لنک حاصل کریں',
 			'meta.profileAddWrapSuccess' => 'پروفائل کامیابی سے تیار ہو گیا، براہ کرم دیکھنے کے لیے [${_root.meta.myProfiles}] پر جائیں',
 			'diversionRulesKeep' => '[${_root.meta.isp}] کے [${_root.meta.diversionRules}] کو برقرار رکھیں',
-			'diversionCustomGroupPreset' => 'پری سیٹ [${_root.meta.diversionCustomGroup}]',
 			_ => null,
 		} ?? switch (path) {
+			'diversionCustomGroupPreset' => 'پری سیٹ [${_root.meta.diversionCustomGroup}]',
 			'diversionCustomGroupPresetTips' => 'نوٹ: فعال کردہ آئٹمز [${_root.meta.diversionCustomGroup}] اور [${_root.meta.diversionRules}] میں شامل/اوور رائٹ کر دیے جائیں گے',
 			'diversionCustomGroupAddTips' => 'نوٹ: شامل کرنے کے بعد، آپ کو ترتیب کو دستی طور پر ایڈجسٹ کرنے کی ضرورت پڑ سکتی ہے، ورنہ نیا شامل کردہ ڈائیورژن موثر نہیں ہو سکتا ہے',
 			'rulesetEnableTips' => 'ٹپ: اختیارات آن کرنے کے بعد، براہ کرم متعلقہ رولز ترتیب دینے کے لیے [${_root.meta.diversionRules}] پر جائیں، ورنہ وہ موثر نہیں ہوں گے',

@@ -1311,6 +1311,9 @@ class Translations$meta$en {
 	/// en: 'Cache'
 	String get cache => 'Cache';
 
+	/// en: 'Cache limit'
+	String get cacheLimit => 'Cache limit';
+
 	/// en: 'Days'
 	String get days => 'Days';
 
@@ -2434,6 +2437,7 @@ extension on Translations {
 			'meta.check' => 'Check',
 			'meta.detect' => 'Detect',
 			'meta.cache' => 'Cache',
+			'meta.cacheLimit' => 'Cache limit',
 			'meta.days' => 'Days',
 			'meta.hours' => 'Hours',
 			'meta.minutes' => 'Minutes',
@@ -2641,9 +2645,9 @@ extension on Translations {
 			'meta.profileAddNoServerAvaliable' => 'No server avaliable, Make sure the Profile Link or Profile File is valid;  if your Profile comes from GitHub, please obtain the link from the [Raw] button on the page',
 			'meta.profileAddWrapSuccess' => 'Profile generated successfully, please go to [${_root.meta.myProfiles}] to view',
 			'diversionRulesKeep' => 'Keep [${_root.meta.isp}] ${_root.meta.diversionRules}',
-			'diversionCustomGroupPreset' => 'Preset [${_root.meta.diversionCustomGroup}]',
 			_ => null,
 		} ?? switch (path) {
+			'diversionCustomGroupPreset' => 'Preset [${_root.meta.diversionCustomGroup}]',
 			'diversionCustomGroupPresetTips' => 'Note: Enabled items will be added/overwritten to [${_root.meta.diversionCustomGroup}] and [${_root.meta.diversionRules}]',
 			'diversionCustomGroupAddTips' => 'Note: After adding, you may need to manually adjust the order, otherwise the newly added diversion may not take effect',
 			'rulesetEnableTips' => 'Tip: After turning on the options, please go to[${_root.meta.diversionRules}]to set the relevant rules, otherwise they will not take effect',

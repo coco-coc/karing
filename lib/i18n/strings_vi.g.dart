@@ -639,6 +639,7 @@ class _Translations$meta$vi implements Translations$meta$en {
 	@override String get check => 'Kiểm tra';
 	@override String get detect => 'Phát hiện';
 	@override String get cache => 'Bộ nhớ đệm';
+	@override String get cacheLimit => 'Giới hạn bộ nhớ đệm';
 	@override String get days => 'Ngày';
 	@override String get hours => 'Giờ';
 	@override String get minutes => 'Phút';
@@ -1277,6 +1278,7 @@ extension on TranslationsVi {
 			'meta.check' => 'Kiểm tra',
 			'meta.detect' => 'Phát hiện',
 			'meta.cache' => 'Bộ nhớ đệm',
+			'meta.cacheLimit' => 'Giới hạn bộ nhớ đệm',
 			'meta.days' => 'Ngày',
 			'meta.hours' => 'Giờ',
 			'meta.minutes' => 'Phút',
@@ -1484,9 +1486,9 @@ extension on TranslationsVi {
 			'meta.profileAddNoServerAvaliable' => 'Không có máy chủ khả dụng, hãy đảm bảo liên kết hoặc tệp cấu hình hợp lệ; nếu cấu hình của bạn từ GitHub, vui lòng lấy liên kết từ nút [Raw] trên trang',
 			'meta.profileAddWrapSuccess' => 'Tạo cấu hình thành công, vui lòng đi tới [${_root.meta.myProfiles}] để xem',
 			'diversionRulesKeep' => 'Giữ [${_root.meta.isp}] ${_root.meta.diversionRules}',
-			'diversionCustomGroupPreset' => 'Cài đặt sẵn [${_root.meta.diversionCustomGroup}]',
 			_ => null,
 		} ?? switch (path) {
+			'diversionCustomGroupPreset' => 'Cài đặt sẵn [${_root.meta.diversionCustomGroup}]',
 			'diversionCustomGroupPresetTips' => 'Lưu ý: Các mục được bật sẽ được thêm/ghi đè vào [${_root.meta.diversionCustomGroup}] và [${_root.meta.diversionRules}]',
 			'diversionCustomGroupAddTips' => 'Lưu ý: Sau khi thêm, bạn có thể cần điều chỉnh thứ tự thủ công, nếu không phân luồng mới thêm có thể không có hiệu lực',
 			'rulesetEnableTips' => 'Mẹo: Sau khi bật các tùy chọn, vui lòng đi tới [${_root.meta.diversionRules}] để thiết lập các quy tắc liên quan, nếu không chúng sẽ không có hiệu lực',

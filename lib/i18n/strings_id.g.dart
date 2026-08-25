@@ -639,6 +639,7 @@ class _Translations$meta$id implements Translations$meta$en {
 	@override String get check => 'Periksa';
 	@override String get detect => 'Deteksi';
 	@override String get cache => 'Cache';
+	@override String get cacheLimit => 'Batas cache';
 	@override String get days => 'hari';
 	@override String get hours => 'jam';
 	@override String get minutes => 'menit';
@@ -1277,6 +1278,7 @@ extension on TranslationsId {
 			'meta.check' => 'Periksa',
 			'meta.detect' => 'Deteksi',
 			'meta.cache' => 'Cache',
+			'meta.cacheLimit' => 'Batas cache',
 			'meta.days' => 'hari',
 			'meta.hours' => 'jam',
 			'meta.minutes' => 'menit',
@@ -1484,9 +1486,9 @@ extension on TranslationsId {
 			'meta.profileAddNoServerAvaliable' => 'Tidak ada server yang tersedia, pastikan tautan atau file konfigurasi valid; jika konfigurasi Anda berasal dari GitHub, gunakan alamat tautan dari tombol [Raw] di halaman',
 			'meta.profileAddWrapSuccess' => 'Konfigurasi berhasil dibuat, silakan lihat di [${_root.meta.myProfiles}]',
 			'diversionRulesKeep' => 'Pertahankan [${_root.meta.isp}]${_root.meta.diversionRules}',
-			'diversionCustomGroupPreset' => 'Preset [${_root.meta.diversionCustomGroup}]',
 			_ => null,
 		} ?? switch (path) {
+			'diversionCustomGroupPreset' => 'Preset [${_root.meta.diversionCustomGroup}]',
 			'diversionCustomGroupPresetTips' => 'Perhatian: item yang diaktifkan akan ditambahkan/menimpa [${_root.meta.diversionCustomGroup}] dan [${_root.meta.diversionRules}]',
 			'diversionCustomGroupAddTips' => 'Perhatian: setelah ditambahkan, Anda mungkin perlu menyesuaikan urutan secara manual, jika tidak routing baru mungkin tidak berlaku',
 			'rulesetEnableTips' => 'Tip: setelah mengaktifkan opsi, silakan buka [${_root.meta.diversionRules}] untuk mengatur aturan terkait, jika tidak maka tidak akan berlaku',

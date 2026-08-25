@@ -115,7 +115,6 @@ class GroupScreenState extends LasyRenderingState<GroupScreen>
                               if (await widget.onDone!(context)) {
                                 Navigator.pop(context, true);
                               }
-                              setState(() {});
                             },
                             child: SizedBox(
                               width: 50,

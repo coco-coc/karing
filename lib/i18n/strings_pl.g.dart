@@ -639,6 +639,7 @@ class _Translations$meta$pl implements Translations$meta$en {
 	@override String get check => 'Sprawdź';
 	@override String get detect => 'Wykryj';
 	@override String get cache => 'Pamięć podręczna';
+	@override String get cacheLimit => 'Limit pamięci podręcznej';
 	@override String get days => 'Dni';
 	@override String get hours => 'Godziny';
 	@override String get minutes => 'Minuty';
@@ -1277,6 +1278,7 @@ extension on TranslationsPl {
 			'meta.check' => 'Sprawdź',
 			'meta.detect' => 'Wykryj',
 			'meta.cache' => 'Pamięć podręczna',
+			'meta.cacheLimit' => 'Limit pamięci podręcznej',
 			'meta.days' => 'Dni',
 			'meta.hours' => 'Godziny',
 			'meta.minutes' => 'Minuty',
@@ -1484,9 +1486,9 @@ extension on TranslationsPl {
 			'meta.profileAddNoServerAvaliable' => 'Brak dostępnych serwerów. Upewnij się, że link do profilu lub plik profilu jest prawidłowy; jeśli profil pochodzi z GitHub, pobierz link za pomocą przycisku [Raw] na stronie',
 			'meta.profileAddWrapSuccess' => 'Profil został pomyślnie wygenerowany, przejdź do [${_root.meta.myProfiles}], aby go wyświetlić',
 			'diversionRulesKeep' => 'Zachowaj [${_root.meta.diversionRules}] dla [${_root.meta.isp}]',
-			'diversionCustomGroupPreset' => 'Predefiniowane [${_root.meta.diversionCustomGroup}]',
 			_ => null,
 		} ?? switch (path) {
+			'diversionCustomGroupPreset' => 'Predefiniowane [${_root.meta.diversionCustomGroup}]',
 			'diversionCustomGroupPresetTips' => 'Uwaga: Włączone elementy zostaną dodane/nadpisane w [${_root.meta.diversionCustomGroup}] i [${_root.meta.diversionRules}]',
 			'diversionCustomGroupAddTips' => 'Uwaga: Po dodaniu może być konieczne ręczne dostosowanie kolejności, w przeciwnym razie nowo dodane przekierowanie może nie zadziałać',
 			'rulesetEnableTips' => 'Wskazówka: Po włączeniu opcji przejdź do [${_root.meta.diversionRules}], aby ustawić odpowiednie reguły, w przeciwnym razie nie zaczną obowiązywać',

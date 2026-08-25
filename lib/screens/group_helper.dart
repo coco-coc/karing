@@ -1043,6 +1043,19 @@ class GroupHelper {
                   },
           ),
         ),
+        GroupItemOptions(
+          textFormFieldOptions: GroupItemTextFieldOptions(
+            name: "${tcontext.meta.cacheLimit}(MB)",
+            text: (settingConfig.statistics.cacheSizeLimitMB ?? "").toString(),
+            textWidthPercent: 0.4,
+            inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+            enabled: settingConfig.statistics.enable == true,
+            onChanged: (String value) {
+              settingConfig.statistics.cacheSizeLimitMB = int.tryParse(value);
+              SettingManager.setDirty(true);
+            },
+          ),
+        ),
       ];
 
       List<GroupItemOptions> options1 = [
@@ -1063,7 +1076,6 @@ class GroupHelper {
           pushOptions: GroupItemPushOptions(
             name: tcontext.meta.records,
             onPush: () async {
-              //AdsRewardWidget.tryLoadAdsThenCallback(context, (ok) {
               Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -1074,7 +1086,6 @@ class GroupHelper {
                   ),
                 ),
               );
-              // });
             },
           ),
         ),

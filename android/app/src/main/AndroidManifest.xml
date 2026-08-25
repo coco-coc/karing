@@ -22,7 +22,7 @@
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28"/>
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
     <uses-permission android:name="android.permission.OBSERVE_GRANT_REVOKE_PERMISSIONS" />
@@ -74,8 +74,10 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
-                <category android:name="android.intent.category.LEANBACK_LAUNCHER" android:required="false" />  <!--  TV -->
-                <action android:name="com.android_package_installer.content.SESSION_API_PACKAGE_INSTALLED" android:exported="false"/>
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" android:required="false"/>  <!--  TV -->
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.android_package_installer.content.SESSION_API_PACKAGE_INSTALLED"/>
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />

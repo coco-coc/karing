@@ -350,6 +350,7 @@
         "check": "チェック",
         "detect": "検出",
         "cache": "キャッシュ",
+        "cacheLimit": "キャッシュ上限",
         "days": "日",
         "hours": "時間",
         "minutes": "分",

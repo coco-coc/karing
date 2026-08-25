@@ -350,6 +350,7 @@
         "check": "Kontrollera",
         "detect": "Detektera",
         "cache": "Cache",
+        "cacheLimit": "Cachegräns",
         "days": "Dagar",
         "hours": "Timmar",
         "minutes": "Minuter",

@@ -350,6 +350,7 @@
         "check": "Kontrol Et",
         "detect": "Tespit Et",
         "cache": "Önbellek",
+        "cacheLimit": "Önbellek sınırı",
         "days": "Gün",
         "hours": "Saat",
         "minutes": "Dakika",

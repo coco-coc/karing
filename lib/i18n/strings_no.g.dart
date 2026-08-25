@@ -639,6 +639,7 @@ class _Translations$meta$no implements Translations$meta$en {
 	@override String get check => 'Sjekk';
 	@override String get detect => 'Oppdag';
 	@override String get cache => 'Buffer';
+	@override String get cacheLimit => 'Cachegrense';
 	@override String get days => 'Dager';
 	@override String get hours => 'Timer';
 	@override String get minutes => 'Minutter';
@@ -1277,6 +1278,7 @@ extension on TranslationsNo {
 			'meta.check' => 'Sjekk',
 			'meta.detect' => 'Oppdag',
 			'meta.cache' => 'Buffer',
+			'meta.cacheLimit' => 'Cachegrense',
 			'meta.days' => 'Dager',
 			'meta.hours' => 'Timer',
 			'meta.minutes' => 'Minutter',
@@ -1484,9 +1486,9 @@ extension on TranslationsNo {
 			'meta.profileAddNoServerAvaliable' => 'Ingen server tilgjengelig, sørg for at profilkoblingen eller profilfilen er gyldig; hvis profilen din kommer fra GitHub, vennligst hent koblingen via [Raw]-knappen på siden',
 			'meta.profileAddWrapSuccess' => 'Profil generert vellykket, vennligst gå til [${_root.meta.myProfiles}] for å se',
 			'diversionRulesKeep' => 'Behold [${_root.meta.diversionRules}] fra [${_root.meta.isp}]',
-			'diversionCustomGroupPreset' => 'Forhåndsinnstilt [${_root.meta.diversionCustomGroup}]',
 			_ => null,
 		} ?? switch (path) {
+			'diversionCustomGroupPreset' => 'Forhåndsinnstilt [${_root.meta.diversionCustomGroup}]',
 			'diversionCustomGroupPresetTips' => 'Merk: Aktiverte elementer vil bli lagt til i/overskrive [${_root.meta.diversionCustomGroup}] og [${_root.meta.diversionRules}]',
 			'diversionCustomGroupAddTips' => 'Merk: Etter at du har lagt til, må du kanskje justere rekkefølgen manuelt, ellers kan det hende at den nylig tillagte omledningen ikke trer i kraft',
 			'rulesetEnableTips' => 'Tips: Etter at du har aktivert alternativene, vennligst gå til [${_root.meta.diversionRules}] for å angi relevante regler, ellers vil de ikke tre i kraft',

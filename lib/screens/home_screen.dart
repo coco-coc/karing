@@ -383,7 +383,6 @@ class _HomeScreenState extends LasyRenderingState<HomeScreen>
   @override
   FutureOr<void> afterFirstLayout(BuildContext context) async {
     await AppLifecycleStateNofity.updateState();
-    initLasyFrameDrawHook();
     Biz.initHomeFinish();
 
     ErrorReporterUtils.register(() {

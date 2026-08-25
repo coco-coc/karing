@@ -639,6 +639,7 @@ class _Translations$meta$sv implements Translations$meta$en {
 	@override String get check => 'Kontrollera';
 	@override String get detect => 'Detektera';
 	@override String get cache => 'Cache';
+	@override String get cacheLimit => 'Cachegräns';
 	@override String get days => 'Dagar';
 	@override String get hours => 'Timmar';
 	@override String get minutes => 'Minuter';
@@ -1277,6 +1278,7 @@ extension on TranslationsSv {
 			'meta.check' => 'Kontrollera',
 			'meta.detect' => 'Detektera',
 			'meta.cache' => 'Cache',
+			'meta.cacheLimit' => 'Cachegräns',
 			'meta.days' => 'Dagar',
 			'meta.hours' => 'Timmar',
 			'meta.minutes' => 'Minuter',
@@ -1484,9 +1486,9 @@ extension on TranslationsSv {
 			'meta.profileAddNoServerAvaliable' => 'Ingen server tillgänglig, se till att profillänken eller profilfilen är giltig; om din profil kommer från GitHub, hämta länken via [Raw]-knappen på sidan',
 			'meta.profileAddWrapSuccess' => 'Profilen har skapats framgångsrikt, gå till [${_root.meta.myProfiles}] för att se den',
 			'diversionRulesKeep' => 'Behåll [${_root.meta.diversionRules}] från [${_root.meta.isp}]',
-			'diversionCustomGroupPreset' => 'Förinställd [${_root.meta.diversionCustomGroup}]',
 			_ => null,
 		} ?? switch (path) {
+			'diversionCustomGroupPreset' => 'Förinställd [${_root.meta.diversionCustomGroup}]',
 			'diversionCustomGroupPresetTips' => 'Obs: Aktiverade objekt kommer att läggas till i/skriva över [${_root.meta.diversionCustomGroup}] och [${_root.meta.diversionRules}]',
 			'diversionCustomGroupAddTips' => 'Obs: Efter att du lagt till kan du behöva justera ordningen manuellt, annars kan den nyligen tillagda omledningen eventuellt inte träda i kraft',
 			'rulesetEnableTips' => 'Tips: Efter att du aktiverat alternativen, gå till [${_root.meta.diversionRules}] för att ställa in relevanta regler, annars kommer de inte att träda i kraft',

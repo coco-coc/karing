@@ -350,6 +350,7 @@
         "check": "Periksa",
         "detect": "Deteksi",
         "cache": "Cache",
+        "cacheLimit": "Batas cache",
         "days": "hari",
         "hours": "jam",
         "minutes": "menit",

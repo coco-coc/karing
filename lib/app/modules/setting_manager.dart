@@ -86,11 +86,13 @@ class SettingConfigItemStatistics {
   bool enable = false;
   bool dataDesensitize = true;
   int cacheDays = 7;
+  int? cacheSizeLimitMB = 1024; //1G
 
   Map<String, dynamic> toJson() => {
     'enable': enable,
     'data_desensitize': dataDesensitize,
     'cache_days': cacheDays,
+    'cache_size_limit_mb': cacheSizeLimitMB,
   };
   void fromJson(Map<String, dynamic>? map) {
     if (map == null) {
@@ -106,6 +108,7 @@ class SettingConfigItemStatistics {
     if (cacheDays > kMaxCacheDays) {
       cacheDays = kMaxCacheDays;
     }
+    cacheSizeLimitMB = map["cache_size_limit_mb"] ?? 1024;
   }
 
   static SettingConfigItemStatistics fromJsonStatic(Map<String, dynamic>? map) {

@@ -283,6 +283,9 @@ class MyProfilesMergeScreenState
     if (hasEnable) {
       ServerManager.setDirty(true);
     }
+    if (!mounted) {
+      return;
+    }
     Navigator.pop(context);
   }
 }

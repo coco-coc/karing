@@ -350,6 +350,7 @@
         "check": "檢測",
         "detect": "探測",
         "cache": "快取",
+        "cacheLimit": "快取上限",
         "days": "天",
         "hours": "時",
         "minutes": "分",

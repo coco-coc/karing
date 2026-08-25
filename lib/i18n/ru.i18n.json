@@ -350,6 +350,7 @@
         "check": "Тест",
         "detect": "Тест",
         "cache": "кэш",
+        "cacheLimit": "Лимит кэша",
         "days": "дни",
         "hours": "часы",
         "minutes": "минуты",

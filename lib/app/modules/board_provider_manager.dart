@@ -460,8 +460,17 @@ class BoardProviderManager {
         ),
       );
     }
+    dynamic decodedBody;
+    try {
+      decodedBody = jsonDecode(result.data!.item2);
+    } catch (err) {
+      return ReturnResult(
+        error: ReturnResultError(
+          "jsonDecode exception: ${err.toString()}\n${result.data!.item2}",
+        ),
+      );
+    }
 
-    final decodedBody = jsonDecode(result.data!.item2);
     BoardProviderConfig config = BoardProviderConfig();
     BoardProviderConfigError error = BoardProviderConfigError();
     error.fromJson(decodedBody);
@@ -557,7 +566,7 @@ class BoardProviderManager {
   }
 
   static Future<void> _save() async {
-    _fileSaver.saveAsJson(_providers);
+    await _fileSaver.saveAsJson(_providers);
   }
 
   static Future<void> _load() async {

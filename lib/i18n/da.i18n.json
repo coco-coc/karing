@@ -350,6 +350,7 @@
         "check": "Tjek",
         "detect": "Registrer",
         "cache": "Cache",
+        "cacheLimit": "Cachegrænse",
         "days": "Dage",
         "hours": "Timer",
         "minutes": "Minutter",

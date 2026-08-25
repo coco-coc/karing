@@ -639,6 +639,7 @@ class _Translations$meta$ja implements Translations$meta$en {
 	@override String get check => 'チェック';
 	@override String get detect => '検出';
 	@override String get cache => 'キャッシュ';
+	@override String get cacheLimit => 'キャッシュ上限';
 	@override String get days => '日';
 	@override String get hours => '時間';
 	@override String get minutes => '分';
@@ -1277,6 +1278,7 @@ extension on TranslationsJa {
 			'meta.check' => 'チェック',
 			'meta.detect' => '検出',
 			'meta.cache' => 'キャッシュ',
+			'meta.cacheLimit' => 'キャッシュ上限',
 			'meta.days' => '日',
 			'meta.hours' => '時間',
 			'meta.minutes' => '分',
@@ -1484,9 +1486,9 @@ extension on TranslationsJa {
 			'meta.profileAddNoServerAvaliable' => '利用可能なサーバーがありません。設定リンクまたは設定ファイルが有効であることを確認してください。設定が GitHub の場合は、ページ上の [Raw] ボタンからリンクを取得してください',
 			'meta.profileAddWrapSuccess' => '構成が正常に生成されました。[${_root.meta.myProfiles}] に移動して確認してください',
 			'diversionRulesKeep' => '[${_root.meta.isp}] の ${_root.meta.diversionRules} を保持する',
-			'diversionCustomGroupPreset' => 'プリセット [${_root.meta.diversionCustomGroup}]',
 			_ => null,
 		} ?? switch (path) {
+			'diversionCustomGroupPreset' => 'プリセット [${_root.meta.diversionCustomGroup}]',
 			'diversionCustomGroupPresetTips' => '注意: 有効にされた項目は [${_root.meta.diversionCustomGroup}] および [${_root.meta.diversionRules}] に追加/上書きされます',
 			'diversionCustomGroupAddTips' => '注意: 追加後、手動で順序を調整する必要がある場合があります。そうしないと、新しく追加された分流が有効にならない場合があります',
 			'rulesetEnableTips' => 'ヒント: オプションをオンにした後、[${_root.meta.diversionRules}] に移動して関連するルールを設定してください。設定しないと有効になりません',

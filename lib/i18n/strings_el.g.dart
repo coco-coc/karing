@@ -639,6 +639,7 @@ class _Translations$meta$el implements Translations$meta$en {
 	@override String get check => 'Έλεγχος';
 	@override String get detect => 'Ανίχνευση';
 	@override String get cache => 'Προσωρινή μνήμη';
+	@override String get cacheLimit => 'Όριο προσωρινής μνήμης';
 	@override String get days => 'Ημέρες';
 	@override String get hours => 'Ώρες';
 	@override String get minutes => 'Λεπτά';
@@ -1277,6 +1278,7 @@ extension on TranslationsEl {
 			'meta.check' => 'Έλεγχος',
 			'meta.detect' => 'Ανίχνευση',
 			'meta.cache' => 'Προσωρινή μνήμη',
+			'meta.cacheLimit' => 'Όριο προσωρινής μνήμης',
 			'meta.days' => 'Ημέρες',
 			'meta.hours' => 'Ώρες',
 			'meta.minutes' => 'Λεπτά',
@@ -1484,9 +1486,9 @@ extension on TranslationsEl {
 			'meta.profileAddNoServerAvaliable' => 'Δεν υπάρχει διαθέσιμος διακομιστής, βεβαιωθείτε ότι ο Σύνδεσμος Προφίλ ή το Αρχείο Προφίλ είναι έγκυρο. Εάν το προφίλ σας προέρχεται από το GitHub, λάβετε το σύνδεσμο μέσω του κουμπιού [Raw] στη σελίδα',
 			'meta.profileAddWrapSuccess' => 'Το προφίλ δημιουργήθηκε επιτυχώς, παρακαλούμε μεταβείτε στο [${_root.meta.myProfiles}] για προβολή',
 			'diversionRulesKeep' => 'Διατήρηση [${_root.meta.diversionRules}] του [${_root.meta.isp}]',
-			'diversionCustomGroupPreset' => 'Προκαθορισμένη [${_root.meta.diversionCustomGroup}]',
 			_ => null,
 		} ?? switch (path) {
+			'diversionCustomGroupPreset' => 'Προκαθορισμένη [${_root.meta.diversionCustomGroup}]',
 			'diversionCustomGroupPresetTips' => 'Σημείωση: Τα ενεργοποιημένα στοιχεία θα προστεθούν/αντικαταστήσουν στο [${_root.meta.diversionCustomGroup}] και στο [${_root.meta.diversionRules}]',
 			'diversionCustomGroupAddTips' => 'Σημείωση: Μετά την προσθήκη, ίσως χρειαστεί να προσαρμόσετε χειροκίνητα τη σειρά, διαφορετικά η πρόσφατα προστιθέμενη εκτροπή ενδέχεται να μην τεθεί σε ισχύ',
 			'rulesetEnableTips' => 'Συμβουλή: Μετά την ενεργοποίηση των επιλογών, παρακαλούμε μεταβείτε στο [${_root.meta.diversionRules}] για να ορίσετε τους σχετικούς κανόνες, διαφορετικά δεν θα τεθούν σε ισχύ',
