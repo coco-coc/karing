@@ -151,7 +151,7 @@ class _Translations$AboutScreen$ru implements Translations$AboutScreen$en {
 	@override String get enablePprof => 'Включить pprof';
 	@override String get pprofPanel => 'pprof панель';
 	@override String get allowRemoteAccessPprof => 'Разрешить удаленный доступ к ${_root.AboutScreen.pprofPanel}';
-	@override String get allowRemoteAccessHtmlBoard => 'Разрешить удаленный доступ${_root.SettingsScreen.htmlBoard}';
+	@override String get allowRemoteAccessHtmlBoard => 'Разрешить удаленный доступ к ${_root.SettingsScreen.htmlBoard}';
 	@override String get useOriginalSBProfile => 'Использовать исходную конфигурацию Sing-box';
 }
 
@@ -987,7 +987,7 @@ extension on TranslationsRu {
 			'AboutScreen.enablePprof' => 'Включить pprof',
 			'AboutScreen.pprofPanel' => 'pprof панель',
 			'AboutScreen.allowRemoteAccessPprof' => 'Разрешить удаленный доступ к ${_root.AboutScreen.pprofPanel}',
-			'AboutScreen.allowRemoteAccessHtmlBoard' => 'Разрешить удаленный доступ${_root.SettingsScreen.htmlBoard}',
+			'AboutScreen.allowRemoteAccessHtmlBoard' => 'Разрешить удаленный доступ к ${_root.SettingsScreen.htmlBoard}',
 			'AboutScreen.useOriginalSBProfile' => 'Использовать исходную конфигурацию Sing-box',
 			'BackupAndSyncWebdavScreen.webdavServerUrl' => 'Адрес сервера',
 			'BackupAndSyncWebdavScreen.webdavRequired' => 'Не может быть пустым',

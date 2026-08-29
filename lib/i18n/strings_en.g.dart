@@ -245,8 +245,8 @@ class Translations$AboutScreen$en {
 	/// en: 'Allow remote access to pprof Panel'
 	String get allowRemoteAccessPprof => 'Allow remote access to ${_root.AboutScreen.pprofPanel}';
 
-	/// en: 'Allow remote accessOnline Panel'
-	String get allowRemoteAccessHtmlBoard => 'Allow remote access${_root.SettingsScreen.htmlBoard}';
+	/// en: 'Allow remote access to Online Panel'
+	String get allowRemoteAccessHtmlBoard => 'Allow remote access to ${_root.SettingsScreen.htmlBoard}';
 
 	/// en: 'Use original sing-box Profile'
 	String get useOriginalSBProfile => 'Use original sing-box Profile';
@@ -2146,7 +2146,7 @@ extension on Translations {
 			'AboutScreen.enablePprof' => 'Enable pprof',
 			'AboutScreen.pprofPanel' => 'pprof Panel',
 			'AboutScreen.allowRemoteAccessPprof' => 'Allow remote access to ${_root.AboutScreen.pprofPanel}',
-			'AboutScreen.allowRemoteAccessHtmlBoard' => 'Allow remote access${_root.SettingsScreen.htmlBoard}',
+			'AboutScreen.allowRemoteAccessHtmlBoard' => 'Allow remote access to ${_root.SettingsScreen.htmlBoard}',
 			'AboutScreen.useOriginalSBProfile' => 'Use original sing-box Profile',
 			'BackupAndSyncWebdavScreen.webdavServerUrl' => 'Server Url',
 			'BackupAndSyncWebdavScreen.webdavRequired' => 'Can not be empty',

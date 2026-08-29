@@ -13,7 +13,7 @@
         "enablePprof": "Enable pprof",
         "pprofPanel": "pprof Panel",
         "allowRemoteAccessPprof": "Allow remote access to @:{AboutScreen.pprofPanel}",
-        "allowRemoteAccessHtmlBoard": "Allow remote access@:{SettingsScreen.htmlBoard}",
+        "allowRemoteAccessHtmlBoard": "Allow remote access to @:{SettingsScreen.htmlBoard}",
         "useOriginalSBProfile": "Use original sing-box Profile"
     },
     "BackupAndSyncWebdavScreen": {

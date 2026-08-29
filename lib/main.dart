@@ -6,6 +6,7 @@ import 'dart:ui';
 
 import 'package:karing/app/local_services/vpn_service.dart';
 import 'package:karing/app/modules/board_provider_manager.dart';
+import 'package:karing/app/modules/server_manager.dart';
 import 'package:karing/app/utils/device_utils.dart';
 import 'package:karing/app/utils/http_overrides_utils.dart';
 import 'package:karing/app/utils/move_to_background_utils.dart';
@@ -344,6 +345,7 @@ class MyAppState extends State<MyApp>
   bool _launchAtStartup = false;
   bool _windowVisibleForMac = false;
   bool _trayGrey = true;
+  final Themes _themes = Themes();
   @override
   void initState() {
     super.initState();
@@ -436,12 +438,10 @@ class MyAppState extends State<MyApp>
     }
 
     return MultiProvider(
-      providers: [ChangeNotifierProvider(create: (_) => Themes())],
+      providers: [ChangeNotifierProvider(create: (_) => _themes)],
       child: Consumer<Themes>(
         builder: (context, appTheme, _) {
-          Provider.of<Themes>(
-            context,
-          ).setTheme(SettingManager.getConfig().ui.theme, false);
+          _themes.setTheme(SettingManager.getConfig().ui.theme, false);
           return Shortcuts(
             shortcuts: const {
               SingleActivator(LogicalKeyboardKey.select):
@@ -603,6 +603,13 @@ class MyAppState extends State<MyApp>
     } else {
       firstShowWindow(true);
     }
+    ServerManager.onEventReloadFromZip(hashCode, () async {
+      if (!mounted) {
+        return;
+      }
+      _themes.setTheme(SettingManager.getConfig().ui.theme, false);
+      setState(() {});
+    });
   }
 
   Future<void> _uninit() async {

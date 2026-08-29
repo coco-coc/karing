@@ -13,7 +13,7 @@
         "enablePprof": "Включить pprof",
         "pprofPanel": "pprof панель",
         "allowRemoteAccessPprof": "Разрешить удаленный доступ к @:{AboutScreen.pprofPanel}",
-        "allowRemoteAccessHtmlBoard": "Разрешить удаленный доступ@:{SettingsScreen.htmlBoard}",
+        "allowRemoteAccessHtmlBoard": "Разрешить удаленный доступ к @:{SettingsScreen.htmlBoard}",
         "useOriginalSBProfile": "Использовать исходную конфигурацию Sing-box"
     },
     "BackupAndSyncWebdavScreen": {
