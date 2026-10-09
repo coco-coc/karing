@@ -147,7 +147,7 @@ class _Translations$AboutScreen$vi implements Translations$AboutScreen$en {
 	@override String get disableAppImproveData => 'Dữ liệu cải thiện ứng dụng';
 	@override String get disableUAReportTip => 'Bật [${_root.AboutScreen.disableAppImproveData}] giúp chúng tôi cải thiện độ ổn định và khả năng sử dụng của sản phẩm; chúng tôi không thu thập bất kỳ dữ liệu riêng tư nào. Tắt tính năng này sẽ ngăn ứng dụng thu thập bất kỳ dữ liệu nào.';
 	@override String get devOptions => 'Tùy chọn nhà phát triển';
-	@override String get enableDebugLog => 'Bật nhật ký gỡ lỗi';
+	@override String get logLevel => 'Mức nhật ký';
 	@override String get viewFilsContent => 'Xem tệp';
 	@override String get enablePprof => 'Bật pprof';
 	@override String get pprofPanel => 'Bảng điều khiển pprof';
@@ -985,7 +985,7 @@ extension on TranslationsVi {
 			'AboutScreen.disableAppImproveData' => 'Dữ liệu cải thiện ứng dụng',
 			'AboutScreen.disableUAReportTip' => 'Bật [${_root.AboutScreen.disableAppImproveData}] giúp chúng tôi cải thiện độ ổn định và khả năng sử dụng của sản phẩm; chúng tôi không thu thập bất kỳ dữ liệu riêng tư nào. Tắt tính năng này sẽ ngăn ứng dụng thu thập bất kỳ dữ liệu nào.',
 			'AboutScreen.devOptions' => 'Tùy chọn nhà phát triển',
-			'AboutScreen.enableDebugLog' => 'Bật nhật ký gỡ lỗi',
+			'AboutScreen.logLevel' => 'Mức nhật ký',
 			'AboutScreen.viewFilsContent' => 'Xem tệp',
 			'AboutScreen.enablePprof' => 'Bật pprof',
 			'AboutScreen.pprofPanel' => 'Bảng điều khiển pprof',

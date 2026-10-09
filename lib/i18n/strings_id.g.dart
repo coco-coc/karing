@@ -147,7 +147,7 @@ class _Translations$AboutScreen$id implements Translations$AboutScreen$en {
 	@override String get disableAppImproveData => 'Data peningkatan aplikasi';
 	@override String get disableUAReportTip => 'Mengaktifkan [${_root.AboutScreen.disableAppImproveData}] membantu kami meningkatkan stabilitas dan kegunaan produk. Kami tidak akan mengumpulkan data privasi pribadi apa pun; setelah dinonaktifkan, aplikasi tidak akan lagi mengumpulkan data apa pun';
 	@override String get devOptions => 'Opsi pengembang';
-	@override String get enableDebugLog => 'Aktifkan log debug';
+	@override String get logLevel => 'Tingkat Log';
 	@override String get viewFilsContent => 'Lihat file';
 	@override String get enablePprof => 'Aktifkan pprof';
 	@override String get pprofPanel => 'Panel pprof';
@@ -985,7 +985,7 @@ extension on TranslationsId {
 			'AboutScreen.disableAppImproveData' => 'Data peningkatan aplikasi',
 			'AboutScreen.disableUAReportTip' => 'Mengaktifkan [${_root.AboutScreen.disableAppImproveData}] membantu kami meningkatkan stabilitas dan kegunaan produk. Kami tidak akan mengumpulkan data privasi pribadi apa pun; setelah dinonaktifkan, aplikasi tidak akan lagi mengumpulkan data apa pun',
 			'AboutScreen.devOptions' => 'Opsi pengembang',
-			'AboutScreen.enableDebugLog' => 'Aktifkan log debug',
+			'AboutScreen.logLevel' => 'Tingkat Log',
 			'AboutScreen.viewFilsContent' => 'Lihat file',
 			'AboutScreen.enablePprof' => 'Aktifkan pprof',
 			'AboutScreen.pprofPanel' => 'Panel pprof',

@@ -147,7 +147,7 @@ class _Translations$AboutScreen$tr implements Translations$AboutScreen$en {
 	@override String get disableAppImproveData => 'Uygulama İyileştirme Verileri';
 	@override String get disableUAReportTip => '[${_root.AboutScreen.disableAppImproveData}] özelliğinin etkinleştirilmesi, ürün kararlılığını ve kullanılabilirliğini iyileştirmemize yardımcı olur; herhangi bir kişisel gizlilik verisi toplamıyoruz. Devre dışı bırakılması, uygulamanın herhangi bir veri toplamasını engeller.';
 	@override String get devOptions => 'Geliştirici Seçenekleri';
-	@override String get enableDebugLog => 'Hata Ayıklama Günlüğünü Etkinleştir';
+	@override String get logLevel => 'Günlük Düzeyi';
 	@override String get viewFilsContent => 'Dosyaları Görüntüle';
 	@override String get enablePprof => 'pprof\'u Etkinleştir';
 	@override String get pprofPanel => 'pprof Paneli';
@@ -985,7 +985,7 @@ extension on TranslationsTr {
 			'AboutScreen.disableAppImproveData' => 'Uygulama İyileştirme Verileri',
 			'AboutScreen.disableUAReportTip' => '[${_root.AboutScreen.disableAppImproveData}] özelliğinin etkinleştirilmesi, ürün kararlılığını ve kullanılabilirliğini iyileştirmemize yardımcı olur; herhangi bir kişisel gizlilik verisi toplamıyoruz. Devre dışı bırakılması, uygulamanın herhangi bir veri toplamasını engeller.',
 			'AboutScreen.devOptions' => 'Geliştirici Seçenekleri',
-			'AboutScreen.enableDebugLog' => 'Hata Ayıklama Günlüğünü Etkinleştir',
+			'AboutScreen.logLevel' => 'Günlük Düzeyi',
 			'AboutScreen.viewFilsContent' => 'Dosyaları Görüntüle',
 			'AboutScreen.enablePprof' => 'pprof\'u Etkinleştir',
 			'AboutScreen.pprofPanel' => 'pprof Paneli',

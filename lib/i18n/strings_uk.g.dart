@@ -147,7 +147,7 @@ class _Translations$AboutScreen$uk implements Translations$AboutScreen$en {
 	@override String get disableAppImproveData => 'Дані про покращення програми';
 	@override String get disableUAReportTip => 'Увімкнення [${_root.AboutScreen.disableAppImproveData}] допомагає нам покращити стабільність та зручність використання продукту; ми не збираємо жодних особистих конфіденційних даних. Вимкнення запобіжить збору будь-яких даних програмою.';
 	@override String get devOptions => 'Параметри розробника';
-	@override String get enableDebugLog => 'Увімкнути налагоджувальний журнал';
+	@override String get logLevel => 'Рівень журналу';
 	@override String get viewFilsContent => 'Переглянути файли';
 	@override String get enablePprof => 'Увімкнути pprof';
 	@override String get pprofPanel => 'Панель pprof';
@@ -985,7 +985,7 @@ extension on TranslationsUk {
 			'AboutScreen.disableAppImproveData' => 'Дані про покращення програми',
 			'AboutScreen.disableUAReportTip' => 'Увімкнення [${_root.AboutScreen.disableAppImproveData}] допомагає нам покращити стабільність та зручність використання продукту; ми не збираємо жодних особистих конфіденційних даних. Вимкнення запобіжить збору будь-яких даних програмою.',
 			'AboutScreen.devOptions' => 'Параметри розробника',
-			'AboutScreen.enableDebugLog' => 'Увімкнути налагоджувальний журнал',
+			'AboutScreen.logLevel' => 'Рівень журналу',
 			'AboutScreen.viewFilsContent' => 'Переглянути файли',
 			'AboutScreen.enablePprof' => 'Увімкнути pprof',
 			'AboutScreen.pprofPanel' => 'Панель pprof',

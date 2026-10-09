@@ -147,7 +147,7 @@ class _Translations$AboutScreen$th implements Translations$AboutScreen$en {
 	@override String get disableAppImproveData => 'ข้อมูลการปรับปรุงแอปพลิเคชัน';
 	@override String get disableUAReportTip => 'การเปิดใช้ [${_root.AboutScreen.disableAppImproveData}] ช่วยให้เราปรับปรุงความเสถียรและการใช้งานของผลิตภัณฑ์ เราไม่เก็บข้อมูลส่วนตัว การปิดใช้งานจะป้องกันแอปจากการเก็บข้อมูลใดๆ';
 	@override String get devOptions => 'ตัวเลือกนักพัฒนา';
-	@override String get enableDebugLog => 'เปิดใช้งานบันทึกการแก้จุดบกพร่อง';
+	@override String get logLevel => 'ระดับการบันทึก';
 	@override String get viewFilsContent => 'ดูไฟล์';
 	@override String get enablePprof => 'เปิดใช้งาน pprof';
 	@override String get pprofPanel => 'แผงควบคุม pprof';
@@ -985,7 +985,7 @@ extension on TranslationsTh {
 			'AboutScreen.disableAppImproveData' => 'ข้อมูลการปรับปรุงแอปพลิเคชัน',
 			'AboutScreen.disableUAReportTip' => 'การเปิดใช้ [${_root.AboutScreen.disableAppImproveData}] ช่วยให้เราปรับปรุงความเสถียรและการใช้งานของผลิตภัณฑ์ เราไม่เก็บข้อมูลส่วนตัว การปิดใช้งานจะป้องกันแอปจากการเก็บข้อมูลใดๆ',
 			'AboutScreen.devOptions' => 'ตัวเลือกนักพัฒนา',
-			'AboutScreen.enableDebugLog' => 'เปิดใช้งานบันทึกการแก้จุดบกพร่อง',
+			'AboutScreen.logLevel' => 'ระดับการบันทึก',
 			'AboutScreen.viewFilsContent' => 'ดูไฟล์',
 			'AboutScreen.enablePprof' => 'เปิดใช้งาน pprof',
 			'AboutScreen.pprofPanel' => 'แผงควบคุม pprof',

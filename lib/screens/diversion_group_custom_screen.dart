@@ -151,9 +151,6 @@ class _DiversionGroupCustomScreenState
         return createWidget(item);
       }).toList(),
       onReorderItem: (int oldIndex, int newIndex) {
-        if (oldIndex < newIndex) {
-          newIndex -= 1;
-        }
         var item = _groupData.removeAt(oldIndex);
         _groupData.insert(newIndex, item);
 

@@ -8,7 +8,7 @@
         "disableAppImproveData": "Использовать данные для улучшения приложения",
         "disableUAReportTip": "Включение параметра [@:{AboutScreen.disableAppImproveData}] помогает нам улучшать стабильность и удобство приложения. Мы не собираем личные данные. Отключение этого параметра предотвратит сбор каких-либо данных приложением.",
         "devOptions": "Параметры разработчика",
-        "enableDebugLog": "Включить debug-лог",
+        "logLevel": "Уровень журнала",
         "viewFilsContent": "Посмотр файлов",
         "enablePprof": "Включить pprof",
         "pprofPanel": "Панель pprof",

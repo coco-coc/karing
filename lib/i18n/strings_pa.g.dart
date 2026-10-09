@@ -147,7 +147,7 @@ class _Translations$AboutScreen$pa implements Translations$AboutScreen$en {
 	@override String get disableAppImproveData => 'ऐप सुधार डेटा';
 	@override String get disableUAReportTip => '[${_root.AboutScreen.disableAppImproveData}] को सक्षम करने से हमें उत्पाद की स्थिरता और उपयोगिता में सुधार करने में मदद मिलती है; हम कोई भी व्यक्तिगत गोपनीयता डेटा एकत्र नहीं करते हैं। अक्षम करने से ऐप को कोई भी डेटा एकत्र करने से रोका जा सकेगा।';
 	@override String get devOptions => 'डेवलपर विकल्प';
-	@override String get enableDebugLog => 'डिबग लॉग सक्षम करें';
+	@override String get logLevel => 'ਲੌਗ ਪੱਧਰ';
 	@override String get viewFilsContent => 'फ़ाइलें देखें';
 	@override String get enablePprof => 'pprof सक्षम करें';
 	@override String get pprofPanel => 'pprof पैनल';
@@ -985,7 +985,7 @@ extension on TranslationsPa {
 			'AboutScreen.disableAppImproveData' => 'ऐप सुधार डेटा',
 			'AboutScreen.disableUAReportTip' => '[${_root.AboutScreen.disableAppImproveData}] को सक्षम करने से हमें उत्पाद की स्थिरता और उपयोगिता में सुधार करने में मदद मिलती है; हम कोई भी व्यक्तिगत गोपनीयता डेटा एकत्र नहीं करते हैं। अक्षम करने से ऐप को कोई भी डेटा एकत्र करने से रोका जा सकेगा।',
 			'AboutScreen.devOptions' => 'डेवलपर विकल्प',
-			'AboutScreen.enableDebugLog' => 'डिबग लॉग सक्षम करें',
+			'AboutScreen.logLevel' => 'ਲੌਗ ਪੱਧਰ',
 			'AboutScreen.viewFilsContent' => 'फ़ाइलें देखें',
 			'AboutScreen.enablePprof' => 'pprof सक्षम करें',
 			'AboutScreen.pprofPanel' => 'pprof पैनल',

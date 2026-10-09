@@ -147,7 +147,7 @@ class _Translations$AboutScreen$ko implements Translations$AboutScreen$en {
 	@override String get disableAppImproveData => '앱 개선 데이터';
 	@override String get disableUAReportTip => '[${_root.AboutScreen.disableAppImproveData}]를 활성화하면 제품의 안정성과 사용성을 개선하는 데 도움이 됩니다. 당사는 개인 정보를 수집하지 않습니다. 비활성화하면 앱에서 어떠한 데이터도 수집하지 않습니다.';
 	@override String get devOptions => '개발자 옵션';
-	@override String get enableDebugLog => '디버그 로그 활성화';
+	@override String get logLevel => '로그 레벨';
 	@override String get viewFilsContent => '파일 보기';
 	@override String get enablePprof => 'pprof 활성화';
 	@override String get pprofPanel => 'pprof 패널';
@@ -985,7 +985,7 @@ extension on TranslationsKo {
 			'AboutScreen.disableAppImproveData' => '앱 개선 데이터',
 			'AboutScreen.disableUAReportTip' => '[${_root.AboutScreen.disableAppImproveData}]를 활성화하면 제품의 안정성과 사용성을 개선하는 데 도움이 됩니다. 당사는 개인 정보를 수집하지 않습니다. 비활성화하면 앱에서 어떠한 데이터도 수집하지 않습니다.',
 			'AboutScreen.devOptions' => '개발자 옵션',
-			'AboutScreen.enableDebugLog' => '디버그 로그 활성화',
+			'AboutScreen.logLevel' => '로그 레벨',
 			'AboutScreen.viewFilsContent' => '파일 보기',
 			'AboutScreen.enablePprof' => 'pprof 활성화',
 			'AboutScreen.pprofPanel' => 'pprof 패널',

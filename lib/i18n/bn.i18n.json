@@ -8,7 +8,7 @@
         "disableAppImproveData": "অ্যাপ উন্নত করার ডেটা",
         "disableUAReportTip": "[@:{AboutScreen.disableAppImproveData}] সক্ষম করলে পণ্যের স্থিতিশীলতা এবং ব্যবহারযোগ্যতা উন্নত করতে আমাদের সাহায্য হয়; আমরা কোনো ব্যক্তিগত গোপনীয়তা ডেটা সংগ্রহ করি না। এটি নিষ্ক্রিয় করলে অ্যাপটি কোনো ডেটা সংগ্রহ করতে পারবে না।",
         "devOptions": "ডেভেলপার অপশন",
-        "enableDebugLog": "ডিবাগ লগ সক্ষম করুন",
+        "logLevel": "লগ স্তর",
         "viewFilsContent": "ফাইলগুলি দেখুন",
         "enablePprof": "pprof সক্ষম করুন",
         "pprofPanel": "pprof প্যানেল",

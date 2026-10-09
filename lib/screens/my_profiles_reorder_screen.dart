@@ -125,9 +125,6 @@ class MyProfilesReorderScreenState
                     );
                   }).toList(),
                   onReorderItem: (int oldIndex, int newIndex) {
-                    if (oldIndex < newIndex) {
-                      newIndex -= 1;
-                    }
                     var item = _subAndConfigList.removeAt(oldIndex);
                     _subAndConfigList.insert(newIndex, item);
                     setState(() {});

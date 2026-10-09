@@ -382,13 +382,14 @@ class SettingConfigItemUIScreen {
 class SettingConfigItemDev {
   static int pprofPortDefault = 3060;
   bool devMode = false;
-  bool enableDebugLog = false;
+
+  String logLevel = SingboxLogLevel.error.name;
   int pprofPort = 0;
   bool allowRemoteAccessPprof = false;
   bool allowRemoteAccessHtmlBoard = false;
   Map<String, dynamic> toJson() {
     Map<String, dynamic> ret = {
-      'enable_debug_log': enableDebugLog,
+      'log_level': logLevel,
       'pprof_port': pprofPort,
       'allow_remote_access_pprof': allowRemoteAccessPprof,
       'allow_remote_access_htmlboard': allowRemoteAccessHtmlBoard,
@@ -400,7 +401,11 @@ class SettingConfigItemDev {
     if (map == null) {
       return;
     }
-    enableDebugLog = map["enable_debug_log"] ?? false;
+
+    logLevel = map["log_level"] ?? SingboxLogLevel.error.name;
+    if (!SingboxLogLevel.names().contains(logLevel)) {
+      logLevel = SingboxLogLevel.error.name;
+    }
     pprofPort = map["pprof_port"] ?? 0;
     allowRemoteAccessPprof = map["allow_remote_access_pprof"] ?? false;
     allowRemoteAccessHtmlBoard = map["allow_remote_access_htmlboard"] ?? false;

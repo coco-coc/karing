@@ -8,7 +8,7 @@
         "disableAppImproveData": "앱 개선 데이터",
         "disableUAReportTip": "[@:{AboutScreen.disableAppImproveData}]를 활성화하면 제품의 안정성과 사용성을 개선하는 데 도움이 됩니다. 당사는 개인 정보를 수집하지 않습니다. 비활성화하면 앱에서 어떠한 데이터도 수집하지 않습니다.",
         "devOptions": "개발자 옵션",
-        "enableDebugLog": "디버그 로그 활성화",
+        "logLevel": "로그 레벨",
         "viewFilsContent": "파일 보기",
         "enablePprof": "pprof 활성화",
         "pprofPanel": "pprof 패널",

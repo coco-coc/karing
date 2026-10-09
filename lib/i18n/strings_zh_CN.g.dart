@@ -147,7 +147,7 @@ class Translations$AboutScreen$zh_CN implements Translations$AboutScreen$en {
 	@override String get disableAppImproveData => '应用改进数据';
 	@override String get disableUAReportTip => '开启[${_root.AboutScreen.disableAppImproveData}]有助于我们改进产品稳定性与可用性,我们不会收集任何个人隐私数据;禁用后,应用将不会再收集任何数据';
 	@override String get devOptions => '开发者选项';
-	@override String get enableDebugLog => '开启调试日志';
+	@override String get logLevel => '日志等级';
 	@override String get viewFilsContent => '查看文件';
 	@override String get enablePprof => '启用pprof';
 	@override String get pprofPanel => 'pprof面板';
@@ -985,7 +985,7 @@ extension on TranslationsZhCn {
 			'AboutScreen.disableAppImproveData' => '应用改进数据',
 			'AboutScreen.disableUAReportTip' => '开启[${_root.AboutScreen.disableAppImproveData}]有助于我们改进产品稳定性与可用性,我们不会收集任何个人隐私数据;禁用后,应用将不会再收集任何数据',
 			'AboutScreen.devOptions' => '开发者选项',
-			'AboutScreen.enableDebugLog' => '开启调试日志',
+			'AboutScreen.logLevel' => '日志等级',
 			'AboutScreen.viewFilsContent' => '查看文件',
 			'AboutScreen.enablePprof' => '启用pprof',
 			'AboutScreen.pprofPanel' => 'pprof面板',

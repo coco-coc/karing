@@ -153,6 +153,7 @@ class _UrlTestSettingsScreenState
                             width: centerWidth,
                             child: Text(
                               current,
+                              overflow: TextOverflow.ellipsis,
                               style: TextStyle(
                                 fontSize: ThemeConfig.kFontSizeGroupItem,
                               ),

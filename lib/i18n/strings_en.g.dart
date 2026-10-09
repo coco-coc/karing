@@ -231,8 +231,8 @@ class Translations$AboutScreen$en {
 	/// en: 'Developer Options'
 	String get devOptions => 'Developer Options';
 
-	/// en: 'Enable Debug Log'
-	String get enableDebugLog => 'Enable Debug Log';
+	/// en: 'Log Level'
+	String get logLevel => 'Log Level';
 
 	/// en: 'View Files'
 	String get viewFilsContent => 'View Files';
@@ -2148,7 +2148,7 @@ extension on Translations {
 			'AboutScreen.disableAppImproveData' => 'Application Improvement Data',
 			'AboutScreen.disableUAReportTip' => 'Enabling [${_root.AboutScreen.disableAppImproveData}] helps us improve product stability and usability; we do not collect any personal privacy data. Disabling it will prevent the app from collecting any data.',
 			'AboutScreen.devOptions' => 'Developer Options',
-			'AboutScreen.enableDebugLog' => 'Enable Debug Log',
+			'AboutScreen.logLevel' => 'Log Level',
 			'AboutScreen.viewFilsContent' => 'View Files',
 			'AboutScreen.enablePprof' => 'Enable pprof',
 			'AboutScreen.pprofPanel' => 'pprof Panel',

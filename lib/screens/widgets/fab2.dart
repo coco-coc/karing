@@ -140,7 +140,7 @@ class ConvexButton2 extends StatelessWidget {
           width: double.infinity,
           child: CustomPaint(
             painter: ConvexPainter(
-              shadowColor: themes.getThemeInvertBgColor(context),
+              shadowColor: themes.getThemeInvertColor(context),
               top: -(top ?? _DEFAULT_TOP),
               width: size ?? _DEFAULT_SIZE,
               height: size ?? _DEFAULT_SIZE,

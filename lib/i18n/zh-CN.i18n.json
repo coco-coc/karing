@@ -8,7 +8,7 @@
         "disableAppImproveData": "应用改进数据",
         "disableUAReportTip": "开启[@:{AboutScreen.disableAppImproveData}]有助于我们改进产品稳定性与可用性,我们不会收集任何个人隐私数据;禁用后,应用将不会再收集任何数据",
         "devOptions": "开发者选项",
-        "enableDebugLog": "开启调试日志",
+        "logLevel": "日志等级",
         "viewFilsContent": "查看文件",
         "enablePprof": "启用pprof",
         "pprofPanel": "pprof面板",

@@ -8,7 +8,7 @@
         "disableAppImproveData": "تطبيق بيانات التحسين",
         "disableUAReportTip": "تفعيل [@:{AboutScreen.disableAppImproveData}] يساعدنا على تحسين استقرار المنتج وسهولة استخدامه؛ ولا نقوم بجمع أي بيانات شخصية. تعطيله سيمنع التطبيق من جمع أي بيانات.",
         "devOptions": "خيارات للمطور",
-        "enableDebugLog": "تمكين سجل التصحيح",
+        "logLevel": "مستوى السجل",
         "viewFilsContent": "عرض الملفات",
         "enablePprof": "يُمكَِن pprof",
         "pprofPanel": "pprof لوحة",

@@ -43,7 +43,7 @@ import 'package:karing/screens/widgets/routes.dart';
 import 'package:path/path.dart' as path;
 import 'package:provider/provider.dart';
 import 'package:screen_retriever/screen_retriever.dart';
-import 'package:tray_manager/tray_manager.dart';
+import 'package:tray_manager/legacy.dart';
 import 'package:vpn_service/vpn_service.dart';
 import 'package:window_manager/window_manager.dart';
 import 'package:flutter_single_instance/flutter_single_instance.dart';

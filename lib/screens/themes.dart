@@ -44,20 +44,7 @@ class Themes with ChangeNotifier {
         : ThemeDataLight.theme(context);
   }
 
-  Color getThemeInvertBgColor(BuildContext context) {
-    var brightness = MediaQuery.platformBrightnessOf(context);
-    switch (_theme) {
-      case ThemeDefine.kThemeLight:
-        return ThemeDataDark.mainBgColor;
-      case ThemeDefine.kThemeDark:
-        return ThemeDataLight.mainBgColor;
-    }
-    // ThemeDefine.kThemeSystem:
-    return brightness == Brightness.dark
-        ? ThemeDataLight.mainBgColor
-        : ThemeDataDark.mainBgColor;
-  }
-  /* Color getThemeBgColor(BuildContext context) {
+  Color? getThemeColor(BuildContext context) {
     var brightness = MediaQuery.platformBrightnessOf(context);
     switch (_theme) {
       case ThemeDefine.kThemeLight:
@@ -71,7 +58,7 @@ class Themes with ChangeNotifier {
         : ThemeDataLight.mainBgColor;
   }
 
-  Color getThemeInvertBgColor(BuildContext context) {
+  Color getThemeInvertColor(BuildContext context) {
     var brightness = MediaQuery.platformBrightnessOf(context);
     switch (_theme) {
       case ThemeDefine.kThemeLight:
@@ -84,21 +71,6 @@ class Themes with ChangeNotifier {
         ? ThemeDataLight.mainBgColor
         : ThemeDataDark.mainBgColor;
   }
-
-  Color getThemeIconColor(BuildContext context) {
-    var brightness = MediaQuery.platformBrightnessOf(context);
-    switch (_theme) {
-      case ThemeDefine.kThemeSystem:
-        return brightness == Brightness.dark
-            ? Colors.white.withValues(alpha: 0.5)
-            : Colors.black.withValues(alpha: 0.5);
-      case ThemeDefine.kThemeLight:
-        return Colors.black.withValues(alpha: 0.5);
-      case ThemeDefine.kThemeDark:
-        return Colors.white.withValues(alpha: 0.5);
-    }
-    return Colors.grey.withValues(alpha: 0.5);
-  }*/
 
   ThemeMode themeMode() {
     switch (_theme) {

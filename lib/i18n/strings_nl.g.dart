@@ -147,7 +147,7 @@ class _Translations$AboutScreen$nl implements Translations$AboutScreen$en {
 	@override String get disableAppImproveData => 'App-verbeteringsgegevens';
 	@override String get disableUAReportTip => 'Het inschakelen van [${_root.AboutScreen.disableAppImproveData}] helpt ons de stabiliteit en bruikbaarheid van het product te verbeteren; we verzamelen geen persoonlijke privacygegevens. Uitschakelen voorkomt dat de app gegevens verzamelt.';
 	@override String get devOptions => 'Ontwikkelaarsopties';
-	@override String get enableDebugLog => 'Debug-logboek inschakelen';
+	@override String get logLevel => 'Logniveau';
 	@override String get viewFilsContent => 'Bestanden bekijken';
 	@override String get enablePprof => 'pprof inschakelen';
 	@override String get pprofPanel => 'pprof-paneel';
@@ -985,7 +985,7 @@ extension on TranslationsNl {
 			'AboutScreen.disableAppImproveData' => 'App-verbeteringsgegevens',
 			'AboutScreen.disableUAReportTip' => 'Het inschakelen van [${_root.AboutScreen.disableAppImproveData}] helpt ons de stabiliteit en bruikbaarheid van het product te verbeteren; we verzamelen geen persoonlijke privacygegevens. Uitschakelen voorkomt dat de app gegevens verzamelt.',
 			'AboutScreen.devOptions' => 'Ontwikkelaarsopties',
-			'AboutScreen.enableDebugLog' => 'Debug-logboek inschakelen',
+			'AboutScreen.logLevel' => 'Logniveau',
 			'AboutScreen.viewFilsContent' => 'Bestanden bekijken',
 			'AboutScreen.enablePprof' => 'pprof inschakelen',
 			'AboutScreen.pprofPanel' => 'pprof-paneel',

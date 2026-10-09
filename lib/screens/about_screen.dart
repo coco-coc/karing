@@ -16,6 +16,7 @@ import 'package:karing/app/utils/log.dart';
 import 'package:karing/app/utils/path_utils.dart';
 import 'package:karing/app/utils/platform_utils.dart';
 import 'package:karing/app/utils/proxy_conf_utils.dart';
+import 'package:karing/app/utils/singbox_config_builder.dart';
 import 'package:karing/app/utils/singbox_json_utils.dart';
 import 'package:karing/app/utils/url_launcher_utils.dart';
 import 'package:karing/i18n/strings.g.dart';
@@ -29,6 +30,7 @@ import 'package:karing/screens/theme_config.dart';
 import 'package:karing/screens/webview_helper.dart';
 import 'package:karing/screens/widgets/framework.dart';
 import 'package:path/path.dart' as path;
+import 'package:tuple/tuple.dart';
 
 class AboutScreen extends LasyRenderingStatefulWidget {
   static RouteSettings routeSettings() {
@@ -358,15 +360,25 @@ class AboutScreenState extends LasyRenderingState<AboutScreen> {
         ),
       ];
 
+      List<Tuple2<String?, String>>? tupleStrings = SingboxLogLevel.names().map(
+        (e) {
+          if (e == SingboxLogLevel.disable.name) {
+            return Tuple2<String?, String>(e, tcontext.meta.disable);
+          }
+          return Tuple2<String?, String>(e, e);
+        },
+      ).toList();
       List<GroupItemOptions> options1 = [
         GroupItemOptions(
-          switchOptions: GroupItemSwitchOptions(
-            name: tcontext.AboutScreen.enableDebugLog,
-            switchValue: dev.enableDebugLog,
-            onSwitch: (bool value) async {
-              dev.enableDebugLog = value;
+          stringPickerOptions: GroupItemStringPickerOptions(
+            name: tcontext.AboutScreen.logLevel,
+            selected: SingboxLogLevel.names().contains(dev.logLevel)
+                ? dev.logLevel
+                : SingboxLogLevel.error.name,
+            tupleStrings: tupleStrings,
+            onPicker: (String? selected) async {
+              dev.logLevel = selected ?? dev.logLevel;
               SettingManager.setDirty(true);
-              setState(() {});
             },
           ),
         ),

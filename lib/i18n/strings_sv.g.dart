@@ -147,7 +147,7 @@ class _Translations$AboutScreen$sv implements Translations$AboutScreen$en {
 	@override String get disableAppImproveData => 'Appförbättringsdata';
 	@override String get disableUAReportTip => 'Genom att aktivera [${_root.AboutScreen.disableAppImproveData}] hjälper du oss att förbättra produktens stabilitet och användbarhet; vi samlar inte in några personliga integritetsdata. Om du inaktiverar detta förhindras appen från att samla in data.';
 	@override String get devOptions => 'Utvecklaralternativ';
-	@override String get enableDebugLog => 'Aktivera felsökningslogg';
+	@override String get logLevel => 'Loggnivå';
 	@override String get viewFilsContent => 'Visa filer';
 	@override String get enablePprof => 'Aktivera pprof';
 	@override String get pprofPanel => 'pprof-panel';
@@ -985,7 +985,7 @@ extension on TranslationsSv {
 			'AboutScreen.disableAppImproveData' => 'Appförbättringsdata',
 			'AboutScreen.disableUAReportTip' => 'Genom att aktivera [${_root.AboutScreen.disableAppImproveData}] hjälper du oss att förbättra produktens stabilitet och användbarhet; vi samlar inte in några personliga integritetsdata. Om du inaktiverar detta förhindras appen från att samla in data.',
 			'AboutScreen.devOptions' => 'Utvecklaralternativ',
-			'AboutScreen.enableDebugLog' => 'Aktivera felsökningslogg',
+			'AboutScreen.logLevel' => 'Loggnivå',
 			'AboutScreen.viewFilsContent' => 'Visa filer',
 			'AboutScreen.enablePprof' => 'Aktivera pprof',
 			'AboutScreen.pprofPanel' => 'pprof-panel',

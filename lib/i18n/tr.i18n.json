@@ -8,7 +8,7 @@
         "disableAppImproveData": "Uygulama İyileştirme Verileri",
         "disableUAReportTip": "[@:{AboutScreen.disableAppImproveData}] özelliğinin etkinleştirilmesi, ürün kararlılığını ve kullanılabilirliğini iyileştirmemize yardımcı olur; herhangi bir kişisel gizlilik verisi toplamıyoruz. Devre dışı bırakılması, uygulamanın herhangi bir veri toplamasını engeller.",
         "devOptions": "Geliştirici Seçenekleri",
-        "enableDebugLog": "Hata Ayıklama Günlüğünü Etkinleştir",
+        "logLevel": "Günlük Düzeyi",
         "viewFilsContent": "Dosyaları Görüntüle",
         "enablePprof": "pprof'u Etkinleştir",
         "pprofPanel": "pprof Paneli",

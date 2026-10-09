@@ -147,7 +147,7 @@ class _Translations$AboutScreen$ar implements Translations$AboutScreen$en {
 	@override String get disableAppImproveData => 'تطبيق بيانات التحسين';
 	@override String get disableUAReportTip => 'تفعيل [${_root.AboutScreen.disableAppImproveData}] يساعدنا على تحسين استقرار المنتج وسهولة استخدامه؛ ولا نقوم بجمع أي بيانات شخصية. تعطيله سيمنع التطبيق من جمع أي بيانات.';
 	@override String get devOptions => 'خيارات للمطور';
-	@override String get enableDebugLog => 'تمكين سجل التصحيح';
+	@override String get logLevel => 'مستوى السجل';
 	@override String get viewFilsContent => 'عرض الملفات';
 	@override String get enablePprof => 'يُمكَِن pprof';
 	@override String get pprofPanel => 'pprof لوحة';
@@ -985,7 +985,7 @@ extension on TranslationsAr {
 			'AboutScreen.disableAppImproveData' => 'تطبيق بيانات التحسين',
 			'AboutScreen.disableUAReportTip' => 'تفعيل [${_root.AboutScreen.disableAppImproveData}] يساعدنا على تحسين استقرار المنتج وسهولة استخدامه؛ ولا نقوم بجمع أي بيانات شخصية. تعطيله سيمنع التطبيق من جمع أي بيانات.',
 			'AboutScreen.devOptions' => 'خيارات للمطور',
-			'AboutScreen.enableDebugLog' => 'تمكين سجل التصحيح',
+			'AboutScreen.logLevel' => 'مستوى السجل',
 			'AboutScreen.viewFilsContent' => 'عرض الملفات',
 			'AboutScreen.enablePprof' => 'يُمكَِن pprof',
 			'AboutScreen.pprofPanel' => 'pprof لوحة',

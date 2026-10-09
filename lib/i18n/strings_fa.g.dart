@@ -147,7 +147,7 @@ class _Translations$AboutScreen$fa implements Translations$AboutScreen$en {
 	@override String get disableAppImproveData => 'داده های بهبود را اعمال کنید';
 	@override String get disableUAReportTip => 'فعال کردن [${_root.AboutScreen.disableAppImproveData}] به ما کمک می‌کند تا پایداری و قابلیت استفاده از محصول را بهبود بخشیم؛ ما هیچ گونه اطلاعات شخصی مربوط به حریم خصوصی را جمع‌آوری نمی‌کنیم. غیرفعال کردن آن مانع از جمع‌آوری هرگونه داده توسط برنامه می‌شود.';
 	@override String get devOptions => 'تنظیمات توسعه‌دهندگان';
-	@override String get enableDebugLog => 'فعال‌سازی گزارش اشکال‌زدایی';
+	@override String get logLevel => 'سطح گزارش';
 	@override String get viewFilsContent => 'مشاهده فایل‌ها';
 	@override String get enablePprof => 'فعال‌سازی pprof';
 	@override String get pprofPanel => 'پنل pprof';
@@ -985,7 +985,7 @@ extension on TranslationsFa {
 			'AboutScreen.disableAppImproveData' => 'داده های بهبود را اعمال کنید',
 			'AboutScreen.disableUAReportTip' => 'فعال کردن [${_root.AboutScreen.disableAppImproveData}] به ما کمک می‌کند تا پایداری و قابلیت استفاده از محصول را بهبود بخشیم؛ ما هیچ گونه اطلاعات شخصی مربوط به حریم خصوصی را جمع‌آوری نمی‌کنیم. غیرفعال کردن آن مانع از جمع‌آوری هرگونه داده توسط برنامه می‌شود.',
 			'AboutScreen.devOptions' => 'تنظیمات توسعه‌دهندگان',
-			'AboutScreen.enableDebugLog' => 'فعال‌سازی گزارش اشکال‌زدایی',
+			'AboutScreen.logLevel' => 'سطح گزارش',
 			'AboutScreen.viewFilsContent' => 'مشاهده فایل‌ها',
 			'AboutScreen.enablePprof' => 'فعال‌سازی pprof',
 			'AboutScreen.pprofPanel' => 'پنل pprof',

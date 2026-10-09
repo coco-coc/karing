@@ -8,7 +8,7 @@
         "disableAppImproveData": "App-verbeteringsgegevens",
         "disableUAReportTip": "Het inschakelen van [@:{AboutScreen.disableAppImproveData}] helpt ons de stabiliteit en bruikbaarheid van het product te verbeteren; we verzamelen geen persoonlijke privacygegevens. Uitschakelen voorkomt dat de app gegevens verzamelt.",
         "devOptions": "Ontwikkelaarsopties",
-        "enableDebugLog": "Debug-logboek inschakelen",
+        "logLevel": "Logniveau",
         "viewFilsContent": "Bestanden bekijken",
         "enablePprof": "pprof inschakelen",
         "pprofPanel": "pprof-paneel",

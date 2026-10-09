@@ -147,7 +147,7 @@ class _Translations$AboutScreen$ru implements Translations$AboutScreen$en {
 	@override String get disableAppImproveData => 'Использовать данные для улучшения приложения';
 	@override String get disableUAReportTip => 'Включение параметра [${_root.AboutScreen.disableAppImproveData}] помогает нам улучшать стабильность и удобство приложения. Мы не собираем личные данные. Отключение этого параметра предотвратит сбор каких-либо данных приложением.';
 	@override String get devOptions => 'Параметры разработчика';
-	@override String get enableDebugLog => 'Включить debug-лог';
+	@override String get logLevel => 'Уровень журнала';
 	@override String get viewFilsContent => 'Посмотр файлов';
 	@override String get enablePprof => 'Включить pprof';
 	@override String get pprofPanel => 'Панель pprof';
@@ -985,7 +985,7 @@ extension on TranslationsRu {
 			'AboutScreen.disableAppImproveData' => 'Использовать данные для улучшения приложения',
 			'AboutScreen.disableUAReportTip' => 'Включение параметра [${_root.AboutScreen.disableAppImproveData}] помогает нам улучшать стабильность и удобство приложения. Мы не собираем личные данные. Отключение этого параметра предотвратит сбор каких-либо данных приложением.',
 			'AboutScreen.devOptions' => 'Параметры разработчика',
-			'AboutScreen.enableDebugLog' => 'Включить debug-лог',
+			'AboutScreen.logLevel' => 'Уровень журнала',
 			'AboutScreen.viewFilsContent' => 'Посмотр файлов',
 			'AboutScreen.enablePprof' => 'Включить pprof',
 			'AboutScreen.pprofPanel' => 'Панель pprof',

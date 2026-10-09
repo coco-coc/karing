@@ -147,7 +147,7 @@ class _Translations$AboutScreen$fr implements Translations$AboutScreen$en {
 	@override String get disableAppImproveData => 'Données d\'amélioration de l\'application';
 	@override String get disableUAReportTip => 'L\'activation de [${_root.AboutScreen.disableAppImproveData}] nous aide à améliorer la stabilité et l\'ergonomie du produit ; nous ne collectons aucune donnée privée. La désactivation empêchera l\'application de collecter toute donnée.';
 	@override String get devOptions => 'Options développeur';
-	@override String get enableDebugLog => 'Activer le journal de débogage';
+	@override String get logLevel => 'Niveau de journalisation';
 	@override String get viewFilsContent => 'Voir les fichiers';
 	@override String get enablePprof => 'Activer pprof';
 	@override String get pprofPanel => 'Panneau pprof';
@@ -985,7 +985,7 @@ extension on TranslationsFr {
 			'AboutScreen.disableAppImproveData' => 'Données d\'amélioration de l\'application',
 			'AboutScreen.disableUAReportTip' => 'L\'activation de [${_root.AboutScreen.disableAppImproveData}] nous aide à améliorer la stabilité et l\'ergonomie du produit ; nous ne collectons aucune donnée privée. La désactivation empêchera l\'application de collecter toute donnée.',
 			'AboutScreen.devOptions' => 'Options développeur',
-			'AboutScreen.enableDebugLog' => 'Activer le journal de débogage',
+			'AboutScreen.logLevel' => 'Niveau de journalisation',
 			'AboutScreen.viewFilsContent' => 'Voir les fichiers',
 			'AboutScreen.enablePprof' => 'Activer pprof',
 			'AboutScreen.pprofPanel' => 'Panneau pprof',

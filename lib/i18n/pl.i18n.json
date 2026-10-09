@@ -8,7 +8,7 @@
         "disableAppImproveData": "Dane o ulepszaniu aplikacji",
         "disableUAReportTip": "Włączenie [@:{AboutScreen.disableAppImproveData}] pomaga nam poprawić stabilność i użyteczność produktu; nie zbieramy żadnych osobistych danych dotyczących prywatności. Wyłączenie tej opcji uniemożliwi aplikacji zbieranie jakichkolwiek danych.",
         "devOptions": "Opcje programistyczne",
-        "enableDebugLog": "Włącz dziennik debugowania",
+        "logLevel": "Poziom dziennika",
         "viewFilsContent": "Wyświetl pliki",
         "enablePprof": "Włącz pprof",
         "pprofPanel": "Panel pprof",

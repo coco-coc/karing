@@ -8,6 +8,7 @@ import 'package:karing/screens/dialog_utils.dart';
 import 'package:karing/screens/theme_config.dart';
 import 'package:karing/screens/theme_define.dart';
 import 'package:karing/screens/themes.dart';
+import 'package:provider/provider.dart';
 import 'package:tuple/tuple.dart';
 
 class CommonWidget {
@@ -21,6 +22,9 @@ class CommonWidget {
     String latency, {
     void Function()? onTapLatencyReload,
   }) {
+    final themeColor = Provider.of<Themes>(
+      context,
+    ).getThemeInvertColor(context);
     const double defaultHeight = 30;
     if (loading) {
       return SizedBox(
@@ -78,11 +82,11 @@ class CommonWidget {
         ),
       );
     }
-    late Color color;
+    Color? color;
     if (la < 800) {
       color = ThemeDefine.kColorGreenBright;
     } else if (la < 1500) {
-      color = themes.getThemeInvertBgColor(context);
+      color = themeColor;
     } else {
       color = Colors.red;
     }

@@ -653,6 +653,7 @@ class _HomeScreenState extends LasyRenderingState<HomeScreen>
       String now = _currentServerForUrltest.now;
       int delay = _currentServerForUrltest.history.delay;
       _currentServerForUrltest.clear();
+      VPNService.setCurrentServerForUrltest(_currentServerForUrltest);
       if (_currentServerForUrltest.now != now ||
           _currentServerForUrltest.history.delay != delay) {
         setState(() {});
@@ -671,6 +672,7 @@ class _HomeScreenState extends LasyRenderingState<HomeScreen>
         if (_currentServerForUrltest.now.isNotEmpty ||
             _currentServerForUrltest.history.delay != 0) {
           _currentServerForUrltest.clear();
+          VPNService.setCurrentServerForUrltest(_currentServerForUrltest);
           setState(() {});
         }
 
@@ -685,8 +687,10 @@ class _HomeScreenState extends LasyRenderingState<HomeScreen>
       int delay = _currentServerForUrltest.history.delay;
       if (result.error != null) {
         _currentServerForUrltest.clear();
+        VPNService.setCurrentServerForUrltest(_currentServerForUrltest);
       } else {
         _currentServerForUrltest = result.data!;
+        VPNService.setCurrentServerForUrltest(_currentServerForUrltest);
         _currentServer.latency = _currentServerForUrltest.history.delay > 0
             ? _currentServerForUrltest.history.delay.toString()
             : _currentServerForUrltest.history.error;
@@ -720,6 +724,7 @@ class _HomeScreenState extends LasyRenderingState<HomeScreen>
     //Log.w("_disconnectToCurrent");
     if (_state != FlutterVpnServiceState.connected) {
       _currentServerForUrltest.clear();
+      VPNService.setCurrentServerForUrltest(_currentServerForUrltest);
     }
 
     _timerCurrentUrltest?.cancel();
@@ -1004,10 +1009,12 @@ class _HomeScreenState extends LasyRenderingState<HomeScreen>
         }
         VPNService.setCurrent(_currentServer);
         _currentServerForUrltest.clear();
+        VPNService.setCurrentServerForUrltest(_currentServerForUrltest);
       } else {
         _currentServer = ServerManager.getUrltest();
         VPNService.setCurrent(_currentServer);
         _currentServerForUrltest.clear();
+        VPNService.setCurrentServerForUrltest(_currentServerForUrltest);
         ServerManager.addRecent(_currentServer);
         ServerManager.saveUse();
       }
@@ -1391,8 +1398,10 @@ class _HomeScreenState extends LasyRenderingState<HomeScreen>
 
           if (result.error != null) {
             _currentServerForUrltest.clear();
+            VPNService.setCurrentServerForUrltest(_currentServerForUrltest);
           } else {
             _currentServerForUrltest = result.data!;
+            VPNService.setCurrentServerForUrltest(_currentServerForUrltest);
             _currentServer.latency = _currentServerForUrltest.history.delay > 0
                 ? _currentServerForUrltest.history.delay.toString()
                 : _currentServerForUrltest.history.error;
@@ -1539,6 +1548,7 @@ class _HomeScreenState extends LasyRenderingState<HomeScreen>
     _disconnectToCurrent();
     _disconnectToService();
     _currentServerForUrltest.clear();
+    VPNService.setCurrentServerForUrltest(_currentServerForUrltest);
 
     setState(() {});
     var result = await setServer();
@@ -2062,6 +2072,7 @@ class _HomeScreenState extends LasyRenderingState<HomeScreen>
       if (!_currentServer.isSame(result) || ServerManager.getDirty()) {
         _currentServer = result;
         _currentServerForUrltest.clear();
+        VPNService.setCurrentServerForUrltest(_currentServerForUrltest);
         ServerManager.addRecent(result);
         var use = ServerManager.getUse();
         if (use.selectDefault != result.tag &&
@@ -2124,6 +2135,7 @@ class _HomeScreenState extends LasyRenderingState<HomeScreen>
 
   Future<void> stop() async {
     _currentServerForUrltest.clear();
+    VPNService.setCurrentServerForUrltest(_currentServerForUrltest);
     await ProxyCluster.stop();
     await Zashboard.stop();
     if (_currentServer.groupid == ServerManager.getUrltestGroupId()) {
@@ -2140,6 +2152,7 @@ class _HomeScreenState extends LasyRenderingState<HomeScreen>
     bool disableShowAlertDialog = false,
   }) async {
     _currentServerForUrltest.clear();
+    VPNService.setCurrentServerForUrltest(_currentServerForUrltest);
     await ProxyCluster.stop();
 
     if (!_agreementApproved) {
@@ -2446,7 +2459,6 @@ class _HomeScreenState extends LasyRenderingState<HomeScreen>
       _widgetOptions.profileSubTraffic!.notifier.value = groupid;
     }
 
-    int alpha = SettingManager.getConfig().uiScreen.getWidgetAlpha();
     final columns = max(4 * (((windowSize.width - 50) / 320).ceil()), 8);
     final spacing = 10.ap;
     List<GridItem> widgets = HomeWidgets.getWidgets(_widgetOptions);
@@ -2467,6 +2479,7 @@ class _HomeScreenState extends LasyRenderingState<HomeScreen>
     const double convexHeight = 80;
     const double convexIconSize = 50;
     final decoration = getBackgroundDecoration();
+    int alpha = SettingManager.getConfig().uiScreen.getWidgetAlpha();
     return Focus(
       onKeyEvent: onKeyEvent,
       canRequestFocus: false,

@@ -147,7 +147,7 @@ class _Translations$AboutScreen$el implements Translations$AboutScreen$en {
 	@override String get disableAppImproveData => 'Δεδομένα βελτίωσης εφαρμογής';
 	@override String get disableUAReportTip => 'Η ενεργοποίηση του [${_root.AboutScreen.disableAppImproveData}] μας βοηθά να βελτιώσουμε τη σταθερότητα και τη χρηστικότητα του προϊόντος. Δεν συλλέγουμε προσωπικά δεδομένα απορρήτου. Η απενεργοποίηση θα εμποδίσει την εφαρμογή από τη συλλογή οποιωνδήποτε δεδομένων.';
 	@override String get devOptions => 'Επιλογές προγραμματιστή';
-	@override String get enableDebugLog => 'Ενεργοποίηση αρχείου καταγραφής σφαλμάτων';
+	@override String get logLevel => 'Επίπεδο καταγραφής';
 	@override String get viewFilsContent => 'Προβολή αρχείων';
 	@override String get enablePprof => 'Ενεργοποίηση pprof';
 	@override String get pprofPanel => 'Πίνακας pprof';
@@ -985,7 +985,7 @@ extension on TranslationsEl {
 			'AboutScreen.disableAppImproveData' => 'Δεδομένα βελτίωσης εφαρμογής',
 			'AboutScreen.disableUAReportTip' => 'Η ενεργοποίηση του [${_root.AboutScreen.disableAppImproveData}] μας βοηθά να βελτιώσουμε τη σταθερότητα και τη χρηστικότητα του προϊόντος. Δεν συλλέγουμε προσωπικά δεδομένα απορρήτου. Η απενεργοποίηση θα εμποδίσει την εφαρμογή από τη συλλογή οποιωνδήποτε δεδομένων.',
 			'AboutScreen.devOptions' => 'Επιλογές προγραμματιστή',
-			'AboutScreen.enableDebugLog' => 'Ενεργοποίηση αρχείου καταγραφής σφαλμάτων',
+			'AboutScreen.logLevel' => 'Επίπεδο καταγραφής',
 			'AboutScreen.viewFilsContent' => 'Προβολή αρχείων',
 			'AboutScreen.enablePprof' => 'Ενεργοποίηση pprof',
 			'AboutScreen.pprofPanel' => 'Πίνακας pprof',

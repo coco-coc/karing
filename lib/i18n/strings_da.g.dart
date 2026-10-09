@@ -147,7 +147,7 @@ class _Translations$AboutScreen$da implements Translations$AboutScreen$en {
 	@override String get disableAppImproveData => 'App-forbedringsdata';
 	@override String get disableUAReportTip => 'Aktivering af [${_root.AboutScreen.disableAppImproveData}] hjælper os med at forbedre produktets stabilitet og brugervenlighed; vi indsamler ingen personlige privatlivsdata. Deaktivering vil forhindre appen i at indsamle data.';
 	@override String get devOptions => 'Udviklerindstillinger';
-	@override String get enableDebugLog => 'Aktiver fejlfindingslog';
+	@override String get logLevel => 'Logniveau';
 	@override String get viewFilsContent => 'Vis filer';
 	@override String get enablePprof => 'Aktiver pprof';
 	@override String get pprofPanel => 'pprof-panel';
@@ -985,7 +985,7 @@ extension on TranslationsDa {
 			'AboutScreen.disableAppImproveData' => 'App-forbedringsdata',
 			'AboutScreen.disableUAReportTip' => 'Aktivering af [${_root.AboutScreen.disableAppImproveData}] hjælper os med at forbedre produktets stabilitet og brugervenlighed; vi indsamler ingen personlige privatlivsdata. Deaktivering vil forhindre appen i at indsamle data.',
 			'AboutScreen.devOptions' => 'Udviklerindstillinger',
-			'AboutScreen.enableDebugLog' => 'Aktiver fejlfindingslog',
+			'AboutScreen.logLevel' => 'Logniveau',
 			'AboutScreen.viewFilsContent' => 'Vis filer',
 			'AboutScreen.enablePprof' => 'Aktiver pprof',
 			'AboutScreen.pprofPanel' => 'pprof-panel',

@@ -8,7 +8,7 @@
         "disableAppImproveData": "ข้อมูลการปรับปรุงแอปพลิเคชัน",
         "disableUAReportTip": "การเปิดใช้ [@:{AboutScreen.disableAppImproveData}] ช่วยให้เราปรับปรุงความเสถียรและการใช้งานของผลิตภัณฑ์ เราไม่เก็บข้อมูลส่วนตัว การปิดใช้งานจะป้องกันแอปจากการเก็บข้อมูลใดๆ",
         "devOptions": "ตัวเลือกนักพัฒนา",
-        "enableDebugLog": "เปิดใช้งานบันทึกการแก้จุดบกพร่อง",
+        "logLevel": "ระดับการบันทึก",
         "viewFilsContent": "ดูไฟล์",
         "enablePprof": "เปิดใช้งาน pprof",
         "pprofPanel": "แผงควบคุม pprof",
